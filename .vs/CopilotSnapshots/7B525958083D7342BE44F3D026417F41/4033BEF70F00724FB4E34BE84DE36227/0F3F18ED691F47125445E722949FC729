@@ -1,0 +1,1140 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+
+namespace Application3
+{
+	public partial class Form1 : Form
+	{
+		// Model cho một tác vụ
+		private class TaskItem
+		{
+			public int Stt { get; set; }
+			public string Ten { get; set; }
+			public DateTime ThoiGianHoanThanh { get; set; }
+			public bool QuanTrong { get; set; }
+			public string LinhVuc { get; set; }
+			public string NoiDung { get; set; }
+		}
+
+		// Designer event handlers (stubs/wrappers) so Designer references compile
+
+		private void đăngNhậpTàiKhoảngKhácToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			// empty - handled if needed
+		}
+
+		private void maskedTextBox2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+		{
+			// ensure password masking
+			try { maskedTextBox2.PasswordChar = '*'; } catch { }
+		}
+
+		private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+		{
+			// no-op
+		}
+
+		private void label8_Click(object sender, EventArgs e)
+		{
+			// no-op
+		}
+
+		// Wrapper methods to match simple Designer click names
+		private void button13_Click(object sender, EventArgs e) => button13_Click_Add(sender, e);
+		private void button8_Click(object sender, EventArgs e) => button8_Click_Save(sender, e);
+		private void button9_Click(object sender, EventArgs e) => button9_Click_Cancel(sender, e);
+		private void button10_Click(object sender, EventArgs e) => button10_Click_Delete(sender, e);
+		private void button11_Click(object sender, EventArgs e) => button11_Click_Import(sender, e);
+		private void button12_Click(object sender, EventArgs e) => button12_Click_Export(sender, e);
+
+		private BindingList<TaskItem> tasks = new BindingList<TaskItem>();
+		private DataGridView dgvAllTasks;
+      private string currentUsername = string.Empty;
+
+		// Build the form title using application name and current username (if any)
+		private string GetFormTitle()
+		{
+			const string appName = "MinhKhang.exe- CONNECTED TO   ";
+			const string appName2 = "Activation  ";
+			if (!string.IsNullOrEmpty(currentUsername))
+				return $"{appName} : {currentUsername}";
+			var userFromInput = maskedTextBox1?.Text;
+			if (!string.IsNullOrWhiteSpace(userFromInput))
+				return $"{appName} : {userFromInput} - {appName2}  : {Activation}";
+			return appName;
+		}
+
+		public Form1()
+		{
+			InitializeComponent();
+		}
+
+		private void Form1_Load(object sender, EventArgs e)
+		{
+            // Set window title using application name and current username (if present)
+			this.Text = GetFormTitle();
+
+			// Khởi tạo DataGridView hiển thị All Task
+			dgvAllTasks = new DataGridView
+			{
+				Dock = DockStyle.Fill,
+				AutoGenerateColumns = false,
+				DataSource = tasks
+			};
+
+			dgvAllTasks.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Stt", DataPropertyName = "Stt" });
+			dgvAllTasks.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Tên", DataPropertyName = "Ten" });
+			dgvAllTasks.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Thời gian hoàn thành", DataPropertyName = "ThoiGianHoanThanh" });
+			dgvAllTasks.Columns.Add(new DataGridViewCheckBoxColumn { HeaderText = "Quan trọng", DataPropertyName = "QuanTrong" });
+			dgvAllTasks.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Lĩnh vực", DataPropertyName = "LinhVuc" });
+			dgvAllTasks.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Nội dung", DataPropertyName = "NoiDung" });
+
+            // Thêm DataGridView vào groupBox4 (all task) từ Designer
+			if (groupBox4 != null)
+			{
+				groupBox4.Controls.Add(dgvAllTasks);
+			}
+
+			// Đặt mật khẩu hiển thị dấu *
+			maskedTextBox2.PasswordChar = '*';
+		}
+		bool dangnhap = false;
+		// Đăng nhập
+		private void button3_Click(object sender, EventArgs e)
+		{
+			string username = maskedTextBox1.Text;
+			string password = maskedTextBox2.Text;
+
+			if ((username == "MinhKhang1995" && password == "123456987@admin") ||
+				(username == "Administrator" && password == "123456987@admin") ||
+				(username == "Test" && password == "test@123") ||
+				(username == "TurboLines" && password == "TurboLines@123"))
+			{
+				currentUsername = username;
+				ttdangnhap.Text = "Đã Đăng nhập "; 
+				label2.Text = currentUsername;
+				dangnhap = true;
+				if (username == "MinhKhang1995" || username == "Administrator")
+				{
+					label79.Text= "Administrator(1003.269.105)";
+					label79.ForeColor= Color.Green;
+				}
+				else
+				{
+					label79.Text = "NoServer";
+					label79.ForeColor = Color.Red;
+				}
+				if (label26 != null) label26.Text = currentUsername; // hiển thị tên người dùng lên label26
+				tabControl1.SelectedIndex = 1; // sang tab thứ hai
+				// Update window title to include username
+				this.Text = GetFormTitle();
+
+				// Show a tray balloon notification (compatible with .NET Framework WinForms)
+				ShowBalloonNotification(
+					"Xin chào người dùng ",
+					"Bắt đầu quá trình làm việc của bạn "
+				);
+			}
+			else
+			{
+				ShowBalloonNotification(
+					"Báo lỗi tài khoản  ",
+					"nếu sai tài khoản mật khẩu quá 03 lần thì vui lòng liên hệ quản trị viên 	"
+				);
+				MessageBox.Show("Sai tài khoản hoặc mật khẩu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+			}
+		}
+
+		private void ShowBalloonNotification(string title, string message, int timeoutMs = 5000)
+		{
+			try
+			{
+				var ni = new NotifyIcon
+				{
+					Icon = SystemIcons.Application,
+					Visible = true,
+					BalloonTipTitle = title,
+					BalloonTipText = message,
+					BalloonTipIcon = ToolTipIcon.Info
+				};
+
+				// Show the balloon tip. Some systems expect a small positive value.
+				ni.ShowBalloonTip(Math.Max(1000, timeoutMs));
+
+				// Dispose the notify icon after a delay to ensure the balloon is shown.
+				var timer = new System.Windows.Forms.Timer { Interval = Math.Max(1500, timeoutMs + 500) };
+				timer.Tick += (s, e) =>
+				{
+					timer.Stop();
+					timer.Dispose();
+					try
+					{
+						ni.Visible = false;
+						ni.Dispose();
+					}
+					catch { /* swallow */ }
+				};
+				timer.Start();
+			}
+			catch
+			{
+				// Fallback to MessageBox if tray notifications fail
+				try { MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Information); } catch { }
+			}
+		}
+
+		// Button 5: mở file TKB
+		private void button5_Click(object sender, EventArgs e)
+		{
+			tabControl1.SelectedIndex = 4;
+		}
+
+		// Button 6: mở website
+		private void button6_Click(object sender, EventArgs e)
+		{
+			string url = "https://hoctructuyen.hcm.edu.vn/";
+			try
+			{
+				System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+				{
+					FileName = url,
+					UseShellExecute = true
+				});
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Không thể mở trang web: " + ex.Message);
+			}
+		}
+
+		// Giới thiệu
+		private void giớiThiệuToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			MessageBox.Show("Hoàng Minh Khang_(C) copyright by MinhKhang\nCảm ơn vì sử dụng ");
+		}
+
+		// Đăng nhập không tài khoản
+		private void button4_Click(object sender, EventArgs e)
+		{
+			MessageBox.Show("Bạn Đã đăng nhập với không tài khoản\nCác thông tin sẽ không khả dụng ");
+			tabControl1.SelectedIndex = 1;
+		}
+
+		// Thoát
+		private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Application.Exit(); 
+		}
+
+		// ================== PHẦN TÁC VỤ ==================
+
+		private void RecalculateStt()
+		{
+			for (int i = 0; i < tasks.Count; i++) tasks[i].Stt = i + 1;
+			dgvAllTasks?.Refresh();
+		}
+
+		// Thêm tác vụ: dọn form để nhập
+		private void button13_Click_Add(object sender, EventArgs e)
+		{
+			richTextBox1.Text = string.Empty; // tên
+			maskedTextBox3.Text = string.Empty; // giờ
+			maskedTextBox4.Text = string.Empty; // ngày
+			checkBox3.Checked = false; // quan trọng
+			richTextBox2.Text = string.Empty; // lĩnh vực
+			richTextBox3.Text = string.Empty; // nội dung
+		}
+
+		// Lưu tác vụ (thêm vào danh sách)
+		private void button8_Click_Save(object sender, EventArgs e)
+		{
+			DateTime combined = DateTime.Now;
+			string dateText = maskedTextBox4.Text.Trim();
+			string timeText = maskedTextBox3.Text.Trim();
+			DateTime datePart, timePart;
+			if (!string.IsNullOrEmpty(dateText) && !string.IsNullOrEmpty(timeText) &&
+				DateTime.TryParseExact(dateText, new[] { "dd/MM/yyyy", "d/M/yyyy" }, CultureInfo.InvariantCulture, DateTimeStyles.None, out datePart) &&
+				DateTime.TryParseExact(timeText, new[] { "HH:mm", "H:mm" }, CultureInfo.InvariantCulture, DateTimeStyles.None, out timePart))
+			{
+				combined = datePart.Date + timePart.TimeOfDay;
+			}
+
+			var item = new TaskItem
+			{
+				Ten = richTextBox1.Text.Trim(),
+				ThoiGianHoanThanh = combined,
+				QuanTrong = checkBox3.Checked,
+				LinhVuc = richTextBox2.Text.Trim(),
+				NoiDung = richTextBox3.Text.Trim()
+			};
+			tasks.Add(item);
+			RecalculateStt();
+		}
+
+		// Hủy nhập
+		private void button9_Click_Cancel(object sender, EventArgs e)
+		{
+			richTextBox1.Text = string.Empty;
+			maskedTextBox3.Text = string.Empty;
+			maskedTextBox4.Text = string.Empty;
+			checkBox3.Checked = false;
+			richTextBox2.Text = string.Empty;
+			richTextBox3.Text = string.Empty;
+		}
+
+		// Xóa tác vụ được chọn
+		private void button10_Click_Delete(object sender, EventArgs e)
+		{
+			if (dgvAllTasks == null) return;
+			if (dgvAllTasks.SelectedRows.Count == 0) return;
+			var toRemove = new List<TaskItem>();
+			foreach (DataGridViewRow r in dgvAllTasks.SelectedRows)
+			{
+				if (r.DataBoundItem is TaskItem t) toRemove.Add(t);
+			}
+			foreach (var t in toRemove) tasks.Remove(t);
+			RecalculateStt();
+		}
+
+		// Import tasks from TXT (tab-separated). Header expected in first line.
+		private void button11_Click_Import(object sender, EventArgs e)
+		{
+			using (var ofd = new OpenFileDialog())
+			{
+				ofd.Filter = "Text files|*.txt|All files|*.*";
+				if (ofd.ShowDialog() != DialogResult.OK) return;
+				try
+				{
+					var lines = File.ReadAllLines(ofd.FileName, Encoding.UTF8);
+					for (int i = 1; i < lines.Length; i++)
+					{
+						var parts = lines[i].Split('\t');
+						if (parts.Length < 5) continue;
+						DateTime dt;
+						DateTime.TryParse(parts[2], out dt);
+						bool qt = parts[3].Trim().ToLower() == "true" || parts[3].Trim() == "1" || parts[3].Trim().ToLower() == "x";
+						var t = new TaskItem { Ten = parts[1], ThoiGianHoanThanh = dt, QuanTrong = qt, LinhVuc = parts[4], NoiDung = parts.Length > 5 ? parts[5] : string.Empty };
+						tasks.Add(t);
+					}
+					RecalculateStt();
+					MessageBox.Show("Import thành công");
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show("Không thể import: " + ex.Message);
+				}
+			}
+		}
+
+		// Export tasks to TXT (tab-separated)
+		private void button12_Click_Export(object sender, EventArgs e)
+		{
+			using (var sfd = new SaveFileDialog())
+			{
+				sfd.Filter = "Text files|*.txt|All files|*.*";
+				if (sfd.ShowDialog() != DialogResult.OK) return;
+				try
+				{
+					using (var sw = new StreamWriter(sfd.FileName, false, Encoding.UTF8))
+					{
+						sw.WriteLine("Stt\tTên\tThời gian hoàn thành\tQuan trọng\tLĩnh vực\tNội dung");
+						foreach (var t in tasks)
+						{
+							sw.WriteLine($"{t.Stt}\t{t.Ten}\t{t.ThoiGianHoanThanh:dd/MM/yyyy HH:mm}\t{t.QuanTrong}\t{t.LinhVuc}\t{t.NoiDung}");
+						}
+					}
+					MessageBox.Show("Export thành công");
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show("Không thể export: " + ex.Message);
+				}
+			}
+		}
+
+		private void kếtThúcPhiênLàmViệcToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+          // Clear current user and update title when ending session
+		  MessageBox.Show("chúng tôi khuyên bạn nên thoát phần mềm vì lý do bảo mật , Xóa toàn bộ ô đăng nhập  ", "Kết thúc phiên làm việc ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			currentUsername = string.Empty;
+			ttdangnhap.Text = "Đẵ Đăng Xuất "; 
+			maskedTextBox2.Text = "";
+			pictureBox3.Visible = false;
+			tableLayoutPanel3.Visible=false;
+			dangnhap = false; 
+			this.Text = GetFormTitle();
+			tabControl1.SelectedIndex = 0;
+			dangnhap = false;
+		}
+
+		private void aboutThisApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			MessageBox.Show("Xin chào , đây là Application 3 của Hoàng Minh Khang "); 
+		}
+
+		private void tabPage4_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void documentaryToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			tabControl1.SelectedIndex = 3;
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			string ngdung = maskedTextBox1.Text;
+			if (ngdung == "MinhKhang1995"  || ngdung == "Administrator" || ngdung == "Test" || ngdung == "TurboLines")
+			{
+				MessageBox.Show("Chúng tôi tìm thấy tài khoản tên này " ,ngdung , MessageBoxButtons.OK, MessageBoxIcon.Information);
+			}
+			else
+			{
+				MessageBox.Show("Có thể bạn đã nhập sai , chúng tôi không tìm thấy tài khoản nào ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+			}
+		}
+
+		private void button11_Click_1(object sender, EventArgs e)
+		{
+			using (var ofd = new OpenFileDialog())
+			{
+				ofd.Filter = "Text files|*.txt|All files|*.*";
+				if (ofd.ShowDialog() != DialogResult.OK) return;
+				try
+				{
+					var lines = File.ReadAllLines(ofd.FileName, Encoding.UTF8);
+					for (int i = 1; i < lines.Length; i++)
+					{
+						var parts = lines[i].Split('\t');
+						if (parts.Length < 5) continue;
+						DateTime dt;
+						DateTime.TryParse(parts[2], out dt);
+						bool qt = parts[3].Trim().ToLower() == "true" || parts[3].Trim() == "1" || parts[3].Trim().ToLower() == "x";
+						var t = new TaskItem { Ten = parts[1], ThoiGianHoanThanh = dt, QuanTrong = qt, LinhVuc = parts[4], NoiDung = parts.Length > 5 ? parts[5] : string.Empty };
+						tasks.Add(t);
+					}
+					RecalculateStt();
+					MessageBox.Show("Import thành công");
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show("Không thể import: " + ex.Message);
+				}
+			}
+		}
+
+		private void button12_Click_1(object sender, EventArgs e)
+		{
+			using (var sfd = new SaveFileDialog())
+			{
+				sfd.Filter = "Text files|*.txt|All files|*.*";
+				if (sfd.ShowDialog() != DialogResult.OK) return;
+				try
+				{
+					using (var sw = new StreamWriter(sfd.FileName, false, Encoding.UTF8))
+					{
+						sw.WriteLine("Stt\tTên\tThời gian hoàn thành\tQuan trọng\tLĩnh vực\tNội dung");
+						foreach (var t in tasks)
+						{
+							sw.WriteLine($"{t.Stt}\t{t.Ten}\t{t.ThoiGianHoanThanh:dd/MM/yyyy HH:mm}\t{t.QuanTrong}\t{t.LinhVuc}\t{t.NoiDung}");
+						}
+					}
+					MessageBox.Show("Export thành công");
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show("Không thể export: " + ex.Message);
+				}
+			}
+		}
+
+		private void button13_Click_1(object sender, EventArgs e)
+		{
+			richTextBox1.Text = string.Empty; // tên
+			maskedTextBox3.Text = string.Empty; // giờ
+			maskedTextBox4.Text = string.Empty; // ngày
+			checkBox3.Checked = false; // quan trọng
+			richTextBox2.Text = string.Empty; // lĩnh vực
+			richTextBox3.Text = string.Empty; // nội dung
+		}
+
+		private void button10_Click_1(object sender, EventArgs e)
+		{
+
+			if (dgvAllTasks == null) return;
+			if (dgvAllTasks.SelectedRows.Count == 0) return;
+			var toRemove = new List<TaskItem>();
+			foreach (DataGridViewRow r in dgvAllTasks.SelectedRows)
+			{
+				if (r.DataBoundItem is TaskItem t) toRemove.Add(t);
+			}
+			foreach (var t in toRemove) tasks.Remove(t);
+			RecalculateStt();
+		}
+
+		private void button9_Click_1(object sender, EventArgs e)
+		{
+			richTextBox1.Text = string.Empty;
+			maskedTextBox3.Text = string.Empty;
+			maskedTextBox4.Text = string.Empty;
+			checkBox3.Checked = false;
+			richTextBox2.Text = string.Empty;
+			richTextBox3.Text = string.Empty;
+		}
+
+		private void button8_Click_1(object sender, EventArgs e)
+		{
+			DateTime combined = DateTime.Now;
+			string dateText = maskedTextBox4.Text.Trim();
+			string timeText = maskedTextBox3.Text.Trim();
+			DateTime datePart, timePart;
+			if (!string.IsNullOrEmpty(dateText) && !string.IsNullOrEmpty(timeText) &&
+				DateTime.TryParseExact(dateText, new[] { "dd/MM/yyyy", "d/M/yyyy" }, CultureInfo.InvariantCulture, DateTimeStyles.None, out datePart) &&
+				DateTime.TryParseExact(timeText, new[] { "HH:mm", "H:mm" }, CultureInfo.InvariantCulture, DateTimeStyles.None, out timePart))
+			{
+				combined = datePart.Date + timePart.TimeOfDay;
+			}
+
+			var item = new TaskItem
+			{
+				Ten = richTextBox1.Text.Trim(),
+				ThoiGianHoanThanh = combined,
+				QuanTrong = checkBox3.Checked,
+				LinhVuc = richTextBox2.Text.Trim(),
+				NoiDung = richTextBox3.Text.Trim()
+			};
+			tasks.Add(item);
+			RecalculateStt();
+		}
+
+		private void xácThựcĐăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			tabControl1.SelectedIndex = 0;
+		}
+
+		private void xácThựcĐăngNhậpToolStripMenuItem_Click_1(object sender, EventArgs e)
+		{
+			tabControl1.SelectedIndex = 0;
+		}
+
+		private void startToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			tabControl1.SelectedIndex = 4;
+		}
+
+		private void stopToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			tabControl1.SelectedIndex = 1; 
+		}
+
+		private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			MessageBox.Show("ImagePreviewer :: Version 1.0" , "Verison--image" , MessageBoxButtons.OK , MessageBoxIcon.Information);
+		}
+
+		private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			tabControl1.SelectedIndex = 5 ; 
+		}
+		bool Activation=false ;
+		private void button14_Click(object sender, EventArgs e)
+		{
+			string cdkey = richTextBox5.Text;
+			if (cdkey == "10035-AAA13-39dsa-33318-32042") 
+			{
+				MessageBox.Show("CD Key hợp lệ! Cảm ơn bạn đã kích hoạt sản phẩm.", "Kích hoạt)", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				Activation = true;
+			}
+			else
+			{
+				MessageBox.Show("CD Key không hợp lệ. Vui lòng kiểm tra lại và thử lại.", "Kích hoạt", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+
+		private void label26_Click(object sender, EventArgs e)
+		{
+			// Khi click lên label, hiển thị tên người dùng hiện tại
+			var user = !string.IsNullOrEmpty(currentUsername) ? currentUsername : maskedTextBox1.Text;
+			if (string.IsNullOrEmpty(user))
+				MessageBox.Show("Chưa có tên người dùng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			else
+				MessageBox.Show("Người dùng hiện tại: " + user, "Người dùng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+		}
+
+		private void label29_Click(object sender, EventArgs e)
+		{
+			var user = !string.IsNullOrEmpty(currentUsername) ? currentUsername : maskedTextBox1.Text;
+			if (string.IsNullOrWhiteSpace(user))
+			{
+				MessageBox.Show("Chưa có tên người dùng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				return;
+			}
+
+			string role;
+			var u = user.ToLowerInvariant();
+			if (u == "administrator" || u.Contains("admin"))
+				role = "Quản trị viên ";
+			else if (u == "minhkhang1995")
+				role = "Hoàng Minh Khang ";
+			else if (u == "turbolines")
+				role = "NguyenCat";
+			else if (u == "test")
+				role = "Người kiểm tra";
+			else if (u.Contains("manager") || u.Contains("mod"))
+				role = "Quản lý / Điều hành";
+			else if (u.Contains("guest") || u.Contains("anon"))
+				role = "Khách";
+			else
+				role = "Người dùng chuẩn";
+
+			if (label29 != null) label29.Text = role;
+			MessageBox.Show($"Người dùng: {user}\nPhân loại: {role}", "Thông tin người dùng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+		}
+
+		private void richTextBox5_TextChanged(object sender, EventArgs e)
+		{
+			
+		}
+
+		private void label31_Click(object sender, EventArgs e)
+		{
+			if (currentUsername== "MinhKhang1995" || currentUsername=="Administrator")
+			{
+				Activation=true;
+			}
+			if (Activation)
+			{
+				if (label31 != null)
+				{
+					label31.Text = "Đã kích hoạt";
+				}
+			}
+			else
+			{
+				if (label31 != null)
+				{
+					label31.Text = "Chưa kích hoạt";
+				}
+			}
+		}
+
+		private void label33_Click(object sender, EventArgs e)
+		{
+			if (richTextBox5.Text == "")
+			{
+				label33.Text = "Không có sẵn "; 
+			}
+			else
+			{
+				label33.Text= richTextBox5.Text;
+			}
+		}
+
+		private void label35_Click(object sender, EventArgs e)
+		{
+			if (currentUsername== "Administrator" || currentUsername == "MinhKhang1995")
+			{
+				label35.Text = "Có"; 
+			}
+			else
+			{
+				label35.Text = "Không";
+			}
+		}
+
+		private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			tabControl1.SelectedIndex = 0;
+		}
+
+		private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			tabControl1.SelectedIndex = 2; 
+		}
+
+		
+
+		private void pictureBox3_Click(object sender, EventArgs e)
+		{
+
+			// If you later need to hide the picture and release its image to free resources,
+			// you can call:
+			// pictureBox3.Visible = false;
+			// pictureBox3.Image?.Dispose();
+			// pictureBox3.Image = null;
+		}
+
+		private void progressBar1_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void tabPage7_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void button15_Click(object sender, EventArgs e)
+		{
+			/*
+			// Export All Task to PDF using a Word template, using late-binding (no compile-time reference to Microsoft.Office.Interop required).
+			string defaultTemplate = @"C:\Users\hoang\OneDrive\Máy tính\project\PRO3\Application3\Export to PDF .docx";
+			string templatePath = defaultTemplate;
+			if (!File.Exists(templatePath))
+			{
+				using (var ofd = new OpenFileDialog())
+				{
+					ofd.Filter = "Word files|*.docx;*.doc|All files|*.*";
+					ofd.Title = "Select Word template for PDF export (optional)";
+					if (ofd.ShowDialog() == DialogResult.OK)
+					{
+						templatePath = ofd.FileName;
+					}
+					else
+					{
+						MessageBox.Show("Template file not found: " + defaultTemplate, "Export to PDF", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+						return;
+					}
+				}
+			}
+
+			using (var sfd = new SaveFileDialog())
+			{
+				sfd.Filter = "PDF files|*.pdf";
+				sfd.FileName = "TasksExport.pdf";
+				if (sfd.ShowDialog() != DialogResult.OK) return;
+
+				Type wordType = Type.GetTypeFromProgID("Word.Application");
+				if (wordType == null)
+				{
+					MessageBox.Show("Microsoft Word is not installed or not available on this machine.", "Export to PDF", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					return;
+				}
+
+				dynamic wordApp = null;
+				dynamic doc = null;
+				dynamic table = null;
+				dynamic range = null;
+
+				try
+				{
+					// Create Word application instance via COM late-binding
+					wordApp = Activator.CreateInstance(wordType);
+					wordApp.Visible = false;
+					// wdAlertsNone = 0
+					wordApp.DisplayAlerts = 0;
+
+					// Open document (use minimal arguments; COM will use defaults)
+					doc = wordApp.Documents.Open(templatePath);
+
+					// Insert a table at the end of document with task data
+					range = doc.Content;
+					// wdCollapseEnd = 0
+					range.Collapse(0);
+					range.InsertParagraphAfter();
+					range = doc.Content;
+					range.Collapse(0);
+
+					int rowCount = Math.Max(1, tasks.Count) + 1; // header + tasks (or one row for "No tasks")
+					int colCount = 6;
+					table = doc.Tables.Add(range, rowCount, colCount);
+					table.Borders.Enable = 1;
+
+					// Header
+					table.Cell(1, 1).Range.Text = "Stt";
+					table.Cell(1, 2).Range.Text = "Tên";
+					table.Cell(1, 3).Range.Text = "Thời gian hoàn thành";
+					table.Cell(1, 4).Range.Text = "Quan trọng";
+					table.Cell(1, 5).Range.Text = "Lĩnh vực";
+					table.Cell(1, 6).Range.Text = "Nội dung";
+
+					if (tasks.Count == 0)
+					{
+						table.Cell(2, 1).Range.Text = "-";
+						table.Cell(2, 2).Range.Text = "Không có tác vụ";
+						for (int c = 3; c <= colCount; c++) table.Cell(2, c).Range.Text = "-";
+					}
+					else
+					{
+						for (int i = 0; i < tasks.Count; i++)
+						{
+							var t = tasks[i];
+							int r = i + 2;
+							table.Cell(r, 1).Range.Text = t.Stt.ToString();
+							table.Cell(r, 2).Range.Text = t.Ten ?? string.Empty;
+							table.Cell(r, 3).Range.Text = t.ThoiGianHoanThanh.ToString("dd/MM/yyyy HH:mm");
+							table.Cell(r, 4).Range.Text = t.QuanTrong ? "X" : "";
+							table.Cell(r, 5).Range.Text = t.LinhVuc ?? string.Empty;
+							table.Cell(r, 6).Range.Text = t.NoiDung ?? string.Empty;
+						}
+					}
+
+					// Save as PDF
+					object outPath = sfd.FileName;
+					// wdFormatPDF = 17
+					doc.SaveAs2(outPath, 17);
+
+					MessageBox.Show("Export to PDF thành công:\n" + sfd.FileName, "Export to PDF", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+					try { if (table != null) System.Runtime.InteropServices.Marshal.ReleaseComObject(table); } catch { }
+					table = null;
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show("Không thể xuất PDF: " + ex.Message, "Export to PDF", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}
+				finally
+				{
+					try
+					{
+						if (range != null) { System.Runtime.InteropServices.Marshal.ReleaseComObject(range); range = null; }
+					}
+					catch { }
+
+					try
+					{
+						if (doc != null)
+						{
+							// Close(false) maps to Close(WdSaveChanges.wdDoNotSaveChanges)
+							doc.Close(false);
+							System.Runtime.InteropServices.Marshal.ReleaseComObject(doc);
+							doc = null;
+						}
+					}
+					catch { }
+
+					try
+					{
+						if (wordApp != null)
+						{
+							// Quit(false) to not save changes
+							wordApp.Quit(false);
+							System.Runtime.InteropServices.Marshal.ReleaseComObject(wordApp);
+							wordApp = null;
+						}
+					}
+					catch { }
+
+					GC.Collect();
+					GC.WaitForPendingFinalizers();
+				}
+			}*/
+		}
+
+		private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			tabControl1.SelectedIndex = 0; 
+		}
+
+		private void thôngTinChungToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			tabControl1.SelectedIndex = 1;
+		}
+
+		private void tácVụToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			tabControl1.SelectedIndex = 2;
+		}
+
+		private void documentaryToolStripMenuItem1_Click(object sender, EventArgs e)
+		{
+			tabControl1.SelectedIndex = 3;
+		}
+
+		private void thờiKhóaBiểuToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			tabControl1.SelectedIndex = 4;
+		}
+
+		private void càiĐặtToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			tabControl1.SelectedIndex = 5;
+		}
+
+		private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			MessageBox.Show("Nếu bạn là quản trị viên , vui lòng sử dụng phần mềm Visual Studio để chình sửa " , "Thông tin cần sửa " , MessageBoxButtons.OKCancel , MessageBoxIcon.Exclamation ); 
+		}
+
+		private void button16_Click(object sender, EventArgs e)
+		{
+			DialogResult resu = MessageBox.Show("Bạn thấy thời khóa biểu này hết hạn và yêu cầu cập nhật " , "Xác nhận "  , MessageBoxButtons.YesNo , MessageBoxIcon.Warning); 
+			if (resu== DialogResult.Yes)
+			{
+				MessageBox.Show("Cảm ơn bạn đã đóng góp ý kiến , chúng tôi sẽ cập nhật thời khóa biểu sớm nhất có thể ", "Cập nhật TKB ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			}
+			
+		}
+
+		private void button17_Click(object sender, EventArgs e)
+		{
+			DialogResult SDS= MessageBox.Show("Báo cáo " , "report" , MessageBoxButtons.YesNo , MessageBoxIcon.Information);
+			
+		}
+
+		private void progressBar2_Click(object sender, EventArgs e)
+		{
+			// Set progress bar to 100% (use Maximum to be robust if max != 100)
+			
+		}
+
+		private void label63_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			Application.Exit(); 
+		}
+
+		private void label65_Click(object sender, EventArgs e)
+		{
+			MessageBox.Show("Nếu bạn nhập sai mã khu vực - đồng nghĩa việc tài khoản của bạn không hợp lệ " , "Info" , MessageBoxButtons.OK , MessageBoxIcon.Information );
+		}
+
+		private void button18_Click(object sender, EventArgs e)
+		{
+			if (dangnhap==true)
+			{
+				// Ensure the picture is visible
+				pictureBox3.Visible = true;
+				tableLayoutPanel3.Visible= true;
+				progressBar2.Value = progressBar2.Maximum;
+			}
+			else
+			{
+				MessageBox.Show("Vui lòng đăng nhập để sử dụng chức năng này " , "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+			}
+		}
+
+		private void button19_Click(object sender, EventArgs e)
+		{
+			tabControl1.SelectedIndex = 0;
+		}
+
+		private void groupBox9_Enter(object sender, EventArgs e)
+		{
+
+		}
+
+		private void button20_Click(object sender, EventArgs e)
+		{
+			groupBox9.Visible=false;
+		}
+
+		private void button21_Click(object sender, EventArgs e)
+		{
+			groupBox9.Visible = true;
+
+		}
+
+		private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+
+		private void label2_Click(object sender, EventArgs e)
+		{
+			if (dangnhap)
+			{
+				label2.Text=currentUsername;
+			}
+		}
+
+		private void button23_Click(object sender, EventArgs e)
+		{
+			tabControl1.SelectedIndex = 5; 
+		}
+
+		private void groupBox1_Enter(object sender, EventArgs e)
+		{
+
+		}
+
+		private void button22_Click(object sender, EventArgs e)
+		{
+			groupBox1.Visible = true; 
+		}
+
+		private void button24_Click(object sender, EventArgs e)
+		{
+			tabControl1.SelectedIndex = 4;
+		}
+
+		private void button25_Click(object sender, EventArgs e)
+		{
+			Application.Exit();
+		}
+
+		private void ttdangnhap_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void groupBox12_Enter(object sender, EventArgs e)
+		{
+
+		}
+
+		private void button26_Click(object sender, EventArgs e)
+		{
+			groupBox12.Visible = false; 
+		}
+
+		private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+		{
+
+		}
+
+		private void checkBox5_CheckedChanged(object sender, EventArgs e)
+		{
+			//if (menuStrip1 == null) return;
+			// Hide the menu strip when checkbox5 is checked, show it when unchecked
+			menuStrip1.Visible = !checkBox5.Checked;
+		}
+
+		private void checkBox6_CheckedChanged(object sender, EventArgs e)
+		{
+			if (!checkBox6.Checked)
+				return;
+
+			var traloi = MessageBox.Show("Thao tác này sẽ ngắt kết nối với máy chủ của bạn - bạn không thể tiếp tục sử dụng các chức năng liên quan trừ khi bạn khởi động lại phần mềm ", "Đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+			if (traloi == DialogResult.Yes)
+			{
+				dangnhap = false;
+				currentUsername = string.Empty;
+				ttdangnhap.Text = "Đã Đăng Xuất";
+				maskedTextBox2.Text = "";
+				pictureBox3.Visible = false;
+				maskedTextBox3.Visible = false;
+				groupBox1.Visible = false;
+				tabControl1.SelectedIndex = 0;
+				button22.Visible = false; 
+				// Uncheck without retriggering the handler
+				checkBox6.CheckedChanged -= checkBox6_CheckedChanged;
+				checkBox6.Checked = false;
+				checkBox6.CheckedChanged += checkBox6_CheckedChanged;
+			}
+			else
+			{
+				// User cancelled: revert the checkbox without retriggering the handler
+				checkBox6.CheckedChanged -= checkBox6_CheckedChanged;
+				checkBox6.Checked = false;
+				checkBox6.CheckedChanged += checkBox6_CheckedChanged;
+			}
+		}
+
+		private void checkBox7_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void button27_Click(object sender, EventArgs e)
+		{
+			
+		}
+
+		private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+
+		private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			MessageBox.Show("Đây là phần mở rộng của phần mềm  , khi bạn nhận được code này từ quản trị viên , bạn có một lần sử dụng để đăng nhập .Sau đó sẽ bị vô hiệu hóa để đảm bảo tính bảo một " , "PREapplication" , MessageBoxButtons.OK, MessageBoxIcon.Information);
+		}
+
+		private void label79_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void toolStripComboBox1_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void CuaSoIn_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void checkBox8_CheckedChanged(object sender, EventArgs e)
+		{
+			CuaSoIn.Visible=!checkBox8.Checked;
+		}
+
+		private void button30_Click(object sender, EventArgs e)
+		{
+			// Switch to the PrintPreview tab
+			tabControl1.SelectedIndex = 6;
+
+			try
+			{
+				// Ensure both picture boxes exist
+				if (pictureBox3 == null || CuaSoIn == null)
+				{
+					MessageBox.Show("Không tìm thấy điều khiển ảnh.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					return;
+				}
+
+				// If there is an image in pictureBox3, clone it into CuaSoIn to avoid shared references
+				if (pictureBox3.Image != null)
+				{
+					Image previous = CuaSoIn.Image;
+					Image newImage = null;
+
+					try
+					{
+						// Create the new image first. If this throws, we must NOT dispose the previous image.
+						newImage = new Bitmap(pictureBox3.Image);
+
+						// Assign the newly created image to the PictureBox
+						CuaSoIn.Image = newImage;
+						CuaSoIn.SizeMode = PictureBoxSizeMode.Zoom;
+
+						// Prevent disposing the newly assigned image in the finally block
+						newImage = null;
+					}
+					finally
+					{
+						// Dispose the previous image if it existed
+						previous?.Dispose();
+
+						// If newImage is not null here, it means creation succeeded but assignment didn't occur;
+						// dispose it to avoid leaking the bitmap.
+						newImage?.Dispose();
+					}
+				}
+				else
+				{
+					MessageBox.Show("Không có ảnh trong pictureBox3 để hiển thị.", "Print Preview", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Lỗi khi sao chép ảnh: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+	}
+
+}

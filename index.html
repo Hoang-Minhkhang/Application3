@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Application3 - Hoàng Minh Khang 1995 </title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 50px;
+    }
+    h1 {
+      color: #333;
+    }
+    p {
+      font-size: 18px;
+      color: #555;
+    }
+    .download-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 18px;
+      color: #fff;
+      background-color: #0078d7;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .download-btn:hover {
+      background-color: #005a9e;
+    }
+  </style>
+</head>
+<body>
+  <h1>Chào mừng đến với Application3</h1>
+  <p>Bấm nút bên dưới để tải và cài đặt ứng dụng:</p>
+
+  <!-- Link tới file .application trong thư mục app.publish -->
+  <a href="app.publish/Application3.application" class="download-btn">Tải ứng dụng (ClickOnce)</a>
+
+  <!-- Tuỳ chọn thêm link tải trực tiếp file setup.exe -->
+  <br><br>
+  <a href="app.publish/setup.exe" class="download-btn">Tải file Setup trực tiếp</a>
+
+  <p style="margin-top:40px; font-size:14px; color:#777;">
+    Lưu ý: Đây là ứng dụng ClickOnce. Sau khi tải file <code>.application</code>, 
+    hãy mở file đó để bắt đầu quá trình cài đặt.<br>
+    Nếu gặp lỗi, bạn có thể tải file <code>setup.exe</code> để cài đặt trực tiếp.
+  </p>
+</body>
+</html>

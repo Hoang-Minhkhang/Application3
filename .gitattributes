@@ -1,0 +1,7 @@
+*.dll binary
+*.exe binary
+*.ico binary
+*.pdb binary
+*.manifest text eol=lf
+*.application text eol=lf
+*.deploy text eol=lf

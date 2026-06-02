@@ -1,0 +1,126 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
+namespace Application3
+{
+	public partial class Form1 : Form
+	{
+		public Form1()
+		{
+			InitializeComponent();
+		}
+
+		private void đăngNhậpTàiKhoảngKhácToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void button5_Click(object sender, EventArgs e)
+		{
+			// Button 5: mở tệp TKB
+			string filePath = @"C:\Users\hoang\OneDrive\Máy tính\TKB L7.jpg";
+			try
+			{
+				System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+				{
+					FileName = filePath,
+					UseShellExecute = true
+				});
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Không thể mở tệp: " + ex.Message);
+			}
+		}
+
+		private void label8_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void Form1_Load(object sender, EventArgs e)
+		{
+
+		}
+
+		private void button6_Click(object sender, EventArgs e)
+		{
+			string url = "https://hoctructuyen.hcm.edu.vn/";
+			try
+			{
+				System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+				{
+					FileName = url,
+					UseShellExecute = true
+				});
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Không thể mở trang web: " + ex.Message);
+			}
+		}
+
+		private void button3_Click(object sender, EventArgs e)
+		{
+            // Lấy giá trị từ các control đã định nghĩa trong Designer
+			string username = maskedTextBox1.Text;
+			string password = maskedTextBox2.Text;
+
+			// Kiểm tra tài khoản và mật khẩu
+			if (username == "MinhKhang1995" && password == "123456987@admin")
+			{
+				// Nếu đúng thì chuyển sang tab thứ hai
+				tabControl1.SelectedIndex = 1; // tabControl1 là control chứa các tab
+			}
+			else
+			{
+				MessageBox.Show("Sai tài khoản hoặc mật khẩu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+			}
+		}
+
+		private void giớiThiệuToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			MessageBox.Show("Hoàng Minh Khang_(C) copyright byMinhKhang" + "Cảm ơn vì sử dụng ");
+		}
+
+		private void button4_Click(object sender, EventArgs e)
+		{
+			MessageBox.Show("Bạn Đã đăng nhập với không tài khoảng " + "các thông tin sẽ không khả dụng "); 
+		}
+
+		private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			DialogResult tst = MessageBox.Show("Bạn có chắc muốn thoát không?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+			if (tst == DialogResult.Yes)
+			{
+				Application.Exit();
+			}
+		}
+
+		private void maskedTextBox2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+		{
+           // Hiển thị ký tự mật khẩu cho maskedTextBox2 (password)
+			try
+			{
+				maskedTextBox2.PasswordChar = '*';
+			}
+			catch
+			{
+				
+			}
+		}
+
+		private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+		{
+
+		}
+	}
+}

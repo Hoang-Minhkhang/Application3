@@ -1,0 +1,525 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+
+namespace Application3
+{
+	public partial class Form1 : Form
+	{
+		// Model cho một tác vụ
+		private class TaskItem
+		{
+			public int Stt { get; set; }
+			public string Ten { get; set; }
+			public DateTime ThoiGianHoanThanh { get; set; }
+			public bool QuanTrong { get; set; }
+			public string LinhVuc { get; set; }
+			public string NoiDung { get; set; }
+		}
+
+		// Designer event handlers (stubs/wrappers) so Designer references compile
+
+		private void đăngNhậpTàiKhoảngKhácToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			// empty - handled if needed
+		}
+
+		private void maskedTextBox2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+		{
+			// ensure password masking
+			try { maskedTextBox2.PasswordChar = '*'; } catch { }
+		}
+
+		private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+		{
+			// no-op
+		}
+
+		private void label8_Click(object sender, EventArgs e)
+		{
+			// no-op
+		}
+
+		// Wrapper methods to match simple Designer click names
+		private void button13_Click(object sender, EventArgs e) => button13_Click_Add(sender, e);
+		private void button8_Click(object sender, EventArgs e) => button8_Click_Save(sender, e);
+		private void button9_Click(object sender, EventArgs e) => button9_Click_Cancel(sender, e);
+		private void button10_Click(object sender, EventArgs e) => button10_Click_Delete(sender, e);
+		private void button11_Click(object sender, EventArgs e) => button11_Click_Import(sender, e);
+		private void button12_Click(object sender, EventArgs e) => button12_Click_Export(sender, e);
+
+		private BindingList<TaskItem> tasks = new BindingList<TaskItem>();
+		private DataGridView dgvAllTasks;
+      private string currentUsername = string.Empty;
+
+		// Build the form title using application name and current username (if any)
+		private string GetFormTitle()
+		{
+			const string appName = "Application 3";
+			if (!string.IsNullOrEmpty(currentUsername))
+				return $"{appName} - {currentUsername}";
+			var userFromInput = maskedTextBox1?.Text;
+			if (!string.IsNullOrWhiteSpace(userFromInput))
+				return $"{appName} - {userFromInput}";
+			return appName;
+		}
+
+		public Form1()
+		{
+			InitializeComponent();
+		}
+
+		private void Form1_Load(object sender, EventArgs e)
+		{
+            // Set window title using application name and current username (if present)
+			this.Text = GetFormTitle();
+
+			// Khởi tạo DataGridView hiển thị All Task
+			dgvAllTasks = new DataGridView
+			{
+				Dock = DockStyle.Fill,
+				AutoGenerateColumns = false,
+				DataSource = tasks
+			};
+
+			dgvAllTasks.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Stt", DataPropertyName = "Stt" });
+			dgvAllTasks.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Tên", DataPropertyName = "Ten" });
+			dgvAllTasks.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Thời gian hoàn thành", DataPropertyName = "ThoiGianHoanThanh" });
+			dgvAllTasks.Columns.Add(new DataGridViewCheckBoxColumn { HeaderText = "Quan trọng", DataPropertyName = "QuanTrong" });
+			dgvAllTasks.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Lĩnh vực", DataPropertyName = "LinhVuc" });
+			dgvAllTasks.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Nội dung", DataPropertyName = "NoiDung" });
+
+            // Thêm DataGridView vào groupBox4 (all task) từ Designer
+			if (groupBox4 != null)
+			{
+				groupBox4.Controls.Add(dgvAllTasks);
+			}
+
+			// Đặt mật khẩu hiển thị dấu *
+			maskedTextBox2.PasswordChar = '*';
+		}
+
+		// Đăng nhập
+		private void button3_Click(object sender, EventArgs e)
+		{
+			string username = maskedTextBox1.Text;
+			string password = maskedTextBox2.Text;
+
+			if ((username == "MinhKhang1995" && password == "123456987@admin") ||
+				(username == "Administrator" && password == "123456987@admin") ||
+				(username == "Test" && password == "test@123") || 
+				(username == "TurboLines" && password == "TurboLines@123"))
+			{
+				currentUsername = username;
+				if (label26 != null) label26.Text = currentUsername; // hiển thị tên người dùng lên label26
+				tabControl1.SelectedIndex = 1; // sang tab thứ hai
+			}
+			else
+			{
+				MessageBox.Show("Sai tài khoản hoặc mật khẩu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+			}
+		}
+
+		// Button 5: mở file TKB
+		private void button5_Click(object sender, EventArgs e)
+		{
+			tabControl1.SelectedIndex = 4;
+		}
+
+		// Button 6: mở website
+		private void button6_Click(object sender, EventArgs e)
+		{
+			string url = "https://hoctructuyen.hcm.edu.vn/";
+			try
+			{
+				System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+				{
+					FileName = url,
+					UseShellExecute = true
+				});
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Không thể mở trang web: " + ex.Message);
+			}
+		}
+
+		// Giới thiệu
+		private void giớiThiệuToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			MessageBox.Show("Hoàng Minh Khang_(C) copyright by MinhKhang\nCảm ơn vì sử dụng ");
+		}
+
+		// Đăng nhập không tài khoản
+		private void button4_Click(object sender, EventArgs e)
+		{
+			MessageBox.Show("Bạn Đã đăng nhập với không tài khoản\nCác thông tin sẽ không khả dụng ");
+		}
+
+		// Thoát
+		private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			DialogResult tst = MessageBox.Show("Bạn có chắc muốn thoát không?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+			if (tst == DialogResult.Yes)
+			{
+				Application.Exit();
+			}
+		}
+
+        // ================== PHẦN TÁC VỤ ==================
+
+		private void RecalculateStt()
+		{
+			for (int i = 0; i < tasks.Count; i++) tasks[i].Stt = i + 1;
+			dgvAllTasks?.Refresh();
+		}
+
+		// Thêm tác vụ: dọn form để nhập
+		private void button13_Click_Add(object sender, EventArgs e)
+		{
+			richTextBox1.Text = string.Empty; // tên
+			maskedTextBox3.Text = string.Empty; // giờ
+			maskedTextBox4.Text = string.Empty; // ngày
+			checkBox3.Checked = false; // quan trọng
+			richTextBox2.Text = string.Empty; // lĩnh vực
+			richTextBox3.Text = string.Empty; // nội dung
+		}
+
+		// Lưu tác vụ (thêm vào danh sách)
+		private void button8_Click_Save(object sender, EventArgs e)
+		{
+			DateTime combined = DateTime.Now;
+			string dateText = maskedTextBox4.Text.Trim();
+			string timeText = maskedTextBox3.Text.Trim();
+			DateTime datePart, timePart;
+			if (!string.IsNullOrEmpty(dateText) && !string.IsNullOrEmpty(timeText) &&
+				DateTime.TryParseExact(dateText, new[] { "dd/MM/yyyy", "d/M/yyyy" }, CultureInfo.InvariantCulture, DateTimeStyles.None, out datePart) &&
+				DateTime.TryParseExact(timeText, new[] { "HH:mm", "H:mm" }, CultureInfo.InvariantCulture, DateTimeStyles.None, out timePart))
+			{
+				combined = datePart.Date + timePart.TimeOfDay;
+			}
+
+			var item = new TaskItem
+			{
+				Ten = richTextBox1.Text.Trim(),
+				ThoiGianHoanThanh = combined,
+				QuanTrong = checkBox3.Checked,
+				LinhVuc = richTextBox2.Text.Trim(),
+				NoiDung = richTextBox3.Text.Trim()
+			};
+			tasks.Add(item);
+			RecalculateStt();
+		}
+
+		// Hủy nhập
+		private void button9_Click_Cancel(object sender, EventArgs e)
+		{
+			richTextBox1.Text = string.Empty;
+			maskedTextBox3.Text = string.Empty;
+			maskedTextBox4.Text = string.Empty;
+			checkBox3.Checked = false;
+			richTextBox2.Text = string.Empty;
+			richTextBox3.Text = string.Empty;
+		}
+
+		// Xóa tác vụ được chọn
+		private void button10_Click_Delete(object sender, EventArgs e)
+		{
+			if (dgvAllTasks == null) return;
+			if (dgvAllTasks.SelectedRows.Count == 0) return;
+			var toRemove = new List<TaskItem>();
+			foreach (DataGridViewRow r in dgvAllTasks.SelectedRows)
+			{
+				if (r.DataBoundItem is TaskItem t) toRemove.Add(t);
+			}
+			foreach (var t in toRemove) tasks.Remove(t);
+			RecalculateStt();
+		}
+
+		// Import tasks from TXT (tab-separated). Header expected in first line.
+		private void button11_Click_Import(object sender, EventArgs e)
+		{
+			using (var ofd = new OpenFileDialog())
+			{
+				ofd.Filter = "Text files|*.txt|All files|*.*";
+				if (ofd.ShowDialog() != DialogResult.OK) return;
+				try
+				{
+					var lines = File.ReadAllLines(ofd.FileName, Encoding.UTF8);
+					for (int i = 1; i < lines.Length; i++)
+					{
+						var parts = lines[i].Split('\t');
+						if (parts.Length < 5) continue;
+						DateTime dt;
+						DateTime.TryParse(parts[2], out dt);
+						bool qt = parts[3].Trim().ToLower() == "true" || parts[3].Trim() == "1" || parts[3].Trim().ToLower() == "x";
+						var t = new TaskItem { Ten = parts[1], ThoiGianHoanThanh = dt, QuanTrong = qt, LinhVuc = parts[4], NoiDung = parts.Length > 5 ? parts[5] : string.Empty };
+						tasks.Add(t);
+					}
+					RecalculateStt();
+					MessageBox.Show("Import thành công");
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show("Không thể import: " + ex.Message);
+				}
+			}
+		}
+
+		// Export tasks to TXT (tab-separated)
+		private void button12_Click_Export(object sender, EventArgs e)
+		{
+			using (var sfd = new SaveFileDialog())
+			{
+				sfd.Filter = "Text files|*.txt|All files|*.*";
+				if (sfd.ShowDialog() != DialogResult.OK) return;
+				try
+				{
+					using (var sw = new StreamWriter(sfd.FileName, false, Encoding.UTF8))
+					{
+						sw.WriteLine("Stt\tTên\tThời gian hoàn thành\tQuan trọng\tLĩnh vực\tNội dung");
+						foreach (var t in tasks)
+						{
+							sw.WriteLine($"{t.Stt}\t{t.Ten}\t{t.ThoiGianHoanThanh:dd/MM/yyyy HH:mm}\t{t.QuanTrong}\t{t.LinhVuc}\t{t.NoiDung}");
+						}
+					}
+					MessageBox.Show("Export thành công");
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show("Không thể export: " + ex.Message);
+				}
+			}
+		}
+
+		private void kếtThúcPhiênLàmViệcToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			tabControl1.SelectedIndex = 0;
+		}
+
+		private void aboutThisApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			MessageBox.Show("Xin chào , đây là Application 3 của Hoàng Minh Khang "); 
+		}
+
+		private void tabPage4_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void documentaryToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			tabControl1.SelectedIndex = 3;
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			string ngdung = maskedTextBox1.Text;
+			if (ngdung == "MinhKhang1995"  || ngdung == "Administrator" || ngdung == "Test" || ngdung == "TurboLines")
+			{
+				MessageBox.Show("Chúng tôi tìm thấy tài khoản tên này " ,ngdung , MessageBoxButtons.OK, MessageBoxIcon.Information);
+			}
+			else
+			{
+				MessageBox.Show("Có thể bạn đã nhập sai , chúng tôi không tìm thấy tài khoản nào ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+			}
+		}
+
+		private void button11_Click_1(object sender, EventArgs e)
+		{
+			using (var ofd = new OpenFileDialog())
+			{
+				ofd.Filter = "Text files|*.txt|All files|*.*";
+				if (ofd.ShowDialog() != DialogResult.OK) return;
+				try
+				{
+					var lines = File.ReadAllLines(ofd.FileName, Encoding.UTF8);
+					for (int i = 1; i < lines.Length; i++)
+					{
+						var parts = lines[i].Split('\t');
+						if (parts.Length < 5) continue;
+						DateTime dt;
+						DateTime.TryParse(parts[2], out dt);
+						bool qt = parts[3].Trim().ToLower() == "true" || parts[3].Trim() == "1" || parts[3].Trim().ToLower() == "x";
+						var t = new TaskItem { Ten = parts[1], ThoiGianHoanThanh = dt, QuanTrong = qt, LinhVuc = parts[4], NoiDung = parts.Length > 5 ? parts[5] : string.Empty };
+						tasks.Add(t);
+					}
+					RecalculateStt();
+					MessageBox.Show("Import thành công");
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show("Không thể import: " + ex.Message);
+				}
+			}
+		}
+
+		private void button12_Click_1(object sender, EventArgs e)
+		{
+			using (var sfd = new SaveFileDialog())
+			{
+				sfd.Filter = "Text files|*.txt|All files|*.*";
+				if (sfd.ShowDialog() != DialogResult.OK) return;
+				try
+				{
+					using (var sw = new StreamWriter(sfd.FileName, false, Encoding.UTF8))
+					{
+						sw.WriteLine("Stt\tTên\tThời gian hoàn thành\tQuan trọng\tLĩnh vực\tNội dung");
+						foreach (var t in tasks)
+						{
+							sw.WriteLine($"{t.Stt}\t{t.Ten}\t{t.ThoiGianHoanThanh:dd/MM/yyyy HH:mm}\t{t.QuanTrong}\t{t.LinhVuc}\t{t.NoiDung}");
+						}
+					}
+					MessageBox.Show("Export thành công");
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show("Không thể export: " + ex.Message);
+				}
+			}
+		}
+
+		private void button13_Click_1(object sender, EventArgs e)
+		{
+			richTextBox1.Text = string.Empty; // tên
+			maskedTextBox3.Text = string.Empty; // giờ
+			maskedTextBox4.Text = string.Empty; // ngày
+			checkBox3.Checked = false; // quan trọng
+			richTextBox2.Text = string.Empty; // lĩnh vực
+			richTextBox3.Text = string.Empty; // nội dung
+		}
+
+		private void button10_Click_1(object sender, EventArgs e)
+		{
+
+			if (dgvAllTasks == null) return;
+			if (dgvAllTasks.SelectedRows.Count == 0) return;
+			var toRemove = new List<TaskItem>();
+			foreach (DataGridViewRow r in dgvAllTasks.SelectedRows)
+			{
+				if (r.DataBoundItem is TaskItem t) toRemove.Add(t);
+			}
+			foreach (var t in toRemove) tasks.Remove(t);
+			RecalculateStt();
+		}
+
+		private void button9_Click_1(object sender, EventArgs e)
+		{
+			richTextBox1.Text = string.Empty;
+			maskedTextBox3.Text = string.Empty;
+			maskedTextBox4.Text = string.Empty;
+			checkBox3.Checked = false;
+			richTextBox2.Text = string.Empty;
+			richTextBox3.Text = string.Empty;
+		}
+
+		private void button8_Click_1(object sender, EventArgs e)
+		{
+			DateTime combined = DateTime.Now;
+			string dateText = maskedTextBox4.Text.Trim();
+			string timeText = maskedTextBox3.Text.Trim();
+			DateTime datePart, timePart;
+			if (!string.IsNullOrEmpty(dateText) && !string.IsNullOrEmpty(timeText) &&
+				DateTime.TryParseExact(dateText, new[] { "dd/MM/yyyy", "d/M/yyyy" }, CultureInfo.InvariantCulture, DateTimeStyles.None, out datePart) &&
+				DateTime.TryParseExact(timeText, new[] { "HH:mm", "H:mm" }, CultureInfo.InvariantCulture, DateTimeStyles.None, out timePart))
+			{
+				combined = datePart.Date + timePart.TimeOfDay;
+			}
+
+			var item = new TaskItem
+			{
+				Ten = richTextBox1.Text.Trim(),
+				ThoiGianHoanThanh = combined,
+				QuanTrong = checkBox3.Checked,
+				LinhVuc = richTextBox2.Text.Trim(),
+				NoiDung = richTextBox3.Text.Trim()
+			};
+			tasks.Add(item);
+			RecalculateStt();
+		}
+
+		private void xácThựcĐăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			tabControl1.SelectedIndex = 0;
+		}
+
+		private void xácThựcĐăngNhậpToolStripMenuItem_Click_1(object sender, EventArgs e)
+		{
+			tabControl1.SelectedIndex = 0;
+		}
+
+		private void startToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			tabControl1.SelectedIndex = 4;
+		}
+
+		private void stopToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			tabControl1.SelectedIndex = 1; 
+		}
+
+		private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			MessageBox.Show("ImagePreviewer :: Version 1.0" , "Verison--image" , MessageBoxButtons.OK , MessageBoxIcon.Information);
+		}
+
+		private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			tabControl1.SelectedIndex = 5 ; 
+		}
+
+		private void button14_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label26_Click(object sender, EventArgs e)
+		{
+			// Khi click lên label, hiển thị tên người dùng hiện tại
+			var user = !string.IsNullOrEmpty(currentUsername) ? currentUsername : maskedTextBox1.Text;
+			if (string.IsNullOrEmpty(user))
+				MessageBox.Show("Chưa có tên người dùng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			else
+				MessageBox.Show("Người dùng hiện tại: " + user, "Người dùng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+		}
+
+		private void label29_Click(object sender, EventArgs e)
+		{
+			var user = !string.IsNullOrEmpty(currentUsername) ? currentUsername : maskedTextBox1.Text;
+			if (string.IsNullOrWhiteSpace(user))
+			{
+				MessageBox.Show("Chưa có tên người dùng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				return;
+			}
+
+			string role;
+			var u = user.ToLowerInvariant();
+			if (u == "administrator" || u.Contains("admin"))
+				role = "Quản trị viên ";
+			else if (u == "minhkhang1995")
+				role = "Hoàng Minh Khang ";
+			else if (u == "TurboLines")
+				role = "NguyenCat";
+			else if (u == "test")
+				role = "Người kiểm tra";
+			else if (u.Contains("manager") || u.Contains("mod"))
+				role = "Quản lý / Điều hành";
+			else if (u.Contains("guest") || u.Contains("anon"))
+				role = "Khách";
+			else
+				role = "Người dùng chuẩn";
+
+			if (label29 != null) label29.Text = role;
+			MessageBox.Show($"Người dùng: {user}\nPhân loại: {role}", "Thông tin người dùng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+		}
+	}
+}
