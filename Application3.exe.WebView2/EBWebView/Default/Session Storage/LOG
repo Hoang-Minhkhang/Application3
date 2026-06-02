@@ -1,3 +1,8 @@
-2026/05/31-20:23:19.146 ccc Reusing MANIFEST C:\Application3\Application3.exe.WebView2\EBWebView\Default\Session Storage/MANIFEST-000001
-2026/05/31-20:23:19.149 ccc Recovering log #3
-2026/05/31-20:23:19.161 ccc Reusing old log C:\Application3\Application3.exe.WebView2\EBWebView\Default\Session Storage/000003.log 
+2026/06/02-10:33:36.208 3668 Reusing MANIFEST C:\Application3\Application3.exe.WebView2\EBWebView\Default\Session Storage/MANIFEST-000001
+2026/06/02-10:33:36.210 3668 Recovering log #3
+2026/06/02-10:33:36.213 3668 Level-0 table #3: started
+2026/06/02-10:33:36.235 3668 Level-0 table #3: 25012 bytes OK
+2026/06/02-10:33:36.236 3668 Recovering log #4
+2026/06/02-10:33:36.241 3668 Reusing old log C:\Application3\Application3.exe.WebView2\EBWebView\Default\Session Storage/000004.log 
+2026/06/02-10:33:36.245 3668 Delete type=0 #3
+2026/06/02-10:33:36.245 3668 Delete type=2 #5

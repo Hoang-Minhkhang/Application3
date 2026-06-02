@@ -1,3 +1,7 @@
-2026/05/31-20:23:19.601 2dec Reusing MANIFEST C:\Application3\Application3.exe.WebView2\EBWebView\Default\IndexedDB\https_www.bing.com_0.indexeddb.leveldb/MANIFEST-000001
-2026/05/31-20:23:19.603 2dec Recovering log #3
-2026/05/31-20:23:19.604 2dec Reusing old log C:\Application3\Application3.exe.WebView2\EBWebView\Default\IndexedDB\https_www.bing.com_0.indexeddb.leveldb/000003.log 
+2026/06/02-10:33:36.232 49b4 Reusing MANIFEST C:\Application3\Application3.exe.WebView2\EBWebView\Default\IndexedDB\https_www.bing.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/06/02-10:33:36.233 49b4 Recovering log #3
+2026/06/02-10:33:36.234 49b4 Reusing old log C:\Application3\Application3.exe.WebView2\EBWebView\Default\IndexedDB\https_www.bing.com_0.indexeddb.leveldb/000003.log 
+2026/06/02-10:33:37.882 49b4 Level-0 table #5: started
+2026/06/02-10:33:37.887 49b4 Level-0 table #5: 523 bytes OK
+2026/06/02-10:33:37.889 49b4 Delete type=0 #3
+2026/06/02-10:33:37.890 5f44 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)

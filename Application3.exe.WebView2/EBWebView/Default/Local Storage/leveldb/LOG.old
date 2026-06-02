@@ -1,3 +1,6 @@
-2026/05/31-10:37:12.393 6d70 Reusing MANIFEST C:\Application3\Application3.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
-2026/05/31-10:37:12.423 6d70 Recovering log #4
-2026/05/31-10:37:12.433 6d70 Reusing old log C:\Application3\Application3.exe.WebView2\EBWebView\Default\Local Storage\leveldb/000004.log 
+2026/05/31-20:23:18.469 ccc Reusing MANIFEST C:\Application3\Application3.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2026/05/31-20:23:18.511 ccc Recovering log #4
+2026/05/31-20:23:18.523 ccc Reusing old log C:\Application3\Application3.exe.WebView2\EBWebView\Default\Local Storage\leveldb/000004.log 
+2026/05/31-20:26:18.617 97b0 Level-0 table #7: started
+2026/05/31-20:26:18.624 97b0 Level-0 table #7: 37178 bytes OK
+2026/05/31-20:26:18.626 97b0 Delete type=0 #4

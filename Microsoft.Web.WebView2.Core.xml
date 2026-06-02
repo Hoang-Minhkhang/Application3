@@ -4,15 +4,6 @@
         <name>Microsoft.Web.WebView2.Core</name>
     </assembly>
     <members>
-        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2AllowedPortRangeScope">
-            <summary>Specifies the scope for port configuration.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2AllowedPortRangeScope.Default">
-            <summary>Scope applies to all components.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2AllowedPortRangeScope.WebRtc">
-            <summary>Applies only to WebRTC peer-to-peer connection.</summary>
-        </member>
         <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2BoundsMode">
             <summary>Mode for how the Bounds property is interpreted in relation to the RasterizationScale property.</summary>
         </member>
@@ -348,37 +339,6 @@
         <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2DownloadState.Completed">
             <summary>The download completed successfully.</summary>
         </member>
-        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2EnhancedSecurityModeLevel">
-            <summary>Enhanced Security Mode levels.
-            Replaced by `CoreWebView2EnhancedSecurityModeState`.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2EnhancedSecurityModeLevel.Off">
-            <summary>Enhanced Security Mode is turned off.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2EnhancedSecurityModeLevel.Strict">
-            <summary>Enhanced Security Mode is enabled in Strict level. Disables JavaScript
-            Just-in-Time (JIT) compilation and enables additional operating system protections.
-            
-            This level applies enhanced security for all sites but may reduce JavaScript performance.
-            
-            See [Enhanced Security Mode](https://learn.microsoft.com/en-us/DeployEdge/microsoft-edge-security-browse-safer)
-            for more details on what protections are enabled with this level.</summary>
-        </member>
-        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2EnhancedSecurityModeState">
-            <summary>Enhanced Security Mode state.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2EnhancedSecurityModeState.Disabled">
-            <summary>Enhanced Security Mode is disabled.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2EnhancedSecurityModeState.Enabled">
-            <summary>Enhanced Security Mode is enabled. Disables JavaScript
-            Just-in-Time (JIT) compilation and enables additional operating system protections.
-            
-            This applies enhanced security for all sites but may reduce JavaScript performance.
-            
-            See [Enhanced Security Mode](https://learn.microsoft.com/en-us/DeployEdge/microsoft-edge-security-browse-safer)
-            for more details on what protections are enabled when this state is set.</summary>
-        </member>
         <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2FaviconImageFormat">
             <summary>Specifies the image format to use for favicon.</summary>
         </member>
@@ -637,32 +597,6 @@
         <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2NonClientRegionKind.Close">
             <summary>A hit test region in the Webview2 which corresponds to the close
             window control button.</summary>
-        </member>
-        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2OriginFeature">
-            <summary>Specifies the feature types that can be configured for origins.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2OriginFeature.EnhancedSecurityMode">
-            <summary>Specifies enhanced security mode settings for the origin.
-            Enhanced Security Mode provides additional protections by disabling or restricting
-            certain web platform features that may pose security risks, such as JIT compilation,
-            certain JavaScript APIs, and other potentially dangerous capabilities. This feature
-            is particularly useful for protecting against zero-day exploits and reducing attack
-            surface. When enabled for an origin, that origin will have Enhanced Security Mode
-            applied; when disabled, normal security mode is used.
-            Enhanced security mode can be configured globally via EnhancedSecurityModeLevel API on profile.
-            If Enhanced Security Mode is not configured for an origin, the global profile setting will apply.
-            
-            For more information about Enhanced Security Mode, see:
-            https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/security</summary>
-        </member>
-        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2OriginFeatureState">
-            <summary>Specifies the state of an origin feature.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2OriginFeatureState.Enabled">
-            <summary>Sets the enabled state of the  origin feature.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2OriginFeatureState.Disabled">
-            <summary>Sets the disabled state of the  origin feature.</summary>
         </member>
         <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2PdfToolbarItems">
             <summary>Specifies the PDF toolbar item types used for the `ICoreWebView2Settings::put_HiddenPdfToolbarItems` method.</summary>
@@ -1073,15 +1007,6 @@
         <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2ReleaseChannels.Canary">
             <summary>The Canary release channel that is released daily.</summary>
         </member>
-        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2RestartRequestedPriority">
-            <summary>Specifies the restart requested priority level.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2RestartRequestedPriority.Normal">
-            <summary>Developer should remind user to restart.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2RestartRequestedPriority.High">
-            <summary>Developer should prompt user to restart as soon as possible.</summary>
-        </member>
         <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2SaveAsKind">
             <summary>Specifies Save As kind selection options for
             `ICoreWebView2SaveAsUIShowingEventArgs`.
@@ -1205,28 +1130,6 @@
         <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2TextDirectionKind.RightToLeft">
             <summary>Indicates that the notification text is right-to-left.</summary>
         </member>
-        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2TextureStreamErrorKind">
-            <summary>Kinds of errors that can be reported by the `ErrorReceived` event.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2TextureStreamErrorKind.NoVideoTrackStarted">
-            <summary>CreateTexture/PresentTexture and so on should return failed HRESULT if
-            the texture stream is in the stopped state rather than using the
-            error event. But there can be edge cases where the browser process
-            knows the texture stream is in the stopped state and the host app
-            process texture stream doesn't yet know that. Like the 10 second issue
-            or if the script side has stopped the stream.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2TextureStreamErrorKind.TextureError">
-            <summary>The texture already has been removed using CloseTexture.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2TextureStreamErrorKind.TextureInUse">
-            <summary>The texture to be presented is already in use for rendering.
-            Call GetAvailableTexture to determine an available texture to present.
-            The developer can technically call PresentTexture multiple times,
-            but the first call make input texture "in use" until the browser
-            renders it and returns the texture as "recycle" so that it can be a member
-            of available textures.</summary>
-        </member>
         <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2TrackingPreventionLevel">
             <summary>Tracking prevention levels.</summary>
         </member>
@@ -1266,32 +1169,6 @@
             behavior](/microsoft-edge/web-platform/tracking-prevention#current-tracking-prevention-behavior)
             for fine-grained information on what is being blocked with this level and
             can change with different Edge versions.</summary>
-        </member>
-        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2TransportProtocolKind">
-            <summary>Specifies the transport protocol for port configuration.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2TransportProtocolKind.Udp">
-            <summary>User Datagram Protocol - fast, connectionless protocol.</summary>
-        </member>
-        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2UpdateRuntimeStatus">
-            <summary>Status of UpdateRuntime operation result.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2UpdateRuntimeStatus.LatestVersionInstalled">
-            <summary>Latest version of Edge WebView2 Runtime is installed.
-            No update for Edge WebView2 Runtime is available, or Edge WebView2
-            Runtime is updated successfully and latest version is now installed.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2UpdateRuntimeStatus.UpdateAlreadyRunning">
-            <summary>Edge WebView2 Runtime update is already running, which could be
-            triggered by auto update or by other UpdateRuntime request from some app.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2UpdateRuntimeStatus.BlockedByPolicy">
-            <summary>Edge WebView2 Runtime update is blocked by group policy.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2UpdateRuntimeStatus.Failed">
-            <summary>Edge WebView2 Runtime update failed.
-            See `ExtendedError` property of UpdateRuntimeResult for more
-            information about the failure.</summary>
         </member>
         <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus">
             <summary>Indicates the error status values for web navigations.</summary>
@@ -1462,67 +1339,10 @@
         <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2Color.B">
             <summary>Specifies the intensity of the Blue color.</summary>
         </member>
-        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2Matrix4x4">
-            <summary>Matrix that represents a 3D transform. This transform is used to
-            calculate correct coordinates when calling
-            CreateCoreWebView2PointerInfoFromPointerId. This is equivalent to a
-            D2D1_MATRIX_4X4_F</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2Matrix4x4._11">
-            <summary>The value in the first row and first column of the matrix.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2Matrix4x4._12">
-            <summary>The value in the first row and second column of the matrix.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2Matrix4x4._13">
-            <summary>The value in the first row and third column of the matrix.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2Matrix4x4._14">
-            <summary>The value in the first row and fourth column of the matrix.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2Matrix4x4._21">
-            <summary>The value in the second row and first column of the matrix.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2Matrix4x4._22">
-            <summary>The value in the second row and second column of the matrix.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2Matrix4x4._23">
-            <summary>The value in the second row and third column of the matrix.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2Matrix4x4._24">
-            <summary>The value in the second row and fourth column of the matrix.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2Matrix4x4._31">
-            <summary>The value in the third row and first column of the matrix.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2Matrix4x4._32">
-            <summary>The value in the third row and second column of the matrix.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2Matrix4x4._33">
-            <summary>The value in the third row and third column of the matrix.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2Matrix4x4._34">
-            <summary>The value in the third row and fourth column of the matrix.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2Matrix4x4._41">
-            <summary>The value in the fourth row and first column of the matrix.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2Matrix4x4._42">
-            <summary>The value in the fourth row and second column of the matrix.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2Matrix4x4._43">
-            <summary>The value in the fourth row and third column of the matrix.</summary>
-        </member>
-        <member name="F:Microsoft.Web.WebView2.Core.CoreWebView2Matrix4x4._44">
-            <summary>The value in the fourth row and fourth column of the matrix.</summary>
-        </member>
         <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2">
             <summary>
             WebView2 enables you to host web content using the latest Microsoft Edge browser and web technology.</summary>
-            <summary></summary>
             
-            <summary></summary>
-            <summary></summary>
             <summary></summary>
             <summary></summary>
             <summary></summary>
@@ -1983,31 +1803,6 @@
             Please use <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.AddWebResourceRequestedFilter(System.String,Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext,Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestSourceKinds)" /> and
             <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.RemoveWebResourceRequestedFilter(System.String,Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext,Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestSourceKinds)" /> instead.</summary>
         </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2.CustomDataPartitionId">
-            <summary>
-            Gets or sets the custom data partition id of the WebView.
-            </summary><remarks><para>
-            This API requires enabling 2 experimental browser features to work properly.
-            These features will be enabled by default in the future.
-            Before these features are enabled by default, please enable them by ensuring <c>--enable-features=ThirdPartyStoragePartitioning,PartitionedCookies</c> is set in <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions.AdditionalBrowserArguments" /> used to initialize <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Environment" />.
-            If these features are not enabled, all data are treated as unpartitioned and stored in the global default location for the profile.
-            </para><para>
-            When custom data partition id id is set, the page in the WebView will act as if the page were hosted in a top level site uniquely associated with the partition id and have a separate storage partition as described in https://developer.chrome.com/docs/privacy-sandbox/storage-partitioning/ and separate cookie partition as described in https://developer.chrome.com/docs/privacy-sandbox/chips/ with all cookies partitioned.
-            If custom data partition id is set to null or empty string, the page inside the WebView will work normally with data treated as unpartitioned.
-            </para><para>
-            The custom data partition id is case sensitive. The default is an empty string. There is no restriction on the length or what characters can be used in partition id.
-            </para><para>
-            The change of the custom data partition id will be applied to new  page or iframe navigations and not impact existing pages and iframes.
-            To avoid accidentally using the new partition id for new page or iframe navigations started by the old page, it is recommended to create a new WebView for new partition instead of changing partition.
-            If you really have to change partition, it is recommended to navigate to a blank page before setting the new partition id and navigating to a page with the new partition.
-            </para><para>
-            As setting custom data partition id does not change DOM security model, developers should be very careful for WebViews with opener and opened window relationship, especially when the pages in the WebViews have same origin, like when the opened window is the same website or about:blank.
-            The pages in these WebViews can access each other's DOM and therefore can potentially access DOM storage and cookies in different partition for the same website.
-            It is recommended to set the same custom data partition id for these WebViews, unless there is an absolute need to set different partition ids and only trusted code is hosted in them.
-            </para><example>
-            :::code language="csharp" source="../code/sample/SampleApps/WebView2WpfBrowser/MainWindow.xaml.cs" id="CustomDataPartitionId":::
-            </example></remarks>
-        </member>
         <member name="E:Microsoft.Web.WebView2.Core.CoreWebView2.BasicAuthenticationRequested">
             <summary>
             BasicAuthenticationRequested event is raised when WebView encounters a Basic HTTP Authentication request as described in https://developer.mozilla.org/docs/Web/HTTP/Authentication, a Digest HTTP Authentication request as described in https://developer.mozilla.org/docs/Web/HTTP/Headers/Authorization#digest, an NTLM authentication or a Proxy Authentication request.
@@ -2394,26 +2189,6 @@
             <summary>
             Clears a host name mapping for local folder that was added by <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.SetVirtualHostNameToFolderMapping(System.String,System.String,Microsoft.Web.WebView2.Core.CoreWebView2HostResourceAccessKind)" />.
             </summary><param name="hostName">The host name to be removed from the mapping.</param><seealso cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.SetVirtualHostNameToFolderMapping(System.String,System.String,Microsoft.Web.WebView2.Core.CoreWebView2HostResourceAccessKind)" />
-        </member>
-        <member name="E:Microsoft.Web.WebView2.Core.CoreWebView2.DedicatedWorkerCreated">
-            <summary>Subscribe to this event that gets raised when a new dedicated worker is created.
-            
-            A Dedicated Worker is a type of web worker that allows you to run Javascript
-            code in the background without blocking the main thread, making them useful
-            for tasks like heavy computations, data processing, and parallel execution.
-            It is "dedicated" because it is linked to a single parent document and cannot
-            be shared with other scripts.
-            
-            This event is raised when a web application creates a dedicated worker using the
-            `new Worker("/worker.js")` method. See the
-            [Worker](https://developer.mozilla.org/docs/Web/API/Worker/Worker)
-            for more information.
-            
-            </summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2.WindowControlsOverlay">
-            <summary>This getter API provides access to the window controls overlay object.
-            \snippet ScenarioWindowControlsOverlay.cpp WindowControlsOverlay</summary>
         </member>
         <member name="E:Microsoft.Web.WebView2.Core.CoreWebView2.DownloadStarting">
             <summary>
@@ -2861,9 +2636,6 @@
             <summary></summary>
             <summary></summary>
             <summary></summary>
-            <summary>This interface is an extension of the ICoreWebView2CompositionController.
-            An object implementing ICoreWebView2ExperimentalCompositionController4
-            interface will also implement ICoreWebView2CompositionController.</summary>
         </member>
         <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2CompositionController.Cursor">
             <summary>
@@ -2927,13 +2699,6 @@
             <summary>
             When a given </summary><param name="Kind"> region kind of type <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2NonClientRegionKind" /></param><returns>This method returns a vector of rectangles which corresponds to the specified region.</returns><remarks>
             This method can be used inside the <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2CompositionController.NonClientRegionChanged" /> event handler to get the list of rects for the specific region that changed.
-            </remarks>
-        </member>
-        <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2CompositionController.CreateCoreWebView2PointerInfoFromPointerId(System.UInt32,System.IntPtr,System.Numerics.Matrix4x4)">
-            <summary>
-            Converts a <c>PointerId</c> received from the system into a <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo" />.
-            </summary><param name="PointerId">The PointerId received from the system to be converted into a <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo" />.</param><param name="ParentWindow">The HWND that contains the WebView. This can be any HWND in the hwnd tree that contains the WebView.</param><param name="transform">The transform from that HWND to the WebView.</param><seealso cref="M:Microsoft.Web.WebView2.Core.CoreWebView2CompositionController.SendMouseInput(Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind,Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys,System.UInt32,System.Drawing.Point)" /><remarks>
-            The returned <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo" /> is used in <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2CompositionController.SendPointerInput(Microsoft.Web.WebView2.Core.CoreWebView2PointerEventKind,Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo)" />. The <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo.PointerKind" /> must be either pen or touch or the function will fail.
             </remarks>
         </member>
         <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2ContentLoadingEventArgs">
@@ -3126,7 +2891,6 @@
             <summary></summary>
             <summary></summary>
             <summary></summary>
-            
             
             <summary>
             This class is the owner of the <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.CoreWebView2"/> object, and
@@ -3757,120 +3521,6 @@
         <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2DOMContentLoadedEventArgs.NavigationId">
             <summary>The ID of the navigation which corresponds to other navigation ID properties on other navigation events.</summary>
         </member>
-        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker">
-            <summary></summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker.ScriptUri">
-            <summary>A string representing the Uri of the script that the worker is executing.
-            
-            The `scriptUri` is a fully qualified URI, including the scheme, host, and path.
-            In contrast, the `scriptURL` property of the `Worker` object in the DOM returns the relative
-            URL of the script being executed by the worker. For more details on DOM API, see the
-            [DOM API documentation](https://developer.mozilla.org/docs/Web/API/Worker/scriptURL).
-            
-            Refer to the Host Name Canonicalization for
-            details on how normalization is performed.
-            The same process applies to the `scriptURL` when a worker is created from DOM API.
-            The `scriptUri` property reflects this normalization, ensuring that the URL is standardized. For example,
-            `HTTPS://EXAMPLE.COM/worker.js` is canonicalized to `https://example.com/worker.js`;
-            `https://bÃ¼cher.de/worker.js` is canonicalized to `https://xn--bcher-kva.de/worker.js`.</summary>
-        </member>
-        <member name="E:Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker.DedicatedWorkerCreated">
-            <summary>Subscribe to this event that gets raised when a new dedicated worker is created from a
-            dedicated worker.
-            
-            A Dedicated Worker is a type of web worker that allows you to run Javascript
-            code in the background without blocking the main thread, making them useful
-            for tasks like heavy computations, data processing, and parallel execution.
-            It is "dedicated" because it is linked to a single parent document and cannot
-            be shared with other scripts.
-            
-            This event is raised when a dedicated creates a dedicated worker using the
-            `new Worker("/worker.js")` method. See the
-            [Worker](https://developer.mozilla.org/docs/Web/API/Worker/Worker)
-            for more information.</summary>
-        </member>
-        <member name="E:Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker.Destroying">
-            <summary>Add an event handler for the `Destroying` event that is raised when the
-            worker object is Destroying.
-            
-            A worker object is Destroying when the worker script is terminated or when
-            the `CoreWebView2DedicatedWorker` object is Destroying.
-            
-            If the worker has already been destroyed before the event handler is registered,
-            the handler will never be called.</summary>
-        </member>
-        <member name="E:Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker.WebMessageReceived">
-            <summary>Add an event handler for the `WebMessageReceived` event.
-            `WebMessageReceived` is fired, when the
-            `ICoreWebView2Settings::IsWebMessageEnabled` setting is set TRUE and the
-            worker runs `self.chrome.webview.postMessage`. The `postMessage` function
-            is `void postMessage(object)` where object is any object supported by JSON
-            conversion.
-            
-            If the worker calls `postMessage` multiple times, the corresponding
-            `WebMessageReceived` events are guaranteed to be fired in the same order.
-            
-            </summary>
-        </member>
-        <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker.PostWebMessageAsJson(System.String)">
-            <summary>Posts the specified webMessageAsJson to this worker.
-            The worker receives the message by subscribing to the `message` event of the
-            `self.chrome.webview` of the worker.
-            
-            ```cpp
-            self.chrome.webview.addEventListener('message', handler)
-            self.chrome.webview.removeEventListener('message', handler)
-            ```
-            
-            The event args is an instance of `MessageEvent`. The
-            `ICoreWebView2Settings::IsWebMessageEnabled` setting must be `TRUE` or
-            the web message will not be sent. The `data` property of the event arg 
-            is the `webMessageAsJson` string parameter parsed as a JSON string into a 
-            JS object. The `source` property of the event arg is the path
-            to the worker script. The message is delivered asynchronously. 
-            If the worker is terminated or destroyed before the message is posted,
-            the message is discarded.
-            Worker Javascript may subscribe and unsubscribe to the event 
-            using the following code:
-            ```javascript
-            self.chrome.webview.addEventListener('message', handler)
-            self.chrome.webview.removeEventListener('message', handler)
-            ```
-            ```cpp
-            See also the equivalent methods: `ICoreWebView2::PostWebMessageAsJson`,
-            `ICoreWebView2Frame::PostWebMessageAsJson`,
-            `ICoreWebView2ServiceWorker::PostWebMessageAsJson`.
-            ```
-            
-            </summary>
-        </member>
-        <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker.PostWebMessageAsString(System.String)">
-            <summary>Posts a message that is a simple string rather than a JSON string
-            representation of a JavaScript object. This behaves exactly the same
-            manner as `PostWebMessageAsJson`, but the `data` property of the event
-            arg of the `self.chrome.webview` message is a string with the same
-            value as `webMessageAsString`.  Use this instead of
-            `PostWebMessageAsJson` if you want to communicate using simple strings
-            rather than JSON objects. Please see `PostWebMessageAsJson` for
-            additional information.
-            ```cpp
-            See also the equivalent methods: `ICoreWebView2::PostWebMessageAsString`,
-            `ICoreWebView2Frame::PostWebMessageAsString`,
-            `ICoreWebView2ServiceWorker::PostWebMessageAsString`.
-            ```</summary>
-        </member>
-        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs">
-            <summary></summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs.OriginalSourceFrameInfo">
-            <summary>The associated frame information that created the dedicated worker.
-            This can be used to get the frame source, name, frameId,
-            and parent frame information.</summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs.Worker">
-            <summary>The dedicated worker that was created.</summary>
-        </member>
         <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2Deferral">
             <summary>
             This is used to complete deferrals on event args that support getting deferrals using the <c>GetDeferral</c> method. This class implements <see cref="T:System.IDisposable" />.</summary>
@@ -4055,16 +3705,6 @@
             <summary></summary>
             <summary></summary>
             <summary></summary>
-            <summary></summary>
-            
-            
-            
-            <summary>This is ICoreWebView2ExperimentalEnvironment12 that returns the texture stream interface.</summary>
-            <summary>This interface is an extension of the ICoreWebView2Environment that manages
-            updating Edge WebView2 Runtime. An object implementing the
-            ICoreWebView2ExperimentalEnvironment3 interface will also implement
-            ICoreWebView2Environment.</summary>
-            
             <summary>
             This represents the WebView2 Environment.
             </summary>
@@ -4256,21 +3896,6 @@
             This find options object can be used to define parameters for a find session.
             Returns the newly created FindOptions object.</summary>
         </member>
-        <member name="E:Microsoft.Web.WebView2.Core.CoreWebView2Environment.RestartRequested">
-            <summary>
-            Add an event handler for the <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2Environment.RestartRequested" /> event.
-            <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2Environment.RestartRequested" /> event is raised when there is a
-            need to restart WebView2 process in order to apply certain beneficial updates.
-            
-            <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2Environment.RestartRequested" /> gives developers the awareness
-            of these necessary WebView2 restarts, allowing developers to resolve issues faster than
-            waiting for end users to restart the app.
-            Developer might want to give end users the ability to save their state before restarting.
-            For apps with multiple processes that host WebView2s that share the same user data folder you
-            need to make sure all WebView2 instances are closed and the associated WebView2 Runtime
-            browser process exits. See <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2Environment.BrowserProcessExited" />
-            for more details.</summary>
-        </member>
         <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateWebResourceRequest(System.String,System.String,System.IO.Stream,System.String)">
             <summary>
             Creates a new <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest" /> object.
@@ -4335,50 +3960,6 @@
             CoreWebView2 will rewind the <c>icon</c> stream before decoding.
             There is a limit of 1000 active custom context menu items at a given time per <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Environment" />. Attempting to create more before deleting existing ones will fail with <c>ERROR_NOT_ENOUGH_QUOTA</c>. It is recommended to reuse custom ContextMenuItems across CoreWebView2ContextMenuRequested events for performance. The created object's <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem.IsEnabled" /> property will default to <c>true</c> and <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem.IsChecked" /> property will default to <c>false</c>. A <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem.CommandId" /> will be assigned that's unique across active custom context menu items, but command ID values of deleted custom ContextMenuItems can be reassigned.
             </remarks>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2Environment.RenderAdapterLUID">
-            <summary>The graphics adapter LUID of the renderer. The host should use this LUID adapter when creating D3D device to use with CreateTextureStream().</summary>
-        </member>
-        <member name="E:Microsoft.Web.WebView2.Core.CoreWebView2Environment.RenderAdapterLUIDChanged">
-            <summary>Listens for change of graphics adapter LUID of the browser.
-            The host can get the updated LUID by RenderAdapterLUID. It is expected
-            that the host updates texture's d3d Device with SetD3DDevice,
-            removes existing textures and creates new texture.</summary>
-        </member>
-        <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateTextureStream(System.String,System.Object)">
-            <summary>Registers the stream id that the host can handle, providing a
-            texture stream when requested from the WebView2's JavaScript code.
-            The host can register multiple unique stream instances, each with
-            a unique stream ID, enabling the host to stream from different sources
-            concurrently.
-            The host should call this only once for unique streamId. The second
-            call of already created streamId without destroying
-            CoreWebView2TextureStream object will return an error.
-            `d3dDevice` is used for creating shared IDXGI resource and NT shared
-            of it. The host should use Adapter of the LUID from the GetRenderAdapterLUID
-            for creating the D3D Device.</summary>
-        </member>
-        <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.UpdateRuntimeAsync">
-            <summary>
-            Try to update the installed Microsoft Edge WebView2 Runtime.</summary><remarks>
-            This will potentially result in a new version of the Edge WebView2 Runtime being installed and <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2Environment.NewBrowserVersionAvailable" /> event being raised.
-            There is no guarantee on the order of that event being raised and the completed handler being invoked.
-            Besides the <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2Environment.NewBrowserVersionAvailable" /> event, there will be no impact to any currently running WebView2s when the update is installed.
-            Even though the Edge WebView2 Runtime update is installed for the machine and available to all users, the update will happen silently and not show elevation prompt.
-            This will not impact Edge browser installations.
-            The latest version can always be queried using the <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.GetAvailableBrowserVersionString(System.String)" /> API.
-            The <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.UpdateRuntimeAsync" /> method is only supported for an installed Edge WebView2 Runtime.
-            When running a fixed version Edge WebView2 Runtime or non stable channel Edge browser, this API will return <c>HRESULT_FROM_WIN32(ERROR_NOT_SUPPORTED)</c>.
-            There could only be one active UpdateRuntime operation in an app process, calling this API before previous call is completed will fail with <c>HRESULT_FROM_WIN32(ERROR_BUSY)</c>.
-            Calling this API repeatedly in a short period of time, will also fail with <c>HRESULT_FROM_WIN32(ERROR_BUSY)</c>.
-            To protect accidental abuse of the update service, the implementation throttles the calls of this API to 3 times within 5 minutes in a process. The exact throttling limit can change in the future.
-            Edge update service can only support one update request at a time globally. If there is already an update operation running in the Edge update service, the result will be a <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2UpdateRuntimeResult" /> with <see cref="F:Microsoft.Web.WebView2.Core.CoreWebView2UpdateRuntimeStatus.UpdateAlreadyRunning" />.
-            As the running update could succeed or fail, the app should retry later if <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2Environment.NewBrowserVersionAvailable" /> event has not been raised.
-            The <c>UpdateRuntime</c> operation is associated with the CoreWebView2Environment object and any ongoing <c>UpdateRuntime</c> operation will be aborted when the associated CoreWebView2Environment along with the CoreWebView2 objects that are created by the CoreWebView2Environment object are all released.
-            In this case, the result will be a <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2UpdateRuntimeResult" /> with <see cref="F:Microsoft.Web.WebView2.Core.CoreWebView2UpdateRuntimeStatus.Failed" /><see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2UpdateRuntimeResult.Status" /> and <c>E_ABORT</c><see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2UpdateRuntimeResult.ExtendedError" />.
-            </remarks><example>
-            :::code language="csharp" source="../code/sample/SampleApps/WebView2WpfBrowser/MainWindow.xaml.cs" id="UpdateRuntime":::
-            </example>
         </member>
         <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateAsync(System.String,System.String,Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions)">
              <summary>
@@ -4723,7 +4304,6 @@
             <summary></summary>
             <summary></summary>
             <summary></summary>
-            <summary></summary>
             <summary>
             Options used to create WebView2 Environment.
             </summary>
@@ -4765,12 +4345,6 @@
             </summary><remarks>
             This defaults to the WebView2 Runtime version that corresponds with the version of the SDK the app is using. The format of this value is the same as the format of the <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Environment.BrowserVersionString" /> property and other BrowserVersion values. Only the version part of the BrowserVersion value is respected. The channel suffix, if it exists, is ignored. The version of the WebView2 Runtime binaries actually used may be different from the specified TargetCompatibleBrowserVersion. The binaries are only guaranteed to be compatible. Verify the actual version on the <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Environment.BrowserVersionString" /> property.
             </remarks>
-        </member>
-        <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions.SetAllowedPortRange(Microsoft.Web.WebView2.Core.CoreWebView2AllowedPortRangeScope,Microsoft.Web.WebView2.Core.CoreWebView2TransportProtocolKind,System.Int32,System.Int32)">
-            <summary></summary>
-        </member>
-        <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions.GetEffectiveAllowedPortRange(Microsoft.Web.WebView2.Core.CoreWebView2AllowedPortRangeScope,Microsoft.Web.WebView2.Core.CoreWebView2TransportProtocolKind,System.Int32@,System.Int32@)">
-            <summary></summary>
         </member>
         <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions.ExclusiveUserDataFolderAccess">
             <summary>
@@ -5044,8 +4618,6 @@
             <summary></summary>
             <summary></summary>
             <summary></summary>
-            <summary></summary>
-            <summary></summary>
             <summary>
             CoreWebView2Frame provides direct access to the iframes information and handling.
             </summary>
@@ -5200,24 +4772,6 @@
             </remarks><example>
             :::code language="csharp" source="../code/sample/SampleApps/WebView2WpfBrowser/MainWindow.xaml.cs" id="FrameChildFrameCreated":::
             </example>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2Frame.UseOverrideTimerWakeInterval">
-            <summary></summary>
-        </member>
-        <member name="E:Microsoft.Web.WebView2.Core.CoreWebView2Frame.DedicatedWorkerCreated">
-            <summary>Subscribe to this event that gets raised when a new dedicated worker is created
-            from an iframe.
-            
-            A Dedicated Worker is a type of web worker that allows you to run Javascript
-            code in the background without blocking the main thread, making them useful
-            for tasks like heavy computations, data processing, and parallel execution.
-            It is "dedicated" because it is linked to a single parent document and cannot
-            be shared with other scripts.
-            
-            This event is raised when a web application creates a dedicated worker using the
-            `new Worker("/worker.js")` method. See the
-            [Worker](https://developer.mozilla.org/docs/Web/API/Worker/Worker)
-            for more information.</summary>
         </member>
         <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2Frame.AddHostObjectToScript(System.String,System.Object,System.Collections.Generic.IEnumerable{System.String})">
             <summary>
@@ -5774,17 +5328,6 @@
             Gets a Deferral object.
             Use this to Complete the event at a later time.</summary>
         </member>
-        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2OriginFeatureSetting">
-            <summary>Represents a feature setting configuration for an origin.</summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2OriginFeatureSetting.Feature">
-            <summary>
-            The feature type for this setting.</summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2OriginFeatureSetting.State">
-            <summary>
-            Indicates whether the feature is enabled for the origin.</summary>
-        </member>
         <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs">
             <summary>
             Event args for the <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.PermissionRequested" /> event.</summary>
@@ -6293,7 +5836,6 @@
             The webview2 process which tried to load the DLL will fail with exit code STATUS_INVALID_IMAGE_HASH(-1073740760).</summary>
         </member>
         <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2ProcessInfo">
-            
             <summary>
             Provides a set of properties for a process list in the <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Environment" />.</summary>
         </member>
@@ -6304,7 +5846,6 @@
             <summary>The process id of the process.</summary>
         </member>
         <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2Profile">
-            <summary></summary>
             <summary>
             Multiple profiles can be created under a single user data directory but with separated cookies, user preference settings, and various data storage etc.. If the CoreWebView2 was created with a <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions" />, the CoreWebView2Profile will match those specified options. Otherwise if this CoreWebView2 was created without a <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions" />, then this will be the default CoreWebView2Profile for the corresponding CoreWebView2Environment.</summary>
             <summary></summary>
@@ -6314,25 +5855,6 @@
             <summary></summary>
             <summary></summary>
             <summary></summary>
-            <summary></summary>
-            <summary></summary>
-            <summary></summary>
-            <summary></summary>
-            <summary></summary>
-            <summary></summary>
-            <summary></summary>
-        </member>
-        <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2Profile.ClearCustomDataPartitionAsync(System.String)">
-            <summary>
-            Clears all DOM storage and cookies in the specified custom data partition.
-            </summary><param name="CustomDataPartitionId">The id of the custom data partition. If null or empty string is specified, <see cref="T:System.ArgumentException" /> will be thrown.</param><remarks><para>
-            Clears all DOM storage and cookies in the custom data partition identified by the <c>CustomDataPartitionId</c>.
-            If no partition is found for the specified <c>CustomDataPartitionId</c>, the API succeeds without doing anything.
-            </para><para>
-            As DOM storage and cookies in the custom data partition is also browsing data, they will also be cleared when <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2Profile.ClearBrowsingDataAsync(Microsoft.Web.WebView2.Core.CoreWebView2BrowsingDataKinds)" /> is called and the clearing condition is met.
-            </para></remarks><example>
-            :::code language="csharp" source="../code/sample/SampleApps/WebView2WpfBrowser/MainWindow.xaml.cs" id="ClearCustomDataPartition":::
-            </example>
         </member>
         <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2Profile.DefaultDownloadFolderPath">
             <summary>
@@ -6360,42 +5882,6 @@
         <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2Profile.ProfilePath">
             <summary>
             Full path of the profile directory.</summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2Profile.EnhancedSecurityModeState">
-            <summary>
-            The <c>EnhancedSecurityModeState</c> property allows you to control whether Enhanced Security
-            Mode is enabled or disabled for WebView2 instances associated with a profile.
-            This applies to all WebViews sharing the same profile.
-            The configuration is not persisted to the user data folder. The property is reset when the profile is recreated.
-            
-            The default value is <c>CoreWebView2EnhancedSecurityModeState.Disabled</c>.
-            
-            When set to <c>Disabled</c>, Enhanced Security Mode is disabled. When set to
-            <c>Enabled</c>, Enhanced Security Mode is enabled.
-            
-            See <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2EnhancedSecurityModeState" /> for descriptions of states.
-            </summary><remarks>
-            Changes apply immediately to new navigation. Existing pages require a reload for the change to take effect.
-            </remarks>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2Profile.AreWebViewScriptApisEnabledForServiceWorkers">
-            <summary>
-            Enables or disables WebView2 specific Service Worker JS APIs in the
-            WebView2s associated with this Profile. When set to <c>true</c>, <c>chrome</c> and
-            <c>webview</c> objects are available in Service Workers. <c>chrome.webview</c> exposes
-            APIs to interact with the WebView from Service Workers. The default value
-            is <c>false</c>. This setting applies to all newly installed Service Workers
-            within the profile and is not persisted across WebView2 sessions.</summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2Profile.ServiceWorkerManager">
-            <summary>
-            Get the <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager" /> instance to monitor service worker registrations
-            and interact with the service worker associated with the current profile.</summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2Profile.SharedWorkerManager">
-            <summary>
-            Get the <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerManager" /> instance to monitor shared worker creations
-            and interact with the shared worker associated with the current profile.</summary>
         </member>
         <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2Profile.ClearBrowsingDataAsync(Microsoft.Web.WebView2.Core.CoreWebView2BrowsingDataKinds)">
             <summary>
@@ -6517,41 +6003,6 @@
             startTime and endTime. Overload the ClearBrowsingDataAsync method to
             allow for additional time parameters.
             </summary>
-        </member>
-        <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2Profile.SetOriginFeatures(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{Microsoft.Web.WebView2.Core.CoreWebView2OriginFeature,Microsoft.Web.WebView2.Core.CoreWebView2OriginFeatureState}})">
-            <summary>
-            Sets the feature configurations for specified origins.
-            This method allows configuring features such as enhanced security mode
-            for one or more origin patterns.
-            Calling this method multiple times with the same (feature, state) pair
-            overwrites the previous origin list; the most recent call takes precedence.
-            Pass an empty <paramref name="origins"/> collection with the same feature
-            settings to reset those settings to their defaults.
-            </summary>
-            <param name="origins">The origin patterns to configure. A <c>null</c> value is treated as an empty collection.</param>
-            <param name="features">The feature/state pairs to apply. A <c>null</c> value is treated as an empty collection.</param>
-        </member>
-        <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2Profile.GetEffectiveFeaturesForOriginAsync(System.String)">
-            <summary>
-            Gets the effective feature settings for a specified origin asynchronously.
-            Returns the effective (computed) settings for all features in
-            <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2OriginFeature"/>, including features that were not
-            explicitly configured via <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2Profile.SetOriginFeatures(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{Microsoft.Web.WebView2.Core.CoreWebView2OriginFeature,Microsoft.Web.WebView2.Core.CoreWebView2OriginFeatureState}})"/> and thus have
-            their default values. The order of features in the returned collection
-            is not guaranteed.
-            </summary>
-            <param name="origin">The origin to query. Must be a valid origin with a
-            scheme and host (e.g. "https://www.example.com"), otherwise the method
-            fails with <c>E_INVALIDARG</c>. Must not be <c>null</c>.</param>
-            <returns>A collection of feature/state pairs for every feature in the enum.</returns>
-            <exception cref="T:System.ArgumentNullException"><paramref name="origin"/> is <c>null</c>.</exception>
-        </member>
-        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2RestartRequestedEventArgs">
-            <summary></summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2RestartRequestedEventArgs.Priority">
-            <summary>
-            Restart requested priority.</summary>
         </member>
         <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2SaveAsUIShowingEventArgs">
             <summary>The event args for `SaveAsUIShowing` event.</summary>
@@ -6730,231 +6181,12 @@
             Gets a Deferral object.
             Use this to Complete the event at a later time.</summary>
         </member>
-        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker">
-            <summary></summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker.ScriptUri">
-            <summary>A string representing the Uri of the script that the worker is executing.
-            
-            The `scriptUri` is a fully qualified URI, including the scheme, host, and path.
-            In contrast, the `scriptURL` property of the `Worker` object in the DOM returns the relative
-            URL of the script being executed by the worker. For more details on DOM API, see the
-            [DOM API documentation](https://developer.mozilla.org/docs/Web/API/Worker/scriptURL).
-            
-            Refer to the Host Name Canonicalization for
-            details on how normalization is performed.
-            The same process applies to the `scriptURL` when a worker is registered from DOM API.
-            The `scriptUri` property reflects this normalization, ensuring that the URL is standardized. For example,
-            `HTTPS://EXAMPLE.COM/worker.js` is canonicalized to `https://example.com/worker.js`;
-            `https://bÃ¼cher.de/worker.js` is canonicalized to `https://xn--bcher-kva.de/worker.js`.</summary>
-        </member>
-        <member name="E:Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker.Destroying">
-            <summary>Add an event handler for the `Destroying` event that is raised when the
-            worker object is Destroying.
-            
-            A worker object is Destroying when the worker script is terminated or when
-            the `CoreWebView2ServiceWorker` object is Destroying.
-            
-            If the worker has already been destroyed before the event handler is registered,
-            the handler will never be called.</summary>
-        </member>
-        <member name="E:Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker.WebMessageReceived">
-            <summary>Add an event handler for the `WebMessageReceived` event.
-            `WebMessageReceived` is fired, when the
-            `ICoreWebView2Settings::IsWebMessageEnabled` setting is set TRUE and the
-            worker runs `self.chrome.webview.postMessage`. The `postMessage` function
-            is `void postMessage(object)` where object is any object supported by JSON
-            conversion.
-            
-            If the worker calls `postMessage` multiple times, the corresponding
-            `WebMessageReceived` events are guaranteed to be fired in the same order.
-            
-            </summary>
-        </member>
-        <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker.PostWebMessageAsJson(System.String)">
-            <summary>Posts the specified webMessageAsJson to this worker.
-            The worker receives the message by subscribing to the `message` event of the
-            `self.chrome.webview` of the worker.
-            
-            ```cpp
-            self.chrome.webview.addEventListener('message', handler)
-            self.chrome.webview.removeEventListener('message', handler)
-            ```
-            
-            The event args is an instance of `MessageEvent`. Both the
-            `ICoreWebView2Profile::AreWebViewScriptApisEnabledForServiceWorkers` and
-            `ICoreWebView2Settings::IsWebMessageEnabled` settings must be `TRUE` or
-            the web message will not be sent. The `data` property of the event arg 
-            is the `webMessageAsJson` string parameter parsed as a JSON string into a 
-            JS object. The `source` property of the event arg is the path
-            to the worker script. The message is delivered asynchronously. 
-            If the worker is terminated or destroyed before the message is posted,
-            the message is discarded.
-            Worker Javascript may subscribe and unsubscribe to the event 
-            using the following code:
-            ```javascript
-            self.chrome.webview.addEventListener('message', handler)
-            self.chrome.webview.removeEventListener('message', handler)
-            ```
-            ```cpp
-            See also the equivalent methods: `ICoreWebView2::PostWebMessageAsJson`,
-            `ICoreWebView2Frame::PostWebMessageAsJson`,
-            `ICoreWebView2DedicatedWorker::PostWebMessageAsJson`.
-            ```
-            
-            </summary>
-        </member>
-        <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker.PostWebMessageAsString(System.String)">
-            <summary>Posts a message that is a simple string rather than a JSON string
-            representation of a JavaScript object. This behaves exactly the same
-            manner as `PostWebMessageAsJson`, but the `data` property of the event
-            arg of the `self.chrome.webview` message is a string with the same
-            value as `webMessageAsString`.  Use this instead of
-            `PostWebMessageAsJson` if you want to communicate using simple strings
-            rather than JSON objects. Please see `PostWebMessageAsJson` for
-            additional information.
-            ```cpp
-            See also the equivalent methods: `ICoreWebView2::PostWebMessageAsString`
-            `ICoreWebView2Frame::PostWebMessageAsString`,
-            `ICoreWebView2DedicatedWorker::PostWebMessageAsString`.
-            ```</summary>
-        </member>
-        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerActivatedEventArgs">
-            <summary></summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerActivatedEventArgs.ActiveServiceWorker">
-            <summary>The service worker that was activated.</summary>
-        </member>
-        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager">
-            <summary></summary>
-        </member>
-        <member name="E:Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager.ServiceWorkerRegistered">
-            <summary>
-            A ServiceWorker is a specific type of worker that takes a JavaScript file that can control the web-page/site that it is associated with, intercepting and modifying navigation and resource requests, and caching resources in a very granular fashion to give you complete control over how app behaves in certain situations.
-            <para>
-            Service workers essentially act as proxy servers that sit between web applications, the browser, and the network (when available). They run in a different context from the web page, which means they have no direct access to the DOM. Unlike dedicated and shared workers, which may have direct access to a global scope shared with other scripts, service workers operate in isolation from the DOM, ensuring a more secure and controlled environment.
-            </para><para>
-            This event is raised when a web application registers a service worker using the <c>navigator.serviceWorker.register("/sw.js")</c> method. See the [Service Worker Registration](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration) for more information.
-            </para></summary>
-        </member>
-        <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager.GetServiceWorkerRegistrationsAsync">
-            <summary>
-            Gets a list of the service worker registrations under the same profile.
-            <para>
-            This method returns a list of <c>CoreWebView2ServiceWorkerRegistration</c> objects, each representing a service worker registration.
-            </para><para>
-            This method corresponds to the <c>getRegistrations</c> method of the <c>ServiceWorkerContainer</c> object in the DOM which returns a Promise that resolves to an array of <c>ServiceWorkerRegistration</c> objects. See the [MDN documentation](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/getRegistrations) for more information.
-            </para></summary>
-        </member>
-        <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager.GetServiceWorkerRegistrationsAsync(System.String)">
-            <summary>
-            Gets the service worker registrations associated with the specified scope.
-            If a service worker has been registered for the given scope, it gets the
-            list of `CoreWebView2ServiceWorkerRegistration` objects otherwise returns
-            empty list.
-            </summary>
-        </member>
-        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegisteredEventArgs">
-            <summary></summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegisteredEventArgs.ServiceWorkerRegistration">
-            <summary>The service worker that was registered.</summary>
-        </member>
-        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration">
-            <summary></summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration.ActiveServiceWorker">
-            <summary>The active service worker that was created. If there is no active service worker,
-            it returns a null pointer.
-            The active service worker is the service worker that controls the pages within
-            the scope of the registration. See the [Service Worker]
-            (https://developer.mozilla.org/docs/Web/API/ServiceWorker) for more information.
-            
-            This corresponds to the `active` property of the `ServiceWorkerRegistration` object in the DOM.
-            For more information, see the [MDN documentation]
-            (https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/active).</summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration.Origin">
-            <summary>A string representing the URI of the origin where the worker is executing.
-            
-            If a worker created with `ScriptUri` set to https://example.com/worker.js, the origin
-            will be https://example.com/.
-            
-            Refer to the Host Name Canonicalization for
-            details on how normalization is performed.</summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration.ScopeUri">
-            <summary>The `scopeUri` is a fully qualified URI, including the scheme, host and path,
-            that specifies the range of URLs a service worker can control.
-            
-            When registering a service worker, if no scope is specified, it defaults to the
-            directory where the service worker script resides. For example, if the script is
-            located at https://example.com/app/sw.js, the default `scopeUri` would be
-            https://example.com/app/. However, if a scope is provided, it is defined relative
-            to the application's base URI. For instance, if an application at
-            https://example.com/ registers a service worker with a scope of /app/, the resulting
-            `scopeUri` is https://example.com/app/.
-            
-            Refer to the Host Name Canonicalization for
-            details on how normalization is performed.
-            The same process applies to the `Scope` when a service worker is registered from DOM API.
-            The `scopeUri` property reflects this normalization, ensuring that the URI is standardized. For example,
-            `HTTPS://EXAMPLE.COM/app/` is canonicalized to `https://example.com/app/`;
-            `https://bÃ¼cher.de/` is canonicalized to `https://xn--bcher-kva.de/`.
-            
-            The `scope` property of the `ServiceWorkerRegistration` object in the DOM returns
-            the relative URL based on the application's base URI, while this property always
-            returns a fully qualified URI.  For more information on DOM API, see the
-            [MDN documentation](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/scope).</summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration.TopLevelOrigin">
-            <summary>A string representing the URI of the top-level document that the worker is associated with.
-            
-            If a worker is created with `ScriptUri` set to https://example.com/worker.js, the top-level origin
-            is https://example.com/. If the same worker is created from a iframe at https://example.com/ which is hosted on
-            https://example2.com/, the top-level origin is https://example2.com/.
-            
-            Refer to the Host Name Canonicalization for
-            details on how normalization is performed.
-            
-            When CustomDataPartitionId is set, the `TopLevelOrigin` will be a generated
-            site like guid.invalid. For example, if the top-level document is https://example.com/worker.js,
-            the top-level origin will be `https://guid.invalid/`.
-            
-            For more details <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2.CustomDataPartitionId" /></summary>
-        </member>
-        <member name="E:Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration.ServiceWorkerActivated">
-            <summary>Adds an event handler for the `ServiceWorkerActivated` event.
-            
-            This event is raised when a service worker is activated. A service worker is
-            activated when its script has been successfully registered and it is ready to
-            control the pages within the scope of the registration.
-            
-            This event is also raised when an updated version of a service worker reaches the active state.
-            In such a case, the existing CoreWebView2ServiceWorker object is destroying, and this event is
-            raised with a new CoreWebView2ServiceWorker object representing the updated service worker.
-            The active service worker is the one that receives fetch and message events for the pages it controls.
-            See the [Service Worker](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/active)
-            documentation for more information.
-            
-            If you register for the `ServiceWorkerActivated` event and the registration already
-            has an active worker, the event handler is not called immediately. Instead, it waits
-            for the next activation event to occur. Therefore, you should first check if an active
-            service worker is running by using the `ActiveServiceWorker` property.</summary>
-        </member>
-        <member name="E:Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration.Unregistering">
-            <summary>Add an event handler for the `Unregistering` event that is raised when the worker registration is
-            unregistered using the JS api `registration.unregister()`. See the
-            [Unregister](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/unregister)
-            for more information.</summary>
-        </member>
         <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2Settings">
             <summary>
             Defines properties that enable, disable, or modify WebView features.
             </summary><remarks>
             Changes to <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.IsGeneralAutofillEnabled" /> and <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.IsPasswordAutosaveEnabled" /> will take effect immediately, while other setting changes made after <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationStarting" /> event do not apply until the next top-level navigation.
             </remarks>
-            <summary></summary>
             <summary></summary>
             <summary></summary>
             <summary></summary>
@@ -7026,18 +6258,6 @@
             </summary><remarks>
             When disabled, the user is not able to zoom using Ctrl++, Ctr+-, or Ctrl+mouse wheel, but the zoom is set using <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ZoomFactor" /> property. The default value is <c>true</c>.
             </remarks>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.PreferredBackgroundTimerWakeInterval">
-            <summary></summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.PreferredForegroundTimerWakeInterval">
-            <summary></summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.PreferredIntensiveTimerWakeInterval">
-            <summary></summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.PreferredOverrideTimerWakeInterval">
-            <summary></summary>
         </member>
         <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.UserAgent">
             <summary>
@@ -7189,201 +6409,12 @@
             from that separate process.
             </remarks>
         </member>
-        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker">
-            <summary></summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker.Origin">
-            <summary>A string representing the URI of the origin where the worker is executing.
-            
-            If a worker created with `ScriptUri` set to https://example.com/worker.js, the origin
-            will be https://example.com/.
-            
-            Refer to the Host Name Canonicalization for
-            details on how normalization is performed.</summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker.ScriptUri">
-            <summary>A string representing the Uri of the script that the worker is executing.
-            
-            The `scriptUri` is a fully qualified URI, including the scheme, host, and path.
-            In contrast, the `scriptURL` property of the `Worker` object in the DOM returns the relative
-            URL of the script being executed by the worker. For more details on DOM API, see the
-            [DOM API documentation](https://developer.mozilla.org/docs/Web/API/Worker/scriptURL).
-            
-            Refer to the Host Name Canonicalization for
-            details on how normalization is performed.
-            The same process applies to the `scriptURL` when a worker is created from DOM API.
-            The `scriptUri` property reflects this normalization, ensuring that the URL is standardized. For example,
-            `HTTPS://EXAMPLE.COM/worker.js` is canonicalized to `https://example.com/worker.js`;
-            `https://bÃ¼cher.de/worker.js` is canonicalized to `https://xn--bcher-kva.de/worker.js`.</summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker.TopLevelOrigin">
-            <summary>A string representing the URI of the top-level document that the worker is associated with.
-            
-            If a worker is created with `ScriptUri` set to https://example.com/worker.js, the top-level origin
-            is https://example.com/. If the same worker is created from a iframe at https://example.com/ which is hosted on
-            https://example2.com/, the top-level origin is https://example2.com/.
-            
-            Refer to the Host Name Canonicalization for
-            details on how normalization is performed.
-            
-            When CustomDataPartitionId is set, the `TopLevelOrigin` will be a generated
-            site like guid.invalid. For example, if the top-level document is https://example.com/worker.js,
-            the top-level origin will be https://guid.invalid/.
-            
-            For more details <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2.CustomDataPartitionId" /></summary>
-        </member>
-        <member name="E:Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker.Destroying">
-            <summary>Add an event handler for the `Destroying` event that is raised when the
-            worker object is Destroying.
-            
-            A worker object is Destroying when the worker script is terminated or when
-            the `CoreWebView2SharedWorker` object is Destroying.
-            
-            If the worker has already been destroyed before the event handler is registered,
-            the handler will never be called.</summary>
-        </member>
-        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerCreatedEventArgs">
-            <summary></summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerCreatedEventArgs.Worker">
-            <summary>The shared worker that was created.</summary>
-        </member>
-        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerManager">
-            <summary></summary>
-        </member>
-        <member name="E:Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerManager.SharedWorkerCreated">
-            <summary>Add an event handler for the `SharedWorkerCreated` event.
-            
-            A SharedWorker is a specific type of worker that can be accessed from several
-            browsing contexts, such as multiple windows, iframes, or even other workers.
-            Unlike Dedicated Workers, which have their own separate global scope, SharedWorkers
-            share a common global scope called SharedWorkerGlobalScope.
-            
-            This event is raised when a web application creates a shared worker using the
-            `new SharedWorker("worker.js")` method. See the
-            [Shared Worker](https://developer.mozilla.org/docs/Web/API/SharedWorker)
-            for more information.
-            
-            </summary>
-        </member>
-        <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerManager.GetSharedWorkersAsync">
-            <summary>Gets a list of the shared workers created under the same profile.</summary>
-        </member>
         <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2SourceChangedEventArgs">
             <summary>
             Event args for the <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.SourceChanged" /> event.</summary>
         </member>
         <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2SourceChangedEventArgs.IsNewDocument">
             <summary><c>true</c> if the page being navigated to is a new document.</summary>
-        </member>
-        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2Texture">
-            <summary>The texture that the host writes to so that the Renderer
-            will render on it.</summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2Texture.Handle">
-            <summary>
-            NT handle that can be shared across with the browser.</summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2Texture.Resource">
-            <summary>D2D texture resource that the host can write to.
-            </summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2Texture.Timestamp">
-            <summary>The timestamp of presenting texture.</summary>
-        </member>
-        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2TextureStream">
-            <summary>
-            CoreWebView2 Texture Stream.</summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2TextureStream.Id">
-            <summary>
-            Retrieves texture stream id.</summary>
-        </member>
-        <member name="E:Microsoft.Web.WebView2.Core.CoreWebView2TextureStream.ErrorReceived">
-            <summary>The `ErrorReceived` event is raised when an error with this texture stream occurs asynchronously.</summary>
-        </member>
-        <member name="E:Microsoft.Web.WebView2.Core.CoreWebView2TextureStream.StartRequested">
-            <summary>
-            Registers texture stream request from the Javascript.</summary>
-        </member>
-        <member name="E:Microsoft.Web.WebView2.Core.CoreWebView2TextureStream.Stopped">
-            <summary>
-            Registers texture stream stopped event.</summary>
-        </member>
-        <member name="E:Microsoft.Web.WebView2.Core.CoreWebView2TextureStream.WebTextureReceived">
-            <summary>
-            Registers web texture receiving event.
-            </summary>
-        </member>
-        <member name="E:Microsoft.Web.WebView2.Core.CoreWebView2TextureStream.WebTextureStreamStopped">
-            <summary>
-            Registers web texture stopped event.</summary>
-        </member>
-        <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2TextureStream.AddAllowedOrigin(System.String,System.Int32)">
-            <summary>
-            Adds allowed origin for texture stream and web texture stream.</summary>
-        </member>
-        <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2TextureStream.RemoveAllowedOrigin(System.String)">
-            <summary>
-            Removes allowed origin for texture stream and web texture stream.
-            </summary>
-        </member>
-        <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2TextureStream.CreateTexture(System.UInt32,System.UInt32)">
-            <summary>
-            Creates texture buffer that the host can write to for the browser rendering.</summary>
-        </member>
-        <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2TextureStream.GetAvailableTexture">
-            <summary>
-            Gets reusable texture.</summary>
-        </member>
-        <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2TextureStream.CloseTexture(Microsoft.Web.WebView2.Core.CoreWebView2Texture)">
-            <summary>
-            Closes created texture.</summary>
-        </member>
-        <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2TextureStream.PresentTexture(Microsoft.Web.WebView2.Core.CoreWebView2Texture)">
-            <summary>
-            Present texture to the browser's renderer.</summary>
-        </member>
-        <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2TextureStream.Stop">
-            <summary>
-            Stops presenting texture stream.</summary>
-        </member>
-        <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2TextureStream.SetD3DDevice(System.Object)">
-            <summary>Set the D3D device this texture stream should use for creating shared
-            texture resources. When the RenderAdapterLUIDChanged event is raised you
-            should create a new D3D device using the RenderAdapterLUID property and
-            call SetD3DDevice with the new D3D device.
-            See the `CreateTextureStream` `d3dDevice` parameter for more details.</summary>
-        </member>
-        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2TextureStreamErrorReceivedEventArgs">
-            <summary>
-            Texture stream error event argument.</summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2TextureStreamErrorReceivedEventArgs.Kind">
-            <summary>The kind of error that has occurred.</summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2TextureStreamErrorReceivedEventArgs.Texture">
-            <summary>
-            Texture that is associated with the an error.</summary>
-        </member>
-        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2TextureStreamWebTextureReceivedEventArgs">
-            <summary>The event args for the `WebTextureReceived` event.</summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2TextureStreamWebTextureReceivedEventArgs.WebTexture">
-            <summary>The web texture that is received.</summary>
-        </member>
-        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2UpdateRuntimeResult">
-            <summary>The UpdateRuntime operation result.</summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2UpdateRuntimeResult.ExtendedError">
-            <summary>
-            The update error happened while trying to update Edge WebView2 Runtime.
-            </summary><remarks>
-            ExtendedError will be 0 if Status is not <see cref="F:Microsoft.Web.WebView2.Core.CoreWebView2UpdateRuntimeStatus.Failed" /> or <see cref="F:Microsoft.Web.WebView2.Core.CoreWebView2UpdateRuntimeStatus.BlockedByPolicy" />.
-            </remarks>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2UpdateRuntimeResult.Status">
-            <summary>The status for the UpdateRuntime operation.</summary>
         </member>
         <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs">
             <summary>
@@ -7528,61 +6559,6 @@
             If this method is being called after a first call has completed, it will return immediately (asynchronously).
             </remarks>
         </member>
-        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2WebTexture">
-            <summary>
-            Web Texture that receives from the Javascript.</summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2WebTexture.Handle">
-            <summary>
-            NT handle that can be shared from the browser.
-            </summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2WebTexture.Resource">
-            <summary>
-            D2D texture resource that the host can read from.</summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2WebTexture.Timestamp">
-            <summary>The timestamp of the web texture. Javascript can set this value
-            with any value, but it is suggested to use same value of its original
-            video frame that is a value of PresentTexture so that the host is able to
-            tell the receiving texture delta.</summary>
-        </member>
-        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2WindowControlsOverlay">
-            <summary></summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2WindowControlsOverlay.BackgroundColor">
-            <summary>The `BackgroundColor` property allows you to set a background color
-            for the overlay. Based on the background color you choose, Webview2 
-            will automatically calculate a foreground and hover color.
-            Defaults to \#f3f3f3</summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2WindowControlsOverlay.Height">
-            <summary>The `Height` property in pixels, allows you to set the height of the overlay and
-            title bar area. Defaults to 48px. 
-            </summary>
-        </member>
-        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2WindowControlsOverlay.IsEnabled">
-            <summary>The `IsEnabled` property allows you to opt in to using
-            the WebView2 window controls overlay. Defaults to `FALSE`.
-            
-            When this property is `TRUE`, WebView2 will draw its own minimize, maximize,
-            and close buttons on the top right corner of the Webview2. 
-            
-            When using this you should configure your app window to not display its default
-            window control buttons. You are responsible for creating a title bar for your app
-            by using the available space to the left of the controls overlay. In doing so, 
-            you can utilize the [IsNonClientRegionSupportEnabled](https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings9?view=webview2-1.0.2739.15)
-            API to enable draggable regions for your custom title bar.
-            
-            The Overlay buttons will sit on top of the HTML content, and will prevent mouse interactions
-            with any elements directly below it, so you should avoid placing content there. 
-            To that end, there are four [CSS environment variables](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/window-controls-overlay#use-css-environment-variables-to-stay-clear-of-the-overlay) 
-            defined to help you get the dimensions of the available titlebar area to the left of the overlay.
-            Similarly the navigator object will contain a [WindowControlsOverlay](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/window-controls-overlay#react-to-overlay-changes)
-            property which can be used to get the titlebar area as a rect, 
-            and listen for changes to the size of that area.
-            </summary>
-        </member>
         <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2WindowFeatures">
             <summary>
             The window features for a WebView popup window.
@@ -7694,7 +6670,7 @@
             </summary>
             <param name="ex">
             Exception that occurred during initialization, or null if initialization was successful.
-            </param>
+            </param> 
         </member>
         <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2InitializationCompletedEventArgs.IsSuccess">
             <summary>
