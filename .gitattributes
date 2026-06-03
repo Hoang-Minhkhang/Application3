@@ -7,3 +7,5 @@
 *.manifest text eol=lf
 *.application text eol=lf
 *.deploy text eol=lf
+*.dll.deploy filter=lfs diff=lfs merge=lfs -text
+*.exe.deploy filter=lfs diff=lfs merge=lfs -text
