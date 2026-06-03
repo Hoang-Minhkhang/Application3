@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 2026/05/28-20:45:23.294 a330 Creating DB C:\Application3\Application3.exe.WebView2\EBWebView\Default\Extension Rules since it was missing.
 2026/05/28-20:45:23.368 a330 Reusing MANIFEST C:\Application3\Application3.exe.WebView2\EBWebView\Default\Extension Rules/MANIFEST-000001
+=======
+2026/06/03-12:41:55.200 6050 Creating DB C:\Application3\Application3.exe.WebView2\EBWebView\Default\Extension Rules since it was missing.
+2026/06/03-12:41:55.212 6050 Reusing MANIFEST C:\Application3\Application3.exe.WebView2\EBWebView\Default\Extension Rules/MANIFEST-000001
+>>>>>>> 5eb3e20 (Publish Application3 version 2.6.4.1289 với Fixed Runtime)

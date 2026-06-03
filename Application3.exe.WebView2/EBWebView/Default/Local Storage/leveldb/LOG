@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 2026/06/02-10:33:35.879 3668 Reusing MANIFEST C:\Application3\Application3.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
 2026/06/02-10:33:35.900 3668 Recovering log #6
 2026/06/02-10:33:35.905 3668 Reusing old log C:\Application3\Application3.exe.WebView2\EBWebView\Default\Local Storage\leveldb/000006.log 
+=======
+2026/06/03-12:41:55.324 71f0 Creating DB C:\Application3\Application3.exe.WebView2\EBWebView\Default\Local Storage\leveldb since it was missing.
+2026/06/03-12:41:55.372 71f0 Reusing MANIFEST C:\Application3\Application3.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+>>>>>>> 5eb3e20 (Publish Application3 version 2.6.4.1289 với Fixed Runtime)

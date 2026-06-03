@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2026/06/02-10:33:36.208 3668 Reusing MANIFEST C:\Application3\Application3.exe.WebView2\EBWebView\Default\Session Storage/MANIFEST-000001
 2026/06/02-10:33:36.210 3668 Recovering log #3
 2026/06/02-10:33:36.213 3668 Level-0 table #3: started
@@ -6,3 +7,7 @@
 2026/06/02-10:33:36.241 3668 Reusing old log C:\Application3\Application3.exe.WebView2\EBWebView\Default\Session Storage/000004.log 
 2026/06/02-10:33:36.245 3668 Delete type=0 #3
 2026/06/02-10:33:36.245 3668 Delete type=2 #5
+=======
+2026/06/03-12:41:55.666 71f0 Creating DB C:\Application3\Application3.exe.WebView2\EBWebView\Default\Session Storage since it was missing.
+2026/06/03-12:41:55.689 71f0 Reusing MANIFEST C:\Application3\Application3.exe.WebView2\EBWebView\Default\Session Storage/MANIFEST-000001
+>>>>>>> 5eb3e20 (Publish Application3 version 2.6.4.1289 với Fixed Runtime)

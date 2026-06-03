@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 2026/06/02-10:33:35.705 2820 Reusing MANIFEST C:\Application3\Application3.exe.WebView2\EBWebView\Default\Sync Data\LevelDB/MANIFEST-000001
 2026/06/02-10:33:35.709 2820 Recovering log #3
 2026/06/02-10:33:35.710 2820 Reusing old log C:\Application3\Application3.exe.WebView2\EBWebView\Default\Sync Data\LevelDB/000003.log 
+=======
+2026/06/03-12:41:55.170 5e2c Creating DB C:\Application3\Application3.exe.WebView2\EBWebView\Default\Sync Data\LevelDB since it was missing.
+2026/06/03-12:41:55.207 5e2c Reusing MANIFEST C:\Application3\Application3.exe.WebView2\EBWebView\Default\Sync Data\LevelDB/MANIFEST-000001
+>>>>>>> 5eb3e20 (Publish Application3 version 2.6.4.1289 với Fixed Runtime)

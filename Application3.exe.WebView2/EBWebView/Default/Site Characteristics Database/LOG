@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 2026/06/02-10:33:35.704 550 Reusing MANIFEST C:\Application3\Application3.exe.WebView2\EBWebView\Default\Site Characteristics Database/MANIFEST-000001
 2026/06/02-10:33:35.709 550 Recovering log #3
 2026/06/02-10:33:35.710 550 Reusing old log C:\Application3\Application3.exe.WebView2\EBWebView\Default\Site Characteristics Database/000003.log 
+=======
+2026/06/03-12:41:55.167 46ac Creating DB C:\Application3\Application3.exe.WebView2\EBWebView\Default\Site Characteristics Database since it was missing.
+2026/06/03-12:41:55.199 46ac Reusing MANIFEST C:\Application3\Application3.exe.WebView2\EBWebView\Default\Site Characteristics Database/MANIFEST-000001
+>>>>>>> 5eb3e20 (Publish Application3 version 2.6.4.1289 với Fixed Runtime)
