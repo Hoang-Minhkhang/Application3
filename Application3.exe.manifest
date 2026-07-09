@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="Application3.exe" version="2.6.04.1303" publicKeyToken="0000000000000000" language="vi-VN" processorArchitecture="msil" type="win32" />
-  <description asmv2:iconFile="HMK.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <asmv1:assemblyIdentity name="Application3.exe" version="2.6.04.1999" publicKeyToken="0000000000000000" language="vi-VN" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="HMK1.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
     <assemblyIdentity name="Application3" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Application3.exe" size="8891328">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Application3.exe" size="9777088">
       <assemblyIdentity name="Application3" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>nddZsenDxrbjosJmYLlJ+qcunY0CqTwqC9W6PNt8H50=</dsig:DigestValue>
+        <dsig:DigestValue>nOVsCSuQ3gS+wjzAJjUoFFKHS+lEeud+g0QYcdXJj+8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -118,6 +118,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>4odWzG8v5O0xSvY0YrJhzSgwhKuYjujGzhhe5C62/Jk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="HMK1.ico" size="432254">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>TRDCaj5x2UWF1IuNjKNrRyk57mgiyM+W/7km+jLFGJk=</dsig:DigestValue>
     </hash>
   </file>
   <file name="runtimes\win-arm64\native\WebView2Loader.dll" size="147336">

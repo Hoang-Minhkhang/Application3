@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Application3.exe" version="2.6.04.1999" publicKeyToken="c6d53b96dc896067" language="vi-VN" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="HMK1.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Application3" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Application3.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Application3.exe" size="9777088">
+      <assemblyIdentity name="Application3" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>nOVsCSuQ3gS+wjzAJjUoFFKHS+lEeud+g0QYcdXJj+8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Web.WebView2.Core.dll" size="650080">
+      <assemblyIdentity name="Microsoft.Web.WebView2.Core" version="1.0.3967.48" publicKeyToken="2A8AB48044D2601E" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>/MB/a43bfJCRXb6qLZWYgLxSJm3UnX+rCC+dppjyvww=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Web.WebView2.WinForms.dll" size="38792">
+      <assemblyIdentity name="Microsoft.Web.WebView2.WinForms" version="1.0.3967.48" publicKeyToken="2A8AB48044D2601E" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>GTVAXq7eXJhc22CoEXWBfs5S8TLj+jVram23U7v0Ugc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Web.WebView2.Wpf.dll" size="83296">
+      <assemblyIdentity name="Microsoft.Web.WebView2.Wpf" version="1.0.3967.48" publicKeyToken="2A8AB48044D2601E" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>fDaENYy8h39/uCwBnXCmFyJNkSX3S+JsL4StcdUvcv0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PdfiumViewer.dll" size="115712">
+      <assemblyIdentity name="PdfiumViewer" version="2.13.0.0" publicKeyToken="91E4789CFB0609E0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>ZfH8v0qDbPN6DoyjK63A+4G5OHAUzhQcwF5dpxFIa6g=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Application3.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="HMK.ico" size="432254">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>4odWzG8v5O0xSvY0YrJhzSgwhKuYjujGzhhe5C62/Jk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="HMK1.ico" size="432254">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>TRDCaj5x2UWF1IuNjKNrRyk57mgiyM+W/7km+jLFGJk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\win-arm64\native\WebView2Loader.dll" size="147336">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Akj+oNs222Xocn6ibWmYxP4NdqoEmOeEgu1pA+AGEUI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\win-x64\native\WebView2Loader.dll" size="159112">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>u1/aXy06rl4Jd6so2KigCs/WPXN0iqrDLa9PxmRbZnc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\win-x86\native\WebView2Loader.dll" size="120672">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>mHNkTyZolg1m4Z0MYveBKxs/NcH1PozWHtuxvjEWZrA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Screensaver.ico" size="78362">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>bOA3e+Oi7oOdFlGx8WT/DwM0jG/eebOzX2bZv6ngmBM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="x64\pdfium.dll" size="15807488">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>KlZXdUVx3P/lSQkI9G1YmMNKrgqpJrL/fPeiSPmAoeY=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=HKHANG-PC\hoang" issuerKeyHash="f41d117ab0ce650788425f2d7816a0b984366540" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>gvn+nTD5BVmqCpCCtbxfYxtf+qMDEXah3CkEj2AyDec=</DigestValue></Reference></SignedInfo><SignatureValue>BzzTQJhqw2h4goAm0FxEqNgaPItmSM9FOpHzxDlBomLX0jP354fBjCek0/D8PPacpa8qia613njvQhvbwy/X3JSA7z+hVgfdCEBhymUSbRlf1Sk+tKznADp6CnrIgHrxoiJF1EUjdjoDmI/brC0cyYrrVlKZnb7pwQvQybUFYjo=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>rh5H6HUKvKkui42VM7Fg1Qk/5+0E4OD3H+R6+58x+b1ci0EhWXdYRISKYqLHC5qQ0wPcxC+oMFAqOlunugLaDmYf1AVrdNtO5SSqtF6dl/WEl++y4sdR7UAfBj0dwjSW2sB9AW5QLF9HNG98KNMsfRURsoOifMN5LBHRdMLRUa0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="e70d32608f0429dca1761103a3fa5f1b635fbcb582900aaa5905f9309dfef982" Description="" Url=""><as:assemblyIdentity name="Application3.exe" version="2.6.04.1999" publicKeyToken="c6d53b96dc896067" language="vi-VN" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=HKHANG-PC\hoang</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>Ta1nLRSUOAR4qNjAI677bDcUdsoTWPNvlYHOCk1l/Zg=</DigestValue></Reference></SignedInfo><SignatureValue>XaWI5ODR4mG+kl8fcLVkCg8bTmdSaZpj/lptrOjy9uQPNNOEU8+wCVlBB10XAU5FhPgAC+BYb7aiGMbZUVc1yWbxUEnXHdmu2rXWQGsj3Vf/B0akEeoBAvMlR6nMVWky/B3LlD3TLcq52R+SRY5BCfinHismjOWu0WR8h+fE4H8=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>rh5H6HUKvKkui42VM7Fg1Qk/5+0E4OD3H+R6+58x+b1ci0EhWXdYRISKYqLHC5qQ0wPcxC+oMFAqOlunugLaDmYf1AVrdNtO5SSqtF6dl/WEl++y4sdR7UAfBj0dwjSW2sB9AW5QLF9HNG98KNMsfRURsoOifMN5LBHRdMLRUa0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB1TCCAT6gAwIBAgIQYr+9RnonX55Oe+1SSsZ5UjANBgkqhkiG9w0BAQsFADApMScwJQYDVQQDHh4ASABLAEgAQQBOAEcALQBQAEMAXABoAG8AYQBuAGcwHhcNMjYwNDA0MTM1NjIwWhcNMjcwNDA0MTk1NjIwWjApMScwJQYDVQQDHh4ASABLAEgAQQBOAEcALQBQAEMAXABoAG8AYQBuAGcwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAK4eR+h1CrypLouNlTOxYNUJP+ftBODg9x/kevufMfm9XItBIVl3WESEimKixwuakNMD3MQvqDBQKjpbp7oC2g5mH9QFa3TbTuUkqrRenZf1hJfvsuLHUe1AHwY9HcI0ltrAfQFuUCxfRzRvfCjTLH0VEbKDonzDeSwR0XTC0VGtAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAIrKf3ZYDQSkPJK2VgOUHUrRXEdC6q0FD+pf2D+qKjyYyTl9J3n/av7yWrgjxHHW0ehnPH0iHFlf0fXwUBlORMtrnJgGTKaeKEj8vv4NeHcJ3UyzAuZk3LyNOGvkmAOaCrDOrnuDlcqofgwLZMZEbivOnmuVNRf65oKYAkbAq1i8=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
