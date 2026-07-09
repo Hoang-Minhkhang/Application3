@@ -120,21 +120,6 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="process1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>132, 17</value>
-  </metadata>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Kính chào người dùng 
-Bạn đang ở trong một "tác phẩm " của tôi  . 
-tự do chiêm ngưỡng những gí có trong đây 
-Xin cảm ơn 
-
-APPLICATION3 PUBLISHED VER 0
-(C) COPYRIGHT BY MINHKHANG(R) 
-DO NOT REUP 
-----------------------------------------
-</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

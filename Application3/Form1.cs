@@ -32,6 +32,23 @@ namespace Application3
 
 	public partial class Form1 : Form
 	{
+		private string _username;
+		public string _nickname { get; set; }
+
+		public Form1(string username, string nickname)
+		{
+			InitializeComponent();
+			_username = username;
+			_nickname = nickname;
+			bool dangnhap = true;
+			// Ví dụ: hiển thị username lên title
+			this.Text = $"Form1 - {_username}";
+			string currentusername = _username;
+			label2.Text = _username;
+			ttdangnhap.Text = _nickname;
+			tabControl1.SelectedIndex = 1;
+
+		}
 		private System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
 		private int SoGiayConLai;
 		private string selectedFile;
@@ -48,7 +65,7 @@ namespace Application3
 				lblCountdown.ForeColor = Color.Red;
 			}
 			else {
-				lblCountdown.Visible = true; 
+				lblCountdown.Visible = true;
 				lblCountdown.ForeColor = Color.Black;
 			}
 			if (SoGiayConLai <= 0)
@@ -56,9 +73,13 @@ namespace Application3
 				timer.Stop();
 				lblCountdown.Text = " Hết giờ!";
 				player.URL = selectedFile;
-
+				if (Onleone.Checked)
+				{
+					BaoCAo.Visible = true;
+				}
 				player.controls.play();
-				isPlaying = true;
+					isPlaying = true;
+					
 			}
 		}
 
@@ -130,7 +151,7 @@ namespace Application3
 		// Build the form title using application name and current username (if any)
 		private string GetFormTitle()
 		{
-			const string appName = "MinhKhang.exe- CONNECTED TO   ";
+			string appName = $"MinhKhang.exe- CONNECTED TO   {_username}";
 			const string appName2 = "Activation  ";
 			if (!string.IsNullOrEmpty(currentUsername))
 				return $"{appName} : {currentUsername}";
@@ -215,7 +236,7 @@ namespace Application3
 			// Đặt mật khẩu hiển thị dấu *
 			maskedTextBox2.PasswordChar = '*';
 		}
-		bool dangnhap = false;
+		bool dangnhap = true;
 		// Đăng nhập
 		string nickname = "";
 		string cuser = "";
@@ -265,6 +286,8 @@ namespace Application3
 
 				
 				dangnhap = true;
+				cuser= username;
+
 				richTextBox7.AppendText($"{DateTime.Now} - Đăng nhập thành công với tài khoản: {username} ({nickname})\n");
 				if (username == "MinhKhang1995" || username == "Administrator")
 				{
@@ -332,6 +355,7 @@ namespace Application3
 					try
 					{
 						ni.Visible = false;
+						// test 
 						ni.Dispose();
 					}
 					catch { /* swallow */ }
@@ -507,19 +531,8 @@ namespace Application3
 
 		private void kếtThúcPhiênLàmViệcToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			// Clear current user and update title when ending session
-			MessageBox.Show("chúng tôi khuyên bạn nên thoát phần mềm vì lý do bảo mật , Xóa toàn bộ ô đăng nhập  ", "Kết thúc phiên làm việc ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-			currentUsername = string.Empty;
-			ttdangnhap.Text = "Đẵ Đăng Xuất ";
-			richTextBox7.AppendText($"{DateTime.Now} - Đăng xuất thành công khỏi {currentUsername} ({nickname})\n");
-			richTextBox7.Text = "";
-			maskedTextBox2.Text = "";
-			pictureBox3.Visible = false;
-			tableLayoutPanel3.Visible = false;
-			dangnhap = false;
-			this.Text = GetFormTitle();
-			tabControl1.SelectedIndex = 0;
-			dangnhap = false;
+			// Clear current user and update title when ending sessionaboutThisApplicationToolStripMenuItem
+			Application.Exit(); 
 		}
 
 		private void aboutThisApplicationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -571,10 +584,13 @@ namespace Application3
 					}
 					RecalculateStt();
 					MessageBox.Show("Import thành công");
+					Trangthaicuoi.Text = "Import tác vụ thành công ";
+
 				}
 				catch (Exception ex)
 				{
 					MessageBox.Show("Không thể import: " + ex.Message);
+					Trangthaicuoi.Text = "Import tác vụ thất bại ";
 				}
 			}
 		}
@@ -596,10 +612,12 @@ namespace Application3
 						}
 					}
 					MessageBox.Show("Export thành công");
+					Trangthaicuoi.Text = "Lưu tác vụ thành công ";
 				}
 				catch (Exception ex)
 				{
 					MessageBox.Show("Không thể export: " + ex.Message);
+					Trangthaicuoi.Text = "Lưu tác vụ thất bại ";
 				}
 			}
 		}
@@ -640,6 +658,7 @@ namespace Application3
 
 		private void button8_Click_1(object sender, EventArgs e)
 		{
+			Trangthaicuoi.Text= "Lưu tác vụ thành công ";
 			DateTime combined = DateTime.Now;
 			string dateText = maskedTextBox4.Text.Trim();
 			string timeText = maskedTextBox3.Text.Trim();
@@ -820,6 +839,7 @@ namespace Application3
 
 		private void button15_Click(object sender, EventArgs e)
 		{
+			Trangthaicuoi.Text="thực thi tác vụ thành công ";
 			// in ra tệp PDF (export contents of groupBox4 to a PDF file)
 			using (var sfd = new SaveFileDialog { Filter = "PDF files|*.pdf", FileName = "groupBox4.pdf" })
 			{
@@ -1229,7 +1249,7 @@ namespace Application3
 		{
 			if (dangnhap)
 			{
-				label2.Text = currentUsername;
+				label2.Text = _username;
 			}
 		}
 
@@ -2281,7 +2301,7 @@ namespace Application3
 					new RectangleF(50, 50, e.PageBounds.Width - 100, e.PageBounds.Height - 100));
 			}
 		}
-
+		bool coTep = false; 
 		private void XemLai_Click(object sender, EventArgs e)
 		{
 			OpenFileDialog ofd = new OpenFileDialog();
@@ -2290,7 +2310,7 @@ namespace Application3
 			{
 				
 				pdfDocument = PdfDocument.Load(ofd.FileName);
-
+				coTep = true; 
 				// Gắn vào PrintPreviewControl (CuaSoIn)
 				CuaSoIn.Document = pdfDocument.CreatePrintDocument();
 			}
@@ -2317,10 +2337,17 @@ namespace Application3
 
 		private void button29_Click(object sender, EventArgs e)
 		{
-			PrintPreviewDialog previewDialog = new PrintPreviewDialog();
-			previewDialog.Document = pdfDocument.CreatePrintDocument();
-			previewDialog.PrintPreviewControl.Zoom = 1.2; // zoom 120%
-			previewDialog.ShowDialog();
+			if (coTep == true)
+			{
+				PrintPreviewDialog previewDialog = new PrintPreviewDialog();
+				previewDialog.Document = pdfDocument.CreatePrintDocument();
+				previewDialog.PrintPreviewControl.Zoom = 1.2; // zoom 120%
+				previewDialog.ShowDialog();
+			}
+			else
+			{
+				MessageBox.Show("Bạn chưa chọn file PDF nào để xem lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+			}
 		}
 
 		private void cửaSổ2ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2433,10 +2460,32 @@ namespace Application3
 			SoGiayConLai = minutes * 60;
 			timer.Start();
 		}
+
+		private void button49_Click(object sender, EventArgs e)
+		{
+			BaoCAo.Visible=false; 
+		}
+
+		private void aboutToolStripMenuItem2_Click(object sender, EventArgs e)
+		{
+			MessageBox.Show("MinhKhangApplication3.exe - timemanager ", "Thông báo "); 
+		}
+
+		private void button50_Click(object sender, EventArgs e)
+		{
+			var cv = new CongViec3();
+			cv.Show();
+		}
+
+		private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Application.Exit(); 
+		}
 	}
 
 }
 
-		
+
+
 
 

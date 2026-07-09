@@ -35,7 +35,6 @@
 			this.label79 = new System.Windows.Forms.Label();
 			this.label78 = new System.Windows.Forms.Label();
 			this.groupBox12 = new System.Windows.Forms.GroupBox();
-			this.label69 = new System.Windows.Forms.Label();
 			this.button26 = new System.Windows.Forms.Button();
 			this.label68 = new System.Windows.Forms.Label();
 			this.groupBox10 = new System.Windows.Forms.GroupBox();
@@ -91,6 +90,8 @@
 			this.linkLabel2 = new System.Windows.Forms.LinkLabel();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.tabPage3 = new System.Windows.Forms.TabPage();
+			this.button50 = new System.Windows.Forms.Button();
+			this.Trangthaicuoi = new System.Windows.Forms.Label();
 			this.button15 = new System.Windows.Forms.Button();
 			this.button13 = new System.Windows.Forms.Button();
 			this.button12 = new System.Windows.Forms.Button();
@@ -127,7 +128,16 @@
 			this.button32 = new System.Windows.Forms.Button();
 			this.checkBox10 = new System.Windows.Forms.CheckBox();
 			this.Rev = new System.Windows.Forms.GroupBox();
+			this.button49 = new System.Windows.Forms.Button();
+			this.Onleone = new System.Windows.Forms.CheckBox();
+			this.BaoCAo = new System.Windows.Forms.GroupBox();
+			this.label83 = new System.Windows.Forms.Label();
+			this.label81 = new System.Windows.Forms.Label();
+			this.label80 = new System.Windows.Forms.Label();
 			this.Number3 = new System.Windows.Forms.GroupBox();
+			this.Starttimer = new System.Windows.Forms.Button();
+			this.Number0 = new System.Windows.Forms.Button();
+			this.ClearButton = new System.Windows.Forms.Button();
 			this.Number9 = new System.Windows.Forms.Button();
 			this.Number8 = new System.Windows.Forms.Button();
 			this.Number7 = new System.Windows.Forms.Button();
@@ -257,6 +267,7 @@
 			this.tabPage7 = new System.Windows.Forms.TabPage();
 			this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
 			this.groupBox14 = new System.Windows.Forms.GroupBox();
+			this.label82 = new System.Windows.Forms.Label();
 			this.button29 = new System.Windows.Forms.Button();
 			this.Print = new System.Windows.Forms.Button();
 			this.ReportToserver = new System.Windows.Forms.Button();
@@ -339,6 +350,7 @@
 			this.TruyCap = new System.Windows.Forms.Button();
 			this.NutTien = new System.Windows.Forms.Button();
 			this.NutQuayVe = new System.Windows.Forms.Button();
+			this.tabPage12 = new System.Windows.Forms.TabPage();
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.mởToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.lưuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -371,6 +383,7 @@
 			this.quảnLýThờiGianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.mởTabToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.chọnÂmBáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.aboutToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
 			this.tabToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.đăngNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.thôngTinChungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -416,9 +429,8 @@
 			this.banĐầuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.contextMenuStrip5 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.pictureBox5 = new System.Windows.Forms.PictureBox();
-			this.Starttimer = new System.Windows.Forms.Button();
-			this.Number0 = new System.Windows.Forms.Button();
-			this.ClearButton = new System.Windows.Forms.Button();
+			this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.label87 = new System.Windows.Forms.Label();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.groupBox12.SuspendLayout();
@@ -437,6 +449,7 @@
 			this.tabPage4.SuspendLayout();
 			this.groupBox17.SuspendLayout();
 			this.Rev.SuspendLayout();
+			this.BaoCAo.SuspendLayout();
 			this.Number3.SuspendLayout();
 			this.tabPage5.SuspendLayout();
 			this.statusStrip1.SuspendLayout();
@@ -483,6 +496,7 @@
 			this.tabControl1.Controls.Add(this.tabPage9);
 			this.tabControl1.Controls.Add(this.tabPage10);
 			this.tabControl1.Controls.Add(this.tabPage11);
+			this.tabControl1.Controls.Add(this.tabPage12);
 			this.tabControl1.Location = new System.Drawing.Point(66, 55);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
@@ -530,26 +544,16 @@
 			// 
 			// groupBox12
 			// 
-			this.groupBox12.Controls.Add(this.label69);
+			this.groupBox12.Controls.Add(this.label87);
 			this.groupBox12.Controls.Add(this.button26);
 			this.groupBox12.Controls.Add(this.label68);
-			this.groupBox12.Location = new System.Drawing.Point(735, 427);
+			this.groupBox12.Location = new System.Drawing.Point(368, 200);
 			this.groupBox12.Name = "groupBox12";
 			this.groupBox12.Size = new System.Drawing.Size(384, 163);
 			this.groupBox12.TabIndex = 6;
 			this.groupBox12.TabStop = false;
-			this.groupBox12.Text = "Tin nhắn từ quản trị viên ";
+			this.groupBox12.Text = "N/A";
 			this.groupBox12.Enter += new System.EventHandler(this.groupBox12_Enter);
-			// 
-			// label69
-			// 
-			this.label69.AutoSize = true;
-			this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label69.Location = new System.Drawing.Point(3, 91);
-			this.label69.Name = "label69";
-			this.label69.Size = new System.Drawing.Size(119, 13);
-			this.label69.TabIndex = 2;
-			this.label69.Text = "Hoàng Minh Khang ";
 			// 
 			// button26
 			// 
@@ -564,12 +568,11 @@
 			// label68
 			// 
 			this.label68.AutoSize = true;
-			this.label68.Location = new System.Drawing.Point(16, 19);
+			this.label68.Location = new System.Drawing.Point(84, 24);
 			this.label68.Name = "label68";
-			this.label68.Size = new System.Drawing.Size(313, 65);
+			this.label68.Size = new System.Drawing.Size(197, 26);
 			this.label68.TabIndex = 0;
-			this.label68.Text = "Xin chào người dùng \r\ncảm ơn vì sử dụng phần mềm \r\nĐể đăng nhập , vui lòng di chu" +
-    "ột lên phía trên cùng và chọn nút\r\n đăng nhập để mỡ cửa sổ \r\nXin cảm ơn \r\n";
+			this.label68.Text = "This Page is currently NOT AVAILABLE \r\nbecause it is moved .\r\n";
 			// 
 			// groupBox10
 			// 
@@ -602,6 +605,7 @@
 			this.button48.TabIndex = 11;
 			this.button48.Text = "Broswer ";
 			this.button48.UseVisualStyleBackColor = true;
+			this.button48.Visible = false;
 			this.button48.Click += new System.EventHandler(this.button48_Click);
 			// 
 			// button33
@@ -614,6 +618,7 @@
 			this.button33.TabIndex = 10;
 			this.button33.Text = "Exit windows";
 			this.button33.UseVisualStyleBackColor = true;
+			this.button33.Visible = false;
 			this.button33.Click += new System.EventHandler(this.button33_Click);
 			// 
 			// button28
@@ -624,6 +629,7 @@
 			this.button28.TabIndex = 9;
 			this.button28.Text = "Code Sign in ";
 			this.button28.UseVisualStyleBackColor = true;
+			this.button28.Visible = false;
 			// 
 			// linkLabel4
 			// 
@@ -634,6 +640,7 @@
 			this.linkLabel4.TabIndex = 8;
 			this.linkLabel4.TabStop = true;
 			this.linkLabel4.Text = "What is Code Sign in ";
+			this.linkLabel4.Visible = false;
 			this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
 			// 
 			// maskedTextBox7
@@ -644,6 +651,7 @@
 			this.maskedTextBox7.Size = new System.Drawing.Size(66, 20);
 			this.maskedTextBox7.TabIndex = 7;
 			this.maskedTextBox7.ValidatingType = typeof(int);
+			this.maskedTextBox7.Visible = false;
 			// 
 			// label77
 			// 
@@ -654,6 +662,7 @@
 			this.label77.Size = new System.Drawing.Size(177, 18);
 			this.label77.TabIndex = 6;
 			this.label77.Text = "Quick Sign in by code ";
+			this.label77.Visible = false;
 			// 
 			// button25
 			// 
@@ -665,6 +674,7 @@
 			this.button25.TabIndex = 5;
 			this.button25.Text = "Thoát Phần Mềm ";
 			this.button25.UseVisualStyleBackColor = true;
+			this.button25.Visible = false;
 			this.button25.Click += new System.EventHandler(this.button25_Click);
 			// 
 			// button24
@@ -675,6 +685,7 @@
 			this.button24.TabIndex = 4;
 			this.button24.Text = "ImagePreview";
 			this.button24.UseVisualStyleBackColor = true;
+			this.button24.Visible = false;
 			this.button24.Click += new System.EventHandler(this.button24_Click);
 			// 
 			// button23
@@ -685,6 +696,7 @@
 			this.button23.TabIndex = 3;
 			this.button23.Text = "Settings";
 			this.button23.UseVisualStyleBackColor = true;
+			this.button23.Visible = false;
 			this.button23.Click += new System.EventHandler(this.button23_Click);
 			// 
 			// button22
@@ -695,6 +707,7 @@
 			this.button22.TabIndex = 2;
 			this.button22.Text = "đăng nhập ";
 			this.button22.UseVisualStyleBackColor = true;
+			this.button22.Visible = false;
 			this.button22.Click += new System.EventHandler(this.button22_Click);
 			// 
 			// groupBox11
@@ -745,9 +758,9 @@
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.Location = new System.Drawing.Point(6, 12);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(292, 31);
+			this.label1.Size = new System.Drawing.Size(228, 31);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "Xin Chào người dùng ";
+			this.label1.Text = "NOT AVAIL able";
 			// 
 			// label6
 			// 
@@ -779,7 +792,7 @@
 			this.groupBox1.Cursor = System.Windows.Forms.Cursors.Cross;
 			this.groupBox1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.groupBox1.ForeColor = System.Drawing.Color.Blue;
-			this.groupBox1.Location = new System.Drawing.Point(334, 138);
+			this.groupBox1.Location = new System.Drawing.Point(643, 423);
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.Size = new System.Drawing.Size(499, 283);
 			this.groupBox1.TabIndex = 2;
@@ -797,6 +810,7 @@
 			this.label65.TabIndex = 17;
 			this.label65.Text = "* Xin chú ý : Vui lòng chọn khu vực bạn làm việc theo đúng khu vực thực tế của bạ" +
     "n .";
+			this.label65.Visible = false;
 			this.label65.Click += new System.EventHandler(this.label65_Click);
 			// 
 			// progressBar1
@@ -806,6 +820,7 @@
 			this.progressBar1.Size = new System.Drawing.Size(491, 17);
 			this.progressBar1.TabIndex = 16;
 			this.progressBar1.Value = 99;
+			this.progressBar1.Visible = false;
 			this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
 			// 
 			// dateTimePicker1
@@ -814,6 +829,7 @@
 			this.dateTimePicker1.Name = "dateTimePicker1";
 			this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
 			this.dateTimePicker1.TabIndex = 5;
+			this.dateTimePicker1.Visible = false;
 			// 
 			// dateTimePicker2
 			// 
@@ -821,6 +837,7 @@
 			this.dateTimePicker2.Name = "dateTimePicker2";
 			this.dateTimePicker2.Size = new System.Drawing.Size(178, 20);
 			this.dateTimePicker2.TabIndex = 15;
+			this.dateTimePicker2.Visible = false;
 			// 
 			// checkBox2
 			// 
@@ -831,6 +848,7 @@
 			this.checkBox2.TabIndex = 14;
 			this.checkBox2.Text = "Tôi đồng ý các điều khoảng này ";
 			this.checkBox2.UseVisualStyleBackColor = true;
+			this.checkBox2.Visible = false;
 			// 
 			// checkBox1
 			// 
@@ -841,6 +859,7 @@
 			this.checkBox1.TabIndex = 13;
 			this.checkBox1.Text = "Tôi đồng ý các thông tin là đúng ";
 			this.checkBox1.UseVisualStyleBackColor = true;
+			this.checkBox1.Visible = false;
 			// 
 			// button4
 			// 
@@ -850,6 +869,7 @@
 			this.button4.TabIndex = 12;
 			this.button4.Text = "Khỏi tài khoản";
 			this.button4.UseVisualStyleBackColor = true;
+			this.button4.Visible = false;
 			this.button4.Click += new System.EventHandler(this.button4_Click);
 			// 
 			// button3
@@ -861,6 +881,7 @@
 			this.button3.TabIndex = 11;
 			this.button3.Text = "Đăng nhập ";
 			this.button3.UseVisualStyleBackColor = true;
+			this.button3.Visible = false;
 			this.button3.Click += new System.EventHandler(this.button3_Click);
 			// 
 			// button2
@@ -872,6 +893,7 @@
 			this.button2.TabIndex = 10;
 			this.button2.Text = "Tìm Kiếm";
 			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Visible = false;
 			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// button1
@@ -883,6 +905,7 @@
 			this.button1.TabIndex = 9;
 			this.button1.Text = "Thoát phần mềm";
 			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Visible = false;
 			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// MaKhuVuc
@@ -915,6 +938,7 @@
 			this.MaKhuVuc.Name = "MaKhuVuc";
 			this.MaKhuVuc.Size = new System.Drawing.Size(222, 22);
 			this.MaKhuVuc.TabIndex = 8;
+			this.MaKhuVuc.Visible = false;
 			this.MaKhuVuc.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
 			// 
 			// label5
@@ -926,6 +950,7 @@
 			this.label5.Size = new System.Drawing.Size(151, 20);
 			this.label5.TabIndex = 7;
 			this.label5.Text = "Chọn Mã khu vực ";
+			this.label5.Visible = false;
 			// 
 			// maskedTextBox2
 			// 
@@ -934,6 +959,7 @@
 			this.maskedTextBox2.Name = "maskedTextBox2";
 			this.maskedTextBox2.Size = new System.Drawing.Size(444, 20);
 			this.maskedTextBox2.TabIndex = 6;
+			this.maskedTextBox2.Visible = false;
 			this.maskedTextBox2.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox2_MaskInputRejected);
 			// 
 			// label4
@@ -945,6 +971,7 @@
 			this.label4.Size = new System.Drawing.Size(86, 20);
 			this.label4.TabIndex = 5;
 			this.label4.Text = "Password";
+			this.label4.Visible = false;
 			// 
 			// maskedTextBox1
 			// 
@@ -953,6 +980,7 @@
 			this.maskedTextBox1.Name = "maskedTextBox1";
 			this.maskedTextBox1.Size = new System.Drawing.Size(444, 20);
 			this.maskedTextBox1.TabIndex = 4;
+			this.maskedTextBox1.Visible = false;
 			this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
 			// 
 			// label3
@@ -964,6 +992,7 @@
 			this.label3.Size = new System.Drawing.Size(214, 20);
 			this.label3.TabIndex = 3;
 			this.label3.Text = "Tài khoản được cung cấp ";
+			this.label3.Visible = false;
 			// 
 			// pictureBox1
 			// 
@@ -1173,6 +1202,8 @@
 			// 
 			// tabPage3
 			// 
+			this.tabPage3.Controls.Add(this.button50);
+			this.tabPage3.Controls.Add(this.Trangthaicuoi);
 			this.tabPage3.Controls.Add(this.button15);
 			this.tabPage3.Controls.Add(this.button13);
 			this.tabPage3.Controls.Add(this.button12);
@@ -1186,6 +1217,25 @@
 			this.tabPage3.TabIndex = 2;
 			this.tabPage3.Text = "Tác vụ ";
 			this.tabPage3.UseVisualStyleBackColor = true;
+			// 
+			// button50
+			// 
+			this.button50.Location = new System.Drawing.Point(429, 12);
+			this.button50.Name = "button50";
+			this.button50.Size = new System.Drawing.Size(90, 21);
+			this.button50.TabIndex = 7;
+			this.button50.Text = "Ver2";
+			this.button50.UseVisualStyleBackColor = true;
+			this.button50.Click += new System.EventHandler(this.button50_Click);
+			// 
+			// Trangthaicuoi
+			// 
+			this.Trangthaicuoi.AutoSize = true;
+			this.Trangthaicuoi.Location = new System.Drawing.Point(9, 599);
+			this.Trangthaicuoi.Name = "Trangthaicuoi";
+			this.Trangthaicuoi.Size = new System.Drawing.Size(58, 13);
+			this.Trangthaicuoi.TabIndex = 6;
+			this.Trangthaicuoi.Text = "Trạng thái ";
 			// 
 			// button15
 			// 
@@ -1556,6 +1606,9 @@
 			// 
 			// Rev
 			// 
+			this.Rev.Controls.Add(this.button49);
+			this.Rev.Controls.Add(this.Onleone);
+			this.Rev.Controls.Add(this.BaoCAo);
 			this.Rev.Controls.Add(this.Number3);
 			this.Rev.Controls.Add(this.button51);
 			this.Rev.Controls.Add(this.txtMinutes);
@@ -1571,6 +1624,72 @@
 			this.Rev.TabStop = false;
 			this.Rev.Text = "Hengiodingu";
 			this.Rev.Enter += new System.EventHandler(this.Rev_Enter);
+			// 
+			// button49
+			// 
+			this.button49.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button49.Location = new System.Drawing.Point(36, 250);
+			this.button49.Name = "button49";
+			this.button49.Size = new System.Drawing.Size(95, 23);
+			this.button49.TabIndex = 17;
+			this.button49.Text = "Hide TST";
+			this.button49.UseVisualStyleBackColor = true;
+			this.button49.Click += new System.EventHandler(this.button49_Click);
+			// 
+			// Onleone
+			// 
+			this.Onleone.AutoSize = true;
+			this.Onleone.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+			this.Onleone.Location = new System.Drawing.Point(14, 221);
+			this.Onleone.Name = "Onleone";
+			this.Onleone.Size = new System.Drawing.Size(178, 30);
+			this.Onleone.TabIndex = 16;
+			this.Onleone.Text = "Only one Time ";
+			this.Onleone.UseVisualStyleBackColor = true;
+			// 
+			// BaoCAo
+			// 
+			this.BaoCAo.Controls.Add(this.label83);
+			this.BaoCAo.Controls.Add(this.label81);
+			this.BaoCAo.Controls.Add(this.label80);
+			this.BaoCAo.Location = new System.Drawing.Point(410, 128);
+			this.BaoCAo.Name = "BaoCAo";
+			this.BaoCAo.Size = new System.Drawing.Size(349, 163);
+			this.BaoCAo.TabIndex = 15;
+			this.BaoCAo.TabStop = false;
+			this.BaoCAo.Text = "Nofitication";
+			this.BaoCAo.Visible = false;
+			// 
+			// label83
+			// 
+			this.label83.AutoSize = true;
+			this.label83.Location = new System.Drawing.Point(43, 133);
+			this.label83.Name = "label83";
+			this.label83.Size = new System.Drawing.Size(187, 13);
+			this.label83.TabIndex = 2;
+			this.label83.Text = "bấm vào hidetst để tắt thông báo này ";
+			// 
+			// label81
+			// 
+			this.label81.AutoSize = true;
+			this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+			this.label81.ForeColor = System.Drawing.Color.Red;
+			this.label81.Location = new System.Drawing.Point(10, 58);
+			this.label81.Name = "label81";
+			this.label81.Size = new System.Drawing.Size(334, 50);
+			this.label81.TabIndex = 1;
+			this.label81.Text = "Bạn đã dùng quá số lần quy định \r\ncho việc báo thức ";
+			// 
+			// label80
+			// 
+			this.label80.AutoSize = true;
+			this.label80.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label80.ForeColor = System.Drawing.Color.Red;
+			this.label80.Location = new System.Drawing.Point(10, 29);
+			this.label80.Name = "label80";
+			this.label80.Size = new System.Drawing.Size(153, 29);
+			this.label80.TabIndex = 0;
+			this.label80.Text = "Thông Báo ";
 			// 
 			// Number3
 			// 
@@ -1592,6 +1711,39 @@
 			this.Number3.TabIndex = 14;
 			this.Number3.TabStop = false;
 			this.Number3.Text = "Keyboard.exe ";
+			// 
+			// Starttimer
+			// 
+			this.Starttimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Starttimer.Location = new System.Drawing.Point(179, 254);
+			this.Starttimer.Name = "Starttimer";
+			this.Starttimer.Size = new System.Drawing.Size(76, 70);
+			this.Starttimer.TabIndex = 11;
+			this.Starttimer.Text = "Start";
+			this.Starttimer.UseVisualStyleBackColor = true;
+			this.Starttimer.Click += new System.EventHandler(this.Starttimer_Click);
+			// 
+			// Number0
+			// 
+			this.Number0.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Number0.Location = new System.Drawing.Point(97, 254);
+			this.Number0.Name = "Number0";
+			this.Number0.Size = new System.Drawing.Size(76, 70);
+			this.Number0.TabIndex = 10;
+			this.Number0.Text = "0";
+			this.Number0.UseVisualStyleBackColor = true;
+			this.Number0.Click += new System.EventHandler(this.Number0_Click);
+			// 
+			// ClearButton
+			// 
+			this.ClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.ClearButton.Location = new System.Drawing.Point(15, 254);
+			this.ClearButton.Name = "ClearButton";
+			this.ClearButton.Size = new System.Drawing.Size(76, 70);
+			this.ClearButton.TabIndex = 9;
+			this.ClearButton.Text = "CLR";
+			this.ClearButton.UseVisualStyleBackColor = true;
+			this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
 			// 
 			// Number9
 			// 
@@ -2083,9 +2235,9 @@
 			this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label61.Location = new System.Drawing.Point(146, 330);
 			this.label61.Name = "label61";
-			this.label61.Size = new System.Drawing.Size(64, 15);
+			this.label61.Size = new System.Drawing.Size(18, 15);
 			this.label61.TabIndex = 20;
-			this.label61.Text = "30-5-2026";
+			this.label61.Text = "-1";
 			// 
 			// label60
 			// 
@@ -2103,10 +2255,9 @@
 			this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label56.Location = new System.Drawing.Point(146, 218);
 			this.label56.Name = "label56";
-			this.label56.Size = new System.Drawing.Size(134, 112);
+			this.label56.Size = new System.Drawing.Size(140, 15);
 			this.label56.TabIndex = 18;
-			this.label56.Text = "Thời khóa biểu cuối cùng của năm học \r\nChú ý - tuần 38 từ thứ 2 đến sáng thứ 4 ng" +
-    "hỉ\r\ntruy cập thường xuyên trên trang LMS để làm bài tập \r\n\r\n";
+			this.label56.Text = "thời khóa biểu đã bị xóa \r\n";
 			// 
 			// label55
 			// 
@@ -2155,9 +2306,9 @@
 			this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label51.Location = new System.Drawing.Point(146, 122);
 			this.label51.Name = "label51";
-			this.label51.Size = new System.Drawing.Size(64, 15);
+			this.label51.Size = new System.Drawing.Size(81, 15);
 			this.label51.TabIndex = 12;
-			this.label51.Text = "25-5-2026";
+			this.label51.Text = "Not Available ";
 			// 
 			// label50
 			// 
@@ -2175,9 +2326,9 @@
 			this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label49.Location = new System.Drawing.Point(146, 90);
 			this.label49.Name = "label49";
-			this.label49.Size = new System.Drawing.Size(25, 15);
+			this.label49.Size = new System.Drawing.Size(46, 15);
 			this.label49.TabIndex = 10;
-			this.label49.Text = "Có ";
+			this.label49.Text = "Không ";
 			// 
 			// label48
 			// 
@@ -2215,9 +2366,9 @@
 			this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label45.Location = new System.Drawing.Point(146, 28);
 			this.label45.Name = "label45";
-			this.label45.Size = new System.Drawing.Size(93, 15);
+			this.label45.Size = new System.Drawing.Size(81, 15);
 			this.label45.TabIndex = 6;
-			this.label45.Text = "1080x838 (cao)";
+			this.label45.Text = "Not Available ";
 			// 
 			// label44
 			// 
@@ -2235,9 +2386,9 @@
 			this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label43.Location = new System.Drawing.Point(146, 3);
 			this.label43.Name = "label43";
-			this.label43.Size = new System.Drawing.Size(54, 15);
+			this.label43.Size = new System.Drawing.Size(57, 15);
 			this.label43.TabIndex = 4;
-			this.label43.Text = "TKB L10";
+			this.label43.Text = "Not Avail ";
 			// 
 			// label42
 			// 
@@ -2293,7 +2444,7 @@
 			// pictureBox3
 			// 
 			this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Cross;
-			this.pictureBox3.Image = global::Application3.Properties.Resources.TKB_L10;
+			this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
 			this.pictureBox3.Location = new System.Drawing.Point(18, 32);
 			this.pictureBox3.Name = "pictureBox3";
 			this.pictureBox3.Size = new System.Drawing.Size(751, 564);
@@ -3035,6 +3186,7 @@
 			// 
 			// groupBox14
 			// 
+			this.groupBox14.Controls.Add(this.label82);
 			this.groupBox14.Controls.Add(this.button29);
 			this.groupBox14.Controls.Add(this.Print);
 			this.groupBox14.Controls.Add(this.ReportToserver);
@@ -3047,6 +3199,15 @@
 			this.groupBox14.TabStop = false;
 			this.groupBox14.Text = "Action";
 			this.groupBox14.Enter += new System.EventHandler(this.groupBox14_Enter);
+			// 
+			// label82
+			// 
+			this.label82.AutoSize = true;
+			this.label82.Location = new System.Drawing.Point(501, 25);
+			this.label82.Name = "label82";
+			this.label82.Size = new System.Drawing.Size(446, 65);
+			this.label82.TabIndex = 10;
+			this.label82.Text = resources.GetString("label82.Text");
 			// 
 			// button29
 			// 
@@ -3803,7 +3964,7 @@
 			this.richTextBox7.Name = "richTextBox7";
 			this.richTextBox7.Size = new System.Drawing.Size(1110, 487);
 			this.richTextBox7.TabIndex = 0;
-			this.richTextBox7.Text = "Toàn bộ hành động bạn làm đây ";
+			this.richTextBox7.Text = "Log:\n";
 			this.richTextBox7.TextChanged += new System.EventHandler(this.richTextBox7_TextChanged);
 			// 
 			// tabPage11
@@ -3921,6 +4082,16 @@
 			this.NutQuayVe.Text = "back";
 			this.NutQuayVe.UseVisualStyleBackColor = true;
 			this.NutQuayVe.Click += new System.EventHandler(this.NutQuayVe_Click);
+			// 
+			// tabPage12
+			// 
+			this.tabPage12.Location = new System.Drawing.Point(4, 22);
+			this.tabPage12.Name = "tabPage12";
+			this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage12.Size = new System.Drawing.Size(1129, 626);
+			this.tabPage12.TabIndex = 11;
+			this.tabPage12.Text = "Report";
+			this.tabPage12.UseVisualStyleBackColor = true;
 			// 
 			// fileToolStripMenuItem
 			// 
@@ -4072,7 +4243,8 @@
             this.tàiKhoảnToolStripMenuItem,
             this.imagePreviewToolStripMenuItem,
             this.uselessBroswerToolStripMenuItem,
-            this.userToolStripMenuItem});
+            this.userToolStripMenuItem,
+            this.eXITToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
 			this.menuStrip1.Size = new System.Drawing.Size(1284, 27);
@@ -4164,7 +4336,8 @@
 			// 
 			this.quảnLýThờiGianToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mởTabToolStripMenuItem,
-            this.chọnÂmBáoToolStripMenuItem});
+            this.chọnÂmBáoToolStripMenuItem,
+            this.aboutToolStripMenuItem2});
 			this.quảnLýThờiGianToolStripMenuItem.Name = "quảnLýThờiGianToolStripMenuItem";
 			this.quảnLýThờiGianToolStripMenuItem.Size = new System.Drawing.Size(93, 23);
 			this.quảnLýThờiGianToolStripMenuItem.Text = "TimeManager";
@@ -4183,6 +4356,13 @@
 			this.chọnÂmBáoToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
 			this.chọnÂmBáoToolStripMenuItem.Text = "Chọn âm báo ";
 			this.chọnÂmBáoToolStripMenuItem.Click += new System.EventHandler(this.chọnÂmBáoToolStripMenuItem_Click);
+			// 
+			// aboutToolStripMenuItem2
+			// 
+			this.aboutToolStripMenuItem2.Name = "aboutToolStripMenuItem2";
+			this.aboutToolStripMenuItem2.Size = new System.Drawing.Size(149, 22);
+			this.aboutToolStripMenuItem2.Text = "About";
+			this.aboutToolStripMenuItem2.Click += new System.EventHandler(this.aboutToolStripMenuItem2_Click);
 			// 
 			// tabToolStripMenuItem
 			// 
@@ -4222,7 +4402,7 @@
 			// 
 			this.documentaryToolStripMenuItem1.Name = "documentaryToolStripMenuItem1";
 			this.documentaryToolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
-			this.documentaryToolStripMenuItem1.Text = "THông báo";
+			this.documentaryToolStripMenuItem1.Text = "Thời gian ";
 			this.documentaryToolStripMenuItem1.Click += new System.EventHandler(this.documentaryToolStripMenuItem1_Click);
 			// 
 			// thờiKhóaBiểuToolStripMenuItem
@@ -4352,21 +4532,21 @@
 			// fullWindowsToolStripMenuItem
 			// 
 			this.fullWindowsToolStripMenuItem.Name = "fullWindowsToolStripMenuItem";
-			this.fullWindowsToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+			this.fullWindowsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.fullWindowsToolStripMenuItem.Text = "Full Windows ";
 			this.fullWindowsToolStripMenuItem.Click += new System.EventHandler(this.fullWindowsToolStripMenuItem_Click);
 			// 
 			// normalWindowsToolStripMenuItem
 			// 
 			this.normalWindowsToolStripMenuItem.Name = "normalWindowsToolStripMenuItem";
-			this.normalWindowsToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+			this.normalWindowsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.normalWindowsToolStripMenuItem.Text = "Normal windows ";
 			this.normalWindowsToolStripMenuItem.Click += new System.EventHandler(this.normalWindowsToolStripMenuItem_Click);
 			// 
 			// aboutToolStripMenuItem1
 			// 
 			this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-			this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(167, 22);
+			this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
 			this.aboutToolStripMenuItem1.Text = "About ";
 			this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
 			// 
@@ -4411,7 +4591,7 @@
             this.toolStripStatusLabel3,
             this.tinhtrang,
             this.toolStripDropDownButton1});
-			this.statusStrip2.Location = new System.Drawing.Point(0, 739);
+			this.statusStrip2.Location = new System.Drawing.Point(0, 727);
 			this.statusStrip2.Name = "statusStrip2";
 			this.statusStrip2.Size = new System.Drawing.Size(1284, 22);
 			this.statusStrip2.TabIndex = 5;
@@ -4421,8 +4601,8 @@
 			// 
 			this.toolStripStatusLabel2.Image = global::Application3.Properties.Resources.guest;
 			this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-			this.toolStripStatusLabel2.Size = new System.Drawing.Size(138, 17);
-			this.toolStripStatusLabel2.Text = "VisualApplication.exe ";
+			this.toolStripStatusLabel2.Size = new System.Drawing.Size(129, 17);
+			this.toolStripStatusLabel2.Text = "MinhKhangminiapp";
 			this.toolStripStatusLabel2.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
 			// 
 			// toolStripSplitButton2
@@ -4518,49 +4698,33 @@
 			this.pictureBox5.Image = global::Application3.Properties.Resources.Travel_127_OBGA_BingHP_shutterstock_204471067_Travel;
 			this.pictureBox5.Location = new System.Drawing.Point(0, 0);
 			this.pictureBox5.Name = "pictureBox5";
-			this.pictureBox5.Size = new System.Drawing.Size(1284, 761);
+			this.pictureBox5.Size = new System.Drawing.Size(1284, 749);
 			this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.pictureBox5.TabIndex = 4;
 			this.pictureBox5.TabStop = false;
 			// 
-			// Starttimer
+			// eXITToolStripMenuItem
 			// 
-			this.Starttimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.Starttimer.Location = new System.Drawing.Point(179, 254);
-			this.Starttimer.Name = "Starttimer";
-			this.Starttimer.Size = new System.Drawing.Size(76, 70);
-			this.Starttimer.TabIndex = 11;
-			this.Starttimer.Text = "Start";
-			this.Starttimer.UseVisualStyleBackColor = true;
-			this.Starttimer.Click += new System.EventHandler(this.Starttimer_Click);
+			this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
+			this.eXITToolStripMenuItem.Size = new System.Drawing.Size(42, 23);
+			this.eXITToolStripMenuItem.Text = "EXIT";
+			this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
 			// 
-			// Number0
+			// label87
 			// 
-			this.Number0.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.Number0.Location = new System.Drawing.Point(97, 254);
-			this.Number0.Name = "Number0";
-			this.Number0.Size = new System.Drawing.Size(76, 70);
-			this.Number0.TabIndex = 10;
-			this.Number0.Text = "0";
-			this.Number0.UseVisualStyleBackColor = true;
-			this.Number0.Click += new System.EventHandler(this.Number0_Click);
-			// 
-			// ClearButton
-			// 
-			this.ClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.ClearButton.Location = new System.Drawing.Point(15, 254);
-			this.ClearButton.Name = "ClearButton";
-			this.ClearButton.Size = new System.Drawing.Size(76, 70);
-			this.ClearButton.TabIndex = 9;
-			this.ClearButton.Text = "CLR";
-			this.ClearButton.UseVisualStyleBackColor = true;
-			this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
+			this.label87.AutoSize = true;
+			this.label87.Font = new System.Drawing.Font("Wingdings 2", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+			this.label87.Location = new System.Drawing.Point(27, 24);
+			this.label87.Name = "label87";
+			this.label87.Size = new System.Drawing.Size(51, 39);
+			this.label87.TabIndex = 3;
+			this.label87.Text = "Ò";
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1284, 761);
+			this.ClientSize = new System.Drawing.Size(1284, 749);
 			this.Controls.Add(this.statusStrip2);
 			this.Controls.Add(this.tabControl1);
 			this.Controls.Add(this.menuStrip1);
@@ -4570,7 +4734,7 @@
 			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "Form1";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "MinhKhang.exe Application3";
+			this.Text = "MinhKhang.exe -Application3 MainProcess";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.tabControl1.ResumeLayout(false);
 			this.tabPage1.ResumeLayout(false);
@@ -4592,6 +4756,7 @@
 			this.tableLayoutPanel1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
 			this.tabPage3.ResumeLayout(false);
+			this.tabPage3.PerformLayout();
 			this.groupBox3.ResumeLayout(false);
 			this.groupBox3.PerformLayout();
 			this.groupBox16.ResumeLayout(false);
@@ -4602,6 +4767,8 @@
 			this.groupBox17.PerformLayout();
 			this.Rev.ResumeLayout(false);
 			this.Rev.PerformLayout();
+			this.BaoCAo.ResumeLayout(false);
+			this.BaoCAo.PerformLayout();
 			this.Number3.ResumeLayout(false);
 			this.tabPage5.ResumeLayout(false);
 			this.tabPage5.PerformLayout();
@@ -4630,6 +4797,7 @@
 			this.groupBox5.PerformLayout();
 			this.tabPage7.ResumeLayout(false);
 			this.groupBox14.ResumeLayout(false);
+			this.groupBox14.PerformLayout();
 			this.groupBox15.ResumeLayout(false);
 			this.groupBox15.PerformLayout();
 			this.tabPage8.ResumeLayout(false);
@@ -4844,7 +5012,6 @@
 		private System.Windows.Forms.GroupBox groupBox12;
 		private System.Windows.Forms.Label label68;
 		private System.Windows.Forms.Button button26;
-		private System.Windows.Forms.Label label69;
 		private System.Windows.Forms.GroupBox groupBox13;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
 		private System.Windows.Forms.Label label70;
@@ -5046,6 +5213,19 @@
 		private System.Windows.Forms.Button Starttimer;
 		private System.Windows.Forms.Button Number0;
 		private System.Windows.Forms.Button ClearButton;
+		private System.Windows.Forms.GroupBox BaoCAo;
+		private System.Windows.Forms.Label label80;
+		private System.Windows.Forms.CheckBox Onleone;
+		private System.Windows.Forms.Label label81;
+		private System.Windows.Forms.Button button49;
+		private System.Windows.Forms.Label label82;
+		private System.Windows.Forms.Label Trangthaicuoi;
+		private System.Windows.Forms.Label label83;
+		private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem2;
+		private System.Windows.Forms.TabPage tabPage12;
+		private System.Windows.Forms.Button button50;
+		private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
+		private System.Windows.Forms.Label label87;
 	}
 }
 
