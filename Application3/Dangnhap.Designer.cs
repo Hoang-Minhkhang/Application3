@@ -34,7 +34,6 @@
 			this.progressBar1 = new System.Windows.Forms.ProgressBar();
 			this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
 			this.checkBox2 = new System.Windows.Forms.CheckBox();
-			this.checkBox1 = new System.Windows.Forms.CheckBox();
 			this.button4 = new System.Windows.Forms.Button();
 			this.button3 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
@@ -53,17 +52,22 @@
 			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.whatIsThisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutThisApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.label1 = new System.Windows.Forms.Label();
+			this.nOKEYBOARDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.groupBox1.SuspendLayout();
 			this.menuStrip1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// groupBox1
 			// 
+			this.groupBox1.Controls.Add(this.label1);
+			this.groupBox1.Controls.Add(this.pictureBox1);
 			this.groupBox1.Controls.Add(this.label65);
 			this.groupBox1.Controls.Add(this.progressBar1);
 			this.groupBox1.Controls.Add(this.dateTimePicker2);
 			this.groupBox1.Controls.Add(this.checkBox2);
-			this.groupBox1.Controls.Add(this.checkBox1);
 			this.groupBox1.Controls.Add(this.button4);
 			this.groupBox1.Controls.Add(this.button3);
 			this.groupBox1.Controls.Add(this.button2);
@@ -88,7 +92,7 @@
 			// label65
 			// 
 			this.label65.AutoSize = true;
-			this.label65.Location = new System.Drawing.Point(29, 168);
+			this.label65.Location = new System.Drawing.Point(37, 185);
 			this.label65.Name = "label65";
 			this.label65.Size = new System.Drawing.Size(94, 14);
 			this.label65.TabIndex = 17;
@@ -120,23 +124,13 @@
 			this.checkBox2.Text = "Tôi đồng ý các điều khoảng này ";
 			this.checkBox2.UseVisualStyleBackColor = true;
 			// 
-			// checkBox1
-			// 
-			this.checkBox1.AutoSize = true;
-			this.checkBox1.Location = new System.Drawing.Point(25, 185);
-			this.checkBox1.Name = "checkBox1";
-			this.checkBox1.Size = new System.Drawing.Size(202, 18);
-			this.checkBox1.TabIndex = 13;
-			this.checkBox1.Text = "Tôi đồng ý các thông tin là đúng ";
-			this.checkBox1.UseVisualStyleBackColor = true;
-			// 
 			// button4
 			// 
 			this.button4.Location = new System.Drawing.Point(369, 231);
 			this.button4.Name = "button4";
 			this.button4.Size = new System.Drawing.Size(124, 22);
 			this.button4.TabIndex = 12;
-			this.button4.Text = "Dùng Chùa";
+			this.button4.Text = "Keyboard";
 			this.button4.UseVisualStyleBackColor = true;
 			this.button4.Click += new System.EventHandler(this.button4_Click);
 			// 
@@ -197,7 +191,7 @@
             "B110",
             "B0010B",
             "B000"});
-			this.MaKhuVuc.Location = new System.Drawing.Point(180, 145);
+			this.MaKhuVuc.Location = new System.Drawing.Point(188, 162);
 			this.MaKhuVuc.Name = "MaKhuVuc";
 			this.MaKhuVuc.Size = new System.Drawing.Size(222, 22);
 			this.MaKhuVuc.TabIndex = 8;
@@ -206,7 +200,7 @@
 			// 
 			this.label5.AutoSize = true;
 			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.Location = new System.Drawing.Point(23, 142);
+			this.label5.Location = new System.Drawing.Point(31, 159);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(151, 20);
 			this.label5.TabIndex = 7;
@@ -215,10 +209,10 @@
 			// MatKhau
 			// 
 			this.MatKhau.Cursor = System.Windows.Forms.Cursors.Cross;
-			this.MatKhau.Location = new System.Drawing.Point(27, 119);
+			this.MatKhau.Location = new System.Drawing.Point(141, 136);
 			this.MatKhau.Name = "MatKhau";
 			this.MatKhau.PasswordChar = '*';
-			this.MatKhau.Size = new System.Drawing.Size(444, 20);
+			this.MatKhau.Size = new System.Drawing.Size(338, 20);
 			this.MatKhau.TabIndex = 6;
 			this.MatKhau.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.MatKhau_MaskInputRejected);
 			// 
@@ -226,7 +220,7 @@
 			// 
 			this.label4.AutoSize = true;
 			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(23, 87);
+			this.label4.Location = new System.Drawing.Point(137, 92);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(86, 20);
 			this.label4.TabIndex = 5;
@@ -235,9 +229,9 @@
 			// TaiKhoan
 			// 
 			this.TaiKhoan.Cursor = System.Windows.Forms.Cursors.Cross;
-			this.TaiKhoan.Location = new System.Drawing.Point(27, 52);
+			this.TaiKhoan.Location = new System.Drawing.Point(141, 69);
 			this.TaiKhoan.Name = "TaiKhoan";
-			this.TaiKhoan.Size = new System.Drawing.Size(444, 20);
+			this.TaiKhoan.Size = new System.Drawing.Size(338, 20);
 			this.TaiKhoan.TabIndex = 4;
 			this.TaiKhoan.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.TaiKhoan_MaskInputRejected);
 			// 
@@ -245,7 +239,7 @@
 			// 
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(21, 28);
+			this.label3.Location = new System.Drawing.Point(137, 33);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(214, 20);
 			this.label3.TabIndex = 3;
@@ -275,19 +269,19 @@
 			// đăngNhậpToolStripMenuItem1
 			// 
 			this.đăngNhậpToolStripMenuItem1.Name = "đăngNhậpToolStripMenuItem1";
-			this.đăngNhậpToolStripMenuItem1.Size = new System.Drawing.Size(164, 22);
+			this.đăngNhậpToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
 			this.đăngNhậpToolStripMenuItem1.Text = "Đăng nhập ngay ";
 			// 
 			// dùngChùaToolStripMenuItem
 			// 
 			this.dùngChùaToolStripMenuItem.Name = "dùngChùaToolStripMenuItem";
-			this.dùngChùaToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+			this.dùngChùaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.dùngChùaToolStripMenuItem.Text = "Dùng chùa ";
 			// 
 			// thoátToolStripMenuItem
 			// 
 			this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-			this.thoátToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+			this.thoátToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.thoátToolStripMenuItem.Text = "Thoát ";
 			this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
 			// 
@@ -295,7 +289,8 @@
 			// 
 			this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.whatIsThisToolStripMenuItem,
-            this.aboutThisApplicationToolStripMenuItem});
+            this.aboutThisApplicationToolStripMenuItem,
+            this.nOKEYBOARDToolStripMenuItem});
 			this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
 			this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
 			this.helpToolStripMenuItem.Text = "Help";
@@ -312,6 +307,33 @@
 			this.aboutThisApplicationToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
 			this.aboutThisApplicationToolStripMenuItem.Text = "About this application ";
 			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Image = global::Application3.Properties.Resources.guest;
+			this.pictureBox1.Location = new System.Drawing.Point(12, 42);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(118, 113);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pictureBox1.TabIndex = 18;
+			this.pictureBox1.TabStop = false;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.ForeColor = System.Drawing.Color.Crimson;
+			this.label1.Location = new System.Drawing.Point(24, 16);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(238, 14);
+			this.label1.TabIndex = 19;
+			this.label1.Text = "**Yêu cầu bàn phím ảo hay bàn phím vật lý \r\n";
+			// 
+			// nOKEYBOARDToolStripMenuItem
+			// 
+			this.nOKEYBOARDToolStripMenuItem.Name = "nOKEYBOARDToolStripMenuItem";
+			this.nOKEYBOARDToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+			this.nOKEYBOARDToolStripMenuItem.Text = "NO KEYBOARD ";
+			this.nOKEYBOARDToolStripMenuItem.Click += new System.EventHandler(this.nOKEYBOARDToolStripMenuItem_Click);
+			// 
 			// Dangnhap
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -319,16 +341,20 @@
 			this.ClientSize = new System.Drawing.Size(509, 299);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.menuStrip1);
+			this.HelpButton = true;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MainMenuStrip = this.menuStrip1;
 			this.MaximizeBox = false;
+			this.MinimizeBox = false;
 			this.Name = "Dangnhap";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Application3.exeDangnhap.form.MinhKhanggithub.ssd.Administrator";
 			this.Load += new System.EventHandler(this.Dangnhap_Load);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -341,7 +367,6 @@
 		private System.Windows.Forms.ProgressBar progressBar1;
 		private System.Windows.Forms.DateTimePicker dateTimePicker2;
 		private System.Windows.Forms.CheckBox checkBox2;
-		private System.Windows.Forms.CheckBox checkBox1;
 		private System.Windows.Forms.Button button4;
 		private System.Windows.Forms.Button button3;
 		private System.Windows.Forms.Button button2;
@@ -360,5 +385,8 @@
 		private System.Windows.Forms.ToolStripMenuItem whatIsThisToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem aboutThisApplicationToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.ToolStripMenuItem nOKEYBOARDToolStripMenuItem;
 	}
 }

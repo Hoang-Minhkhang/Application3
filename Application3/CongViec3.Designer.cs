@@ -74,6 +74,19 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.Number3 = new System.Windows.Forms.GroupBox();
+			this.Starttimer = new System.Windows.Forms.Button();
+			this.Number0 = new System.Windows.Forms.Button();
+			this.ClearButton = new System.Windows.Forms.Button();
+			this.Number9 = new System.Windows.Forms.Button();
+			this.Number8 = new System.Windows.Forms.Button();
+			this.Number7 = new System.Windows.Forms.Button();
+			this.Number6 = new System.Windows.Forms.Button();
+			this.Number5 = new System.Windows.Forms.Button();
+			this.Number4 = new System.Windows.Forms.Button();
+			this.button52 = new System.Windows.Forms.Button();
+			this.Number2 = new System.Windows.Forms.Button();
+			this.Number1 = new System.Windows.Forms.Button();
 			this.menuStrip1.SuspendLayout();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
@@ -82,6 +95,8 @@
 			this.tabPage4.SuspendLayout();
 			this.tabPage5.SuspendLayout();
 			this.groupBox2.SuspendLayout();
+			this.tabPage2.SuspendLayout();
+			this.Number3.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// menuStrip1
@@ -531,6 +546,7 @@
 			// 
 			// tabPage2
 			// 
+			this.tabPage2.Controls.Add(this.Number3);
 			this.tabPage2.Location = new System.Drawing.Point(4, 22);
 			this.tabPage2.Name = "tabPage2";
 			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -538,6 +554,147 @@
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "tabPage2";
 			this.tabPage2.UseVisualStyleBackColor = true;
+			// 
+			// Number3
+			// 
+			this.Number3.Controls.Add(this.Starttimer);
+			this.Number3.Controls.Add(this.Number0);
+			this.Number3.Controls.Add(this.ClearButton);
+			this.Number3.Controls.Add(this.Number9);
+			this.Number3.Controls.Add(this.Number8);
+			this.Number3.Controls.Add(this.Number7);
+			this.Number3.Controls.Add(this.Number6);
+			this.Number3.Controls.Add(this.Number5);
+			this.Number3.Controls.Add(this.Number4);
+			this.Number3.Controls.Add(this.button52);
+			this.Number3.Controls.Add(this.Number2);
+			this.Number3.Controls.Add(this.Number1);
+			this.Number3.Location = new System.Drawing.Point(822, 218);
+			this.Number3.Name = "Number3";
+			this.Number3.Size = new System.Drawing.Size(288, 348);
+			this.Number3.TabIndex = 15;
+			this.Number3.TabStop = false;
+			this.Number3.Text = "Keyboard.exe ";
+			// 
+			// Starttimer
+			// 
+			this.Starttimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Starttimer.Location = new System.Drawing.Point(179, 254);
+			this.Starttimer.Name = "Starttimer";
+			this.Starttimer.Size = new System.Drawing.Size(76, 70);
+			this.Starttimer.TabIndex = 11;
+			this.Starttimer.Text = "->";
+			this.Starttimer.UseVisualStyleBackColor = true;
+			// 
+			// Number0
+			// 
+			this.Number0.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Number0.Location = new System.Drawing.Point(97, 254);
+			this.Number0.Name = "Number0";
+			this.Number0.Size = new System.Drawing.Size(76, 70);
+			this.Number0.TabIndex = 10;
+			this.Number0.Text = "0";
+			this.Number0.UseVisualStyleBackColor = true;
+			// 
+			// ClearButton
+			// 
+			this.ClearButton.Font = new System.Drawing.Font("Wingdings", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+			this.ClearButton.Location = new System.Drawing.Point(15, 254);
+			this.ClearButton.Name = "ClearButton";
+			this.ClearButton.Size = new System.Drawing.Size(76, 70);
+			this.ClearButton.TabIndex = 9;
+			this.ClearButton.Text = "Ö";
+			this.ClearButton.UseVisualStyleBackColor = true;
+			// 
+			// Number9
+			// 
+			this.Number9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Number9.Location = new System.Drawing.Point(179, 176);
+			this.Number9.Name = "Number9";
+			this.Number9.Size = new System.Drawing.Size(76, 70);
+			this.Number9.TabIndex = 8;
+			this.Number9.Text = "9";
+			this.Number9.UseVisualStyleBackColor = true;
+			// 
+			// Number8
+			// 
+			this.Number8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Number8.Location = new System.Drawing.Point(97, 176);
+			this.Number8.Name = "Number8";
+			this.Number8.Size = new System.Drawing.Size(76, 70);
+			this.Number8.TabIndex = 7;
+			this.Number8.Text = "8";
+			this.Number8.UseVisualStyleBackColor = true;
+			// 
+			// Number7
+			// 
+			this.Number7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Number7.Location = new System.Drawing.Point(15, 176);
+			this.Number7.Name = "Number7";
+			this.Number7.Size = new System.Drawing.Size(76, 70);
+			this.Number7.TabIndex = 6;
+			this.Number7.Text = "7";
+			this.Number7.UseVisualStyleBackColor = true;
+			// 
+			// Number6
+			// 
+			this.Number6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Number6.Location = new System.Drawing.Point(179, 100);
+			this.Number6.Name = "Number6";
+			this.Number6.Size = new System.Drawing.Size(76, 70);
+			this.Number6.TabIndex = 5;
+			this.Number6.Text = "6";
+			this.Number6.UseVisualStyleBackColor = true;
+			// 
+			// Number5
+			// 
+			this.Number5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Number5.Location = new System.Drawing.Point(97, 100);
+			this.Number5.Name = "Number5";
+			this.Number5.Size = new System.Drawing.Size(76, 70);
+			this.Number5.TabIndex = 4;
+			this.Number5.Text = "5";
+			this.Number5.UseVisualStyleBackColor = true;
+			// 
+			// Number4
+			// 
+			this.Number4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Number4.Location = new System.Drawing.Point(15, 100);
+			this.Number4.Name = "Number4";
+			this.Number4.Size = new System.Drawing.Size(76, 70);
+			this.Number4.TabIndex = 3;
+			this.Number4.Text = "4";
+			this.Number4.UseVisualStyleBackColor = true;
+			// 
+			// button52
+			// 
+			this.button52.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button52.Location = new System.Drawing.Point(179, 24);
+			this.button52.Name = "button52";
+			this.button52.Size = new System.Drawing.Size(76, 70);
+			this.button52.TabIndex = 2;
+			this.button52.Text = "3";
+			this.button52.UseVisualStyleBackColor = true;
+			// 
+			// Number2
+			// 
+			this.Number2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Number2.Location = new System.Drawing.Point(97, 24);
+			this.Number2.Name = "Number2";
+			this.Number2.Size = new System.Drawing.Size(76, 70);
+			this.Number2.TabIndex = 1;
+			this.Number2.Text = "2";
+			this.Number2.UseVisualStyleBackColor = true;
+			// 
+			// Number1
+			// 
+			this.Number1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Number1.Location = new System.Drawing.Point(15, 24);
+			this.Number1.Name = "Number1";
+			this.Number1.Size = new System.Drawing.Size(76, 70);
+			this.Number1.TabIndex = 0;
+			this.Number1.Text = "1";
+			this.Number1.UseVisualStyleBackColor = true;
 			// 
 			// CongViec3
 			// 
@@ -561,6 +718,8 @@
 			this.tabPage5.ResumeLayout(false);
 			this.groupBox2.ResumeLayout(false);
 			this.groupBox2.PerformLayout();
+			this.tabPage2.ResumeLayout(false);
+			this.Number3.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -613,5 +772,18 @@
 		private System.Windows.Forms.Button button11;
 		private System.Windows.Forms.Button button14;
 		private System.Windows.Forms.Button button13;
+		private System.Windows.Forms.GroupBox Number3;
+		private System.Windows.Forms.Button Starttimer;
+		private System.Windows.Forms.Button Number0;
+		private System.Windows.Forms.Button ClearButton;
+		private System.Windows.Forms.Button Number9;
+		private System.Windows.Forms.Button Number8;
+		private System.Windows.Forms.Button Number7;
+		private System.Windows.Forms.Button Number6;
+		private System.Windows.Forms.Button Number5;
+		private System.Windows.Forms.Button Number4;
+		private System.Windows.Forms.Button button52;
+		private System.Windows.Forms.Button Number2;
+		private System.Windows.Forms.Button Number1;
 	}
 }

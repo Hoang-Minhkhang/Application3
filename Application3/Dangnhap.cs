@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -53,7 +54,7 @@ namespace Application3
 				Form1 form1 = new Form1(username,nickname );
 				form1.Show();
 
-				this.Hide(); 
+
 				dangnhap = true;
 
 				// Update this window title to include the nickname
@@ -121,7 +122,15 @@ namespace Application3
 
 		private void button4_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show ("Dùng chùa sẽ không tốt cho bạn đâu, hãy đăng nhập bằng tài khoản có sẵn để trải nghiệm đầy đủ tính năng của phần mềm nhé!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+			try
+			{
+				// Mở On-Screen Keyboard
+				Process.Start("osk.exe");
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Không thể mở On-Screen Keyboard: " + ex.Message);
+			}
 		}
 
 		private void label65_Click(object sender, EventArgs e)
@@ -137,6 +146,11 @@ namespace Application3
 		private void Dangnhap_Load(object sender, EventArgs e)
 		{
 
+		}
+
+		private void nOKEYBOARDToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Process.Start("osk.exe");
 		}
 	}
 }

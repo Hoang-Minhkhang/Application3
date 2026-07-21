@@ -35,6 +35,7 @@
 			this.label79 = new System.Windows.Forms.Label();
 			this.label78 = new System.Windows.Forms.Label();
 			this.groupBox12 = new System.Windows.Forms.GroupBox();
+			this.label87 = new System.Windows.Forms.Label();
 			this.button26 = new System.Windows.Forms.Button();
 			this.label68 = new System.Windows.Forms.Label();
 			this.groupBox10 = new System.Windows.Forms.GroupBox();
@@ -342,7 +343,6 @@
 			this.richTextBox7 = new System.Windows.Forms.RichTextBox();
 			this.tabPage11 = new System.Windows.Forms.TabPage();
 			this.truyCapMang = new System.Windows.Forms.GroupBox();
-			this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
 			this.groupBox21 = new System.Windows.Forms.GroupBox();
 			this.button46 = new System.Windows.Forms.Button();
 			this.DiaChiThanh = new System.Windows.Forms.TextBox();
@@ -409,6 +409,7 @@
 			this.normalWindowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.userToolStripMenuItem = new System.Windows.Forms.ToolStripTextBox();
+			this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -429,8 +430,8 @@
 			this.banĐầuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.contextMenuStrip5 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.pictureBox5 = new System.Windows.Forms.PictureBox();
-			this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.label87 = new System.Windows.Forms.Label();
+			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+			this.webView22 = new Microsoft.Web.WebView2.WinForms.WebView2();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.groupBox12.SuspendLayout();
@@ -476,11 +477,11 @@
 			this.tabPage10.SuspendLayout();
 			this.tabPage11.SuspendLayout();
 			this.truyCapMang.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
 			this.groupBox21.SuspendLayout();
 			this.menuStrip1.SuspendLayout();
 			this.statusStrip2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.webView22)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// tabControl1
@@ -555,6 +556,16 @@
 			this.groupBox12.Text = "N/A";
 			this.groupBox12.Enter += new System.EventHandler(this.groupBox12_Enter);
 			// 
+			// label87
+			// 
+			this.label87.AutoSize = true;
+			this.label87.Font = new System.Drawing.Font("Wingdings 2", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+			this.label87.Location = new System.Drawing.Point(27, 24);
+			this.label87.Name = "label87";
+			this.label87.Size = new System.Drawing.Size(51, 39);
+			this.label87.TabIndex = 3;
+			this.label87.Text = "Ò";
+			// 
 			// button26
 			// 
 			this.button26.Location = new System.Drawing.Point(266, 131);
@@ -570,9 +581,10 @@
 			this.label68.AutoSize = true;
 			this.label68.Location = new System.Drawing.Point(84, 24);
 			this.label68.Name = "label68";
-			this.label68.Size = new System.Drawing.Size(197, 26);
+			this.label68.Size = new System.Drawing.Size(247, 52);
 			this.label68.TabIndex = 0;
-			this.label68.Text = "This Page is currently NOT AVAILABLE \r\nbecause it is moved .\r\n";
+			this.label68.Text = "This Page is currently NOT AVAILABLE \r\nbecause it is moved .\r\nchủ sơ hữu đã dừng " +
+    "cung cấp dịch vụ đăng nhập \r\ntrên trang chính \r\n";
 			// 
 			// groupBox10
 			// 
@@ -3981,7 +3993,7 @@
 			// 
 			// truyCapMang
 			// 
-			this.truyCapMang.Controls.Add(this.webView21);
+			this.truyCapMang.Controls.Add(this.webView22);
 			this.truyCapMang.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.truyCapMang.Location = new System.Drawing.Point(3, 51);
 			this.truyCapMang.Name = "truyCapMang";
@@ -3989,19 +4001,6 @@
 			this.truyCapMang.TabIndex = 1;
 			this.truyCapMang.TabStop = false;
 			this.truyCapMang.Text = "NoiDung";
-			// 
-			// webView21
-			// 
-			this.webView21.AllowExternalDrop = true;
-			this.webView21.CreationProperties = null;
-			this.webView21.DefaultBackgroundColor = System.Drawing.Color.White;
-			this.webView21.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.webView21.Location = new System.Drawing.Point(3, 16);
-			this.webView21.Name = "webView21";
-			this.webView21.Size = new System.Drawing.Size(1117, 553);
-			this.webView21.TabIndex = 0;
-			this.webView21.ZoomFactor = 1D;
-			this.webView21.Click += new System.EventHandler(this.webView21_Click);
 			// 
 			// groupBox21
 			// 
@@ -4532,21 +4531,21 @@
 			// fullWindowsToolStripMenuItem
 			// 
 			this.fullWindowsToolStripMenuItem.Name = "fullWindowsToolStripMenuItem";
-			this.fullWindowsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.fullWindowsToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
 			this.fullWindowsToolStripMenuItem.Text = "Full Windows ";
 			this.fullWindowsToolStripMenuItem.Click += new System.EventHandler(this.fullWindowsToolStripMenuItem_Click);
 			// 
 			// normalWindowsToolStripMenuItem
 			// 
 			this.normalWindowsToolStripMenuItem.Name = "normalWindowsToolStripMenuItem";
-			this.normalWindowsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.normalWindowsToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
 			this.normalWindowsToolStripMenuItem.Text = "Normal windows ";
 			this.normalWindowsToolStripMenuItem.Click += new System.EventHandler(this.normalWindowsToolStripMenuItem_Click);
 			// 
 			// aboutToolStripMenuItem1
 			// 
 			this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-			this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+			this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(167, 22);
 			this.aboutToolStripMenuItem1.Text = "About ";
 			this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
 			// 
@@ -4556,6 +4555,13 @@
 			this.userToolStripMenuItem.Name = "userToolStripMenuItem";
 			this.userToolStripMenuItem.Size = new System.Drawing.Size(42, 23);
 			this.userToolStripMenuItem.Text = "User";
+			// 
+			// eXITToolStripMenuItem
+			// 
+			this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
+			this.eXITToolStripMenuItem.Size = new System.Drawing.Size(42, 23);
+			this.eXITToolStripMenuItem.Text = "EXIT";
+			this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
 			// 
 			// contextMenuStrip1
 			// 
@@ -4703,22 +4709,17 @@
 			this.pictureBox5.TabIndex = 4;
 			this.pictureBox5.TabStop = false;
 			// 
-			// eXITToolStripMenuItem
+			// webView22
 			// 
-			this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
-			this.eXITToolStripMenuItem.Size = new System.Drawing.Size(42, 23);
-			this.eXITToolStripMenuItem.Text = "EXIT";
-			this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
-			// 
-			// label87
-			// 
-			this.label87.AutoSize = true;
-			this.label87.Font = new System.Drawing.Font("Wingdings 2", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-			this.label87.Location = new System.Drawing.Point(27, 24);
-			this.label87.Name = "label87";
-			this.label87.Size = new System.Drawing.Size(51, 39);
-			this.label87.TabIndex = 3;
-			this.label87.Text = "Ò";
+			this.webView22.AllowExternalDrop = true;
+			this.webView22.CreationProperties = null;
+			this.webView22.DefaultBackgroundColor = System.Drawing.Color.White;
+			this.webView22.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.webView22.Location = new System.Drawing.Point(3, 16);
+			this.webView22.Name = "webView22";
+			this.webView22.Size = new System.Drawing.Size(1117, 553);
+			this.webView22.TabIndex = 0;
+			this.webView22.ZoomFactor = 1D;
 			// 
 			// Form1
 			// 
@@ -4811,7 +4812,6 @@
 			this.tabPage10.ResumeLayout(false);
 			this.tabPage11.ResumeLayout(false);
 			this.truyCapMang.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.webView21)).EndInit();
 			this.groupBox21.ResumeLayout(false);
 			this.groupBox21.PerformLayout();
 			this.menuStrip1.ResumeLayout(false);
@@ -4819,6 +4819,7 @@
 			this.statusStrip2.ResumeLayout(false);
 			this.statusStrip2.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.webView22)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -5226,6 +5227,8 @@
 		private System.Windows.Forms.Button button50;
 		private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
 		private System.Windows.Forms.Label label87;
+		private System.Windows.Forms.ColorDialog colorDialog1;
+		private Microsoft.Web.WebView2.WinForms.WebView2 webView22;
 	}
 }
 

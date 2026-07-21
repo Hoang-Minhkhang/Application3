@@ -41,7 +41,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -63,11 +63,10 @@
     <ApplicationIcon>HMK1.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>32421E2ED0D023771C77F55B7C7C059A61C27996</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>A935E903D17DAE5CE5134ABDA6B0B0F0980BD0A2</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>
-    </ManifestKeyFile>
+    <ManifestKeyFile>Application3_5_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -165,6 +164,7 @@
     <None Include="Application3_2_TemporaryKey.pfx" />
     <None Include="Application3_3_TemporaryKey.pfx" />
     <None Include="Application3_4_TemporaryKey.pfx" />
+    <None Include="Application3_5_TemporaryKey.pfx" />
     <None Include="Application3_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

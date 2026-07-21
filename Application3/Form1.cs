@@ -38,6 +38,7 @@ namespace Application3
 		public Form1(string username, string nickname)
 		{
 			InitializeComponent();
+			InitializeTimer();
 			_username = username;
 			_nickname = nickname;
 			bool dangnhap = true;
@@ -47,7 +48,12 @@ namespace Application3
 			label2.Text = _username;
 			ttdangnhap.Text = _nickname;
 			tabControl1.SelectedIndex = 1;
-
+			
+		}
+		private void InitializeTimer()
+		{
+			timer.Interval = 1000;     // 1 giây
+			timer.Tick += Timer_Tick;
 		}
 		private System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
 		private int SoGiayConLai;
@@ -58,31 +64,25 @@ namespace Application3
 		private PdfDocument pdfDocument;
 		private void Timer_Tick(object sender, EventArgs e)
 		{
-			SoGiayConLai--;
-			lblCountdown.Text = TimeSpan.FromSeconds(SoGiayConLai).ToString(@"hh\:mm\:ss");
-			if (SoGiayConLai <= 10)
+			if (SoGiayConLai > 0)
 			{
-				lblCountdown.ForeColor = Color.Red;
+				SoGiayConLai--;
+				lblCountdown.Text = TimeSpan.FromSeconds(SoGiayConLai).ToString(@"mm\:ss");
+
+				if (SoGiayConLai <= 10)
+					lblCountdown.ForeColor = Color.Red;
+				else
+					lblCountdown.ForeColor = Color.Black;
 			}
-			else {
-				lblCountdown.Visible = true;
-				lblCountdown.ForeColor = Color.Black;
-			}
-			if (SoGiayConLai <= 0)
+			else
 			{
 				timer.Stop();
-				lblCountdown.Text = " Hết giờ!";
 				player.URL = selectedFile;
-				if (Onleone.Checked)
-				{
-					BaoCAo.Visible = true;
-				}
-				player.controls.play();
-					isPlaying = true;
-					
+				lblCountdown.Text = "Hết giờ!";
+				ShowBalloonNotification("Thông báo", "Đã hết giờ!");
 			}
 		}
-
+		//player.URL = selectedFile;
 		// Model cho một tác vụ
 		private class TaskItem
 		{
@@ -164,6 +164,7 @@ namespace Application3
 		public Form1()
 		{
 			InitializeComponent();
+			InitializeTimer();
 			CuaSoIn.Document = printDocument1;
 			CuaSoIn.MouseWheel += CuaSoIn_MouseWheel;
 			printDocument1.PrintPage += PrintDocument1_PrintPage;
@@ -174,14 +175,14 @@ namespace Application3
 			timer.Tick += Timer_Tick;
 		}
 		string time = DateTime.Now.ToString();
-		private void WebView21_CoreWebView2InitializationCompleted(
+		private void webView22_CoreWebView2InitializationCompleted(
 	object sender,
 	CoreWebView2InitializationCompletedEventArgs e)
 		{
 			if (e.IsSuccess)
 			{
 				// Khởi tạo thành công, có thể Navigate
-				webView21.CoreWebView2.Navigate("https://www.microsoft.com");
+				webView22.CoreWebView2.Navigate("https://www.microsoft.com");
 			}
 			else
 			{
@@ -204,10 +205,17 @@ namespace Application3
 					btn.FlatStyle = FlatStyle.System;
 				}
 			}
-			webView21.NavigationCompleted += WebView21_NavigationCompleted;
-			webView21.SourceChanged += WebView21_SourceChanged;
-			await webView21.EnsureCoreWebView2Async(null);
-			webView21.CoreWebView2.Navigate("https://www.bing.com");
+			if (webView22 != null)
+			{
+				webView22.NavigationCompleted += webView22_NavigationCompleted;
+				webView22.SourceChanged += webView22_SourceChanged;
+				await webView22.EnsureCoreWebView2Async(null);
+				webView22.CoreWebView2.Navigate("https://www.bing.com");
+			}
+			else
+			{
+				// fallback: bỏ qua hoặc log, disable tính năng trình duyệt
+			}
 			CenterTabControl();
 			// Set window title using application name and current username (if present)
 			this.Text = GetFormTitle();
@@ -381,7 +389,7 @@ namespace Application3
 		{
 			tabControl1.SelectedIndex = 10; 
 			richTextBox7.AppendText($"{DateTime.Now} - {cuser} đang truy cập website hoctructuyen \n");
-			webView21.CoreWebView2.Navigate("https://hoctructuyen.hcm.edu.vn/");
+			webView22.CoreWebView2.Navigate("https://hoctructuyen.hcm.edu.vn/");
 		}
 
 		// Giới thiệu
@@ -1189,7 +1197,7 @@ namespace Application3
 				pictureBox3.Visible = true;
 				tableLayoutPanel3.Visible = true;
 				progressBar2.Value = progressBar2.Maximum;
-				richTextBox7.AppendText($"{DateTime.Now} - {cuser} đang kiểm tra thời khóa biểu   ({nickname})\n");
+				richTextBox7.AppendText($"{DateTime.Now} - {cuser} đang kiểm tra thời khóa biểu   ({_nickname})\n");
 				try
 				{
 					var expiry = new DateTime(tkbhethangnam, tkbhethangthang, tkbhethangngay);
@@ -2107,12 +2115,12 @@ namespace Application3
 
 		private void NutQuayVe_Click(object sender, EventArgs e)
 		{
-			webView21.GoBack(); 
+			webView22.GoBack(); 
 		}
 
 		private void NutTien_Click(object sender, EventArgs e)
 		{
-			webView21.GoForward(); 
+			webView22.GoForward(); 
 		}
 
 		private void TruyCap_Click(object sender, EventArgs e)
@@ -2130,9 +2138,9 @@ namespace Application3
 			{
 				url = "https://" + url;
 			}
-			if (webView21.CoreWebView2 != null)
+			if (webView22.CoreWebView2 != null)
 			{
-				webView21.CoreWebView2.Navigate(url);
+				webView22.CoreWebView2.Navigate(url);
 			}
 
 		}
@@ -2144,23 +2152,23 @@ namespace Application3
 
 		private void TaiLai_Click(object sender, EventArgs e)
 		{
-			webView21.Refresh();
+			webView22.Refresh();
 		}
-		private void WebView21_NavigationCompleted(object sender, Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs e)
+		private void webView22_NavigationCompleted(object sender, Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs e)
 		{
-			if (webView21.Source != null)
+			if (webView22.Source != null)
 			{
-				DiaChiThanh.Text = webView21.Source.ToString();
+				DiaChiThanh.Text = webView22.Source.ToString();
 			}
 		}
-		private void WebView21_SourceChanged(object sender, Microsoft.Web.WebView2.Core.CoreWebView2SourceChangedEventArgs e)
+		private void webView22_SourceChanged(object sender, Microsoft.Web.WebView2.Core.CoreWebView2SourceChangedEventArgs e)
 		{
-			if (webView21.Source != null)
+			if (webView22.Source != null)
 			{
-				DiaChiThanh.Text = webView21.Source.ToString();
+				DiaChiThanh.Text = webView22.Source.ToString();
 			}
 		}
-		private void webView21_Click(object sender, EventArgs e)
+		private void webView22_Click(object sender, EventArgs e)
 		{
 
 		}
@@ -2194,7 +2202,7 @@ namespace Application3
 		{
 			tabControl1.SelectedIndex = 10;
 			richTextBox7.AppendText($"{DateTime.Now} - {cuser} đang truy cập website làm bài  \n");
-			webView21.CoreWebView2.Navigate("https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAATt2igZUMTdaM0NEVjAxREZJOEhVVVRWNklFOEE0Qi4u");
+			webView22.CoreWebView2.Navigate("https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAATt2igZUMTdaM0NEVjAxREZJOEhVVVRWNklFOEE0Qi4u");
 		}
 
 		private void label53_Click(object sender, EventArgs e)
@@ -2213,15 +2221,13 @@ namespace Application3
 			if (int.TryParse(txtMinutes.Text, out int minutes))
 			{
 				SoGiayConLai = minutes * 60;
+				lblCountdown.Visible = true;
+				timer.Start();
 			}
 			else
 			{
 				MessageBox.Show("Vui lòng nhập số phút hợp lệ!");
-				return;
 			}
-			int phut = int.Parse(txtMinutes.Text);
-			SoGiayConLai = minutes * 60;
-			timer.Start();
 		}
 
 		private void chosechon_Click(object sender, EventArgs e)
@@ -2447,6 +2453,7 @@ namespace Application3
 
 		private void Starttimer_Click(object sender, EventArgs e)
 		{
+			
 			if (int.TryParse(txtMinutes.Text, out int minutes))
 			{
 				SoGiayConLai = minutes * 60;
@@ -2460,7 +2467,7 @@ namespace Application3
 			SoGiayConLai = minutes * 60;
 			timer.Start();
 		}
-
+		
 		private void button49_Click(object sender, EventArgs e)
 		{
 			BaoCAo.Visible=false; 
