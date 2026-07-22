@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-<ItemGroup>
-  <PackageReference Include="PdfiumViewer.Native.x86_64.v8-xfa" Version="2018.4.8.256" />
-</ItemGroup>
+  <Import Project="..\packages\PdfiumViewer.Native.x86_64.v8-xfa.2018.4.8.256\build\PdfiumViewer.Native.x86_64.v8-xfa.props" Condition="Exists('..\packages\PdfiumViewer.Native.x86_64.v8-xfa.2018.4.8.256\build\PdfiumViewer.Native.x86_64.v8-xfa.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -35,7 +33,7 @@
     <SuiteName>Administrator</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>2000</ApplicationRevision>
+    <ApplicationRevision>2001</ApplicationRevision>
     <ApplicationVersion>2.6.04.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
