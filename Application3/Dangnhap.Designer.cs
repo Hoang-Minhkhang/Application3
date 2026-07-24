@@ -30,6 +30,8 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dangnhap));
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.label1 = new System.Windows.Forms.Label();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.label65 = new System.Windows.Forms.Label();
 			this.progressBar1 = new System.Windows.Forms.ProgressBar();
 			this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -52,12 +54,10 @@
 			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.whatIsThisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutThisApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.label1 = new System.Windows.Forms.Label();
 			this.nOKEYBOARDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.groupBox1.SuspendLayout();
-			this.menuStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// groupBox1
@@ -88,6 +88,26 @@
 			this.groupBox1.TabIndex = 3;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Application3.exe  Sign in";
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.ForeColor = System.Drawing.Color.Crimson;
+			this.label1.Location = new System.Drawing.Point(24, 16);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(238, 14);
+			this.label1.TabIndex = 19;
+			this.label1.Text = "**Yêu cầu bàn phím ảo hay bàn phím vật lý \r\n";
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Image = global::Application3.Properties.Resources.guest;
+			this.pictureBox1.Location = new System.Drawing.Point(12, 42);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(118, 113);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pictureBox1.TabIndex = 18;
+			this.pictureBox1.TabStop = false;
 			// 
 			// label65
 			// 
@@ -269,19 +289,19 @@
 			// đăngNhậpToolStripMenuItem1
 			// 
 			this.đăngNhậpToolStripMenuItem1.Name = "đăngNhậpToolStripMenuItem1";
-			this.đăngNhậpToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+			this.đăngNhậpToolStripMenuItem1.Size = new System.Drawing.Size(164, 22);
 			this.đăngNhậpToolStripMenuItem1.Text = "Đăng nhập ngay ";
 			// 
 			// dùngChùaToolStripMenuItem
 			// 
 			this.dùngChùaToolStripMenuItem.Name = "dùngChùaToolStripMenuItem";
-			this.dùngChùaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.dùngChùaToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
 			this.dùngChùaToolStripMenuItem.Text = "Dùng chùa ";
 			// 
 			// thoátToolStripMenuItem
 			// 
 			this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-			this.thoátToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.thoátToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
 			this.thoátToolStripMenuItem.Text = "Thoát ";
 			this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
 			// 
@@ -307,26 +327,6 @@
 			this.aboutThisApplicationToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
 			this.aboutThisApplicationToolStripMenuItem.Text = "About this application ";
 			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.Image = global::Application3.Properties.Resources.guest;
-			this.pictureBox1.Location = new System.Drawing.Point(12, 42);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(118, 113);
-			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.pictureBox1.TabIndex = 18;
-			this.pictureBox1.TabStop = false;
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.ForeColor = System.Drawing.Color.Crimson;
-			this.label1.Location = new System.Drawing.Point(24, 16);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(238, 14);
-			this.label1.TabIndex = 19;
-			this.label1.Text = "**Yêu cầu bàn phím ảo hay bàn phím vật lý \r\n";
-			// 
 			// nOKEYBOARDToolStripMenuItem
 			// 
 			this.nOKEYBOARDToolStripMenuItem.Name = "nOKEYBOARDToolStripMenuItem";
@@ -348,13 +348,13 @@
 			this.MinimizeBox = false;
 			this.Name = "Dangnhap";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Application3.exeDangnhap.form.MinhKhanggithub.ssd.Administrator";
+			this.Text = "Application3.exex SignIn";
 			this.Load += new System.EventHandler(this.Dangnhap_Load);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

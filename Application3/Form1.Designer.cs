@@ -343,6 +343,7 @@
 			this.richTextBox7 = new System.Windows.Forms.RichTextBox();
 			this.tabPage11 = new System.Windows.Forms.TabPage();
 			this.truyCapMang = new System.Windows.Forms.GroupBox();
+			this.webView22 = new Microsoft.Web.WebView2.WinForms.WebView2();
 			this.groupBox21 = new System.Windows.Forms.GroupBox();
 			this.button46 = new System.Windows.Forms.Button();
 			this.DiaChiThanh = new System.Windows.Forms.TextBox();
@@ -431,7 +432,6 @@
 			this.contextMenuStrip5 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.pictureBox5 = new System.Windows.Forms.PictureBox();
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-			this.webView22 = new Microsoft.Web.WebView2.WinForms.WebView2();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.groupBox12.SuspendLayout();
@@ -477,11 +477,11 @@
 			this.tabPage10.SuspendLayout();
 			this.tabPage11.SuspendLayout();
 			this.truyCapMang.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.webView22)).BeginInit();
 			this.groupBox21.SuspendLayout();
 			this.menuStrip1.SuspendLayout();
 			this.statusStrip2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.webView22)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// tabControl1
@@ -4002,6 +4002,18 @@
 			this.truyCapMang.TabStop = false;
 			this.truyCapMang.Text = "NoiDung";
 			// 
+			// webView22
+			// 
+			this.webView22.AllowExternalDrop = true;
+			this.webView22.CreationProperties = null;
+			this.webView22.DefaultBackgroundColor = System.Drawing.Color.White;
+			this.webView22.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.webView22.Location = new System.Drawing.Point(3, 16);
+			this.webView22.Name = "webView22";
+			this.webView22.Size = new System.Drawing.Size(1117, 553);
+			this.webView22.TabIndex = 0;
+			this.webView22.ZoomFactor = 1D;
+			// 
 			// groupBox21
 			// 
 			this.groupBox21.Controls.Add(this.button46);
@@ -4434,28 +4446,28 @@
 			// startToolStripMenuItem
 			// 
 			this.startToolStripMenuItem.Name = "startToolStripMenuItem";
-			this.startToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+			this.startToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.startToolStripMenuItem.Text = "Start";
 			this.startToolStripMenuItem.Click += new System.EventHandler(this.startToolStripMenuItem_Click);
 			// 
 			// stopToolStripMenuItem
 			// 
 			this.stopToolStripMenuItem.Name = "stopToolStripMenuItem";
-			this.stopToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+			this.stopToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.stopToolStripMenuItem.Text = "Stop";
 			this.stopToolStripMenuItem.Click += new System.EventHandler(this.stopToolStripMenuItem_Click);
 			// 
 			// printImageToolStripMenuItem
 			// 
 			this.printImageToolStripMenuItem.Name = "printImageToolStripMenuItem";
-			this.printImageToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+			this.printImageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.printImageToolStripMenuItem.Text = "PrintImage";
 			this.printImageToolStripMenuItem.Click += new System.EventHandler(this.printImageToolStripMenuItem_Click);
 			// 
 			// aboutToolStripMenuItem
 			// 
 			this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.aboutToolStripMenuItem.Text = "About";
 			this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
 			// 
@@ -4466,7 +4478,7 @@
             this.lỗiHìnhẢnhToolStripMenuItem,
             this.bảnQuyềnToolStripMenuItem});
 			this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
-			this.reportToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+			this.reportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.reportToolStripMenuItem.Text = "Report";
 			// 
 			// ngàyHếtHạnToolStripMenuItem
@@ -4494,7 +4506,7 @@
             this.tạiSaoTôiKhôngThểChỉnhSửaĐượcChúngToolStripMenuItem,
             this.tôiKhôngThểZoomHìnhẢnhToolStripMenuItem});
 			this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-			this.helpToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+			this.helpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.helpToolStripMenuItem.Text = "Help";
 			// 
 			// tạiSaoTôiKhôngThểXemĐượcHìnhẢnhToolStripMenuItem
@@ -4709,18 +4721,6 @@
 			this.pictureBox5.TabIndex = 4;
 			this.pictureBox5.TabStop = false;
 			// 
-			// webView22
-			// 
-			this.webView22.AllowExternalDrop = true;
-			this.webView22.CreationProperties = null;
-			this.webView22.DefaultBackgroundColor = System.Drawing.Color.White;
-			this.webView22.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.webView22.Location = new System.Drawing.Point(3, 16);
-			this.webView22.Name = "webView22";
-			this.webView22.Size = new System.Drawing.Size(1117, 553);
-			this.webView22.TabIndex = 0;
-			this.webView22.ZoomFactor = 1D;
-			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4812,6 +4812,7 @@
 			this.tabPage10.ResumeLayout(false);
 			this.tabPage11.ResumeLayout(false);
 			this.truyCapMang.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.webView22)).EndInit();
 			this.groupBox21.ResumeLayout(false);
 			this.groupBox21.PerformLayout();
 			this.menuStrip1.ResumeLayout(false);
@@ -4819,7 +4820,6 @@
 			this.statusStrip2.ResumeLayout(false);
 			this.statusStrip2.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.webView22)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
