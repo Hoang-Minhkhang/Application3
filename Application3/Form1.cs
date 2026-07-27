@@ -34,6 +34,7 @@ namespace Application3
 	{
 		private string _username;
 		public string _nickname { get; set; }
+		int TimerCount = 0;
 
 		public Form1(string username, string nickname)
 		{
@@ -76,10 +77,16 @@ namespace Application3
 			}
 			else
 			{
-				timer.Stop();
+			timer.Stop();
+			// If a sound file was selected, set URL and start playback explicitly
+			if (!string.IsNullOrEmpty(selectedFile))
+			{
 				player.URL = selectedFile;
-				lblCountdown.Text = "Hết giờ!";
-				ShowBalloonNotification("Thông báo", "Đã hết giờ!");
+				try { player.controls.play(); } catch { }
+				isPlaying = true;
+			}
+			lblCountdown.Text = "Hết giờ!";
+			ShowBalloonNotification("Thông báo", "Đã hết giờ!");
 			}
 		}
 		//player.URL = selectedFile;
@@ -192,6 +199,7 @@ namespace Application3
 
 		private async void Form1_Load(object sender, EventArgs e)
 		{
+			 
 			this.BackColor = SystemColors.Control;
 
 			// MenuStrip hiển thị theo hệ thống
@@ -1750,7 +1758,8 @@ namespace Application3
 					using (var sw = new StreamWriter(sfd.FileName, false, Encoding.UTF8))
 					{
 						sw.WriteLine("Stt\tTên\tThời gian hoàn thành\tQuan trọng\tLĩnh vực\tNội dung");
-						foreach (var t in tasks)
+						foreach (var t in tasks
+						)
 						{
 							sw.WriteLine($"{t.Stt}\t{t.Ten}\t{t.ThoiGianHoanThanh:dd/MM/yyyy HH:mm}\t{t.QuanTrong}\t{t.LinhVuc}\t{t.NoiDung}");
 						}
@@ -2223,6 +2232,9 @@ namespace Application3
 				SoGiayConLai = minutes * 60;
 				lblCountdown.Visible = true;
 				timer.Start();
+				TimerCount += int.Parse(txtMinutes.Text);
+				isPlaying = true;
+				TemThoiGian.Text = TimerCount.ToString(); 
 			}
 			else
 			{
@@ -2263,12 +2275,16 @@ namespace Application3
 
 		private void button51_Click(object sender, EventArgs e)
 		{
-			if (isPlaying)
+			// Always attempt to stop playback; don't depend on isPlaying flag
+			try
 			{
 				player.controls.stop();
-				isPlaying = false;
 			}
-			
+			catch { }
+			isPlaying = false;
+			timer.Stop();
+
+
 		}
 
 		private void DiaChiThanh_TextChanged(object sender, EventArgs e)
@@ -2488,9 +2504,62 @@ namespace Application3
 		{
 			Application.Exit(); 
 		}
-	}
 
+		private void button53_Click_1(object sender, EventArgs e)
+		{
+			if (timer == null) return;
+
+    var tType = timer.GetType();
+    var startMethod = tType.GetMethod("Start", Type.EmptyTypes);
+    if (startMethod != null)
+    {
+        startMethod.Invoke(timer, null);
+        return;
+    }
+
+    // Try to resume System.Threading.Timer or other timers that expose Change(...)
+    var changeMethods = tType.GetMethods().Where(m => m.Name == "Change").ToArray();
+    foreach (var change in changeMethods)
+    {
+        var parms = change.GetParameters();
+        if (parms.Length == 2)
+        {
+            try
+            {
+                if (parms[0].ParameterType == typeof(int) && parms[1].ParameterType == typeof(int))
+                {
+                    change.Invoke(timer, new object[] { 0, System.Threading.Timeout.Infinite });
+                    return;
+                }
+                if (parms[0].ParameterType == typeof(long) && parms[1].ParameterType == typeof(long))
+                {
+                    change.Invoke(timer, new object[] { 0L, (long)System.Threading.Timeout.Infinite });
+                    return;
+                }
+                if (parms[0].ParameterType == typeof(System.TimeSpan) && parms[1].ParameterType == typeof(System.TimeSpan))
+                {
+                    change.Invoke(timer, new object[] { System.TimeSpan.Zero, System.Threading.Timeout.InfiniteTimeSpan });
+                    return;
+                }
+            }
+            catch
+            {
+                // ignore and try the next overload
+            }
+        }
+    }
+
+    // Fallback: try Start property-like invocation
+    var startProp = tType.GetProperty("Enabled");
+    if (startProp != null && startProp.CanWrite && startProp.PropertyType == typeof(bool))
+    {
+        startProp.SetValue(timer, true);
+    }
+		}
+	}
 }
+
+
 
 
 

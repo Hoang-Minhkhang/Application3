@@ -129,6 +129,9 @@
 			this.button32 = new System.Windows.Forms.Button();
 			this.checkBox10 = new System.Windows.Forms.CheckBox();
 			this.Rev = new System.Windows.Forms.GroupBox();
+			this.TemThoiGian = new System.Windows.Forms.Label();
+			this.label69 = new System.Windows.Forms.Label();
+			this.button53 = new System.Windows.Forms.Button();
 			this.button49 = new System.Windows.Forms.Button();
 			this.Onleone = new System.Windows.Forms.CheckBox();
 			this.BaoCAo = new System.Windows.Forms.GroupBox();
@@ -1618,6 +1621,9 @@
 			// 
 			// Rev
 			// 
+			this.Rev.Controls.Add(this.TemThoiGian);
+			this.Rev.Controls.Add(this.label69);
+			this.Rev.Controls.Add(this.button53);
 			this.Rev.Controls.Add(this.button49);
 			this.Rev.Controls.Add(this.Onleone);
 			this.Rev.Controls.Add(this.BaoCAo);
@@ -1636,6 +1642,35 @@
 			this.Rev.TabStop = false;
 			this.Rev.Text = "Hengiodingu";
 			this.Rev.Enter += new System.EventHandler(this.Rev_Enter);
+			// 
+			// TemThoiGian
+			// 
+			this.TemThoiGian.AutoSize = true;
+			this.TemThoiGian.Location = new System.Drawing.Point(135, 299);
+			this.TemThoiGian.Name = "TemThoiGian";
+			this.TemThoiGian.Size = new System.Drawing.Size(61, 13);
+			this.TemThoiGian.TabIndex = 20;
+			this.TemThoiGian.Text = " NO DATA ";
+			// 
+			// label69
+			// 
+			this.label69.AutoSize = true;
+			this.label69.Location = new System.Drawing.Point(27, 299);
+			this.label69.Name = "label69";
+			this.label69.Size = new System.Drawing.Size(102, 13);
+			this.label69.TabIndex = 19;
+			this.label69.Text = "Đếm thời gian (phút)";
+			// 
+			// button53
+			// 
+			this.button53.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button53.Location = new System.Drawing.Point(198, 198);
+			this.button53.Name = "button53";
+			this.button53.Size = new System.Drawing.Size(95, 23);
+			this.button53.TabIndex = 18;
+			this.button53.Text = "Resume";
+			this.button53.UseVisualStyleBackColor = true;
+			this.button53.Click += new System.EventHandler(this.button53_Click_1);
 			// 
 			// button49
 			// 
@@ -3223,21 +3258,23 @@
 			// 
 			// button29
 			// 
+			this.button29.Font = new System.Drawing.Font("Wingdings 2", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
 			this.button29.Location = new System.Drawing.Point(340, 19);
 			this.button29.Name = "button29";
 			this.button29.Size = new System.Drawing.Size(110, 50);
 			this.button29.TabIndex = 9;
-			this.button29.Text = "PrintPreview3";
+			this.button29.Text = "4";
 			this.button29.UseVisualStyleBackColor = true;
 			this.button29.Click += new System.EventHandler(this.button29_Click);
 			// 
 			// Print
 			// 
+			this.Print.Font = new System.Drawing.Font("Wingdings 2", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
 			this.Print.Location = new System.Drawing.Point(6, 19);
 			this.Print.Name = "Print";
 			this.Print.Size = new System.Drawing.Size(97, 50);
 			this.Print.TabIndex = 8;
-			this.Print.Text = "In ";
+			this.Print.Text = "6";
 			this.Print.UseVisualStyleBackColor = true;
 			this.Print.Click += new System.EventHandler(this.Print_Click);
 			// 
@@ -4446,28 +4483,28 @@
 			// startToolStripMenuItem
 			// 
 			this.startToolStripMenuItem.Name = "startToolStripMenuItem";
-			this.startToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.startToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
 			this.startToolStripMenuItem.Text = "Start";
 			this.startToolStripMenuItem.Click += new System.EventHandler(this.startToolStripMenuItem_Click);
 			// 
 			// stopToolStripMenuItem
 			// 
 			this.stopToolStripMenuItem.Name = "stopToolStripMenuItem";
-			this.stopToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.stopToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
 			this.stopToolStripMenuItem.Text = "Stop";
 			this.stopToolStripMenuItem.Click += new System.EventHandler(this.stopToolStripMenuItem_Click);
 			// 
 			// printImageToolStripMenuItem
 			// 
 			this.printImageToolStripMenuItem.Name = "printImageToolStripMenuItem";
-			this.printImageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.printImageToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
 			this.printImageToolStripMenuItem.Text = "PrintImage";
 			this.printImageToolStripMenuItem.Click += new System.EventHandler(this.printImageToolStripMenuItem_Click);
 			// 
 			// aboutToolStripMenuItem
 			// 
 			this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
 			this.aboutToolStripMenuItem.Text = "About";
 			this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
 			// 
@@ -4478,7 +4515,7 @@
             this.lỗiHìnhẢnhToolStripMenuItem,
             this.bảnQuyềnToolStripMenuItem});
 			this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
-			this.reportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.reportToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
 			this.reportToolStripMenuItem.Text = "Report";
 			// 
 			// ngàyHếtHạnToolStripMenuItem
@@ -4506,7 +4543,7 @@
             this.tạiSaoTôiKhôngThểChỉnhSửaĐượcChúngToolStripMenuItem,
             this.tôiKhôngThểZoomHìnhẢnhToolStripMenuItem});
 			this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-			this.helpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.helpToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
 			this.helpToolStripMenuItem.Text = "Help";
 			// 
 			// tạiSaoTôiKhôngThểXemĐượcHìnhẢnhToolStripMenuItem
@@ -5229,6 +5266,9 @@
 		private System.Windows.Forms.Label label87;
 		private System.Windows.Forms.ColorDialog colorDialog1;
 		private Microsoft.Web.WebView2.WinForms.WebView2 webView22;
+		private System.Windows.Forms.Button button53;
+		private System.Windows.Forms.Label label69;
+		private System.Windows.Forms.Label TemThoiGian;
 	}
 }
 
