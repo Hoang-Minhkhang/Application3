@@ -435,6 +435,9 @@
 			this.contextMenuStrip5 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.pictureBox5 = new System.Windows.Forms.PictureBox();
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+			this.usernameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.kếtThúcPhiênLàmViệcToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+			this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.groupBox12.SuspendLayout();
@@ -1788,7 +1791,7 @@
 			this.ClearButton.Name = "ClearButton";
 			this.ClearButton.Size = new System.Drawing.Size(76, 70);
 			this.ClearButton.TabIndex = 9;
-			this.ClearButton.Text = "CLR";
+			this.ClearButton.Text = "DEL";
 			this.ClearButton.UseVisualStyleBackColor = true;
 			this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
 			// 
@@ -4292,6 +4295,7 @@
             this.imagePreviewToolStripMenuItem,
             this.uselessBroswerToolStripMenuItem,
             this.userToolStripMenuItem,
+            this.usernameToolStripMenuItem,
             this.eXITToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
@@ -4607,6 +4611,7 @@
 			// 
 			// eXITToolStripMenuItem
 			// 
+			this.eXITToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
 			this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
 			this.eXITToolStripMenuItem.Size = new System.Drawing.Size(42, 23);
 			this.eXITToolStripMenuItem.Text = "EXIT";
@@ -4757,6 +4762,29 @@
 			this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.pictureBox5.TabIndex = 4;
 			this.pictureBox5.TabStop = false;
+			// 
+			// usernameToolStripMenuItem
+			// 
+			this.usernameToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+			this.usernameToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.kếtThúcPhiênLàmViệcToolStripMenuItem1,
+            this.helpToolStripMenuItem1});
+			this.usernameToolStripMenuItem.Name = "usernameToolStripMenuItem";
+			this.usernameToolStripMenuItem.Size = new System.Drawing.Size(72, 23);
+			this.usernameToolStripMenuItem.Text = "Username";
+			// 
+			// kếtThúcPhiênLàmViệcToolStripMenuItem1
+			// 
+			this.kếtThúcPhiênLàmViệcToolStripMenuItem1.Name = "kếtThúcPhiênLàmViệcToolStripMenuItem1";
+			this.kếtThúcPhiênLàmViệcToolStripMenuItem1.Size = new System.Drawing.Size(201, 22);
+			this.kếtThúcPhiênLàmViệcToolStripMenuItem1.Text = "Kết thúc phiên làm việc ";
+			this.kếtThúcPhiênLàmViệcToolStripMenuItem1.Click += new System.EventHandler(this.kếtThúcPhiênLàmViệcToolStripMenuItem1_Click);
+			// 
+			// helpToolStripMenuItem1
+			// 
+			this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
+			this.helpToolStripMenuItem1.Size = new System.Drawing.Size(201, 22);
+			this.helpToolStripMenuItem1.Text = "Help";
 			// 
 			// Form1
 			// 
@@ -5269,6 +5297,9 @@
 		private System.Windows.Forms.Button button53;
 		private System.Windows.Forms.Label label69;
 		private System.Windows.Forms.Label TemThoiGian;
+		private System.Windows.Forms.ToolStripMenuItem usernameToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem kếtThúcPhiênLàmViệcToolStripMenuItem1;
+		private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
 	}
 }
 

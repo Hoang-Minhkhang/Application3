@@ -35,7 +35,7 @@ namespace Application3
 		private string _username;
 		public string _nickname { get; set; }
 		int TimerCount = 0;
-
+		
 		public Form1(string username, string nickname)
 		{
 			InitializeComponent();
@@ -49,7 +49,9 @@ namespace Application3
 			label2.Text = _username;
 			ttdangnhap.Text = _nickname;
 			tabControl1.SelectedIndex = 1;
-			
+			usernameToolStripMenuItem.Text = _username; 
+
+
 		}
 		private void InitializeTimer()
 		{
@@ -2555,6 +2557,12 @@ namespace Application3
     {
         startProp.SetValue(timer, true);
     }
+		}
+
+		private void kếtThúcPhiênLàmViệcToolStripMenuItem1_Click(object sender, EventArgs e)
+		{
+			this.Close(); 
+
 		}
 	}
 }
