@@ -129,6 +129,8 @@
 			this.button32 = new System.Windows.Forms.Button();
 			this.checkBox10 = new System.Windows.Forms.CheckBox();
 			this.Rev = new System.Windows.Forms.GroupBox();
+			this.label122 = new System.Windows.Forms.Label();
+			this.AmThanhThoiFian = new System.Windows.Forms.Label();
 			this.TemThoiGian = new System.Windows.Forms.Label();
 			this.label69 = new System.Windows.Forms.Label();
 			this.button53 = new System.Windows.Forms.Button();
@@ -413,6 +415,9 @@
 			this.normalWindowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.userToolStripMenuItem = new System.Windows.Forms.ToolStripTextBox();
+			this.usernameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.kếtThúcPhiênLàmViệcToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+			this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -435,9 +440,6 @@
 			this.contextMenuStrip5 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.pictureBox5 = new System.Windows.Forms.PictureBox();
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-			this.usernameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.kếtThúcPhiênLàmViệcToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-			this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.groupBox12.SuspendLayout();
@@ -1624,6 +1626,8 @@
 			// 
 			// Rev
 			// 
+			this.Rev.Controls.Add(this.label122);
+			this.Rev.Controls.Add(this.AmThanhThoiFian);
 			this.Rev.Controls.Add(this.TemThoiGian);
 			this.Rev.Controls.Add(this.label69);
 			this.Rev.Controls.Add(this.button53);
@@ -1646,6 +1650,24 @@
 			this.Rev.Text = "Hengiodingu";
 			this.Rev.Enter += new System.EventHandler(this.Rev_Enter);
 			// 
+			// label122
+			// 
+			this.label122.AutoSize = true;
+			this.label122.Location = new System.Drawing.Point(29, 325);
+			this.label122.Name = "label122";
+			this.label122.Size = new System.Drawing.Size(115, 13);
+			this.label122.TabIndex = 22;
+			this.label122.Text = "Chưa bắt đầu bấm giờ ";
+			// 
+			// AmThanhThoiFian
+			// 
+			this.AmThanhThoiFian.AutoSize = true;
+			this.AmThanhThoiFian.Location = new System.Drawing.Point(27, 312);
+			this.AmThanhThoiFian.Name = "AmThanhThoiFian";
+			this.AmThanhThoiFian.Size = new System.Drawing.Size(102, 13);
+			this.AmThanhThoiFian.TabIndex = 21;
+			this.AmThanhThoiFian.Text = "Trạng Thái Âm Báo ";
+			// 
 			// TemThoiGian
 			// 
 			this.TemThoiGian.AutoSize = true;
@@ -1666,6 +1688,7 @@
 			// 
 			// button53
 			// 
+			this.button53.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.button53.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button53.Location = new System.Drawing.Point(198, 198);
 			this.button53.Name = "button53";
@@ -1764,6 +1787,7 @@
 			// 
 			// Starttimer
 			// 
+			this.Starttimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Starttimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Starttimer.Location = new System.Drawing.Point(179, 254);
 			this.Starttimer.Name = "Starttimer";
@@ -1775,6 +1799,7 @@
 			// 
 			// Number0
 			// 
+			this.Number0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Number0.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Number0.Location = new System.Drawing.Point(97, 254);
 			this.Number0.Name = "Number0";
@@ -1786,6 +1811,7 @@
 			// 
 			// ClearButton
 			// 
+			this.ClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.ClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.ClearButton.Location = new System.Drawing.Point(15, 254);
 			this.ClearButton.Name = "ClearButton";
@@ -1797,6 +1823,7 @@
 			// 
 			// Number9
 			// 
+			this.Number9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Number9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Number9.Location = new System.Drawing.Point(179, 176);
 			this.Number9.Name = "Number9";
@@ -1808,6 +1835,7 @@
 			// 
 			// Number8
 			// 
+			this.Number8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Number8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Number8.Location = new System.Drawing.Point(97, 176);
 			this.Number8.Name = "Number8";
@@ -1819,6 +1847,7 @@
 			// 
 			// Number7
 			// 
+			this.Number7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Number7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Number7.Location = new System.Drawing.Point(15, 176);
 			this.Number7.Name = "Number7";
@@ -1830,6 +1859,7 @@
 			// 
 			// Number6
 			// 
+			this.Number6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Number6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Number6.Location = new System.Drawing.Point(179, 100);
 			this.Number6.Name = "Number6";
@@ -1841,6 +1871,7 @@
 			// 
 			// Number5
 			// 
+			this.Number5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Number5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Number5.Location = new System.Drawing.Point(97, 100);
 			this.Number5.Name = "Number5";
@@ -1852,6 +1883,7 @@
 			// 
 			// Number4
 			// 
+			this.Number4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Number4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Number4.Location = new System.Drawing.Point(15, 100);
 			this.Number4.Name = "Number4";
@@ -1863,6 +1895,7 @@
 			// 
 			// button52
 			// 
+			this.button52.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button52.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button52.Location = new System.Drawing.Point(179, 24);
 			this.button52.Name = "button52";
@@ -1874,6 +1907,7 @@
 			// 
 			// Number2
 			// 
+			this.Number2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Number2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Number2.Location = new System.Drawing.Point(97, 24);
 			this.Number2.Name = "Number2";
@@ -1885,6 +1919,7 @@
 			// 
 			// Number1
 			// 
+			this.Number1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Number1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Number1.Location = new System.Drawing.Point(15, 24);
 			this.Number1.Name = "Number1";
@@ -1928,6 +1963,7 @@
 			// start
 			// 
 			this.start.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.start.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.start.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
 			this.start.Location = new System.Drawing.Point(298, 169);
 			this.start.Name = "start";
@@ -1939,6 +1975,7 @@
 			// 
 			// Test
 			// 
+			this.Test.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.Test.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Test.Location = new System.Drawing.Point(197, 169);
 			this.Test.Name = "Test";
@@ -1950,6 +1987,7 @@
 			// 
 			// chosechon
 			// 
+			this.chosechon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.chosechon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.chosechon.Location = new System.Drawing.Point(30, 169);
 			this.chosechon.Name = "chosechon";
@@ -4609,6 +4647,30 @@
 			this.userToolStripMenuItem.Size = new System.Drawing.Size(42, 23);
 			this.userToolStripMenuItem.Text = "User";
 			// 
+			// usernameToolStripMenuItem
+			// 
+			this.usernameToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+			this.usernameToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.kếtThúcPhiênLàmViệcToolStripMenuItem1,
+            this.helpToolStripMenuItem1});
+			this.usernameToolStripMenuItem.Name = "usernameToolStripMenuItem";
+			this.usernameToolStripMenuItem.Size = new System.Drawing.Size(72, 23);
+			this.usernameToolStripMenuItem.Text = "Username";
+			this.usernameToolStripMenuItem.Click += new System.EventHandler(this.usernameToolStripMenuItem_Click);
+			// 
+			// kếtThúcPhiênLàmViệcToolStripMenuItem1
+			// 
+			this.kếtThúcPhiênLàmViệcToolStripMenuItem1.Name = "kếtThúcPhiênLàmViệcToolStripMenuItem1";
+			this.kếtThúcPhiênLàmViệcToolStripMenuItem1.Size = new System.Drawing.Size(201, 22);
+			this.kếtThúcPhiênLàmViệcToolStripMenuItem1.Text = "Kết thúc phiên làm việc ";
+			this.kếtThúcPhiênLàmViệcToolStripMenuItem1.Click += new System.EventHandler(this.kếtThúcPhiênLàmViệcToolStripMenuItem1_Click);
+			// 
+			// helpToolStripMenuItem1
+			// 
+			this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
+			this.helpToolStripMenuItem1.Size = new System.Drawing.Size(201, 22);
+			this.helpToolStripMenuItem1.Text = "Help";
+			// 
 			// eXITToolStripMenuItem
 			// 
 			this.eXITToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
@@ -4763,29 +4825,6 @@
 			this.pictureBox5.TabIndex = 4;
 			this.pictureBox5.TabStop = false;
 			// 
-			// usernameToolStripMenuItem
-			// 
-			this.usernameToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-			this.usernameToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.kếtThúcPhiênLàmViệcToolStripMenuItem1,
-            this.helpToolStripMenuItem1});
-			this.usernameToolStripMenuItem.Name = "usernameToolStripMenuItem";
-			this.usernameToolStripMenuItem.Size = new System.Drawing.Size(72, 23);
-			this.usernameToolStripMenuItem.Text = "Username";
-			// 
-			// kếtThúcPhiênLàmViệcToolStripMenuItem1
-			// 
-			this.kếtThúcPhiênLàmViệcToolStripMenuItem1.Name = "kếtThúcPhiênLàmViệcToolStripMenuItem1";
-			this.kếtThúcPhiênLàmViệcToolStripMenuItem1.Size = new System.Drawing.Size(201, 22);
-			this.kếtThúcPhiênLàmViệcToolStripMenuItem1.Text = "Kết thúc phiên làm việc ";
-			this.kếtThúcPhiênLàmViệcToolStripMenuItem1.Click += new System.EventHandler(this.kếtThúcPhiênLàmViệcToolStripMenuItem1_Click);
-			// 
-			// helpToolStripMenuItem1
-			// 
-			this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
-			this.helpToolStripMenuItem1.Size = new System.Drawing.Size(201, 22);
-			this.helpToolStripMenuItem1.Text = "Help";
-			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4800,7 +4839,7 @@
 			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "Form1";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "MinhKhang.exe -Application3 MainProcess";
+			this.Text = "MinhKhang.exe (https://hoang-minhkhang.github.io/Application3/)";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.tabControl1.ResumeLayout(false);
 			this.tabPage1.ResumeLayout(false);
@@ -5300,6 +5339,8 @@
 		private System.Windows.Forms.ToolStripMenuItem usernameToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem kếtThúcPhiênLàmViệcToolStripMenuItem1;
 		private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
+		private System.Windows.Forms.Label AmThanhThoiFian;
+		private System.Windows.Forms.Label label122;
 	}
 }
 

@@ -47,8 +47,8 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.tabPage3 = new System.Windows.Forms.TabPage();
-			this.label4 = new System.Windows.Forms.Label();
 			this.button1 = new System.Windows.Forms.Button();
+			this.label4 = new System.Windows.Forms.Label();
 			this.menuStrip1.SuspendLayout();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
@@ -230,6 +230,15 @@
 			this.tabPage3.Text = "UpdateApplication";
 			this.tabPage3.UseVisualStyleBackColor = true;
 			// 
+			// button1
+			// 
+			this.button1.Location = new System.Drawing.Point(23, 78);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(75, 23);
+			this.button1.TabIndex = 1;
+			this.button1.Text = "Kiểm Tra ";
+			this.button1.UseVisualStyleBackColor = true;
+			// 
 			// label4
 			// 
 			this.label4.AutoSize = true;
@@ -239,15 +248,6 @@
 			this.label4.Size = new System.Drawing.Size(364, 48);
 			this.label4.TabIndex = 0;
 			this.label4.Text = "Hoàng  Minh Khang Application3.exe \r\nUPDATe\r\n";
-			// 
-			// button1
-			// 
-			this.button1.Location = new System.Drawing.Point(23, 78);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 23);
-			this.button1.TabIndex = 1;
-			this.button1.Text = "Kiểm Tra ";
-			this.button1.UseVisualStyleBackColor = true;
 			// 
 			// Form2
 			// 

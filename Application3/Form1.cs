@@ -88,7 +88,9 @@ namespace Application3
 				isPlaying = true;
 			}
 			lblCountdown.Text = "Hết giờ!";
-			ShowBalloonNotification("Thông báo", "Đã hết giờ!");
+				label122.Text = "Hết giờ!";
+				label122.ForeColor = Color.Red;
+				ShowBalloonNotification("Thông báo", "Đã hết giờ!");
 			}
 		}
 		//player.URL = selectedFile;
@@ -2236,6 +2238,8 @@ namespace Application3
 				timer.Start();
 				TimerCount += int.Parse(txtMinutes.Text);
 				isPlaying = true;
+				label122.Text = "Đã Bấm giờ ";
+				label122.ForeColor = Color.Green; 
 				TemThoiGian.Text = TimerCount.ToString(); 
 			}
 			else
@@ -2251,6 +2255,8 @@ namespace Application3
 			if (ofd.ShowDialog() == DialogResult.OK)
 			{
 				selectedFile = ofd.FileName;
+				AmThanhThoiFian.Text = "Đã Chọn file Âm thanh ";
+				AmThanhThoiFian.ForeColor = Color.Green;
 			}
 		}
 
@@ -2267,6 +2273,8 @@ namespace Application3
 				player.URL = selectedFile;
 				player.controls.play();
 				isPlaying = true;
+				AmThanhThoiFian.Text = "Đã Chọn file Âm thanh ";
+				AmThanhThoiFian.ForeColor = Color.Green;
 			}
 			else
 			{
@@ -2475,6 +2483,14 @@ namespace Application3
 			if (int.TryParse(txtMinutes.Text, out int minutes))
 			{
 				SoGiayConLai = minutes * 60;
+				lblCountdown.Visible = true;
+				timer.Start();
+				TimerCount += int.Parse(txtMinutes.Text);
+				isPlaying = true;
+				TemThoiGian.Text = TimerCount.ToString();
+				label122.Text = "Đã Bấm giờ ";
+				label122.ForeColor = Color.Green;
+
 			}
 			else
 			{
@@ -2562,6 +2578,11 @@ namespace Application3
 		private void kếtThúcPhiênLàmViệcToolStripMenuItem1_Click(object sender, EventArgs e)
 		{
 			this.Close(); 
+
+		}
+
+		private void usernameToolStripMenuItem_Click(object sender, EventArgs e)
+		{
 
 		}
 	}

@@ -1,6 +1,2 @@
-2026/07/22-19:26:53.801 40dc Reusing MANIFEST C:\Application3\Application3.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
-2026/07/22-19:26:53.833 40dc Recovering log #31
-2026/07/22-19:26:53.843 40dc Reusing old log C:\Application3\Application3.exe.WebView2\EBWebView\Default\Local Storage\leveldb/000031.log 
-2026/07/22-19:27:53.857 7298 Level-0 table #35: started
-2026/07/22-19:27:53.860 7298 Level-0 table #35: 35732 bytes OK
-2026/07/22-19:27:53.862 7298 Delete type=0 #31
+2026/07/28-19:58:39.074 783c Creating DB C:\Users\hoang\OneDrive\Máy tính\project\PRO3\Application3\Application3.exe.WebView2\EBWebView\Default\Local Storage\leveldb since it was missing.
+2026/07/28-19:58:39.170 783c Reusing MANIFEST C:\Users\hoang\OneDrive\Máy tính\project\PRO3\Application3\Application3.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001

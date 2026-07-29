@@ -33,7 +33,7 @@
     <SuiteName>Administrator</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>2007</ApplicationRevision>
+    <ApplicationRevision>2008</ApplicationRevision>
     <ApplicationVersion>2.6.04.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -72,10 +72,10 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.4126.0, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
