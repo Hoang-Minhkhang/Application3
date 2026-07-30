@@ -35,7 +35,8 @@ namespace Application3
 		private string _username;
 		public string _nickname { get; set; }
 		int TimerCount = 0;
-		
+
+
 		public Form1(string username, string nickname)
 		{
 			InitializeComponent();
@@ -49,7 +50,7 @@ namespace Application3
 			label2.Text = _username;
 			ttdangnhap.Text = _nickname;
 			tabControl1.SelectedIndex = 1;
-			usernameToolStripMenuItem.Text = _username; 
+			usernameToolStripMenuItem.Text = _username;
 
 
 		}
@@ -79,15 +80,15 @@ namespace Application3
 			}
 			else
 			{
-			timer.Stop();
-			// If a sound file was selected, set URL and start playback explicitly
-			if (!string.IsNullOrEmpty(selectedFile))
-			{
-				player.URL = selectedFile;
-				try { player.controls.play(); } catch { }
-				isPlaying = true;
-			}
-			lblCountdown.Text = "Hết giờ!";
+				timer.Stop();
+				// If a sound file was selected, set URL and start playback explicitly
+				if (!string.IsNullOrEmpty(selectedFile))
+				{
+					player.URL = selectedFile;
+					try { player.controls.play(); } catch { }
+					isPlaying = true;
+				}
+				lblCountdown.Text = "Hết giờ!";
 				label122.Text = "Hết giờ!";
 				label122.ForeColor = Color.Red;
 				ShowBalloonNotification("Thông báo", "Đã hết giờ!");
@@ -203,7 +204,7 @@ namespace Application3
 
 		private async void Form1_Load(object sender, EventArgs e)
 		{
-			 
+
 			this.BackColor = SystemColors.Control;
 
 			// MenuStrip hiển thị theo hệ thống
@@ -304,9 +305,9 @@ namespace Application3
 				label2.Text = currentUsername;
 				tinhtrang.Text = username;
 
-				
+
 				dangnhap = true;
-				cuser= username;
+				cuser = username;
 
 				richTextBox7.AppendText($"{DateTime.Now} - Đăng nhập thành công với tài khoản: {username} ({nickname})\n");
 				if (username == "MinhKhang1995" || username == "Administrator")
@@ -337,7 +338,7 @@ namespace Application3
 					"Báo lỗi tài khoản  ",
 					"nếu sai tài khoản mật khẩu quá 03 lần thì vui lòng liên hệ quản trị viên 	"
 				);
-				richTextBox7.AppendText ("" + $"{DateTime.Now} - Đăng nhập thất bại với tài khoản: {username} - ({nickname})\n");
+				richTextBox7.AppendText("" + $"{DateTime.Now} - Đăng nhập thất bại với tài khoản: {username} - ({nickname})\n");
 				richTextBox7.AppendText("		Tài khoản mật khẩu ..............................Kiểm tra \n");
 				richTextBox7.AppendText("		Mã khu vực ......................................Kiểm tra \n");
 				richTextBox7.AppendText("		NẾU KHÔNG HOẠT ĐỘNG \n");
@@ -349,7 +350,7 @@ namespace Application3
 				MessageBox.Show("Sai tài khoản hoặc mật khẩu! - kiểm tra log đểbiết hướng xử lý ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 			}
 		}
-		
+
 		private void ShowBalloonNotification(string title, string message, int timeoutMs = 5000)
 		{
 			try
@@ -399,7 +400,7 @@ namespace Application3
 		// Button 6: mở website
 		private void button6_Click(object sender, EventArgs e)
 		{
-			tabControl1.SelectedIndex = 10; 
+			tabControl1.SelectedIndex = 10;
 			richTextBox7.AppendText($"{DateTime.Now} - {cuser} đang truy cập website hoctructuyen \n");
 			webView22.CoreWebView2.Navigate("https://hoctructuyen.hcm.edu.vn/");
 		}
@@ -552,7 +553,7 @@ namespace Application3
 		private void kếtThúcPhiênLàmViệcToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			// Clear current user and update title when ending sessionaboutThisApplicationToolStripMenuItem
-			Application.Exit(); 
+			Application.Exit();
 		}
 
 		private void aboutThisApplicationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -678,7 +679,7 @@ namespace Application3
 
 		private void button8_Click_1(object sender, EventArgs e)
 		{
-			Trangthaicuoi.Text= "Lưu tác vụ thành công ";
+			Trangthaicuoi.Text = "Lưu tác vụ thành công ";
 			DateTime combined = DateTime.Now;
 			string dateText = maskedTextBox4.Text.Trim();
 			string timeText = maskedTextBox3.Text.Trim();
@@ -767,7 +768,7 @@ namespace Application3
 
 			string role;
 			var u = user.ToLowerInvariant();
-			role = nickname; 
+			role = nickname;
 
 			if (label29 != null) label29.Text = role;
 			MessageBox.Show($"Người dùng: {user}\nPhân loại: {role}", "Thông tin người dùng", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -859,7 +860,7 @@ namespace Application3
 
 		private void button15_Click(object sender, EventArgs e)
 		{
-			Trangthaicuoi.Text="thực thi tác vụ thành công ";
+			Trangthaicuoi.Text = "thực thi tác vụ thành công ";
 			// in ra tệp PDF (export contents of groupBox4 to a PDF file)
 			using (var sfd = new SaveFileDialog { Filter = "PDF files|*.pdf", FileName = "groupBox4.pdf" })
 			{
@@ -1198,9 +1199,9 @@ namespace Application3
 		{
 			MessageBox.Show("Nếu bạn nhập sai mã khu vực - đồng nghĩa việc tài khoản của bạn không hợp lệ ", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
-		int  tkbhethangngay = 30;
+		int tkbhethangngay = 30;
 		int tkbhethangthang = 5;
-		int tkbhethangnam	 = 2026;
+		int tkbhethangnam = 2026;
 		private void button18_Click(object sender, EventArgs e)
 		{
 			if (dangnhap == true)
@@ -1216,7 +1217,7 @@ namespace Application3
 					if (DateTime.Now.Date <= expiry.Date)
 					{
 						label53.Text = "Còn Hiệu Lực ";
-						label53.ForeColor = Color.Green; 
+						label53.ForeColor = Color.Green;
 					}
 					else
 					{
@@ -1393,17 +1394,17 @@ namespace Application3
 		private void CuaSoIn_MouseWheel(object sender, MouseEventArgs e)
 		{
 			if (pdfDocument == null) return;
-    if (e.Delta < 0 && CuaSoIn.StartPage < pdfDocument.PageCount - 1)
-        CuaSoIn.StartPage++;
-    else if (e.Delta > 0 && CuaSoIn.StartPage > 0)
-        CuaSoIn.StartPage--;
+			if (e.Delta < 0 && CuaSoIn.StartPage < pdfDocument.PageCount - 1)
+				CuaSoIn.StartPage++;
+			else if (e.Delta > 0 && CuaSoIn.StartPage > 0)
+				CuaSoIn.StartPage--;
 		}
-		
+
 		private void CuaSoIn_Click(object sender, EventArgs e)
 		{
-			
+
 			CuaSoIn.Zoom = 1.2; // zoom 120%
-		
+
 
 		}
 
@@ -1935,7 +1936,7 @@ namespace Application3
 		{
 			if (dangnhap == true)
 			{
-			 if (pictureBox3.Image == null)
+				if (pictureBox3.Image == null)
 				{
 					MessageBox.Show("Không có hình để xuất.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 					return;
@@ -2128,12 +2129,12 @@ namespace Application3
 
 		private void NutQuayVe_Click(object sender, EventArgs e)
 		{
-			webView22.GoBack(); 
+			webView22.GoBack();
 		}
 
 		private void NutTien_Click(object sender, EventArgs e)
 		{
-			webView22.GoForward(); 
+			webView22.GoForward();
 		}
 
 		private void TruyCap_Click(object sender, EventArgs e)
@@ -2160,7 +2161,7 @@ namespace Application3
 
 		private void ThanhDiaChi_TextChanged(object sender, EventArgs e)
 		{
-			
+
 		}
 
 		private void TaiLai_Click(object sender, EventArgs e)
@@ -2193,7 +2194,7 @@ namespace Application3
 
 		private void button46_Click(object sender, EventArgs e)
 		{
-			tabControl1.Dock = DockStyle.Fill; 
+			tabControl1.Dock = DockStyle.Fill;
 		}
 
 		private void fullWindowsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2208,7 +2209,7 @@ namespace Application3
 
 		private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show("HMKA broswer app ver 1.0 - using WebView2" , "about "  , MessageBoxButtons.OK, MessageBoxIcon.Information);
+			MessageBox.Show("HMKA broswer app ver 1.0 - using WebView2", "about ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
 
 		private void button47_Click(object sender, EventArgs e)
@@ -2226,9 +2227,9 @@ namespace Application3
 		private void button48_Click(object sender, EventArgs e)
 		{
 			tabControl1.SelectedIndex = 10;
-			richTextBox7.AppendText($"{DateTime.Now} - {cuser} đang truy cập website làm bài  \n");	
+			richTextBox7.AppendText($"{DateTime.Now} - {cuser} đang truy cập website làm bài  \n");
 		}
-		
+
 		private void start_Click(object sender, EventArgs e)
 		{
 			if (int.TryParse(txtMinutes.Text, out int minutes))
@@ -2239,8 +2240,8 @@ namespace Application3
 				TimerCount += int.Parse(txtMinutes.Text);
 				isPlaying = true;
 				label122.Text = "Đã Bấm giờ ";
-				label122.ForeColor = Color.Green; 
-				TemThoiGian.Text = TimerCount.ToString(); 
+				label122.ForeColor = Color.Green;
+				TemThoiGian.Text = TimerCount.ToString();
 			}
 			else
 			{
@@ -2333,16 +2334,16 @@ namespace Application3
 					new RectangleF(50, 50, e.PageBounds.Width - 100, e.PageBounds.Height - 100));
 			}
 		}
-		bool coTep = false; 
+		bool coTep = false;
 		private void XemLai_Click(object sender, EventArgs e)
 		{
 			OpenFileDialog ofd = new OpenFileDialog();
 			ofd.Filter = "PDF files|*.pdf";
 			if (ofd.ShowDialog() == DialogResult.OK)
 			{
-				
+
 				pdfDocument = PdfDocument.Load(ofd.FileName);
-				coTep = true; 
+				coTep = true;
 				// Gắn vào PrintPreviewControl (CuaSoIn)
 				CuaSoIn.Document = pdfDocument.CreatePrintDocument();
 			}
@@ -2405,7 +2406,7 @@ namespace Application3
 
 		private void mởTabToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			tabControl1.SelectedIndex = 3; 
+			tabControl1.SelectedIndex = 3;
 		}
 
 		private void chọnÂmBáoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2435,7 +2436,7 @@ namespace Application3
 
 		private void Number1_Click(object sender, EventArgs e)
 		{
-			txtMinutes.Text += "1"; 
+			txtMinutes.Text += "1";
 		}
 
 		private void Number2_Click(object sender, EventArgs e)
@@ -2479,7 +2480,7 @@ namespace Application3
 
 		private void Starttimer_Click(object sender, EventArgs e)
 		{
-			
+
 			if (int.TryParse(txtMinutes.Text, out int minutes))
 			{
 				SoGiayConLai = minutes * 60;
@@ -2501,15 +2502,15 @@ namespace Application3
 			SoGiayConLai = minutes * 60;
 			timer.Start();
 		}
-		
+
 		private void button49_Click(object sender, EventArgs e)
 		{
-			BaoCAo.Visible=false; 
+			BaoCAo.Visible = false;
 		}
 
 		private void aboutToolStripMenuItem2_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show("MinhKhangApplication3.exe - timemanager ", "Thông báo "); 
+			MessageBox.Show("MinhKhangApplication3.exe - timemanager ", "Thông báo ");
 		}
 
 		private void button50_Click(object sender, EventArgs e)
@@ -2520,70 +2521,88 @@ namespace Application3
 
 		private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			Application.Exit(); 
+			Application.Exit();
 		}
 
 		private void button53_Click_1(object sender, EventArgs e)
 		{
 			if (timer == null) return;
 
-    var tType = timer.GetType();
-    var startMethod = tType.GetMethod("Start", Type.EmptyTypes);
-    if (startMethod != null)
-    {
-        startMethod.Invoke(timer, null);
-        return;
-    }
+			var tType = timer.GetType();
+			var startMethod = tType.GetMethod("Start", Type.EmptyTypes);
+			if (startMethod != null)
+			{
+				startMethod.Invoke(timer, null);
+				return;
+			}
 
-    // Try to resume System.Threading.Timer or other timers that expose Change(...)
-    var changeMethods = tType.GetMethods().Where(m => m.Name == "Change").ToArray();
-    foreach (var change in changeMethods)
-    {
-        var parms = change.GetParameters();
-        if (parms.Length == 2)
-        {
-            try
-            {
-                if (parms[0].ParameterType == typeof(int) && parms[1].ParameterType == typeof(int))
-                {
-                    change.Invoke(timer, new object[] { 0, System.Threading.Timeout.Infinite });
-                    return;
-                }
-                if (parms[0].ParameterType == typeof(long) && parms[1].ParameterType == typeof(long))
-                {
-                    change.Invoke(timer, new object[] { 0L, (long)System.Threading.Timeout.Infinite });
-                    return;
-                }
-                if (parms[0].ParameterType == typeof(System.TimeSpan) && parms[1].ParameterType == typeof(System.TimeSpan))
-                {
-                    change.Invoke(timer, new object[] { System.TimeSpan.Zero, System.Threading.Timeout.InfiniteTimeSpan });
-                    return;
-                }
-            }
-            catch
-            {
-                // ignore and try the next overload
-            }
-        }
-    }
+			// Try to resume System.Threading.Timer or other timers that expose Change(...)
+			var changeMethods = tType.GetMethods().Where(m => m.Name == "Change").ToArray();
+			foreach (var change in changeMethods)
+			{
+				var parms = change.GetParameters();
+				if (parms.Length == 2)
+				{
+					try
+					{
+						if (parms[0].ParameterType == typeof(int) && parms[1].ParameterType == typeof(int))
+						{
+							change.Invoke(timer, new object[] { 0, System.Threading.Timeout.Infinite });
+							return;
+						}
+						if (parms[0].ParameterType == typeof(long) && parms[1].ParameterType == typeof(long))
+						{
+							change.Invoke(timer, new object[] { 0L, (long)System.Threading.Timeout.Infinite });
+							return;
+						}
+						if (parms[0].ParameterType == typeof(System.TimeSpan) && parms[1].ParameterType == typeof(System.TimeSpan))
+						{
+							change.Invoke(timer, new object[] { System.TimeSpan.Zero, System.Threading.Timeout.InfiniteTimeSpan });
+							return;
+						}
+					}
+					catch
+					{
+						// ignore and try the next overload
+					}
+				}
+			}
 
-    // Fallback: try Start property-like invocation
-    var startProp = tType.GetProperty("Enabled");
-    if (startProp != null && startProp.CanWrite && startProp.PropertyType == typeof(bool))
-    {
-        startProp.SetValue(timer, true);
-    }
+			// Fallback: try Start property-like invocation
+			var startProp = tType.GetProperty("Enabled");
+			if (startProp != null && startProp.CanWrite && startProp.PropertyType == typeof(bool))
+			{
+				startProp.SetValue(timer, true);
+			}
 		}
 
 		private void kếtThúcPhiênLàmViệcToolStripMenuItem1_Click(object sender, EventArgs e)
 		{
-			this.Close(); 
+			this.Close();
 
 		}
 
 		private void usernameToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 
+		}
+
+		private void onScreenKeyboardToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				Process.Start("osk.exe");
+
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Không thể mở bàn phím ảo: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+
+		private void btnExport_Click(object sender, EventArgs e)
+		{
+			MessageBox.Show("unusuable"); 
 		}
 	}
 }

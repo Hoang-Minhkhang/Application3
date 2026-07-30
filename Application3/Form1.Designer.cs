@@ -129,6 +129,7 @@
 			this.button32 = new System.Windows.Forms.Button();
 			this.checkBox10 = new System.Windows.Forms.CheckBox();
 			this.Rev = new System.Windows.Forms.GroupBox();
+			this.btnExport = new System.Windows.Forms.Button();
 			this.label122 = new System.Windows.Forms.Label();
 			this.AmThanhThoiFian = new System.Windows.Forms.Label();
 			this.TemThoiGian = new System.Windows.Forms.Label();
@@ -437,6 +438,9 @@
 			this.toCửaSổHơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.chínhGiữaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.banĐầuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
+			this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
+			this.onScreenKeyboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.contextMenuStrip5 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.pictureBox5 = new System.Windows.Forms.PictureBox();
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
@@ -561,7 +565,7 @@
 			this.groupBox12.Size = new System.Drawing.Size(384, 163);
 			this.groupBox12.TabIndex = 6;
 			this.groupBox12.TabStop = false;
-			this.groupBox12.Text = "N/A";
+			this.groupBox12.Text = "Not Available Page ";
 			this.groupBox12.Enter += new System.EventHandler(this.groupBox12_Enter);
 			// 
 			// label87
@@ -1626,6 +1630,7 @@
 			// 
 			// Rev
 			// 
+			this.Rev.Controls.Add(this.btnExport);
 			this.Rev.Controls.Add(this.label122);
 			this.Rev.Controls.Add(this.AmThanhThoiFian);
 			this.Rev.Controls.Add(this.TemThoiGian);
@@ -1649,6 +1654,18 @@
 			this.Rev.TabStop = false;
 			this.Rev.Text = "Hengiodingu";
 			this.Rev.Enter += new System.EventHandler(this.Rev_Enter);
+			// 
+			// btnExport
+			// 
+			this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.btnExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnExport.Location = new System.Drawing.Point(30, 341);
+			this.btnExport.Name = "btnExport";
+			this.btnExport.Size = new System.Drawing.Size(95, 44);
+			this.btnExport.TabIndex = 23;
+			this.btnExport.Text = "TXT EXPort";
+			this.btnExport.UseVisualStyleBackColor = true;
+			this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
 			// 
 			// label122
 			// 
@@ -1690,9 +1707,9 @@
 			// 
 			this.button53.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.button53.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button53.Location = new System.Drawing.Point(198, 198);
+			this.button53.Location = new System.Drawing.Point(197, 192);
 			this.button53.Name = "button53";
-			this.button53.Size = new System.Drawing.Size(95, 23);
+			this.button53.Size = new System.Drawing.Size(95, 44);
 			this.button53.TabIndex = 18;
 			this.button53.Text = "Resume";
 			this.button53.UseVisualStyleBackColor = true;
@@ -1932,9 +1949,9 @@
 			// button51
 			// 
 			this.button51.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-			this.button51.Location = new System.Drawing.Point(399, 169);
+			this.button51.Location = new System.Drawing.Point(399, 145);
 			this.button51.Name = "button51";
-			this.button51.Size = new System.Drawing.Size(95, 23);
+			this.button51.Size = new System.Drawing.Size(95, 41);
 			this.button51.TabIndex = 13;
 			this.button51.Text = "STOP";
 			this.button51.UseVisualStyleBackColor = true;
@@ -1965,9 +1982,9 @@
 			this.start.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.start.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.start.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-			this.start.Location = new System.Drawing.Point(298, 169);
+			this.start.Location = new System.Drawing.Point(298, 145);
 			this.start.Name = "start";
-			this.start.Size = new System.Drawing.Size(95, 23);
+			this.start.Size = new System.Drawing.Size(95, 41);
 			this.start.TabIndex = 10;
 			this.start.Text = "START";
 			this.start.UseVisualStyleBackColor = true;
@@ -1977,9 +1994,9 @@
 			// 
 			this.Test.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.Test.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.Test.Location = new System.Drawing.Point(197, 169);
+			this.Test.Location = new System.Drawing.Point(197, 145);
 			this.Test.Name = "Test";
-			this.Test.Size = new System.Drawing.Size(95, 23);
+			this.Test.Size = new System.Drawing.Size(95, 41);
 			this.Test.TabIndex = 9;
 			this.Test.Text = "TEST";
 			this.Test.UseVisualStyleBackColor = true;
@@ -1989,9 +2006,9 @@
 			// 
 			this.chosechon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.chosechon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.chosechon.Location = new System.Drawing.Point(30, 169);
+			this.chosechon.Location = new System.Drawing.Point(30, 145);
 			this.chosechon.Name = "chosechon";
-			this.chosechon.Size = new System.Drawing.Size(161, 23);
+			this.chosechon.Size = new System.Drawing.Size(161, 41);
 			this.chosechon.TabIndex = 8;
 			this.chosechon.Text = "chọn âm thanh báo ";
 			this.chosechon.UseVisualStyleBackColor = true;
@@ -4712,7 +4729,9 @@
             this.toolStripSplitButton2,
             this.toolStripStatusLabel3,
             this.tinhtrang,
-            this.toolStripDropDownButton1});
+            this.toolStripDropDownButton1,
+            this.toolStripStatusLabel4,
+            this.toolStripDropDownButton2});
 			this.statusStrip2.Location = new System.Drawing.Point(0, 727);
 			this.statusStrip2.Name = "statusStrip2";
 			this.statusStrip2.Size = new System.Drawing.Size(1284, 22);
@@ -4808,6 +4827,30 @@
 			this.banĐầuToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
 			this.banĐầuToolStripMenuItem.Text = "Ban Đầu ";
 			this.banĐầuToolStripMenuItem.Click += new System.EventHandler(this.banĐầuToolStripMenuItem_Click);
+			// 
+			// toolStripStatusLabel4
+			// 
+			this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
+			this.toolStripStatusLabel4.Size = new System.Drawing.Size(59, 17);
+			this.toolStripStatusLabel4.Text = "Trợ Năng ";
+			// 
+			// toolStripDropDownButton2
+			// 
+			this.toolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.onScreenKeyboardToolStripMenuItem});
+			this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
+			this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
+			this.toolStripDropDownButton2.Size = new System.Drawing.Size(29, 20);
+			this.toolStripDropDownButton2.Text = "Trợ năng";
+			// 
+			// onScreenKeyboardToolStripMenuItem
+			// 
+			this.onScreenKeyboardToolStripMenuItem.Name = "onScreenKeyboardToolStripMenuItem";
+			this.onScreenKeyboardToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+			this.onScreenKeyboardToolStripMenuItem.Text = "OnScreenKeyboard";
+			this.onScreenKeyboardToolStripMenuItem.Click += new System.EventHandler(this.onScreenKeyboardToolStripMenuItem_Click);
 			// 
 			// contextMenuStrip5
 			// 
@@ -5341,6 +5384,10 @@
 		private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
 		private System.Windows.Forms.Label AmThanhThoiFian;
 		private System.Windows.Forms.Label label122;
+		private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
+		private System.Windows.Forms.ToolStripMenuItem onScreenKeyboardToolStripMenuItem;
+		private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
+		private System.Windows.Forms.Button btnExport;
 	}
 }
 
