@@ -3,11 +3,11 @@ name: Build
 on:
   push:
     branches:
-      - main   # chạy khi push lên nhánh main
+      - main
 
 jobs:
   build:
-    runs-on: windows-latest   # bắt buộc dùng Windows runner
+    runs-on: windows-latest
 
     steps:
       - name: Checkout source
@@ -16,7 +16,13 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '6.0.x'   # hoặc 8.0 nếu bạn cài .NET 8
+          dotnet-version: '6.0.x'   # hoặc 8.0 nếu bạn dùng .NET 8
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1.1
+
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v1.1.1
 
       - name: Restore NuGet packages
         run: dotnet restore Application3/Application3.csproj
