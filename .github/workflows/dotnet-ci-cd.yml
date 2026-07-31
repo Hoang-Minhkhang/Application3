@@ -28,15 +28,30 @@ jobs:
           restore-keys: |
             nuget-packages-${{ runner.os }}-
 
-      - name: Restore NuGet packages (packages.config)
+      - name: Restore NuGet packages (solution or project)
+        shell: powershell
         run: |
-          nuget install Application3/packages.config -OutputDirectory packages
+          Write-Host "Attempting to restore using solution if present, otherwise restore project."
+          if (Test-Path Application3.slnx) {
+            Write-Host "Restoring Application3.slnx -> packages"
+            nuget restore Application3.slnx -PackagesDirectory packages
+          } else {
+            Write-Host "Restoring Application3/Application3.csproj -> packages"
+            nuget restore Application3/Application3.csproj -PackagesDirectory packages
+          }
 
       - name: Verify packages folder
+        shell: powershell
         run: |
-          echo "List packages directory"
-          dir packages
+          Write-Host "List packages directory (top-level):"
+          if (Test-Path packages) {
+            Get-ChildItem -Path packages -Depth 2 | ForEach-Object { Write-Host $_.FullName }
+          } else {
+            Write-Host "packages directory not found"
+          }
+          Write-Host "Check for PdfiumViewer folder(s):"
+          Get-ChildItem -Path packages -Filter "PdfiumViewer*" -Recurse -ErrorAction SilentlyContinue | ForEach-Object { Write-Host $_.FullName }
 
       - name: Build with MSBuild
         run: |
-          msbuild Application3/Application3.csproj /p:Configuration=Release /m
+          msbuild Application3/Application3.csproj /p:Configuration=Release /p:Platform="Any CPU" /m
