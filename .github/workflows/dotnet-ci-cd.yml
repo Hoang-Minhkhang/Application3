@@ -19,11 +19,8 @@ jobs:
       - name: Setup NuGet
         uses: NuGet/setup-nuget@v1.1.1
 
-      - name: Restore packages
-        run: nuget restore Application3.slnx
-
-      - name: Build with MSBuild
-        run: msbuild Application3.slnx /p:Configuration=Release
-	
       - name: Restore NuGet packages
         run: nuget restore Application3.sln
+
+      - name: Build with MSBuild
+        run: msbuild Application3.sln /p:Configuration=Release
