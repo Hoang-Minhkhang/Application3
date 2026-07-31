@@ -1,3 +1,13 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main   # chạy khi push lên nhánh main
+  pull_request:
+    branches:
+      - main   # chạy khi có pull request vào nhánh main
+
 jobs:
   build:
     runs-on: windows-latest
