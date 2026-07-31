@@ -444,6 +444,7 @@
 			this.contextMenuStrip5 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.pictureBox5 = new System.Windows.Forms.PictureBox();
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+			this.label123 = new System.Windows.Forms.Label();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.groupBox12.SuspendLayout();
@@ -1580,6 +1581,7 @@
 			// 
 			// groupBox17
 			// 
+			this.groupBox17.Controls.Add(this.btnExport);
 			this.groupBox17.Controls.Add(this.SoCauHoi);
 			this.groupBox17.Controls.Add(this.button43);
 			this.groupBox17.Controls.Add(this.button32);
@@ -1630,7 +1632,7 @@
 			// 
 			// Rev
 			// 
-			this.Rev.Controls.Add(this.btnExport);
+			this.Rev.Controls.Add(this.label123);
 			this.Rev.Controls.Add(this.label122);
 			this.Rev.Controls.Add(this.AmThanhThoiFian);
 			this.Rev.Controls.Add(this.TemThoiGian);
@@ -1659,7 +1661,7 @@
 			// 
 			this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.btnExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnExport.Location = new System.Drawing.Point(30, 341);
+			this.btnExport.Location = new System.Drawing.Point(6, 70);
 			this.btnExport.Name = "btnExport";
 			this.btnExport.Size = new System.Drawing.Size(95, 44);
 			this.btnExport.TabIndex = 23;
@@ -4868,6 +4870,17 @@
 			this.pictureBox5.TabIndex = 4;
 			this.pictureBox5.TabStop = false;
 			// 
+			// label123
+			// 
+			this.label123.AutoSize = true;
+			this.label123.ForeColor = System.Drawing.Color.Red;
+			this.label123.Location = new System.Drawing.Point(27, 380);
+			this.label123.Name = "label123";
+			this.label123.Size = new System.Drawing.Size(444, 13);
+			this.label123.TabIndex = 23;
+			this.label123.Text = "**Phân khục hẹn giờ nhập vào với đơn vị là phút ,Vui lòng làm tròng khi có số lẻ " +
+    ",Xin Cảm ơi \r\n";
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5388,6 +5401,7 @@
 		private System.Windows.Forms.ToolStripMenuItem onScreenKeyboardToolStripMenuItem;
 		private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
 		private System.Windows.Forms.Button btnExport;
+		private System.Windows.Forms.Label label123;
 	}
 }
 

@@ -26,7 +26,7 @@ using System.Windows.Media.TextFormatting;
 using WMPLib;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
-
+// git add .   git commit -m "" , git push  origin main
 namespace Application3
 {
 
