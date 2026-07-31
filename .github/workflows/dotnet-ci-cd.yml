@@ -28,31 +28,33 @@ jobs:
           restore-keys: |
             nuget-packages-${{ runner.os }}-
 
-      - name: Restore NuGet packages (solution or project)
+      - name: Install NuGet packages (packages.config)
         shell: powershell
         run: |
-          Write-Host "Attempting to restore using solution if present, otherwise restore project."
-          if (Test-Path Application3.slnx) {
-            Write-Host "Restoring Application3.slnx -> packages"
-            nuget restore Application3.slnx -PackagesDirectory packages
-          } else {
-            Write-Host "Restoring Application3/Application3.csproj -> packages"
-            nuget restore Application3/Application3.csproj -PackagesDirectory packages
-          }
+          Write-Host "Installing packages.config into top-level packages folder"
+          nuget install Application3/packages.config -OutputDirectory packages -Source https://api.nuget.org/v3/index.json
 
-      - name: Verify packages folder
+      - name: Verify packages folder and PdfiumViewer
         shell: powershell
         run: |
-          Write-Host "List packages directory (top-level):"
-          if (Test-Path packages) {
-            Get-ChildItem -Path packages -Depth 2 | ForEach-Object { Write-Host $_.FullName }
-          } else {
-            Write-Host "packages directory not found"
+          if (-Not (Test-Path packages)) {
+            Write-Error "packages folder not found"
+            exit 1
           }
-          Write-Host "Check for PdfiumViewer folder(s):"
-          Get-ChildItem -Path packages -Filter "PdfiumViewer*" -Recurse -ErrorAction SilentlyContinue | ForEach-Object { Write-Host $_.FullName }
+          Write-Host "Top-level packages folder:"
+          Get-ChildItem packages | ForEach-Object { Write-Host $_.Name }
+          Write-Host "Looking for PdfiumViewer dirs (recursively):"
+          Get-ChildItem -Path packages -Filter "PdfiumViewer*" -Recurse -Directory | ForEach-Object { Write-Host $_.FullName }
+          Write-Host "Check for DLL exactly where csproj expects:"
+          $expected = Join-Path -Path (Resolve-Path Application3) -ChildPath "..\packages\PdfiumViewer.2.13.0.0\lib\net20\PdfiumViewer.dll"
+          Write-Host "Expected path (relative to repo): $expected"
+          if (-Not (Test-Path $expected)) {
+            Write-Warning "Expected PdfiumViewer.dll not found at $expected. See above list to find actual folder name."
+          } else {
+            Write-Host "Found PdfiumViewer.dll"
+          }
 
       - name: Build with MSBuild
         run: |
-          # NOTE: Platform must match the Platform used in the .csproj Condition (AnyCPU, no space)
+          # Platform must match the Platform used in the .csproj Condition (AnyCPU)
           msbuild Application3/Application3.csproj /p:Configuration=Release /p:Platform=AnyCPU /m
