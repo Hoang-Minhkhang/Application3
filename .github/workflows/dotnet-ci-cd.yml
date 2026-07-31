@@ -1,4 +1,4 @@
-name: Build
+name: Build .NET Framework Application3
 
 on:
   push:
@@ -13,16 +13,30 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v3
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: '6.0.x'   # hoặc 8.0 nếu bạn dùng .NET 8
+      - name: Setup NuGet CLI
+        uses: NuGet/setup-nuget@v1
 
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1.1
 
-      - name: Restore NuGet packages
-        run: dotnet restore Application3/Application3.csproj
+      - name: Cache NuGet packages
+        uses: actions/cache@v4
+        with:
+          path: |
+            packages
+          key: nuget-packages-${{ runner.os }}-${{ hashFiles('**/packages.config') }}
+          restore-keys: |
+            nuget-packages-${{ runner.os }}-
+
+      - name: Restore NuGet packages (packages.config)
+        run: |
+          nuget install Application3/packages.config -OutputDirectory packages
+
+      - name: Verify packages folder
+        run: |
+          echo "List packages directory"
+          dir packages
 
       - name: Build with MSBuild
-        run: msbuild Application3/Application3.csproj /p:Configuration=Release
+        run: |
+          msbuild Application3/Application3.csproj /p:Configuration=Release /m
