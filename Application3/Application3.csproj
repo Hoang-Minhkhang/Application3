@@ -211,6 +211,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\TKB L9.jpg" />
+    <Content Include="DieuKhoanSuDung.txt" />
     <Content Include="HMK.ico" />
     <None Include="Resources\TKB L10.jpg" />
     <None Include="Resources\HMK.JPG" />
