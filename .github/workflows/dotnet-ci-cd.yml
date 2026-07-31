@@ -25,5 +25,5 @@ jobs:
       - name: Build with MSBuild
         run: msbuild Application3.slnx /p:Configuration=Release
 	
-	name: Restore NuGet packages
-	run: nuget restore Application3.sln
+      - name: Restore NuGet packages
+        run: nuget restore Application3.sln
