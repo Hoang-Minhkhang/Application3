@@ -18,14 +18,8 @@ jobs:
         with:
           dotnet-version: '6.0.x'   # hoặc 8.0 nếu bạn dùng .NET 8
 
-      - name: Setup MSBuild
-        uses: microsoft/setup-msbuild@v1.1
-
-      - name: Setup NuGet
-        uses: NuGet/setup-nuget@v1.1.1
-
       - name: Restore NuGet packages
         run: dotnet restore Application3/Application3.csproj
 
-      - name: Build with MSBuild
-        run: msbuild Application3/Application3.csproj /p:Configuration=Release
+      - name: Build project
+        run: dotnet build Application3/Application3.csproj --configuration Release
