@@ -54,4 +54,5 @@ jobs:
 
       - name: Build with MSBuild
         run: |
-          msbuild Application3/Application3.csproj /p:Configuration=Release /p:Platform="Any CPU" /m
+          # NOTE: Platform must match the Platform used in the .csproj Condition (AnyCPU, no space)
+          msbuild Application3/Application3.csproj /p:Configuration=Release /p:Platform=AnyCPU /m
