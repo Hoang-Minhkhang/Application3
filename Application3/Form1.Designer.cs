@@ -124,12 +124,16 @@
 			this.label14 = new System.Windows.Forms.Label();
 			this.tabPage4 = new System.Windows.Forms.TabPage();
 			this.groupBox17 = new System.Windows.Forms.GroupBox();
+			this.btnExport = new System.Windows.Forms.Button();
 			this.SoCauHoi = new System.Windows.Forms.MaskedTextBox();
 			this.button43 = new System.Windows.Forms.Button();
 			this.button32 = new System.Windows.Forms.Button();
 			this.checkBox10 = new System.Windows.Forms.CheckBox();
 			this.Rev = new System.Windows.Forms.GroupBox();
-			this.btnExport = new System.Windows.Forms.Button();
+			this.SoLanBao = new System.Windows.Forms.Label();
+			this.label124 = new System.Windows.Forms.Label();
+			this.button54 = new System.Windows.Forms.Button();
+			this.label123 = new System.Windows.Forms.Label();
 			this.label122 = new System.Windows.Forms.Label();
 			this.AmThanhThoiFian = new System.Windows.Forms.Label();
 			this.TemThoiGian = new System.Windows.Forms.Label();
@@ -444,7 +448,8 @@
 			this.contextMenuStrip5 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.pictureBox5 = new System.Windows.Forms.PictureBox();
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-			this.label123 = new System.Windows.Forms.Label();
+			this.label125 = new System.Windows.Forms.Label();
+			this.label126 = new System.Windows.Forms.Label();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.groupBox12.SuspendLayout();
@@ -1593,6 +1598,18 @@
 			this.groupBox17.TabStop = false;
 			this.groupBox17.Text = "Quá trình lấy kiểm tra ";
 			// 
+			// btnExport
+			// 
+			this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.btnExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnExport.Location = new System.Drawing.Point(6, 70);
+			this.btnExport.Name = "btnExport";
+			this.btnExport.Size = new System.Drawing.Size(95, 44);
+			this.btnExport.TabIndex = 23;
+			this.btnExport.Text = "TXT EXPort";
+			this.btnExport.UseVisualStyleBackColor = true;
+			this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+			// 
 			// SoCauHoi
 			// 
 			this.SoCauHoi.Location = new System.Drawing.Point(273, 19);
@@ -1632,6 +1649,11 @@
 			// 
 			// Rev
 			// 
+			this.Rev.Controls.Add(this.label126);
+			this.Rev.Controls.Add(this.label125);
+			this.Rev.Controls.Add(this.SoLanBao);
+			this.Rev.Controls.Add(this.label124);
+			this.Rev.Controls.Add(this.button54);
 			this.Rev.Controls.Add(this.label123);
 			this.Rev.Controls.Add(this.label122);
 			this.Rev.Controls.Add(this.AmThanhThoiFian);
@@ -1657,17 +1679,47 @@
 			this.Rev.Text = "Hengiodingu";
 			this.Rev.Enter += new System.EventHandler(this.Rev_Enter);
 			// 
-			// btnExport
+			// SoLanBao
 			// 
-			this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.btnExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnExport.Location = new System.Drawing.Point(6, 70);
-			this.btnExport.Name = "btnExport";
-			this.btnExport.Size = new System.Drawing.Size(95, 44);
-			this.btnExport.TabIndex = 23;
-			this.btnExport.Text = "TXT EXPort";
-			this.btnExport.UseVisualStyleBackColor = true;
-			this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+			this.SoLanBao.AutoSize = true;
+			this.SoLanBao.Location = new System.Drawing.Point(94, 338);
+			this.SoLanBao.Name = "SoLanBao";
+			this.SoLanBao.Size = new System.Drawing.Size(66, 13);
+			this.SoLanBao.TabIndex = 26;
+			this.SoLanBao.Text = "Số Lần Báo ";
+			this.SoLanBao.Click += new System.EventHandler(this.SoLanBao_Click);
+			// 
+			// label124
+			// 
+			this.label124.AutoSize = true;
+			this.label124.Location = new System.Drawing.Point(29, 338);
+			this.label124.Name = "label124";
+			this.label124.Size = new System.Drawing.Size(66, 13);
+			this.label124.TabIndex = 25;
+			this.label124.Text = "Số Lần Báo ";
+			// 
+			// button54
+			// 
+			this.button54.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.button54.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button54.Location = new System.Drawing.Point(30, 186);
+			this.button54.Name = "button54";
+			this.button54.Size = new System.Drawing.Size(161, 41);
+			this.button54.TabIndex = 24;
+			this.button54.Text = "Restart ";
+			this.button54.UseVisualStyleBackColor = true;
+			this.button54.Click += new System.EventHandler(this.button54_Click_1);
+			// 
+			// label123
+			// 
+			this.label123.AutoSize = true;
+			this.label123.ForeColor = System.Drawing.Color.Red;
+			this.label123.Location = new System.Drawing.Point(27, 380);
+			this.label123.Name = "label123";
+			this.label123.Size = new System.Drawing.Size(444, 13);
+			this.label123.TabIndex = 23;
+			this.label123.Text = "**Phân khục hẹn giờ nhập vào với đơn vị là phút ,Vui lòng làm tròng khi có số lẻ " +
+    ",Xin Cảm ơi \r\n";
 			// 
 			// label122
 			// 
@@ -1709,7 +1761,7 @@
 			// 
 			this.button53.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.button53.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button53.Location = new System.Drawing.Point(197, 192);
+			this.button53.Location = new System.Drawing.Point(197, 186);
 			this.button53.Name = "button53";
 			this.button53.Size = new System.Drawing.Size(95, 44);
 			this.button53.TabIndex = 18;
@@ -4870,16 +4922,23 @@
 			this.pictureBox5.TabIndex = 4;
 			this.pictureBox5.TabStop = false;
 			// 
-			// label123
+			// label125
 			// 
-			this.label123.AutoSize = true;
-			this.label123.ForeColor = System.Drawing.Color.Red;
-			this.label123.Location = new System.Drawing.Point(27, 380);
-			this.label123.Name = "label123";
-			this.label123.Size = new System.Drawing.Size(444, 13);
-			this.label123.TabIndex = 23;
-			this.label123.Text = "**Phân khục hẹn giờ nhập vào với đơn vị là phút ,Vui lòng làm tròng khi có số lẻ " +
-    ",Xin Cảm ơi \r\n";
+			this.label125.AutoSize = true;
+			this.label125.Location = new System.Drawing.Point(27, 356);
+			this.label125.Name = "label125";
+			this.label125.Size = new System.Drawing.Size(89, 13);
+			this.label125.TabIndex = 27;
+			this.label125.Text = "Thời gian dự kiến";
+			// 
+			// label126
+			// 
+			this.label126.AutoSize = true;
+			this.label126.Location = new System.Drawing.Point(135, 356);
+			this.label126.Name = "label126";
+			this.label126.Size = new System.Drawing.Size(55, 13);
+			this.label126.TabIndex = 28;
+			this.label126.Text = "NO DATA";
 			// 
 			// Form1
 			// 
@@ -5402,6 +5461,11 @@
 		private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
 		private System.Windows.Forms.Button btnExport;
 		private System.Windows.Forms.Label label123;
+		private System.Windows.Forms.Button button54;
+		private System.Windows.Forms.Label SoLanBao;
+		private System.Windows.Forms.Label label124;
+		private System.Windows.Forms.Label label126;
+		private System.Windows.Forms.Label label125;
 	}
 }
 

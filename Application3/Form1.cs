@@ -60,8 +60,10 @@ namespace Application3
 			timer.Tick += Timer_Tick;
 		}
 		private System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
-		private int SoGiayConLai;
+		private int SoGiayConLai = 0;
+		private int alarmTime = 0;
 		private string selectedFile;
+		private int SoLanNhacLai = 0; 
 		private WindowsMediaPlayer player = new WindowsMediaPlayer();
 		private bool isPlaying = false;
 
@@ -1820,7 +1822,7 @@ namespace Application3
 
 		private void thựcHiệnToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			// thực hiên in toàn bộ tác vụ ra pdf 
+			// thực hiện in toàn bộ tác vụ ra pdf 
 
 		}
 
@@ -2237,11 +2239,16 @@ namespace Application3
 				SoGiayConLai = minutes * 60;
 				lblCountdown.Visible = true;
 				timer.Start();
-				TimerCount += int.Parse(txtMinutes.Text);
+				TimerCount += minutes;
 				isPlaying = true;
 				label122.Text = "Đã Bấm giờ ";
 				label122.ForeColor = Color.Green;
 				TemThoiGian.Text = TimerCount.ToString();
+				SoLanNhacLai++;
+				SoLanBao.Text = SoLanNhacLai.ToString();
+				DateTime Temp = DateTime.Now;
+				DateTime alarmTime = Temp.AddSeconds(SoGiayConLai);
+				label126.Text = $"Thời gian kết thúc: {alarmTime:HH:mm:ss}";
 			}
 			else
 			{
@@ -2486,12 +2493,16 @@ namespace Application3
 				SoGiayConLai = minutes * 60;
 				lblCountdown.Visible = true;
 				timer.Start();
-				TimerCount += int.Parse(txtMinutes.Text);
+				TimerCount += minutes;
 				isPlaying = true;
-				TemThoiGian.Text = TimerCount.ToString();
 				label122.Text = "Đã Bấm giờ ";
 				label122.ForeColor = Color.Green;
-
+				TemThoiGian.Text = TimerCount.ToString();
+				SoLanNhacLai++;
+				SoLanBao.Text = SoLanNhacLai.ToString();
+				DateTime Temp = DateTime.Now;
+				DateTime alarmTime = Temp.AddSeconds(SoGiayConLai);
+				label126.Text = $"Thời gian kết thúc: {alarmTime:HH:mm:ss}";
 			}
 			else
 			{
@@ -2602,10 +2613,54 @@ namespace Application3
 
 		private void btnExport_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show("unusuable"); 
+			MessageBox.Show("unusable"); 
+		}
+
+		private void button54_Click_1(object sender, EventArgs e)
+		{
+			// Always attempt to stop playback; don't depend on isPlaying flag
+			SoLanNhacLai++;
+			SoLanBao.Text = SoLanNhacLai.ToString();
+
+			try
+			{
+				player.controls.stop();
+			}
+			catch { }
+			isPlaying = false;
+			timer.Stop();
+			if (int.TryParse(txtMinutes.Text, out int minutes))
+			{
+				SoGiayConLai = minutes * 60;
+				lblCountdown.Visible = true;
+				timer.Start();
+				TimerCount += minutes;
+				isPlaying = true;
+				label122.Text = "Đã Bấm giờ ";
+				label122.ForeColor = Color.Green;
+				TemThoiGian.Text = TimerCount.ToString();
+				DateTime Temp = DateTime.Now;
+				DateTime alarmTime = Temp.AddSeconds(SoGiayConLai);
+				label126.Text = $"Thời gian kết thúc: {alarmTime:HH:mm:ss}";
+			}
+			else
+			{
+				MessageBox.Show("Vui lòng nhập số phút hợp lệ!");
+			}
+		}
+
+		private void SoLanBao_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }
+
+
+
+
+
+
 
 
 
