@@ -130,6 +130,8 @@
 			this.button32 = new System.Windows.Forms.Button();
 			this.checkBox10 = new System.Windows.Forms.CheckBox();
 			this.Rev = new System.Windows.Forms.GroupBox();
+			this.label126 = new System.Windows.Forms.Label();
+			this.label125 = new System.Windows.Forms.Label();
 			this.SoLanBao = new System.Windows.Forms.Label();
 			this.label124 = new System.Windows.Forms.Label();
 			this.button54 = new System.Windows.Forms.Button();
@@ -448,8 +450,6 @@
 			this.contextMenuStrip5 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.pictureBox5 = new System.Windows.Forms.PictureBox();
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-			this.label125 = new System.Windows.Forms.Label();
-			this.label126 = new System.Windows.Forms.Label();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.groupBox12.SuspendLayout();
@@ -1678,6 +1678,24 @@
 			this.Rev.TabStop = false;
 			this.Rev.Text = "Hengiodingu";
 			this.Rev.Enter += new System.EventHandler(this.Rev_Enter);
+			// 
+			// label126
+			// 
+			this.label126.AutoSize = true;
+			this.label126.Location = new System.Drawing.Point(135, 356);
+			this.label126.Name = "label126";
+			this.label126.Size = new System.Drawing.Size(55, 13);
+			this.label126.TabIndex = 28;
+			this.label126.Text = "NO DATA";
+			// 
+			// label125
+			// 
+			this.label125.AutoSize = true;
+			this.label125.Location = new System.Drawing.Point(27, 356);
+			this.label125.Name = "label125";
+			this.label125.Size = new System.Drawing.Size(89, 13);
+			this.label125.TabIndex = 27;
+			this.label125.Text = "Thời gian dự kiến";
 			// 
 			// SoLanBao
 			// 
@@ -4921,24 +4939,6 @@
 			this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.pictureBox5.TabIndex = 4;
 			this.pictureBox5.TabStop = false;
-			// 
-			// label125
-			// 
-			this.label125.AutoSize = true;
-			this.label125.Location = new System.Drawing.Point(27, 356);
-			this.label125.Name = "label125";
-			this.label125.Size = new System.Drawing.Size(89, 13);
-			this.label125.TabIndex = 27;
-			this.label125.Text = "Thời gian dự kiến";
-			// 
-			// label126
-			// 
-			this.label126.AutoSize = true;
-			this.label126.Location = new System.Drawing.Point(135, 356);
-			this.label126.Name = "label126";
-			this.label126.Size = new System.Drawing.Size(55, 13);
-			this.label126.TabIndex = 28;
-			this.label126.Text = "NO DATA";
 			// 
 			// Form1
 			// 
