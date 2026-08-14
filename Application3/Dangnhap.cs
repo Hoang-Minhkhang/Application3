@@ -152,5 +152,25 @@ namespace Application3
 		{
 			Process.Start("osk.exe");
 		}
+
+		private void Dangnhap_HelpButtonClicked(object sender, CancelEventArgs e)
+		{
+
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			tabControl1.SelectedIndex = 1; 
+		}
+
+		private void button5_Click(object sender, EventArgs e)
+		{
+			tabControl1.SelectedIndex = 0;
+		}
+
+		private void button6_Click(object sender, EventArgs e)
+		{
+			this.Close();
+		}
 	}
 }

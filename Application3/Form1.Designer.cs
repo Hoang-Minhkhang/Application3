@@ -364,6 +364,10 @@
 			this.NutTien = new System.Windows.Forms.Button();
 			this.NutQuayVe = new System.Windows.Forms.Button();
 			this.tabPage12 = new System.Windows.Forms.TabPage();
+			this.button55 = new System.Windows.Forms.Button();
+			this.checkBox11 = new System.Windows.Forms.CheckBox();
+			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.CommanderA = new System.Windows.Forms.Label();
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.mởToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.lưuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -447,9 +451,16 @@
 			this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
 			this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
 			this.onScreenKeyboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.cOMMANDERToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.contextMenuStrip5 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.pictureBox5 = new System.Windows.Forms.PictureBox();
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+			this.button56 = new System.Windows.Forms.Button();
+			this.groupBox22 = new System.Windows.Forms.GroupBox();
+			this.button57 = new System.Windows.Forms.Button();
+			this.button58 = new System.Windows.Forms.Button();
+			this.button59 = new System.Windows.Forms.Button();
+			this.button60 = new System.Windows.Forms.Button();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.groupBox12.SuspendLayout();
@@ -497,9 +508,11 @@
 			this.truyCapMang.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.webView22)).BeginInit();
 			this.groupBox21.SuspendLayout();
+			this.tabPage12.SuspendLayout();
 			this.menuStrip1.SuspendLayout();
 			this.statusStrip2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+			this.groupBox22.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// tabControl1
@@ -1684,9 +1697,9 @@
 			this.label126.AutoSize = true;
 			this.label126.Location = new System.Drawing.Point(135, 356);
 			this.label126.Name = "label126";
-			this.label126.Size = new System.Drawing.Size(55, 13);
+			this.label126.Size = new System.Drawing.Size(73, 13);
 			this.label126.TabIndex = 28;
-			this.label126.Text = "NO DATA";
+			this.label126.Text = "Not Available ";
 			// 
 			// label125
 			// 
@@ -1762,9 +1775,9 @@
 			this.TemThoiGian.AutoSize = true;
 			this.TemThoiGian.Location = new System.Drawing.Point(135, 299);
 			this.TemThoiGian.Name = "TemThoiGian";
-			this.TemThoiGian.Size = new System.Drawing.Size(61, 13);
+			this.TemThoiGian.Size = new System.Drawing.Size(69, 13);
 			this.TemThoiGian.TabIndex = 20;
-			this.TemThoiGian.Text = " NO DATA ";
+			this.TemThoiGian.Text = "Not available";
 			// 
 			// label69
 			// 
@@ -4263,6 +4276,11 @@
 			// 
 			// tabPage12
 			// 
+			this.tabPage12.Controls.Add(this.button55);
+			this.tabPage12.Controls.Add(this.checkBox11);
+			this.tabPage12.Controls.Add(this.textBox1);
+			this.tabPage12.Controls.Add(this.CommanderA);
+			this.tabPage12.Controls.Add(this.groupBox22);
 			this.tabPage12.Location = new System.Drawing.Point(4, 22);
 			this.tabPage12.Name = "tabPage12";
 			this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
@@ -4270,6 +4288,45 @@
 			this.tabPage12.TabIndex = 11;
 			this.tabPage12.Text = "Report";
 			this.tabPage12.UseVisualStyleBackColor = true;
+			// 
+			// button55
+			// 
+			this.button55.Location = new System.Drawing.Point(981, 12);
+			this.button55.Name = "button55";
+			this.button55.Size = new System.Drawing.Size(75, 23);
+			this.button55.TabIndex = 3;
+			this.button55.Text = "RUN";
+			this.button55.UseVisualStyleBackColor = true;
+			this.button55.Click += new System.EventHandler(this.button55_Click_1);
+			// 
+			// checkBox11
+			// 
+			this.checkBox11.AutoSize = true;
+			this.checkBox11.Location = new System.Drawing.Point(215, 39);
+			this.checkBox11.Name = "checkBox11";
+			this.checkBox11.Size = new System.Drawing.Size(124, 17);
+			this.checkBox11.TabIndex = 2;
+			this.checkBox11.Text = "Run As Administrator";
+			this.checkBox11.UseVisualStyleBackColor = true;
+			// 
+			// textBox1
+			// 
+			this.textBox1.Location = new System.Drawing.Point(266, 9);
+			this.textBox1.Name = "textBox1";
+			this.textBox1.Size = new System.Drawing.Size(684, 20);
+			this.textBox1.TabIndex = 1;
+			this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+			this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+			// 
+			// CommanderA
+			// 
+			this.CommanderA.AutoSize = true;
+			this.CommanderA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.CommanderA.Location = new System.Drawing.Point(7, 6);
+			this.CommanderA.Name = "CommanderA";
+			this.CommanderA.Size = new System.Drawing.Size(246, 20);
+			this.CommanderA.TabIndex = 0;
+			this.CommanderA.Text = "Please Enter Command Here ";
 			// 
 			// fileToolStripMenuItem
 			// 
@@ -4731,7 +4788,6 @@
 			// 
 			// userToolStripMenuItem
 			// 
-			this.userToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.userToolStripMenuItem.Name = "userToolStripMenuItem";
 			this.userToolStripMenuItem.Size = new System.Drawing.Size(42, 23);
 			this.userToolStripMenuItem.Text = "User";
@@ -4910,7 +4966,8 @@
 			// 
 			this.toolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
 			this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.onScreenKeyboardToolStripMenuItem});
+            this.onScreenKeyboardToolStripMenuItem,
+            this.cOMMANDERToolStripMenuItem});
 			this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
 			this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
@@ -4923,6 +4980,13 @@
 			this.onScreenKeyboardToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
 			this.onScreenKeyboardToolStripMenuItem.Text = "OnScreenKeyboard";
 			this.onScreenKeyboardToolStripMenuItem.Click += new System.EventHandler(this.onScreenKeyboardToolStripMenuItem_Click);
+			// 
+			// cOMMANDERToolStripMenuItem
+			// 
+			this.cOMMANDERToolStripMenuItem.Name = "cOMMANDERToolStripMenuItem";
+			this.cOMMANDERToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+			this.cOMMANDERToolStripMenuItem.Text = "COMMANDER ";
+			this.cOMMANDERToolStripMenuItem.Click += new System.EventHandler(this.cOMMANDERToolStripMenuItem_Click);
 			// 
 			// contextMenuStrip5
 			// 
@@ -4939,6 +5003,81 @@
 			this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.pictureBox5.TabIndex = 4;
 			this.pictureBox5.TabStop = false;
+			// 
+			// button56
+			// 
+			this.button56.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.button56.Image = ((System.Drawing.Image)(resources.GetObject("button56.Image")));
+			this.button56.Location = new System.Drawing.Point(6, 31);
+			this.button56.Name = "button56";
+			this.button56.Size = new System.Drawing.Size(122, 115);
+			this.button56.TabIndex = 4;
+			this.button56.Text = "Winver";
+			this.button56.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+			this.button56.UseVisualStyleBackColor = true;
+			this.button56.Click += new System.EventHandler(this.button56_Click);
+			// 
+			// groupBox22
+			// 
+			this.groupBox22.Controls.Add(this.button60);
+			this.groupBox22.Controls.Add(this.button59);
+			this.groupBox22.Controls.Add(this.button58);
+			this.groupBox22.Controls.Add(this.button57);
+			this.groupBox22.Controls.Add(this.button56);
+			this.groupBox22.Location = new System.Drawing.Point(8, 54);
+			this.groupBox22.Name = "groupBox22";
+			this.groupBox22.Size = new System.Drawing.Size(1078, 174);
+			this.groupBox22.TabIndex = 5;
+			this.groupBox22.TabStop = false;
+			this.groupBox22.Text = "Windows Tool";
+			// 
+			// button57
+			// 
+			this.button57.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.button57.Location = new System.Drawing.Point(134, 31);
+			this.button57.Name = "button57";
+			this.button57.Size = new System.Drawing.Size(122, 115);
+			this.button57.TabIndex = 5;
+			this.button57.Text = "Taskmgr";
+			this.button57.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+			this.button57.UseVisualStyleBackColor = true;
+			this.button57.Click += new System.EventHandler(this.button57_Click);
+			// 
+			// button58
+			// 
+			this.button58.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.button58.Location = new System.Drawing.Point(262, 31);
+			this.button58.Name = "button58";
+			this.button58.Size = new System.Drawing.Size(122, 115);
+			this.button58.TabIndex = 6;
+			this.button58.Text = "Notepad";
+			this.button58.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+			this.button58.UseVisualStyleBackColor = true;
+			this.button58.Click += new System.EventHandler(this.button58_Click);
+			// 
+			// button59
+			// 
+			this.button59.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.button59.Location = new System.Drawing.Point(390, 31);
+			this.button59.Name = "button59";
+			this.button59.Size = new System.Drawing.Size(122, 115);
+			this.button59.TabIndex = 7;
+			this.button59.Text = "cmd";
+			this.button59.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+			this.button59.UseVisualStyleBackColor = true;
+			this.button59.Click += new System.EventHandler(this.button59_Click);
+			// 
+			// button60
+			// 
+			this.button60.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.button60.Location = new System.Drawing.Point(518, 31);
+			this.button60.Name = "button60";
+			this.button60.Size = new System.Drawing.Size(122, 115);
+			this.button60.TabIndex = 8;
+			this.button60.Text = "RUN";
+			this.button60.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+			this.button60.UseVisualStyleBackColor = true;
+			this.button60.Click += new System.EventHandler(this.button60_Click);
 			// 
 			// Form1
 			// 
@@ -5034,11 +5173,14 @@
 			((System.ComponentModel.ISupportInitialize)(this.webView22)).EndInit();
 			this.groupBox21.ResumeLayout(false);
 			this.groupBox21.PerformLayout();
+			this.tabPage12.ResumeLayout(false);
+			this.tabPage12.PerformLayout();
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
 			this.statusStrip2.ResumeLayout(false);
 			this.statusStrip2.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+			this.groupBox22.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -5466,6 +5608,17 @@
 		private System.Windows.Forms.Label label124;
 		private System.Windows.Forms.Label label126;
 		private System.Windows.Forms.Label label125;
+		private System.Windows.Forms.ToolStripMenuItem cOMMANDERToolStripMenuItem;
+		private System.Windows.Forms.CheckBox checkBox11;
+		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.Label CommanderA;
+		private System.Windows.Forms.Button button55;
+		private System.Windows.Forms.GroupBox groupBox22;
+		private System.Windows.Forms.Button button60;
+		private System.Windows.Forms.Button button59;
+		private System.Windows.Forms.Button button58;
+		private System.Windows.Forms.Button button57;
+		private System.Windows.Forms.Button button56;
 	}
 }
 

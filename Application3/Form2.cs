@@ -122,7 +122,7 @@ namespace Application3
 			MinhKhangNotepad = null;
 
 			// Cập nhật tiêu đề form giống Notepad
-			this.Text = $"MinhKhang.exe - notepad";
+			this.Text = $"MinhKhang.exe - notepadApplication";
 		}
 
 		private void saveFileToolStripMenuItem_Click(object sender, EventArgs e)
@@ -157,6 +157,11 @@ namespace Application3
 		private void aboutUsToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			tabControl1.SelectedIndex = 1; 
+		}
+
+		private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+		{
+
 		}
 	}
 }

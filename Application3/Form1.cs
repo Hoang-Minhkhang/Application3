@@ -2653,6 +2653,129 @@ namespace Application3
 		{
 
 		}
+
+		private void cOMMANDERToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Process.Start("cmd.exe"); 
+		}
+
+		private void textBox1_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void textBox1_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Enter)
+			{
+				// Lấy nội dung trong TextBox
+				string command = textBox1.Text;
+
+				// Ví dụ: chạy lệnh như mở ứng dụng
+
+				// Ví dụ: chạy lệnh như mở ứng dụng
+				try
+				{
+					ProcessStartInfo psi = new ProcessStartInfo();
+					psi.FileName = command;
+					// Nếu checkbox được tích thì chạy với quyền Admin
+					if (checkBox11.Checked)
+					{
+						psi.UseShellExecute = true;
+						psi.Verb = "runas"; // yêu cầu quyền Administrator
+					}
+					System.Diagnostics.Process.Start(psi);
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show("Không thể chạy lệnh: " + ex.Message);
+				}
+
+				// Ngăn Enter tạo dòng mới trong TextBox
+				e.SuppressKeyPress = true;
+			}
+		}
+
+		private void button55_Click_1(object sender, EventArgs e)
+		{
+			
+				// Lấy nội dung trong TextBox
+				string command = textBox1.Text;
+
+				// Ví dụ: chạy lệnh như mở ứng dụng
+
+				// Ví dụ: chạy lệnh như mở ứng dụng
+				try
+				{
+					ProcessStartInfo psi = new ProcessStartInfo();
+					psi.FileName = command;
+					// Nếu checkbox được tích thì chạy với quyền Admin
+					if (checkBox11.Checked)
+					{
+						psi.UseShellExecute = true;
+						psi.Verb = "runas"; // yêu cầu quyền Administrator
+					}
+					System.Diagnostics.Process.Start(psi);
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show("Không thể chạy lệnh: " + ex.Message);
+				}
+
+				// Ngăn Enter tạo dòng mới trong TextBox
+				
+			
+		}
+
+		private void button56_Click(object sender, EventArgs e)
+		{
+			Process.Start("winver.exe");
+		}
+
+		private void button57_Click(object sender, EventArgs e)
+		{
+			Process.Start("taskmgr.exe" );
+		}
+
+		private void button58_Click(object sender, EventArgs e)
+		{
+			Process.Start("notepad.exe");
+		}
+
+		private void button59_Click(object sender, EventArgs e)
+		{
+			Process.Start("cmd.exe");
+		}
+
+		private void button60_Click(object sender, EventArgs e)
+		{
+			using (OpenFileDialog ofd = new OpenFileDialog())
+			{
+				ofd.Title = "Chọn file EXE ";
+				ofd.Filter = "Executable Files|*.exe|All Files|*.*";
+				ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+				ofd.RestoreDirectory = true;
+
+				if (ofd.ShowDialog() != DialogResult.OK)
+					return;
+
+				string selectedPath = ofd.FileName;
+
+				try
+				{
+					var psi = new System.Diagnostics.ProcessStartInfo
+					{
+						FileName = selectedPath,
+						UseShellExecute = true
+					};
+					System.Diagnostics.Process.Start(psi);
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show($"Không thể mở file:\r\n{ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}
+			}
+		}
 	}
 }
 
