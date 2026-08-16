@@ -368,6 +368,17 @@
 			this.checkBox11 = new System.Windows.Forms.CheckBox();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.CommanderA = new System.Windows.Forms.Label();
+			this.groupBox22 = new System.Windows.Forms.GroupBox();
+			this.button60 = new System.Windows.Forms.Button();
+			this.button59 = new System.Windows.Forms.Button();
+			this.button58 = new System.Windows.Forms.Button();
+			this.button57 = new System.Windows.Forms.Button();
+			this.button56 = new System.Windows.Forms.Button();
+			this.tabPage13 = new System.Windows.Forms.TabPage();
+			this.maskedTextBox8 = new System.Windows.Forms.MaskedTextBox();
+			this.label128 = new System.Windows.Forms.Label();
+			this.textBox8 = new System.Windows.Forms.TextBox();
+			this.label127 = new System.Windows.Forms.Label();
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.mởToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.lưuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -455,12 +466,6 @@
 			this.contextMenuStrip5 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.pictureBox5 = new System.Windows.Forms.PictureBox();
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-			this.button56 = new System.Windows.Forms.Button();
-			this.groupBox22 = new System.Windows.Forms.GroupBox();
-			this.button57 = new System.Windows.Forms.Button();
-			this.button58 = new System.Windows.Forms.Button();
-			this.button59 = new System.Windows.Forms.Button();
-			this.button60 = new System.Windows.Forms.Button();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.groupBox12.SuspendLayout();
@@ -509,10 +514,11 @@
 			((System.ComponentModel.ISupportInitialize)(this.webView22)).BeginInit();
 			this.groupBox21.SuspendLayout();
 			this.tabPage12.SuspendLayout();
+			this.groupBox22.SuspendLayout();
+			this.tabPage13.SuspendLayout();
 			this.menuStrip1.SuspendLayout();
 			this.statusStrip2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-			this.groupBox22.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// tabControl1
@@ -529,6 +535,7 @@
 			this.tabControl1.Controls.Add(this.tabPage10);
 			this.tabControl1.Controls.Add(this.tabPage11);
 			this.tabControl1.Controls.Add(this.tabPage12);
+			this.tabControl1.Controls.Add(this.tabPage13);
 			this.tabControl1.Location = new System.Drawing.Point(66, 55);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
@@ -1263,9 +1270,10 @@
 			// 
 			// button50
 			// 
-			this.button50.Location = new System.Drawing.Point(429, 12);
+			this.button50.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.button50.Location = new System.Drawing.Point(447, 6);
 			this.button50.Name = "button50";
-			this.button50.Size = new System.Drawing.Size(90, 21);
+			this.button50.Size = new System.Drawing.Size(89, 27);
 			this.button50.TabIndex = 7;
 			this.button50.Text = "Ver2";
 			this.button50.UseVisualStyleBackColor = true;
@@ -1282,9 +1290,10 @@
 			// 
 			// button15
 			// 
-			this.button15.Location = new System.Drawing.Point(330, 12);
+			this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.button15.Location = new System.Drawing.Point(342, 7);
 			this.button15.Name = "button15";
-			this.button15.Size = new System.Drawing.Size(90, 21);
+			this.button15.Size = new System.Drawing.Size(99, 26);
 			this.button15.TabIndex = 5;
 			this.button15.Text = "Thực thi";
 			this.button15.UseVisualStyleBackColor = true;
@@ -1292,9 +1301,10 @@
 			// 
 			// button13
 			// 
-			this.button13.Location = new System.Drawing.Point(177, 6);
+			this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.button13.Location = new System.Drawing.Point(199, 6);
 			this.button13.Name = "button13";
-			this.button13.Size = new System.Drawing.Size(137, 26);
+			this.button13.Size = new System.Drawing.Size(137, 27);
 			this.button13.TabIndex = 4;
 			this.button13.Text = "Thêm tác vụ ";
 			this.button13.UseVisualStyleBackColor = true;
@@ -1302,9 +1312,10 @@
 			// 
 			// button12
 			// 
-			this.button12.Location = new System.Drawing.Point(92, 6);
+			this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.button12.Location = new System.Drawing.Point(103, 6);
 			this.button12.Name = "button12";
-			this.button12.Size = new System.Drawing.Size(79, 21);
+			this.button12.Size = new System.Drawing.Size(90, 27);
 			this.button12.TabIndex = 3;
 			this.button12.Text = "export task ";
 			this.button12.UseVisualStyleBackColor = true;
@@ -1312,9 +1323,10 @@
 			// 
 			// button11
 			// 
+			this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.button11.Location = new System.Drawing.Point(7, 6);
 			this.button11.Name = "button11";
-			this.button11.Size = new System.Drawing.Size(79, 21);
+			this.button11.Size = new System.Drawing.Size(89, 27);
 			this.button11.TabIndex = 2;
 			this.button11.Text = "Inport task ";
 			this.button11.UseVisualStyleBackColor = true;
@@ -1889,7 +1901,7 @@
 			// 
 			// Starttimer
 			// 
-			this.Starttimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Starttimer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.Starttimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Starttimer.Location = new System.Drawing.Point(179, 254);
 			this.Starttimer.Name = "Starttimer";
@@ -1901,7 +1913,7 @@
 			// 
 			// Number0
 			// 
-			this.Number0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Number0.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.Number0.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Number0.Location = new System.Drawing.Point(97, 254);
 			this.Number0.Name = "Number0";
@@ -1913,7 +1925,7 @@
 			// 
 			// ClearButton
 			// 
-			this.ClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.ClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.ClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.ClearButton.Location = new System.Drawing.Point(15, 254);
 			this.ClearButton.Name = "ClearButton";
@@ -1925,7 +1937,7 @@
 			// 
 			// Number9
 			// 
-			this.Number9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Number9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.Number9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Number9.Location = new System.Drawing.Point(179, 176);
 			this.Number9.Name = "Number9";
@@ -1937,7 +1949,7 @@
 			// 
 			// Number8
 			// 
-			this.Number8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Number8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.Number8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Number8.Location = new System.Drawing.Point(97, 176);
 			this.Number8.Name = "Number8";
@@ -1949,7 +1961,7 @@
 			// 
 			// Number7
 			// 
-			this.Number7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Number7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.Number7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Number7.Location = new System.Drawing.Point(15, 176);
 			this.Number7.Name = "Number7";
@@ -1961,7 +1973,7 @@
 			// 
 			// Number6
 			// 
-			this.Number6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Number6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.Number6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Number6.Location = new System.Drawing.Point(179, 100);
 			this.Number6.Name = "Number6";
@@ -1973,7 +1985,7 @@
 			// 
 			// Number5
 			// 
-			this.Number5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Number5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.Number5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Number5.Location = new System.Drawing.Point(97, 100);
 			this.Number5.Name = "Number5";
@@ -1985,7 +1997,7 @@
 			// 
 			// Number4
 			// 
-			this.Number4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Number4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.Number4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Number4.Location = new System.Drawing.Point(15, 100);
 			this.Number4.Name = "Number4";
@@ -1997,7 +2009,7 @@
 			// 
 			// button52
 			// 
-			this.button52.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button52.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.button52.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button52.Location = new System.Drawing.Point(179, 24);
 			this.button52.Name = "button52";
@@ -2009,7 +2021,7 @@
 			// 
 			// Number2
 			// 
-			this.Number2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Number2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.Number2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Number2.Location = new System.Drawing.Point(97, 24);
 			this.Number2.Name = "Number2";
@@ -2021,7 +2033,7 @@
 			// 
 			// Number1
 			// 
-			this.Number1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Number1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.Number1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Number1.Location = new System.Drawing.Point(15, 24);
 			this.Number1.Name = "Number1";
@@ -3401,6 +3413,7 @@
 			// 
 			// button29
 			// 
+			this.button29.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.button29.Font = new System.Drawing.Font("Wingdings 2", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
 			this.button29.Location = new System.Drawing.Point(340, 19);
 			this.button29.Name = "button29";
@@ -3412,6 +3425,7 @@
 			// 
 			// Print
 			// 
+			this.Print.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.Print.Font = new System.Drawing.Font("Wingdings 2", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
 			this.Print.Location = new System.Drawing.Point(6, 19);
 			this.Print.Name = "Print";
@@ -3423,6 +3437,7 @@
 			// 
 			// ReportToserver
 			// 
+			this.ReportToserver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.ReportToserver.Location = new System.Drawing.Point(109, 19);
 			this.ReportToserver.Name = "ReportToserver";
 			this.ReportToserver.Size = new System.Drawing.Size(109, 50);
@@ -3432,6 +3447,7 @@
 			// 
 			// XemLai
 			// 
+			this.XemLai.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.XemLai.Location = new System.Drawing.Point(224, 19);
 			this.XemLai.Name = "XemLai";
 			this.XemLai.Size = new System.Drawing.Size(110, 50);
@@ -4328,6 +4344,129 @@
 			this.CommanderA.TabIndex = 0;
 			this.CommanderA.Text = "Please Enter Command Here ";
 			// 
+			// groupBox22
+			// 
+			this.groupBox22.Controls.Add(this.button60);
+			this.groupBox22.Controls.Add(this.button59);
+			this.groupBox22.Controls.Add(this.button58);
+			this.groupBox22.Controls.Add(this.button57);
+			this.groupBox22.Controls.Add(this.button56);
+			this.groupBox22.Location = new System.Drawing.Point(8, 54);
+			this.groupBox22.Name = "groupBox22";
+			this.groupBox22.Size = new System.Drawing.Size(1078, 174);
+			this.groupBox22.TabIndex = 5;
+			this.groupBox22.TabStop = false;
+			this.groupBox22.Text = "Windows Tool";
+			// 
+			// button60
+			// 
+			this.button60.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.button60.Location = new System.Drawing.Point(518, 31);
+			this.button60.Name = "button60";
+			this.button60.Size = new System.Drawing.Size(122, 115);
+			this.button60.TabIndex = 8;
+			this.button60.Text = "RUN";
+			this.button60.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+			this.button60.UseVisualStyleBackColor = true;
+			this.button60.Click += new System.EventHandler(this.button60_Click);
+			// 
+			// button59
+			// 
+			this.button59.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.button59.Location = new System.Drawing.Point(390, 31);
+			this.button59.Name = "button59";
+			this.button59.Size = new System.Drawing.Size(122, 115);
+			this.button59.TabIndex = 7;
+			this.button59.Text = "cmd";
+			this.button59.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+			this.button59.UseVisualStyleBackColor = true;
+			this.button59.Click += new System.EventHandler(this.button59_Click);
+			// 
+			// button58
+			// 
+			this.button58.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.button58.Location = new System.Drawing.Point(262, 31);
+			this.button58.Name = "button58";
+			this.button58.Size = new System.Drawing.Size(122, 115);
+			this.button58.TabIndex = 6;
+			this.button58.Text = "Notepad";
+			this.button58.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+			this.button58.UseVisualStyleBackColor = true;
+			this.button58.Click += new System.EventHandler(this.button58_Click);
+			// 
+			// button57
+			// 
+			this.button57.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.button57.Location = new System.Drawing.Point(134, 31);
+			this.button57.Name = "button57";
+			this.button57.Size = new System.Drawing.Size(122, 115);
+			this.button57.TabIndex = 5;
+			this.button57.Text = "Taskmgr";
+			this.button57.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+			this.button57.UseVisualStyleBackColor = true;
+			this.button57.Click += new System.EventHandler(this.button57_Click);
+			// 
+			// button56
+			// 
+			this.button56.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.button56.Image = ((System.Drawing.Image)(resources.GetObject("button56.Image")));
+			this.button56.Location = new System.Drawing.Point(6, 31);
+			this.button56.Name = "button56";
+			this.button56.Size = new System.Drawing.Size(122, 115);
+			this.button56.TabIndex = 4;
+			this.button56.Text = "Winver";
+			this.button56.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+			this.button56.UseVisualStyleBackColor = true;
+			this.button56.Click += new System.EventHandler(this.button56_Click);
+			// 
+			// tabPage13
+			// 
+			this.tabPage13.Controls.Add(this.maskedTextBox8);
+			this.tabPage13.Controls.Add(this.label128);
+			this.tabPage13.Controls.Add(this.textBox8);
+			this.tabPage13.Controls.Add(this.label127);
+			this.tabPage13.Location = new System.Drawing.Point(4, 22);
+			this.tabPage13.Name = "tabPage13";
+			this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage13.Size = new System.Drawing.Size(1129, 626);
+			this.tabPage13.TabIndex = 12;
+			this.tabPage13.Text = "CongViec1";
+			this.tabPage13.UseVisualStyleBackColor = true;
+			// 
+			// maskedTextBox8
+			// 
+			this.maskedTextBox8.Location = new System.Drawing.Point(126, 50);
+			this.maskedTextBox8.Name = "maskedTextBox8";
+			this.maskedTextBox8.Size = new System.Drawing.Size(100, 20);
+			this.maskedTextBox8.TabIndex = 3;
+			// 
+			// label128
+			// 
+			this.label128.AutoSize = true;
+			this.label128.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label128.Location = new System.Drawing.Point(18, 50);
+			this.label128.Name = "label128";
+			this.label128.Size = new System.Drawing.Size(91, 20);
+			this.label128.TabIndex = 2;
+			this.label128.Text = "Thời Gian ";
+			// 
+			// textBox8
+			// 
+			this.textBox8.Location = new System.Drawing.Point(169, 16);
+			this.textBox8.Name = "textBox8";
+			this.textBox8.Size = new System.Drawing.Size(825, 20);
+			this.textBox8.TabIndex = 1;
+			// 
+			// label127
+			// 
+			this.label127.AutoSize = true;
+			this.label127.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label127.Location = new System.Drawing.Point(18, 16);
+			this.label127.Name = "label127";
+			this.label127.Size = new System.Drawing.Size(150, 20);
+			this.label127.TabIndex = 0;
+			this.label127.Text = "Tiêu Đề Làm Việc";
+			// 
 			// fileToolStripMenuItem
 			// 
 			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -4788,6 +4927,7 @@
 			// 
 			// userToolStripMenuItem
 			// 
+			this.userToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.userToolStripMenuItem.Name = "userToolStripMenuItem";
 			this.userToolStripMenuItem.Size = new System.Drawing.Size(42, 23);
 			this.userToolStripMenuItem.Text = "User";
@@ -5004,81 +5144,6 @@
 			this.pictureBox5.TabIndex = 4;
 			this.pictureBox5.TabStop = false;
 			// 
-			// button56
-			// 
-			this.button56.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.button56.Image = ((System.Drawing.Image)(resources.GetObject("button56.Image")));
-			this.button56.Location = new System.Drawing.Point(6, 31);
-			this.button56.Name = "button56";
-			this.button56.Size = new System.Drawing.Size(122, 115);
-			this.button56.TabIndex = 4;
-			this.button56.Text = "Winver";
-			this.button56.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-			this.button56.UseVisualStyleBackColor = true;
-			this.button56.Click += new System.EventHandler(this.button56_Click);
-			// 
-			// groupBox22
-			// 
-			this.groupBox22.Controls.Add(this.button60);
-			this.groupBox22.Controls.Add(this.button59);
-			this.groupBox22.Controls.Add(this.button58);
-			this.groupBox22.Controls.Add(this.button57);
-			this.groupBox22.Controls.Add(this.button56);
-			this.groupBox22.Location = new System.Drawing.Point(8, 54);
-			this.groupBox22.Name = "groupBox22";
-			this.groupBox22.Size = new System.Drawing.Size(1078, 174);
-			this.groupBox22.TabIndex = 5;
-			this.groupBox22.TabStop = false;
-			this.groupBox22.Text = "Windows Tool";
-			// 
-			// button57
-			// 
-			this.button57.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.button57.Location = new System.Drawing.Point(134, 31);
-			this.button57.Name = "button57";
-			this.button57.Size = new System.Drawing.Size(122, 115);
-			this.button57.TabIndex = 5;
-			this.button57.Text = "Taskmgr";
-			this.button57.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-			this.button57.UseVisualStyleBackColor = true;
-			this.button57.Click += new System.EventHandler(this.button57_Click);
-			// 
-			// button58
-			// 
-			this.button58.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.button58.Location = new System.Drawing.Point(262, 31);
-			this.button58.Name = "button58";
-			this.button58.Size = new System.Drawing.Size(122, 115);
-			this.button58.TabIndex = 6;
-			this.button58.Text = "Notepad";
-			this.button58.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-			this.button58.UseVisualStyleBackColor = true;
-			this.button58.Click += new System.EventHandler(this.button58_Click);
-			// 
-			// button59
-			// 
-			this.button59.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.button59.Location = new System.Drawing.Point(390, 31);
-			this.button59.Name = "button59";
-			this.button59.Size = new System.Drawing.Size(122, 115);
-			this.button59.TabIndex = 7;
-			this.button59.Text = "cmd";
-			this.button59.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-			this.button59.UseVisualStyleBackColor = true;
-			this.button59.Click += new System.EventHandler(this.button59_Click);
-			// 
-			// button60
-			// 
-			this.button60.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.button60.Location = new System.Drawing.Point(518, 31);
-			this.button60.Name = "button60";
-			this.button60.Size = new System.Drawing.Size(122, 115);
-			this.button60.TabIndex = 8;
-			this.button60.Text = "RUN";
-			this.button60.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-			this.button60.UseVisualStyleBackColor = true;
-			this.button60.Click += new System.EventHandler(this.button60_Click);
-			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5094,6 +5159,9 @@
 			this.Name = "Form1";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "MinhKhang.exe (https://hoang-minhkhang.github.io/Application3/)";
+			this.AutoSizeChanged += new System.EventHandler(this.Form1_AutoSizeChanged);
+			this.MaximizedBoundsChanged += new System.EventHandler(this.Form1_MaximizedBoundsChanged);
+			this.MaximumSizeChanged += new System.EventHandler(this.Form1_MaximumSizeChanged);
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.tabControl1.ResumeLayout(false);
 			this.tabPage1.ResumeLayout(false);
@@ -5175,12 +5243,14 @@
 			this.groupBox21.PerformLayout();
 			this.tabPage12.ResumeLayout(false);
 			this.tabPage12.PerformLayout();
+			this.groupBox22.ResumeLayout(false);
+			this.tabPage13.ResumeLayout(false);
+			this.tabPage13.PerformLayout();
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
 			this.statusStrip2.ResumeLayout(false);
 			this.statusStrip2.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-			this.groupBox22.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -5619,6 +5689,11 @@
 		private System.Windows.Forms.Button button58;
 		private System.Windows.Forms.Button button57;
 		private System.Windows.Forms.Button button56;
+		private System.Windows.Forms.TabPage tabPage13;
+		private System.Windows.Forms.Label label127;
+		private System.Windows.Forms.MaskedTextBox maskedTextBox8;
+		private System.Windows.Forms.Label label128;
+		private System.Windows.Forms.TextBox textBox8;
 	}
 }
 

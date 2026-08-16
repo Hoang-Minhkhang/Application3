@@ -2613,7 +2613,7 @@ namespace Application3
 
 		private void btnExport_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show("unusable"); 
+			
 		}
 
 		private void button54_Click_1(object sender, EventArgs e)
@@ -2775,6 +2775,21 @@ namespace Application3
 					MessageBox.Show($"Không thể mở file:\r\n{ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}
 			}
+		}
+
+		private void Form1_MaximumSizeChanged(object sender, EventArgs e)
+		{
+			CenterTabControl();
+		}
+
+		private void Form1_MaximizedBoundsChanged(object sender, EventArgs e)
+		{
+			CenterTabControl();
+		}
+
+		private void Form1_AutoSizeChanged(object sender, EventArgs e)
+		{
+			CenterTabControl();
 		}
 	}
 }

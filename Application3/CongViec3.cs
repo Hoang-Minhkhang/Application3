@@ -69,15 +69,7 @@ namespace Application3
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-			using (var ofd = new OpenFileDialog())
-			{
-				ofd.Filter = "Text files|*.txt|All files|*.*";
-				if (ofd.ShowDialog() != DialogResult.OK) return;
-				try
-				{
-					var lines = File.ReadAllLines(ofd.FileName, Encoding.UTF8);
-				} catch { }
-			}
+			
 		}
 
 		private void button10_Click(object sender, EventArgs e)
@@ -87,7 +79,6 @@ namespace Application3
 
 		private void Add_Click(object sender, EventArgs e)
 		{
-			checkedListBox1.Items.Add(comboBox1.SelectedItem);
 
 		}
 
