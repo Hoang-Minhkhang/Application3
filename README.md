@@ -12,7 +12,7 @@ CÁC tính năng
 -printpreview (pdfiumviewer) 
 -...
 Điều khoản : 
-Điều khoảng khi sdu73 dụng application3 
+Điều khoảng khi sử dụng dụng application3 
 /!\ Người sử dụng cấn tuân thủ các điêu	 khoản và điều kiện sử dụng của ứng dụng. Việc vi phạm các điều khoản này có thể dẫn đến việc bị hạn chế quyền truy cập hoặc bị cấm sử dụng ứng dụng. Người sử dụng nên đọc kỹ các điều khoản trước khi tiếp tục sử dụng ứng dụng để đảm bảo rằng họ hiểu và đồng ý với các quy định đã được đặt ra.
 1. Quyền truy cập và sử dụng ứng dụng
 Người dùng cần có tài khoản hợp lệ để truy cập và sử dụng ứng dụng. Mỗi người dùng chỉ được phép sử dụng một tài khoản duy nhất và không được chia sẻ thông tin đăng nhập với bất kỳ ai khác. Việc sử dụng tài khoản của người khác mà không được phép là vi phạm các điều khoản này.
