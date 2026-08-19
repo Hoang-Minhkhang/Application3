@@ -61,9 +61,9 @@
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
-			this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-			this.button5 = new System.Windows.Forms.Button();
 			this.button6 = new System.Windows.Forms.Button();
+			this.button5 = new System.Windows.Forms.Button();
+			this.richTextBox1 = new System.Windows.Forms.RichTextBox();
 			this.groupBox1.SuspendLayout();
 			this.tabControl2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -413,13 +413,16 @@
 			this.tabPage1.Text = "Điều khoản ";
 			this.tabPage1.UseVisualStyleBackColor = true;
 			// 
-			// richTextBox1
+			// button6
 			// 
-			this.richTextBox1.Location = new System.Drawing.Point(0, 0);
-			this.richTextBox1.Name = "richTextBox1";
-			this.richTextBox1.Size = new System.Drawing.Size(533, 248);
-			this.richTextBox1.TabIndex = 0;
-			this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+			this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.button6.Location = new System.Drawing.Point(256, 251);
+			this.button6.Name = "button6";
+			this.button6.Size = new System.Drawing.Size(242, 23);
+			this.button6.TabIndex = 2;
+			this.button6.Text = "Từ Chối (thoát phần mềm ) \r\n";
+			this.button6.UseVisualStyleBackColor = true;
+			this.button6.Click += new System.EventHandler(this.button6_Click);
 			// 
 			// button5
 			// 
@@ -432,16 +435,13 @@
 			this.button5.UseVisualStyleBackColor = true;
 			this.button5.Click += new System.EventHandler(this.button5_Click);
 			// 
-			// button6
+			// richTextBox1
 			// 
-			this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.button6.Location = new System.Drawing.Point(256, 251);
-			this.button6.Name = "button6";
-			this.button6.Size = new System.Drawing.Size(242, 23);
-			this.button6.TabIndex = 2;
-			this.button6.Text = "Từ Chối (thoát phần mềm ) \r\n";
-			this.button6.UseVisualStyleBackColor = true;
-			this.button6.Click += new System.EventHandler(this.button6_Click);
+			this.richTextBox1.Location = new System.Drawing.Point(0, 0);
+			this.richTextBox1.Name = "richTextBox1";
+			this.richTextBox1.Size = new System.Drawing.Size(533, 248);
+			this.richTextBox1.TabIndex = 0;
+			this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
 			// 
 			// Dangnhap
 			// 
@@ -456,7 +456,7 @@
 			this.MaximizeBox = false;
 			this.Name = "Dangnhap";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Application3.exex SignIn";
+			this.Text = "Application3.exe ";
 			this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.Dangnhap_HelpButtonClicked);
 			this.Load += new System.EventHandler(this.Dangnhap_Load);
 			this.groupBox1.ResumeLayout(false);

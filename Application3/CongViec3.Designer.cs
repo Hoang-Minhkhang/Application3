@@ -248,6 +248,7 @@
 			// 
 			// button12
 			// 
+			this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.button12.Font = new System.Drawing.Font("Wingdings 2", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
 			this.button12.Location = new System.Drawing.Point(372, 6);
 			this.button12.Name = "button12";
@@ -258,6 +259,7 @@
 			// 
 			// button9
 			// 
+			this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button9.Location = new System.Drawing.Point(1028, 6);
 			this.button9.Name = "button9";
@@ -269,6 +271,7 @@
 			// 
 			// Add
 			// 
+			this.Add.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Add.Location = new System.Drawing.Point(3, 6);
 			this.Add.Name = "Add";
@@ -280,6 +283,7 @@
 			// 
 			// button8
 			// 
+			this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button8.Location = new System.Drawing.Point(435, 6);
 			this.button8.Name = "button8";
@@ -291,6 +295,7 @@
 			// 
 			// button1
 			// 
+			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button1.Location = new System.Drawing.Point(64, 6);
 			this.button1.Name = "button1";
@@ -301,6 +306,7 @@
 			// 
 			// button7
 			// 
+			this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.button7.Font = new System.Drawing.Font("Wingdings", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
 			this.button7.Location = new System.Drawing.Point(311, 6);
 			this.button7.Name = "button7";
@@ -311,6 +317,7 @@
 			// 
 			// button2
 			// 
+			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.button2.Font = new System.Drawing.Font("Webdings", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
 			this.button2.Location = new System.Drawing.Point(125, 9);
 			this.button2.Name = "button2";
@@ -321,6 +328,7 @@
 			// 
 			// button6
 			// 
+			this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.button6.Font = new System.Drawing.Font("Wingdings 2", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
 			this.button6.Location = new System.Drawing.Point(247, 6);
 			this.button6.Name = "button6";
@@ -331,6 +339,7 @@
 			// 
 			// button3
 			// 
+			this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.button3.Font = new System.Drawing.Font("Webdings", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
 			this.button3.Location = new System.Drawing.Point(186, 9);
 			this.button3.Name = "button3";
@@ -377,6 +386,7 @@
 			// 
 			// button14
 			// 
+			this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.button14.Font = new System.Drawing.Font("Wingdings 2", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
 			this.button14.Location = new System.Drawing.Point(148, 3);
 			this.button14.Name = "button14";
@@ -387,6 +397,7 @@
 			// 
 			// button13
 			// 
+			this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.button13.Font = new System.Drawing.Font("Wingdings 2", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
 			this.button13.Location = new System.Drawing.Point(78, 3);
 			this.button13.Name = "button13";
@@ -397,6 +408,7 @@
 			// 
 			// button11
 			// 
+			this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.button11.Font = new System.Drawing.Font("Wingdings 2", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
 			this.button11.Location = new System.Drawing.Point(8, 3);
 			this.button11.Name = "button11";

@@ -59,7 +59,7 @@ namespace Application3
 
 				// Update this window title to include the nickname
 				this.Text = $"Đăng nhập - {nickname}";
-
+				MatKhau.Text= ""; 
 				// Show a tray balloon notification (compatible with .NET Framework WinForms)
 				ShowBalloonNotification(
 					$"Xin chào {nickname}",

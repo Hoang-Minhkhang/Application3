@@ -28,6 +28,7 @@ namespace Application3
 			InitializeComponent();
 			currentUser = username;
 			this.Nickname = nickname; // gán vào property
+			richTextBox1.Text= "HI " + username + " !\n\nVisit https://github.com/Hoang-Minhkhang/Application3/ for more infomation  \n to save this document : option->saveFile ";
 		}
 		private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
 		{
@@ -53,40 +54,7 @@ namespace Application3
 					btn.FlatStyle = FlatStyle.System;
 				}
 			}
-			if (currentUser == "MinhKhang1995") {
-				richTextBox1.Text = "---------------------Message from Administrator---------------------"+ "!\n"  +
-					"Xin chào " + currentUser + "! chúc bạn một ngày tốt lành! " + "!\n" +
-					"khám phá những gì có trong đây " + "!\n" +
-					"to save this document : go to NotepadOption -> save file " + "!\n";
-
-			}
-			else if (currentUser == "Administrator")
-			{
-				richTextBox1.Text = "---------------------Message from Administrator---------------------" + "!\n" +
-					"Xin chào " + currentUser + "! chúc bạn một ngày tốt lành! " + "!\n" +
-					"to save this document : go to NotepadOption -> save file " + "!\n";
-
-			}
-			else if (currentUser == "TurboLines")
-			{
-				richTextBox1.Text = "---------------------Message from Administrator--------------------- " + "!\n" +
-					"Xin chào " + currentUser + "! chúc bạn một ngày tốt lành! " + "!\n" +
-					"Xin cảm ơn bạn đã sử dụng phần mềm!" + "!\n" +
-					"to save this document : go to NotepadOption -> save file " + "!\n";
-			}
-			else if (currentUser == "User1005")
-			{
-				richTextBox1.Text = "---------------------Message from Administrator(Hoàng Minh Khang )--------------------- " + "!\n" +
-					"Xin chào " + "Duy Khang " + "! chúc bạn một ngày tốt lành! " + "!\n" +
-					"như nghững gì bạn đã nói sáng (28-5-2026) - mình gửi cho bạn phần mềm này " + "!\n" +
-					"Hãy khám phá những gì trong đây nhé " + "!\n" +
-					"Các tính năng còn thô sơ -chưa phát triển hoàn thiện .Nên nếu có gì thì cho mình biết " + "!\n" +
-					"về phần thời khóa biểu - mình đã cập nhật lên bản mới nhất - nhớ xem ngày hết hạn đó " + "!\n" +
-					"Contact me via hoangminhkhang2021@outlook.com " + "!\n" +
-					"Sent from MinhKhang1995 to " + currentUser + " " + "!\n" +
-
-					"to save this document : go to NotepadOption -> save file " + "!\n";
-			}
+			
 		}
 
 
