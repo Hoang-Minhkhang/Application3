@@ -2045,6 +2045,7 @@
 			// 
 			// button51
 			// 
+			this.button51.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.button51.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
 			this.button51.Location = new System.Drawing.Point(399, 145);
 			this.button51.Name = "button51";
@@ -4264,7 +4265,7 @@
 			this.TruyCap.Name = "TruyCap";
 			this.TruyCap.Size = new System.Drawing.Size(74, 25);
 			this.TruyCap.TabIndex = 3;
-			this.TruyCap.Text = "Goooo";
+			this.TruyCap.Text = "Go &refesh";
 			this.TruyCap.UseVisualStyleBackColor = true;
 			this.TruyCap.Click += new System.EventHandler(this.TruyCap_Click);
 			// 

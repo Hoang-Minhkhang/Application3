@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,39 +29,45 @@ namespace Application3
 		{
 			string username = TaiKhoan.Text;
 			string password = MatKhau.Text;
-
-			if ((username == "MinhKhang1995" && password == "123456987@admin") ||
-				(username == "Administrator" && password == "123456987@admin") ||
-				(username == "Test" && password == "test@123") ||
-				(username == "TurboLines" && password == "TurboLines@123") ||
-				(username == "User1005" && password == "123456987"))
+			string  TruyenForm2 = "";
+			var credentials = new Dictionary<string, string>
+			{
+				{ "MinhKhang1995", "123456987@admin" },
+				{ "Administrator", "123456987@admin" },
+				{ "Test", "test@123" },
+				{ "TurboLines", "TurboLines@123" },
+				{ "User1005", "123456987" }
+			};
+			
+			if (credentials.TryGetValue(username, out var expected) && expected == password)
 			{
 				currentUsername = username;
 				cuser = username;
 
-				// determine nickname before creating other forms
-				if (currentUsername == "MinhKhang1995") nickname = "MinhKhang";
-				else if (currentUsername == "Administrator") nickname = "Quản trị viên";
-				else if (currentUsername == "Test") nickname = "Người dùng thử";
-				else if (currentUsername == "TurboLines") nickname = "ToNguyenCat";
-				else if (currentUsername == "User1005") nickname = "DuyKhang";
-				else nickname = username;
+				var nicknames = new Dictionary<string, string>
+				{
+					{ "MinhKhang1995", "MinhKhang" },
+					{ "Administrator", "Quản trị viên" },
+					{ "Test", "Người dùng thử" },
+					{ "TurboLines", "ToNguyenCat" },
+					{ "User1005", "DuyKhang" }
+				};
+
+				string nickname;
+				if (!nicknames.TryGetValue(username, out nickname))
+					nickname = username;
 
 				// open forms with both username and nickname
-				Form2 form2 = new Form2(username, nickname);
+				Form2 form2 = new Form2(username, nickname , TruyenForm2 );
 				form2.Show();
 
-				// chuyển sang form 1 với username và nickname
-				Form1 form1 = new Form1(username,nickname );
+				Form1 form1 = new Form1(username, nickname);
 				form1.Show();
 
-
 				dangnhap = true;
-
-				// Update this window title to include the nickname
 				this.Text = $"Đăng nhập - {nickname}";
-				MatKhau.Text= ""; 
-				// Show a tray balloon notification (compatible with .NET Framework WinForms)
+				MatKhau.Text = string.Empty;
+
 				ShowBalloonNotification(
 					$"Xin chào {nickname}",
 					"Bắt đầu quá trình làm việc của bạn"

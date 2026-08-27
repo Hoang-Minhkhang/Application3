@@ -63,7 +63,8 @@ namespace Application3
 		private int SoGiayConLai = 0;
 		private int alarmTime = 0;
 		private string selectedFile;
-		private int SoLanNhacLai = 0; 
+		private int SoLanNhacLai = 0;
+		private string TruyenForm2 = ""; 
 		private WindowsMediaPlayer player = new WindowsMediaPlayer();
 		private bool isPlaying = false;
 
@@ -276,8 +277,7 @@ namespace Application3
 			{
 				currentUsername = username;
 				cuser = username;
-				Form2 form2 = new Form2(username, nickname); // truyền đủ 2 tham số
-				form2.Show();
+				
 				if (currentUsername == "MinhKhang1995") nickname = "MinhKhang";
 				else if (currentUsername == "Administrator") nickname = "Quản trị viên ";
 				else if (currentUsername == "Test") nickname = "Người dùng thử ";
@@ -1202,7 +1202,7 @@ namespace Application3
 			MessageBox.Show("Nếu bạn nhập sai mã khu vực - đồng nghĩa việc tài khoản của bạn không hợp lệ ", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
 		int tkbhethangngay = 30;
-		int tkbhethangthang = 5;
+		int tkbhethangthang = 9;
 		int tkbhethangnam = 2026;
 		private void button18_Click(object sender, EventArgs e)
 		{
@@ -2249,6 +2249,7 @@ namespace Application3
 				DateTime Temp = DateTime.Now;
 				DateTime alarmTime = Temp.AddSeconds(SoGiayConLai);
 				label126.Text = $"Thời gian kết thúc: {alarmTime:HH:mm:ss}";
+				TruyenForm2 += $"\n \n  --------lần {SoLanNhacLai} \n thời gian: {DateTime.Now:HH:mm:ss} \n thời gian dự kiến : {alarmTime:HH:mm:ss}  ";
 			}
 			else
 			{
@@ -2503,6 +2504,8 @@ namespace Application3
 				DateTime Temp = DateTime.Now;
 				DateTime alarmTime = Temp.AddSeconds(SoGiayConLai);
 				label126.Text = $"Thời gian kết thúc: {alarmTime:HH:mm:ss}";
+				TruyenForm2 += $"\n \n --------lần {SoLanNhacLai} \n thời gian: {DateTime.Now:HH:mm:ss} \n thời gian dự kiến : {alarmTime:HH:mm:ss}  ";
+
 			}
 			else
 			{
@@ -2613,7 +2616,9 @@ namespace Application3
 
 		private void btnExport_Click(object sender, EventArgs e)
 		{
-			
+			TruyenForm2+= " \n ----Xuất vào thời gian " + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " ";
+			Form2 f2 = new Form2(_username, nickname ,TruyenForm2);
+			f2.Show();
 		}
 
 		private void button54_Click_1(object sender, EventArgs e)
@@ -2642,6 +2647,8 @@ namespace Application3
 				DateTime Temp = DateTime.Now;
 				DateTime alarmTime = Temp.AddSeconds(SoGiayConLai);
 				label126.Text = $"Thời gian kết thúc: {alarmTime:HH:mm:ss}";
+				TruyenForm2 += $"\n \n --------lần {SoLanNhacLai} \n thời gian: {DateTime.Now:HH:mm:ss} \n thời gian dự kiến : {alarmTime:HH:mm:ss}  ";
+
 			}
 			else
 			{

@@ -49,6 +49,9 @@
 			this.tabPage3 = new System.Windows.Forms.TabPage();
 			this.button1 = new System.Windows.Forms.Button();
 			this.label4 = new System.Windows.Forms.Label();
+			this.printOptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.printNowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.notAVAILABLEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
@@ -61,6 +64,7 @@
 			// 
 			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.secondWindowsToolStripMenuItem,
+            this.printOptionToolStripMenuItem,
             this.helpToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
@@ -250,6 +254,30 @@
 			this.label4.TabIndex = 0;
 			this.label4.Text = "Hoàng  Minh Khang Application3.exe \r\nUPDATe\r\n";
 			// 
+			// printOptionToolStripMenuItem
+			// 
+			this.printOptionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.printNowToolStripMenuItem});
+			this.printOptionToolStripMenuItem.Name = "printOptionToolStripMenuItem";
+			this.printOptionToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
+			this.printOptionToolStripMenuItem.Text = "Print Option";
+			// 
+			// printNowToolStripMenuItem
+			// 
+			this.printNowToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.notAVAILABLEToolStripMenuItem});
+			this.printNowToolStripMenuItem.Name = "printNowToolStripMenuItem";
+			this.printNowToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.printNowToolStripMenuItem.Text = "Print Now ";
+			this.printNowToolStripMenuItem.Click += new System.EventHandler(this.printNowToolStripMenuItem_Click);
+			// 
+			// notAVAILABLEToolStripMenuItem
+			// 
+			this.notAVAILABLEToolStripMenuItem.Name = "notAVAILABLEToolStripMenuItem";
+			this.notAVAILABLEToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.notAVAILABLEToolStripMenuItem.Text = "Not AVAILABLE ";
+			this.notAVAILABLEToolStripMenuItem.Click += new System.EventHandler(this.notAVAILABLEToolStripMenuItem_Click);
+			// 
 			// Form2
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -299,5 +327,8 @@
 		private System.Windows.Forms.TabPage tabPage3;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.ToolStripMenuItem printOptionToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem printNowToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem notAVAILABLEToolStripMenuItem;
 	}
 }

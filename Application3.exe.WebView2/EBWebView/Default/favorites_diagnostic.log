@@ -33,3 +33,32 @@
 2026-07-21 12:55:52.787: [INFO] OnDoneLoading sync enabled: 0
 2026-07-21 13:43:19.096: [INFO] OnDoneLoading sync enabled: 0
 2026-07-22 12:26:53.588: [INFO] OnDoneLoading sync enabled: 0
+2026-08-21 05:18:05.686: [INFO] CurrentProfilePath: c:\Users\hoang\OneDrive\Máy tính\project\PRO3\Application3\Application3.exe.WebView2\EBWebView\Default
+2026-08-21 05:18:05.686: [INFO] Profiles total count: 1
+2026-08-21 05:18:05.686: [INFO] Profile: name=Hồ sơ 1 path=c:\Users\hoang\OneDrive\Máy tính\project\PRO3\Application3\Application3.exe.WebView2\EBWebView\Default lastActive=2026-07-22T12:27:24.469Z
+2026-08-21 05:18:05.686: [INFO] LastUsedProfileDir: c:\Users\hoang\OneDrive\Máy tính\project\PRO3\Application3\Application3.exe.WebView2\EBWebView\Default
+2026-08-21 05:18:05.686: [INFO] MostRecentlyActiveProfile: name=Hồ sơ 1 path=c:\Users\hoang\OneDrive\Máy tính\project\PRO3\Application3\Application3.exe.WebView2\EBWebView\Default lastActive=2026-07-22T12:27:24.469Z
+2026-08-21 05:18:05.686: [INFO] OnDoneLoading sync enabled: 0
+2026-08-21 05:18:05.686: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-21 05:18:05.686: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-21 05:18:05.686: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-21 05:18:11.483: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-23 08:04:16.981: [INFO] CurrentProfilePath: c:\Users\hoang\OneDrive\Máy tính\project\PRO3\Application3\Application3.exe.WebView2\EBWebView\Default
+2026-08-23 08:04:16.981: [INFO] Profiles total count: 1
+2026-08-23 08:04:16.982: [INFO] Profile: name=Hồ sơ 1 path=c:\Users\hoang\OneDrive\Máy tính\project\PRO3\Application3\Application3.exe.WebView2\EBWebView\Default lastActive=2026-07-22T12:27:24.469Z
+2026-08-23 08:04:16.982: [INFO] LastUsedProfileDir: c:\Users\hoang\OneDrive\Máy tính\project\PRO3\Application3\Application3.exe.WebView2\EBWebView\Default
+2026-08-23 08:04:16.982: [INFO] MostRecentlyActiveProfile: name=Hồ sơ 1 path=c:\Users\hoang\OneDrive\Máy tính\project\PRO3\Application3\Application3.exe.WebView2\EBWebView\Default lastActive=2026-07-22T12:27:24.469Z
+2026-08-23 08:04:16.982: [INFO] OnDoneLoading sync enabled: 0
+2026-08-23 08:04:16.982: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-23 08:04:16.982: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-23 08:04:16.982: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-23 08:04:25.451: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-26 02:51:08.938: [INFO] CurrentProfilePath: c:\Users\hoang\OneDrive\Máy tính\project\PRO3\Application3\Application3.exe.WebView2\EBWebView\Default
+2026-08-26 02:51:08.939: [INFO] Profiles total count: 1
+2026-08-26 02:51:08.939: [INFO] Profile: name=Hồ sơ 1 path=c:\Users\hoang\OneDrive\Máy tính\project\PRO3\Application3\Application3.exe.WebView2\EBWebView\Default lastActive=2026-07-22T12:27:24.469Z
+2026-08-26 02:51:08.939: [INFO] LastUsedProfileDir: c:\Users\hoang\OneDrive\Máy tính\project\PRO3\Application3\Application3.exe.WebView2\EBWebView\Default
+2026-08-26 02:51:08.939: [INFO] MostRecentlyActiveProfile: name=Hồ sơ 1 path=c:\Users\hoang\OneDrive\Máy tính\project\PRO3\Application3\Application3.exe.WebView2\EBWebView\Default lastActive=2026-07-22T12:27:24.469Z
+2026-08-26 02:51:08.939: [INFO] OnDoneLoading sync enabled: 0
+2026-08-26 02:51:08.939: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-26 02:51:08.939: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-26 02:51:08.939: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1

@@ -1,5 +1,3 @@
-2026/07/28-19:58:38.763 7370 Table #4: 8 entries OK
-2026/07/28-19:58:38.765 7370 Table #7: 8 entries OK
-2026/07/28-19:58:38.766 7370 Table #8: 1 entries OK
-2026/07/28-19:58:38.790 7370 Archiving C:\Users\hoang\OneDrive\Máy tính\project\PRO3\Application3\Application3.exe.WebView2\EBWebView\Default\Site Characteristics Database/MANIFEST-000001: OK
-2026/07/28-19:58:38.815 7370 **** Repaired leveldb C:\Users\hoang\OneDrive\Máy tính\project\PRO3\Application3\Application3.exe.WebView2\EBWebView\Default\Site Characteristics Database; recovered 3 files; 810 bytes. Some data may have been lost. ****
+2026/08/23-15:04:17.011 eb4 Reusing MANIFEST c:\Users\hoang\OneDrive\Máy tính\project\PRO3\Application3\Application3.exe.WebView2\EBWebView\Default\Site Characteristics Database/MANIFEST-000001
+2026/08/23-15:04:17.012 eb4 Recovering log #10
+2026/08/23-15:04:17.015 eb4 Reusing old log c:\Users\hoang\OneDrive\Máy tính\project\PRO3\Application3\Application3.exe.WebView2\EBWebView\Default\Site Characteristics Database/000010.log 

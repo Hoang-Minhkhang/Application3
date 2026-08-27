@@ -18,18 +18,21 @@ namespace Application3
 		private Stack<string> forwardHistory = new Stack<string>();
 		private string currentUser;
 		public string Nickname { get; set; }
+		private string _dataFromForm1;
 		public Form2()
 		{
 			InitializeComponent();
 			
 		}
-		public Form2(string username, string nickname)
+		public Form2(string username, string nickname, string TruyenForm2)
 		{
 			InitializeComponent();
 			currentUser = username;
 			this.Nickname = nickname; // gán vào property
-			richTextBox1.Text= "HI " + username + " !\n\nVisit https://github.com/Hoang-Minhkhang/Application3/ for more infomation  \n to save this document : option->saveFile ";
+			richTextBox1.Text= "HI " + username + " !\n\nVisit https://github.com/Hoang-Minhkhang/Application3/ for more infomation  \n to save this document : option->saveFile \n  ";
+			richTextBox1.Text += TruyenForm2;
 		}
+
 		private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			this.Close();
@@ -130,6 +133,16 @@ namespace Application3
 		private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
 		{
 
+		}
+
+		private void printNowToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void notAVAILABLEToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			MessageBox.Show("Save it to TXT file and you can print it from there.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
 	}
 }
