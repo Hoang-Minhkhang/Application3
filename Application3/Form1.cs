@@ -35,6 +35,8 @@ namespace Application3
 		private string _username;
 		public string _nickname { get; set; }
 		int TimerCount = 0;
+		
+		
 
 
 		public Form1(string username, string nickname)
@@ -160,6 +162,7 @@ namespace Application3
 		private void button12_Click(object sender, EventArgs e) => button12_Click_Export(sender, e);
 
 		private BindingList<TaskItem> tasks = new BindingList<TaskItem>();
+		private bool LamViec = false; 
 		private DataGridView dgvAllTasks;
 		private string currentUsername = string.Empty;
 
@@ -2798,7 +2801,94 @@ namespace Application3
 		{
 			CenterTabControl();
 		}
+
+		private void button61_Click(object sender, EventArgs e)
+		{
+			tabControl1.SelectedIndex = 2; 
+		}
+
+		private void button62_Click(object sender, EventArgs e)
+		{
+			tabControl1.SelectedIndex = 4; 
+		}
+
+		private void button63_Click(object sender, EventArgs e)
+		{
+			TruyenForm2+= $"\n \n  --------------Tiêu Đề Làm Việc   { textBox8.Text}--------- \n \n Nội Dung {textBox9.Text} \n vào thời gian {DateTime.Now}"; 
+			TruyenForm2+=$"\n -----BẮT ĐẦU QUÁ TRÌNH LÀM VIỆC  {DateTime.Now} \n";
+			LamViec = true;
+			label133.Text = "Đang làm việc ";
+			label133.ForeColor = Color.Green ;
+		}
+
+		private void button64_Click(object sender, EventArgs e)
+		{
+			TruyenForm2+=$"In Tiến Trình Làm Việc  {DateTime.Now} \n";
+			Form2 f2 = new Form2(_username, nickname, TruyenForm2);
+			f2.Show();
+		}
+
+		private void button69_Click(object sender, EventArgs e)
+		{
+			tabControl1.SelectedIndex = 12; 
+		}
+
+		private void button65_Click(object sender, EventArgs e)
+		{
+			LamViec = false;
+			label133.Text = "Không làm việc ";
+			label133.ForeColor= Color.Red;
+			TruyenForm2 += $"\n ----------------Kết thúc quá trình làm việc  {DateTime.Now} \n";
+		}
+
+		private void button66_Click(object sender, EventArgs e)
+		{
+			
+			OpenFileDialog ofd = new OpenFileDialog();
+			ofd.Filter = "Text Files (*.txt)|*.txt";
+			if (ofd.ShowDialog() == DialogResult.OK)
+			{
+				checkedListBox1.Items.Clear();
+				var lines = File.ReadAllLines(ofd.FileName);
+				foreach (var line in lines)
+				{
+					// Nếu file có định dạng "Nội dung|True/False"
+					var parts = line.Split('|');
+					if (parts.Length == 2)
+					{
+						bool isChecked = bool.Parse(parts[1]);
+						checkedListBox5.Items.Add(parts[0], isChecked);
+					}
+					else
+					{
+						checkedListBox5.Items.Add(line, false);
+					}
+				
+			}
+		}
+
 	}
+
+		private void button67_Click(object sender, EventArgs e)
+		{
+			
+			SaveFileDialog sfd = new SaveFileDialog();
+			sfd.Filter = "Text Files (*.txt)|*.txt";
+			if (sfd.ShowDialog() == DialogResult.OK)
+			{
+				using (StreamWriter writer = new StreamWriter(sfd.FileName))
+				{
+					for (int i = 0; i < checkedListBox5.Items.Count; i++)
+					{
+						bool isChecked = checkedListBox5.GetItemChecked(i);
+						writer.WriteLine($"{checkedListBox5.Items[i]}|{isChecked}");
+					}
+				
+			}
+		}
+
+	}
+}
 }
 
 
