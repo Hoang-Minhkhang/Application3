@@ -35,8 +35,8 @@ namespace Application3
 		private string _username;
 		public string _nickname { get; set; }
 		int TimerCount = 0;
-		
-		
+
+
 
 
 		public Form1(string username, string nickname)
@@ -66,7 +66,7 @@ namespace Application3
 		private int alarmTime = 0;
 		private string selectedFile;
 		private int SoLanNhacLai = 0;
-		private string TruyenForm2 = ""; 
+		private string TruyenForm2 = "";
 		private WindowsMediaPlayer player = new WindowsMediaPlayer();
 		private bool isPlaying = false;
 
@@ -160,9 +160,11 @@ namespace Application3
 		private void button10_Click(object sender, EventArgs e) => button10_Click_Delete(sender, e);
 		private void button11_Click(object sender, EventArgs e) => button11_Click_Import(sender, e);
 		private void button12_Click(object sender, EventArgs e) => button12_Click_Export(sender, e);
+		private System.Windows.Forms.Timer workTimer2 = new System.Windows.Forms.Timer();
+
 
 		private BindingList<TaskItem> tasks = new BindingList<TaskItem>();
-		private bool LamViec = false; 
+		private bool LamViec = false;
 		private DataGridView dgvAllTasks;
 		private string currentUsername = string.Empty;
 
@@ -207,10 +209,13 @@ namespace Application3
 				MessageBox.Show("Khởi tạo WebView2 thất bại: " + e.InitializationException.Message);
 			}
 		}
-
+		int counter = 0; // số giây đã trôi qua
+		int workDuration = 3600; // thời gian làm việc tối đa (ví dụ: 1 giờ = 3600 giây)
+		System.Windows.Forms.Timer workTimer = new System.Windows.Forms.Timer();
 		private async void Form1_Load(object sender, EventArgs e)
 		{
-
+			workTimer2.Interval = 1000; // 1 giây
+			workTimer2.Tick += WorkTimer2_Tick;
 			this.BackColor = SystemColors.Control;
 
 			// MenuStrip hiển thị theo hệ thống
@@ -280,7 +285,7 @@ namespace Application3
 			{
 				currentUsername = username;
 				cuser = username;
-				
+
 				if (currentUsername == "MinhKhang1995") nickname = "MinhKhang";
 				else if (currentUsername == "Administrator") nickname = "Quản trị viên ";
 				else if (currentUsername == "Test") nickname = "Người dùng thử ";
@@ -2619,8 +2624,8 @@ namespace Application3
 
 		private void btnExport_Click(object sender, EventArgs e)
 		{
-			TruyenForm2+= " \n ----Xuất vào thời gian " + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " ";
-			Form2 f2 = new Form2(_username, nickname ,TruyenForm2);
+			TruyenForm2 += " \n ----Xuất vào thời gian " + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " ";
+			Form2 f2 = new Form2(_username, nickname, TruyenForm2);
 			f2.Show();
 		}
 
@@ -2666,7 +2671,7 @@ namespace Application3
 
 		private void cOMMANDERToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			Process.Start("cmd.exe"); 
+			Process.Start("cmd.exe");
 		}
 
 		private void textBox1_TextChanged(object sender, EventArgs e)
@@ -2708,33 +2713,33 @@ namespace Application3
 
 		private void button55_Click_1(object sender, EventArgs e)
 		{
-			
-				// Lấy nội dung trong TextBox
-				string command = textBox1.Text;
 
-				// Ví dụ: chạy lệnh như mở ứng dụng
+			// Lấy nội dung trong TextBox
+			string command = textBox1.Text;
 
-				// Ví dụ: chạy lệnh như mở ứng dụng
-				try
+			// Ví dụ: chạy lệnh như mở ứng dụng
+
+			// Ví dụ: chạy lệnh như mở ứng dụng
+			try
+			{
+				ProcessStartInfo psi = new ProcessStartInfo();
+				psi.FileName = command;
+				// Nếu checkbox được tích thì chạy với quyền Admin
+				if (checkBox11.Checked)
 				{
-					ProcessStartInfo psi = new ProcessStartInfo();
-					psi.FileName = command;
-					// Nếu checkbox được tích thì chạy với quyền Admin
-					if (checkBox11.Checked)
-					{
-						psi.UseShellExecute = true;
-						psi.Verb = "runas"; // yêu cầu quyền Administrator
-					}
-					System.Diagnostics.Process.Start(psi);
+					psi.UseShellExecute = true;
+					psi.Verb = "runas"; // yêu cầu quyền Administrator
 				}
-				catch (Exception ex)
-				{
-					MessageBox.Show("Không thể chạy lệnh: " + ex.Message);
-				}
+				System.Diagnostics.Process.Start(psi);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Không thể chạy lệnh: " + ex.Message);
+			}
 
-				// Ngăn Enter tạo dòng mới trong TextBox
-				
-			
+			// Ngăn Enter tạo dòng mới trong TextBox
+
+
 		}
 
 		private void button56_Click(object sender, EventArgs e)
@@ -2744,7 +2749,7 @@ namespace Application3
 
 		private void button57_Click(object sender, EventArgs e)
 		{
-			Process.Start("taskmgr.exe" );
+			Process.Start("taskmgr.exe");
 		}
 
 		private void button58_Click(object sender, EventArgs e)
@@ -2804,46 +2809,55 @@ namespace Application3
 
 		private void button61_Click(object sender, EventArgs e)
 		{
-			tabControl1.SelectedIndex = 2; 
+			tabControl1.SelectedIndex = 2;
 		}
 
 		private void button62_Click(object sender, EventArgs e)
 		{
-			tabControl1.SelectedIndex = 4; 
+			tabControl1.SelectedIndex = 4;
 		}
-
+		private void WorkTimer2_Tick(object sender, EventArgs e)
+		{
+			counter++;
+			label131.Text = TimeSpan.FromSeconds(counter).ToString(@"hh\:mm\:ss");
+		}
 		private void button63_Click(object sender, EventArgs e)
 		{
-			TruyenForm2+= $"\n \n  --------------Tiêu Đề Làm Việc   { textBox8.Text}--------- \n \n Nội Dung {textBox9.Text} \n vào thời gian {DateTime.Now}"; 
-			TruyenForm2+=$"\n -----BẮT ĐẦU QUÁ TRÌNH LÀM VIỆC  {DateTime.Now} \n";
+			TruyenForm2 += $"\n \n  --------------Tiêu Đề Làm Việc   {textBox8.Text}--------- \n \n Nội Dung {textBox9.Text} \n vào thời gian {DateTime.Now}";
+			TruyenForm2 += $"\n -----BẮT ĐẦU QUÁ TRÌNH LÀM VIỆC  {DateTime.Now} \n";
 			LamViec = true;
 			label133.Text = "Đang làm việc ";
-			label133.ForeColor = Color.Green ;
+			label133.ForeColor = Color.Green;
+			counter = 0;
+			label131.Text = "00:00:00"; // reset về 0
+			workTimer2.Start();
 		}
 
 		private void button64_Click(object sender, EventArgs e)
 		{
-			TruyenForm2+=$"In Tiến Trình Làm Việc  {DateTime.Now} \n";
+			TruyenForm2 += $"In Tiến Trình Làm Việc  {DateTime.Now} \n";
 			Form2 f2 = new Form2(_username, nickname, TruyenForm2);
 			f2.Show();
 		}
 
 		private void button69_Click(object sender, EventArgs e)
 		{
-			tabControl1.SelectedIndex = 12; 
+			tabControl1.SelectedIndex = 12;
 		}
 
 		private void button65_Click(object sender, EventArgs e)
 		{
 			LamViec = false;
 			label133.Text = "Không làm việc ";
-			label133.ForeColor= Color.Red;
+			label133.ForeColor = Color.Red;
+			workTimer2.Stop();
 			TruyenForm2 += $"\n ----------------Kết thúc quá trình làm việc  {DateTime.Now} \n";
+			TruyenForm2 += $"\n Tổng thời gian làm việc: {TimeSpan.FromSeconds(counter)} \n";
 		}
 
 		private void button66_Click(object sender, EventArgs e)
 		{
-			
+
 			OpenFileDialog ofd = new OpenFileDialog();
 			ofd.Filter = "Text Files (*.txt)|*.txt";
 			if (ofd.ShowDialog() == DialogResult.OK)
@@ -2863,15 +2877,15 @@ namespace Application3
 					{
 						checkedListBox5.Items.Add(line, false);
 					}
-				
-			}
-		}
 
-	}
+				}
+			}
+
+		}
 
 		private void button67_Click(object sender, EventArgs e)
 		{
-			
+
 			SaveFileDialog sfd = new SaveFileDialog();
 			sfd.Filter = "Text Files (*.txt)|*.txt";
 			if (sfd.ShowDialog() == DialogResult.OK)
@@ -2883,12 +2897,81 @@ namespace Application3
 						bool isChecked = checkedListBox5.GetItemChecked(i);
 						writer.WriteLine($"{checkedListBox5.Items[i]}|{isChecked}");
 					}
-				
+
+				}
+			}
+
+		}
+
+		private void textBox10_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Enter) // khi nhấn Enter
+			{
+				string input = textBox10.Text.Trim();
+				if (!string.IsNullOrEmpty(input))
+				{
+					checkedListBox5.Items.Add(input, false); // thêm vào checklist, mặc định chưa check
+					textBox10.Clear(); // xóa nội dung textbox sau khi thêm
+				}
+
+				e.SuppressKeyPress = true; // ngăn Enter tạo tiếng "ding"
+
+			}
+		}
+		private void UpdateComboBoxFromChecklist()
+		{
+			comboBox1.Items.Clear();
+			foreach (var item in checkedListBox5.Items)
+			{
+				comboBox1.Items.Add(item.ToString());
+			}
+		}
+		private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+		{
+			string selected = comboBox1.SelectedItem?.ToString();
+			if (!string.IsNullOrEmpty(selected))
+			{
+				richTextBox9.AppendText(selected + Environment.NewLine);
 			}
 		}
 
+		private void comboBox1_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Enter)
+			{
+				string input = textBox10.Text.Trim();
+				if (!string.IsNullOrEmpty(input))
+				{
+					checkedListBox5.Items.Add(input, false);
+					textBox10.Clear();
+
+					// Cập nhật comboBox1 để hiển thị gợi ý mới
+					UpdateComboBoxFromChecklist();
+				}
+				e.SuppressKeyPress = true;
+			}
+			if (e.KeyCode == Keys.Enter)
+			{
+				string selected = comboBox1.Text.Trim();
+				if (!string.IsNullOrEmpty(selected))
+				{
+					richTextBox9.AppendText(selected + Environment.NewLine);
+					comboBox1.Text = ""; 
+				}
+				e.SuppressKeyPress = true;
+			}
+		}
+
+		private void button70_Click(object sender, EventArgs e)
+		{
+			checkedListBox5.Items.Clear();
+		}
+
+		private void toolStripTextBox1_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
-}
 }
 
 
