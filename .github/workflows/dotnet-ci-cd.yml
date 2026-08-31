@@ -19,41 +19,35 @@ jobs:
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1.1
 
-      - name: Restore NuGet packages with PackagesDirectory
-        shell: powershell
+      - name: Restore NuGet packages
+        shell: cmd
         run: |
-          Write-Host "Restoring NuGet packages..."
-          nuget restore Application3/packages.config -PackagesDirectory packages -Source https://api.nuget.org/v3/index.json -Verbosity detailed
-          if ($LASTEXITCODE -ne 0) {
-            Write-Error "NuGet restore failed"
-            exit 1
-          }
-          Write-Host "NuGet restore completed successfully"
+          nuget restore Application3\packages.config -PackagesDirectory packages -Source https://api.nuget.org/v3/index.json -Verbosity detailed
 
       - name: Verify packages folder
-        shell: powershell
+        shell: cmd
         run: |
-          Write-Host "Checking packages folder..."
-          if (Test-Path packages) {
-            Write-Host "✓ Packages folder exists"
-            Get-ChildItem packages | ForEach-Object { Write-Host $_.Name }
-          } else {
-            Write-Error "packages folder not found"
-            exit 1
-          }
+          echo Checking packages folder...
+          if exist packages (
+            echo Packages folder exists
+            dir packages
+          ) else (
+            echo ERROR: packages folder not found
+            exit /b 1
+          )
 
       - name: Verify PdfiumViewer
-        shell: powershell
+        shell: cmd
         run: |
-          $pdfiumPath = "packages/PdfiumViewer.2.13.0.0/lib/net20/PdfiumViewer.dll"
-          if (Test-Path $pdfiumPath) {
-            Write-Host "✓ PdfiumViewer.dll found at $pdfiumPath"
-          } else {
-            Write-Error "PdfiumViewer.dll NOT found"
-            Get-ChildItem packages -Filter "PdfiumViewer*" -Recurse
-            exit 1
-          }
+          set pdfiumPath=packages\PdfiumViewer.2.13.0.0\lib\net20\PdfiumViewer.dll
+          if exist "%pdfiumPath%" (
+            echo PdfiumViewer.dll found
+          ) else (
+            echo ERROR: PdfiumViewer.dll NOT found at %pdfiumPath%
+            dir packages /s /b | findstr "PdfiumViewer"
+            exit /b 1
+          )
 
       - name: Build with MSBuild
         run: |
-          msbuild Application3/Application3.csproj /p:Configuration=Release /p:Platform=AnyCPU /m
+          msbuild Application3\Application3.csproj /p:Configuration=Release /p:Platform=AnyCPU /m
