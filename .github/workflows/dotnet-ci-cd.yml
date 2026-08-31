@@ -19,27 +19,40 @@ jobs:
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1.1
 
-      - name: Restore NuGet packages
+      - name: Restore NuGet packages with PackagesDirectory
         shell: powershell
         run: |
           Write-Host "Restoring NuGet packages..."
-          nuget restore Application3/Application3.csproj -Source https://api.nuget.org/v3/index.json
+          nuget restore Application3/packages.config -PackagesDirectory packages -Source https://api.nuget.org/v3/index.json -Verbosity detailed
           if ($LASTEXITCODE -ne 0) {
             Write-Error "NuGet restore failed"
             exit 1
           }
           Write-Host "NuGet restore completed successfully"
 
-      - name: Verify PdfiumViewer package
+      - name: Verify packages folder
+        shell: powershell
+        run: |
+          Write-Host "Checking packages folder..."
+          if (Test-Path packages) {
+            Write-Host "✓ Packages folder exists"
+            Get-ChildItem packages | ForEach-Object { Write-Host $_.Name }
+          } else {
+            Write-Error "packages folder not found"
+            exit 1
+          }
+
+      - name: Verify PdfiumViewer
         shell: powershell
         run: |
           $pdfiumPath = "packages/PdfiumViewer.2.13.0.0/lib/net20/PdfiumViewer.dll"
-          if (-Not (Test-Path $pdfiumPath)) {
-            Write-Error "PdfiumViewer.dll not found at $pdfiumPath"
+          if (Test-Path $pdfiumPath) {
+            Write-Host "✓ PdfiumViewer.dll found at $pdfiumPath"
+          } else {
+            Write-Error "PdfiumViewer.dll NOT found"
             Get-ChildItem packages -Filter "PdfiumViewer*" -Recurse
             exit 1
           }
-          Write-Host "✓ PdfiumViewer.dll found successfully"
 
       - name: Build with MSBuild
         run: |
