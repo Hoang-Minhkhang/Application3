@@ -77,6 +77,7 @@ namespace Application3
 			{
 				SoGiayConLai--;
 				lblCountdown.Text = TimeSpan.FromSeconds(SoGiayConLai).ToString(@"mm\:ss");
+				label134.Text = TimeSpan.FromSeconds(SoGiayConLai).ToString(@"mm\:ss");
 
 				if (SoGiayConLai <= 10)
 					lblCountdown.ForeColor = Color.Red;
@@ -95,6 +96,7 @@ namespace Application3
 				}
 				lblCountdown.Text = "Hết giờ!";
 				label122.Text = "Hết giờ!";
+				label134.Text = "Hết giờ!";
 				label122.ForeColor = Color.Red;
 				ShowBalloonNotification("Thông báo", "Đã hết giờ!");
 			}

@@ -489,6 +489,9 @@
 			this.contextMenuStrip5 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.pictureBox5 = new System.Windows.Forms.PictureBox();
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+			this.label134 = new System.Windows.Forms.Label();
+			this.label135 = new System.Windows.Forms.Label();
+			this.label136 = new System.Windows.Forms.Label();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.groupBox12.SuspendLayout();
@@ -2484,9 +2487,9 @@
 			this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label61.Location = new System.Drawing.Point(146, 330);
 			this.label61.Name = "label61";
-			this.label61.Size = new System.Drawing.Size(18, 15);
+			this.label61.Size = new System.Drawing.Size(65, 15);
 			this.label61.TabIndex = 20;
-			this.label61.Text = "-1";
+			this.label61.Text = "30 9 2026 ";
 			// 
 			// label60
 			// 
@@ -2504,9 +2507,9 @@
 			this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label56.Location = new System.Drawing.Point(146, 218);
 			this.label56.Name = "label56";
-			this.label56.Size = new System.Drawing.Size(140, 15);
+			this.label56.Size = new System.Drawing.Size(138, 45);
 			this.label56.TabIndex = 18;
-			this.label56.Text = "thời khóa biểu đã bị xóa \r\n";
+			this.label56.Text = "THời khóa biểu áp dụng vào đầu năm 2026 \r\nlần 1\r\n";
 			// 
 			// label55
 			// 
@@ -2555,9 +2558,9 @@
 			this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label51.Location = new System.Drawing.Point(146, 122);
 			this.label51.Name = "label51";
-			this.label51.Size = new System.Drawing.Size(81, 15);
+			this.label51.Size = new System.Drawing.Size(58, 15);
 			this.label51.TabIndex = 12;
-			this.label51.Text = "Not Available ";
+			this.label51.Text = "7 9 2026 ";
 			// 
 			// label50
 			// 
@@ -2575,9 +2578,9 @@
 			this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label49.Location = new System.Drawing.Point(146, 90);
 			this.label49.Name = "label49";
-			this.label49.Size = new System.Drawing.Size(46, 15);
+			this.label49.Size = new System.Drawing.Size(23, 15);
 			this.label49.TabIndex = 10;
-			this.label49.Text = "Không ";
+			this.label49.Text = "có ";
 			// 
 			// label48
 			// 
@@ -2615,9 +2618,9 @@
 			this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label45.Location = new System.Drawing.Point(146, 28);
 			this.label45.Name = "label45";
-			this.label45.Size = new System.Drawing.Size(81, 15);
+			this.label45.Size = new System.Drawing.Size(62, 15);
 			this.label45.TabIndex = 6;
-			this.label45.Text = "Not Available ";
+			this.label45.Text = "2400 851 ";
 			// 
 			// label44
 			// 
@@ -2635,9 +2638,9 @@
 			this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label43.Location = new System.Drawing.Point(146, 3);
 			this.label43.Name = "label43";
-			this.label43.Size = new System.Drawing.Size(57, 15);
+			this.label43.Size = new System.Drawing.Size(51, 15);
 			this.label43.TabIndex = 4;
-			this.label43.Text = "Not Avail ";
+			this.label43.Text = "TKB_L1";
 			// 
 			// label42
 			// 
@@ -4601,6 +4604,9 @@
 			// 
 			// groupBox23
 			// 
+			this.groupBox23.Controls.Add(this.label136);
+			this.groupBox23.Controls.Add(this.label135);
+			this.groupBox23.Controls.Add(this.label134);
 			this.groupBox23.Controls.Add(this.label133);
 			this.groupBox23.Controls.Add(this.label131);
 			this.groupBox23.Controls.Add(this.button65);
@@ -5443,6 +5449,36 @@
 			this.pictureBox5.TabIndex = 4;
 			this.pictureBox5.TabStop = false;
 			// 
+			// label134
+			// 
+			this.label134.AutoSize = true;
+			this.label134.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label134.Location = new System.Drawing.Point(678, 131);
+			this.label134.Name = "label134";
+			this.label134.Size = new System.Drawing.Size(92, 31);
+			this.label134.TabIndex = 13;
+			this.label134.Text = "--:--:--\r\n";
+			// 
+			// label135
+			// 
+			this.label135.AutoSize = true;
+			this.label135.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+			this.label135.Location = new System.Drawing.Point(525, 95);
+			this.label135.Name = "label135";
+			this.label135.Size = new System.Drawing.Size(82, 17);
+			this.label135.TabIndex = 14;
+			this.label135.Text = "Counter #1 ";
+			// 
+			// label136
+			// 
+			this.label136.AutoSize = true;
+			this.label136.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+			this.label136.Location = new System.Drawing.Point(525, 145);
+			this.label136.Name = "label136";
+			this.label136.Size = new System.Drawing.Size(146, 17);
+			this.label136.TabIndex = 15;
+			this.label136.Text = "Counter #2 THoiGian ";
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -6019,6 +6055,9 @@
 		private System.Windows.Forms.Label label133;
 		private System.Windows.Forms.Button button70;
 		private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+		private System.Windows.Forms.Label label136;
+		private System.Windows.Forms.Label label135;
+		private System.Windows.Forms.Label label134;
 	}
 }
 

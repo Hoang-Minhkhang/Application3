@@ -113,36 +113,6 @@ namespace Application3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap TKB_L10 {
-            get {
-                object obj = ResourceManager.GetObject("TKB L10", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TKB_L8 {
-            get {
-                object obj = ResourceManager.GetObject("TKB L8", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TKB_L9 {
-            get {
-                object obj = ResourceManager.GetObject("TKB L9", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Travel_127_OBGA_BingHP_shutterstock_204471067_Travel {
             get {
                 object obj = ResourceManager.GetObject("Travel_127_OBGA.BingHP_shutterstock_204471067_Travel", resourceCulture);
