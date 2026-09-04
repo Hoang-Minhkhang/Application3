@@ -1,5 +1,6 @@
 ﻿using Microsoft.Web.WebView2.Core;
 using Microsoft.Web.WebView2.WinForms;
+using PdfiumViewer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,12 +15,11 @@ using System.Linq;
 using System.Media;
 using System.Net.Http;
 using System.Runtime.ConstrainedExecution;
+using System.Runtime.Remoting.Messaging;
 using System.Security.Policy;
 using System.Security.RightsManagement;
 using System.Text;
 using System.Threading;
-using PdfiumViewer;
-
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media.TextFormatting;
@@ -2823,6 +2823,7 @@ namespace Application3
 			counter++;
 			label131.Text = TimeSpan.FromSeconds(counter).ToString(@"hh\:mm\:ss");
 		}
+		string msg = ""; 
 		private void button63_Click(object sender, EventArgs e)
 		{
 			TruyenForm2 += $"\n \n  --------------Tiêu Đề Làm Việc   {textBox8.Text}--------- \n \n Nội Dung {textBox9.Text} \n vào thời gian {DateTime.Now}";
@@ -2833,6 +2834,8 @@ namespace Application3
 			counter = 0;
 			label131.Text = "00:00:00"; // reset về 0
 			workTimer2.Start();
+			
+
 		}
 
 		private void button64_Click(object sender, EventArgs e)
@@ -2973,7 +2976,46 @@ namespace Application3
 		{
 
 		}
-	}
+
+		private void button68_Click(object sender, EventArgs e)
+		{
+			string checkedItems = string.Join("\n  ", checkedListBox5.CheckedItems.Cast<string>());
+
+			// Lấy nội dung từ richTextBox8 và richTextBox9
+			string text8 = richTextBox8.Text;
+			string text9 = richTextBox9.Text;
+			TruyenForm2+= $"\n \n thông tin checklist  \n {checkedItems} \n GHI CHÚ  {text8} \n Công Việc đạ làm  {text9} \n vào thời gian {DateTime.Now}";
+		}
+
+		private void button71_Click(object sender, EventArgs e)
+		{
+			SoLanNhacLai++;
+			SoLanBao.Text = SoLanNhacLai.ToString();
+
+			try
+			{
+				player.controls.stop();
+			}
+			catch { }
+			isPlaying = false;
+			timer.Stop();
+			if (int.TryParse(txtMinutes.Text, out int minutes))
+			{
+				SoGiayConLai = minutes * 60;
+				lblCountdown.Visible = true;
+				timer.Start();
+				TimerCount += minutes;
+				isPlaying = true;
+				label122.Text = "Đã Bấm giờ ";
+				label122.ForeColor = Color.Green;
+				TemThoiGian.Text = TimerCount.ToString();
+				DateTime Temp = DateTime.Now;
+				DateTime alarmTime = Temp.AddSeconds(SoGiayConLai);
+				label126.Text = $"Thời gian kết thúc: {alarmTime:HH:mm:ss}";
+				TruyenForm2 += $"\n \n --------lần {SoLanNhacLai} \n thời gian: {DateTime.Now:HH:mm:ss} \n thời gian dự kiến : {alarmTime:HH:mm:ss}  ";
+			}
+		}
+		}
 }
 
 
