@@ -1,19 +1,21 @@
-Application3.exe - Hoàng Minh Khang 
+**Application3.exe - Hoàng Minh Khang**
 Xin Chào người dùng , để sử dụng :
--Xin Vui lòng cung cấp tài khoản mật khẩu , khu vực 
--Đồng ý và tuân thủ theo yêu cầu 
-Để Tải xuống : 
--Tải trên github 
--tải file EXE 
+-Xin Vui lòng cung cấp tài khoản mật khẩu , khu vực
+-Đồng ý và tuân thủ theo yêu cầu
+Để Tải xuống :
+-Tải trên github
+-tải file EXE
 -...
-CÁC tính năng 
--tác vụ 
--thời khóa biểu 
--printpreview (pdfiumviewer) 
+CÁC tính năng
+-tác vụ
+-thời khóa biểu
+-printpreview (pdfiumviewer)
 -...
-Điều khoản : 
-Điều khoảng khi sử dụng dụng application3 
-/!\ Người sử dụng cấn tuân thủ các điêu	 khoản và điều kiện sử dụng của ứng dụng. Việc vi phạm các điều khoản này có thể dẫn đến việc bị hạn chế quyền truy cập hoặc bị cấm sử dụng ứng dụng. Người sử dụng nên đọc kỹ các điều khoản trước khi tiếp tục sử dụng ứng dụng để đảm bảo rằng họ hiểu và đồng ý với các quy định đã được đặt ra.
+Điều khoản :
+Điều khoảng khi sử dụng dụng application3
+/!\\ Người sử dụng cấn tuân thủ các điêu	 khoản và điều kiện sử dụng của ứng dụng. Việc vi phạm các điều khoản này có thể dẫn đến việc bị hạn chế quyền truy cập hoặc bị cấm sử dụng ứng dụng. Người sử dụng nên đọc kỹ các điều khoản trước khi tiếp tục sử dụng ứng dụng để đảm bảo rằng họ hiểu và đồng ý với các quy định đã được đặt ra.
+---
+
 1. Quyền truy cập và sử dụng ứng dụng
 Người dùng cần có tài khoản hợp lệ để truy cập và sử dụng ứng dụng. Mỗi người dùng chỉ được phép sử dụng một tài khoản duy nhất và không được chia sẻ thông tin đăng nhập với bất kỳ ai khác. Việc sử dụng tài khoản của người khác mà không được phép là vi phạm các điều khoản này.
 2. Bảo mật thông tin cá nhân
@@ -30,9 +32,11 @@ Phần mềm, nội dung và các tài liệu liên quan đến ứng dụng đ�
 Ứng dụng có quyền chấm dứt quyền sử dụng của người dùng nếu phát hiện vi phạm các điều khoản và điều kiện sử dụng. Người sử dụng sẽ bị cấm truy cập vào ứng dụng và có thể bị xóa tài khoản mà không cần thông báo trước. Việc chấm dứt quyền sử dụng sẽ không ảnh hưởng đến các quyền và nghĩa vụ đã phát sinh trước đó.
 8. Luật áp dụng và giải quyết tranh chấp
 Các điều khoản và điều kiện sử dụng của ứng dụng được điều chỉnh bởi pháp luật của quốc gia nơi ứng dụng hoạt động. Mọi tranh chấp phát sinh từ việc sử dụng ứng dụng sẽ được giải quyết thông qua thương lượng giữa các bên. Nếu không thể đạt được thỏa thuận, tranh chấp sẽ được đưa ra tòa án có thẩm quyền để giải quyết theo quy định của pháp luật.
-9.một số lưu ý 
+9.một số lưu ý
 Phần mềm đang trong thòi gian thử nghiệp , chúng tôi sẽ không chịu trách nhiệm về bất kỳ lỗi nào phát sinh trong quá trình sử dụng. Người sử dụng nên sao lưu dữ liệu quan trọng và sử dụng ứng dụng một cách cẩn thận. Chúng tôi khuyến nghị người dùng báo cáo bất kỳ lỗi hoặc vấn đề nào gặp phải để chúng tôi có thể cải thiện ứng dụng trong các phiên bản tiếp theo.
-i : thông tin phần mềm 
+i : thông tin phần mềm
 Tên Phần Mềm : application3
-Người phát triển : Hoàng Minh Khang (github:Hoang-MinhKhang ) 
+Người phát triển : Hoàng Minh Khang (github:Hoang-MinhKhang )
+9. SÀn phẩm chưa hoàn thiện , chúng tôi rất xin lỗi nếu có vấn đề 
 ----------------------XIN CẢM Ơn -----------------------
+
