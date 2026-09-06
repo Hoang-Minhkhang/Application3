@@ -388,6 +388,7 @@
 			this.button66 = new System.Windows.Forms.Button();
 			this.checkedListBox5 = new System.Windows.Forms.CheckedListBox();
 			this.groupBox23 = new System.Windows.Forms.GroupBox();
+			this.button71 = new System.Windows.Forms.Button();
 			this.label136 = new System.Windows.Forms.Label();
 			this.label135 = new System.Windows.Forms.Label();
 			this.label134 = new System.Windows.Forms.Label();
@@ -492,7 +493,6 @@
 			this.contextMenuStrip5 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.pictureBox5 = new System.Windows.Forms.PictureBox();
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-			this.button71 = new System.Windows.Forms.Button();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.groupBox12.SuspendLayout();
@@ -2508,9 +2508,9 @@
 			this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label56.Location = new System.Drawing.Point(146, 218);
 			this.label56.Name = "label56";
-			this.label56.Size = new System.Drawing.Size(138, 45);
+			this.label56.Size = new System.Drawing.Size(138, 60);
 			this.label56.TabIndex = 18;
-			this.label56.Text = "THời khóa biểu áp dụng vào đầu năm 2026 \r\nlần 1\r\n";
+			this.label56.Text = "THời khóa biểu áp dụng vào đầu năm 2026 \r\nlần cập nhệt thứ ba \r\n\r\n";
 			// 
 			// label55
 			// 
@@ -4631,6 +4631,20 @@
 			this.groupBox23.TabStop = false;
 			this.groupBox23.Text = "Main Process ";
 			// 
+			// button71
+			// 
+			this.button71.BackColor = System.Drawing.Color.Lime;
+			this.button71.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.button71.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button71.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.button71.Location = new System.Drawing.Point(964, 139);
+			this.button71.Name = "button71";
+			this.button71.Size = new System.Drawing.Size(120, 30);
+			this.button71.TabIndex = 16;
+			this.button71.Text = "RESET";
+			this.button71.UseVisualStyleBackColor = false;
+			this.button71.Click += new System.EventHandler(this.button71_Click);
+			// 
 			// label136
 			// 
 			this.label136.AutoSize = true;
@@ -5481,20 +5495,6 @@
 			this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.pictureBox5.TabIndex = 4;
 			this.pictureBox5.TabStop = false;
-			// 
-			// button71
-			// 
-			this.button71.BackColor = System.Drawing.Color.Lime;
-			this.button71.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.button71.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button71.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.button71.Location = new System.Drawing.Point(964, 139);
-			this.button71.Name = "button71";
-			this.button71.Size = new System.Drawing.Size(120, 30);
-			this.button71.TabIndex = 16;
-			this.button71.Text = "RESET";
-			this.button71.UseVisualStyleBackColor = false;
-			this.button71.Click += new System.EventHandler(this.button71_Click);
 			// 
 			// Form1
 			// 
