@@ -170,12 +170,6 @@
 			this.label121 = new System.Windows.Forms.Label();
 			this.label89 = new System.Windows.Forms.Label();
 			this.tabPage5 = new System.Windows.Forms.TabPage();
-			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-			this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-			this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-			this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
-			this.whatIsThisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.trởVềD8angNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.button21 = new System.Windows.Forms.Button();
 			this.groupBox9 = new System.Windows.Forms.GroupBox();
 			this.label67 = new System.Windows.Forms.Label();
@@ -185,13 +179,6 @@
 			this.button18 = new System.Windows.Forms.Button();
 			this.label64 = new System.Windows.Forms.Label();
 			this.label59 = new System.Windows.Forms.Label();
-			this.groupBox8 = new System.Windows.Forms.GroupBox();
-			this.button30 = new System.Windows.Forms.Button();
-			this.progressBar2 = new System.Windows.Forms.ProgressBar();
-			this.label58 = new System.Windows.Forms.Label();
-			this.button17 = new System.Windows.Forms.Button();
-			this.button16 = new System.Windows.Forms.Button();
-			this.label57 = new System.Windows.Forms.Label();
 			this.groupBox7 = new System.Windows.Forms.GroupBox();
 			this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
 			this.label61 = new System.Windows.Forms.Label();
@@ -215,7 +202,13 @@
 			this.label40 = new System.Windows.Forms.Label();
 			this.linkLabel3 = new System.Windows.Forms.LinkLabel();
 			this.label39 = new System.Windows.Forms.Label();
-			this.pictureBox3 = new System.Windows.Forms.PictureBox();
+			this.groupBox8 = new System.Windows.Forms.GroupBox();
+			this.button30 = new System.Windows.Forms.Button();
+			this.progressBar2 = new System.Windows.Forms.ProgressBar();
+			this.label58 = new System.Windows.Forms.Label();
+			this.button17 = new System.Windows.Forms.Button();
+			this.button16 = new System.Windows.Forms.Button();
+			this.label57 = new System.Windows.Forms.Label();
 			this.tabPage6 = new System.Windows.Forms.TabPage();
 			this.groupBox13 = new System.Windows.Forms.GroupBox();
 			this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -493,6 +486,8 @@
 			this.contextMenuStrip5 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.pictureBox5 = new System.Windows.Forms.PictureBox();
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+			this.groupBox25 = new System.Windows.Forms.GroupBox();
+			this.pictureBox3 = new System.Windows.Forms.PictureBox();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.groupBox12.SuspendLayout();
@@ -514,12 +509,10 @@
 			this.BaoCAo.SuspendLayout();
 			this.Number3.SuspendLayout();
 			this.tabPage5.SuspendLayout();
-			this.statusStrip1.SuspendLayout();
 			this.groupBox9.SuspendLayout();
-			this.groupBox8.SuspendLayout();
 			this.groupBox7.SuspendLayout();
 			this.tableLayoutPanel3.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+			this.groupBox8.SuspendLayout();
 			this.tabPage6.SuspendLayout();
 			this.groupBox13.SuspendLayout();
 			this.tableLayoutPanel4.SuspendLayout();
@@ -548,6 +541,8 @@
 			this.menuStrip1.SuspendLayout();
 			this.statusStrip2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+			this.groupBox25.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// tabControl1
@@ -565,10 +560,11 @@
 			this.tabControl1.Controls.Add(this.tabPage11);
 			this.tabControl1.Controls.Add(this.tabPage12);
 			this.tabControl1.Controls.Add(this.tabPage13);
-			this.tabControl1.Location = new System.Drawing.Point(66, 55);
+			this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.tabControl1.Location = new System.Drawing.Point(0, 27);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(1137, 652);
+			this.tabControl1.Size = new System.Drawing.Size(1151, 680);
 			this.tabControl1.TabIndex = 1;
 			this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
 			// 
@@ -584,7 +580,7 @@
 			this.tabPage1.Location = new System.Drawing.Point(4, 22);
 			this.tabPage1.Name = "tabPage1";
 			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage1.Size = new System.Drawing.Size(1129, 626);
+			this.tabPage1.Size = new System.Drawing.Size(1143, 654);
 			this.tabPage1.TabIndex = 0;
 			this.tabPage1.Text = "general";
 			this.tabPage1.UseVisualStyleBackColor = true;
@@ -1079,7 +1075,7 @@
 			this.pictureBox1.Image = global::Application3.Properties.Resources._1005;
 			this.pictureBox1.Location = new System.Drawing.Point(3, 3);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(1123, 620);
+			this.pictureBox1.Size = new System.Drawing.Size(1137, 648);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.pictureBox1.TabIndex = 4;
 			this.pictureBox1.TabStop = false;
@@ -1661,7 +1657,7 @@
 			this.tabPage4.Location = new System.Drawing.Point(4, 22);
 			this.tabPage4.Name = "tabPage4";
 			this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage4.Size = new System.Drawing.Size(1129, 626);
+			this.tabPage4.Size = new System.Drawing.Size(1143, 654);
 			this.tabPage4.TabIndex = 3;
 			this.tabPage4.Text = "Thời gian ";
 			this.tabPage4.UseVisualStyleBackColor = true;
@@ -2183,72 +2179,19 @@
 			// 
 			// tabPage5
 			// 
-			this.tabPage5.Controls.Add(this.statusStrip1);
 			this.tabPage5.Controls.Add(this.button21);
 			this.tabPage5.Controls.Add(this.groupBox9);
 			this.tabPage5.Controls.Add(this.label64);
 			this.tabPage5.Controls.Add(this.label59);
-			this.tabPage5.Controls.Add(this.groupBox8);
 			this.tabPage5.Controls.Add(this.groupBox7);
-			this.tabPage5.Controls.Add(this.pictureBox3);
+			this.tabPage5.Controls.Add(this.groupBox25);
 			this.tabPage5.Location = new System.Drawing.Point(4, 22);
 			this.tabPage5.Name = "tabPage5";
 			this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage5.Size = new System.Drawing.Size(1129, 626);
+			this.tabPage5.Size = new System.Drawing.Size(1143, 654);
 			this.tabPage5.TabIndex = 4;
 			this.tabPage5.Text = "ImagePreview";
 			this.tabPage5.UseVisualStyleBackColor = true;
-			// 
-			// statusStrip1
-			// 
-			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripProgressBar1,
-            this.toolStripStatusLabel1,
-            this.toolStripSplitButton1});
-			this.statusStrip1.Location = new System.Drawing.Point(3, 601);
-			this.statusStrip1.Name = "statusStrip1";
-			this.statusStrip1.Size = new System.Drawing.Size(1123, 22);
-			this.statusStrip1.TabIndex = 8;
-			this.statusStrip1.Text = "statusStrip1";
-			// 
-			// toolStripProgressBar1
-			// 
-			this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-			this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
-			this.toolStripProgressBar1.Click += new System.EventHandler(this.toolStripProgressBar1_Click);
-			// 
-			// toolStripStatusLabel1
-			// 
-			this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-			this.toolStripStatusLabel1.Size = new System.Drawing.Size(104, 17);
-			this.toolStripStatusLabel1.Text = "Click Here to load ";
-			this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
-			// 
-			// toolStripSplitButton1
-			// 
-			this.toolStripSplitButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.whatIsThisToolStripMenuItem,
-            this.trởVềD8angNhậpToolStripMenuItem});
-			this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
-			this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-			this.toolStripSplitButton1.Size = new System.Drawing.Size(32, 20);
-			this.toolStripSplitButton1.Text = "toolStripSplitButton1";
-			// 
-			// whatIsThisToolStripMenuItem
-			// 
-			this.whatIsThisToolStripMenuItem.Name = "whatIsThisToolStripMenuItem";
-			this.whatIsThisToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-			this.whatIsThisToolStripMenuItem.Text = "What is this ";
-			this.whatIsThisToolStripMenuItem.Click += new System.EventHandler(this.whatIsThisToolStripMenuItem_Click);
-			// 
-			// trởVềD8angNhậpToolStripMenuItem
-			// 
-			this.trởVềD8angNhậpToolStripMenuItem.Name = "trởVềD8angNhậpToolStripMenuItem";
-			this.trởVềD8angNhậpToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-			this.trởVềD8angNhậpToolStripMenuItem.Text = "trở về d8ang nhập ";
-			this.trởVềD8angNhậpToolStripMenuItem.Click += new System.EventHandler(this.trởVềD8angNhậpToolStripMenuItem_Click);
 			// 
 			// button21
 			// 
@@ -2355,6 +2298,275 @@
 			this.label59.TabIndex = 3;
 			this.label59.Text = "*Phần mềm có hạn chế là không thể zoom , chỉnh sửa hay tương tác với chúng \r\n";
 			// 
+			// groupBox7
+			// 
+			this.groupBox7.Controls.Add(this.tableLayoutPanel3);
+			this.groupBox7.Controls.Add(this.label39);
+			this.groupBox7.Controls.Add(this.groupBox8);
+			this.groupBox7.Dock = System.Windows.Forms.DockStyle.Right;
+			this.groupBox7.Location = new System.Drawing.Point(810, 3);
+			this.groupBox7.Name = "groupBox7";
+			this.groupBox7.Size = new System.Drawing.Size(330, 648);
+			this.groupBox7.TabIndex = 1;
+			this.groupBox7.TabStop = false;
+			this.groupBox7.Text = "Picture Information ";
+			// 
+			// tableLayoutPanel3
+			// 
+			this.tableLayoutPanel3.ColumnCount = 2;
+			this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.48097F));
+			this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.51903F));
+			this.tableLayoutPanel3.Controls.Add(this.label61, 1, 9);
+			this.tableLayoutPanel3.Controls.Add(this.label60, 0, 9);
+			this.tableLayoutPanel3.Controls.Add(this.label56, 1, 8);
+			this.tableLayoutPanel3.Controls.Add(this.label55, 0, 8);
+			this.tableLayoutPanel3.Controls.Add(this.label54, 0, 7);
+			this.tableLayoutPanel3.Controls.Add(this.label53, 1, 6);
+			this.tableLayoutPanel3.Controls.Add(this.label52, 0, 6);
+			this.tableLayoutPanel3.Controls.Add(this.label51, 1, 5);
+			this.tableLayoutPanel3.Controls.Add(this.label50, 0, 5);
+			this.tableLayoutPanel3.Controls.Add(this.label49, 1, 4);
+			this.tableLayoutPanel3.Controls.Add(this.label48, 0, 4);
+			this.tableLayoutPanel3.Controls.Add(this.label47, 1, 3);
+			this.tableLayoutPanel3.Controls.Add(this.label46, 0, 3);
+			this.tableLayoutPanel3.Controls.Add(this.label45, 1, 2);
+			this.tableLayoutPanel3.Controls.Add(this.label44, 0, 2);
+			this.tableLayoutPanel3.Controls.Add(this.label43, 1, 1);
+			this.tableLayoutPanel3.Controls.Add(this.label42, 0, 1);
+			this.tableLayoutPanel3.Controls.Add(this.label41, 1, 0);
+			this.tableLayoutPanel3.Controls.Add(this.label40, 0, 0);
+			this.tableLayoutPanel3.Controls.Add(this.linkLabel3, 1, 7);
+			this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 16);
+			this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+			this.tableLayoutPanel3.RowCount = 10;
+			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 112F));
+			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel3.Size = new System.Drawing.Size(324, 439);
+			this.tableLayoutPanel3.TabIndex = 2;
+			this.tableLayoutPanel3.Visible = false;
+			this.tableLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel3_Paint);
+			// 
+			// label61
+			// 
+			this.label61.AutoSize = true;
+			this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label61.Location = new System.Drawing.Point(163, 419);
+			this.label61.Name = "label61";
+			this.label61.Size = new System.Drawing.Size(65, 15);
+			this.label61.TabIndex = 20;
+			this.label61.Text = "30 9 2026 ";
+			// 
+			// label60
+			// 
+			this.label60.AutoSize = true;
+			this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label60.Location = new System.Drawing.Point(3, 419);
+			this.label60.Name = "label60";
+			this.label60.Size = new System.Drawing.Size(92, 15);
+			this.label60.TabIndex = 19;
+			this.label60.Text = "Hạn sử dụng ";
+			// 
+			// label56
+			// 
+			this.label56.AutoSize = true;
+			this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label56.Location = new System.Drawing.Point(163, 307);
+			this.label56.Name = "label56";
+			this.label56.Size = new System.Drawing.Size(141, 60);
+			this.label56.TabIndex = 18;
+			this.label56.Text = "THời khóa biểu áp dụng vào đầu năm 2026 \r\nlần cập nhệt thứ ba \r\n\r\n";
+			// 
+			// label55
+			// 
+			this.label55.AutoSize = true;
+			this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label55.Location = new System.Drawing.Point(3, 307);
+			this.label55.Name = "label55";
+			this.label55.Size = new System.Drawing.Size(60, 15);
+			this.label55.TabIndex = 17;
+			this.label55.Text = "Ghi chú ";
+			// 
+			// label54
+			// 
+			this.label54.AutoSize = true;
+			this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label54.Location = new System.Drawing.Point(3, 268);
+			this.label54.Name = "label54";
+			this.label54.Size = new System.Drawing.Size(137, 30);
+			this.label54.TabIndex = 15;
+			this.label54.Text = "Thông tin cần chỉnh sửa ";
+			// 
+			// label53
+			// 
+			this.label53.AutoSize = true;
+			this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label53.Location = new System.Drawing.Point(163, 240);
+			this.label53.Name = "label53";
+			this.label53.Size = new System.Drawing.Size(67, 15);
+			this.label53.TabIndex = 14;
+			this.label53.Text = "không biết ";
+			this.label53.Click += new System.EventHandler(this.label53_Click);
+			// 
+			// label52
+			// 
+			this.label52.AutoSize = true;
+			this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label52.Location = new System.Drawing.Point(3, 240);
+			this.label52.Name = "label52";
+			this.label52.Size = new System.Drawing.Size(64, 15);
+			this.label52.TabIndex = 13;
+			this.label52.Text = "Hiệu lực ";
+			// 
+			// label51
+			// 
+			this.label51.AutoSize = true;
+			this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label51.Location = new System.Drawing.Point(163, 211);
+			this.label51.Name = "label51";
+			this.label51.Size = new System.Drawing.Size(58, 15);
+			this.label51.TabIndex = 12;
+			this.label51.Text = "7 9 2026 ";
+			// 
+			// label50
+			// 
+			this.label50.AutoSize = true;
+			this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label50.Location = new System.Drawing.Point(3, 211);
+			this.label50.Name = "label50";
+			this.label50.Size = new System.Drawing.Size(63, 15);
+			this.label50.TabIndex = 11;
+			this.label50.Text = "Áp dụng ";
+			// 
+			// label49
+			// 
+			this.label49.AutoSize = true;
+			this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label49.Location = new System.Drawing.Point(163, 179);
+			this.label49.Name = "label49";
+			this.label49.Size = new System.Drawing.Size(23, 15);
+			this.label49.TabIndex = 10;
+			this.label49.Text = "có ";
+			// 
+			// label48
+			// 
+			this.label48.AutoSize = true;
+			this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label48.Location = new System.Drawing.Point(3, 179);
+			this.label48.Name = "label48";
+			this.label48.Size = new System.Drawing.Size(107, 15);
+			this.label48.TabIndex = 9;
+			this.label48.Text = "Tệp này có sẵn ";
+			// 
+			// label47
+			// 
+			this.label47.AutoSize = true;
+			this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label47.Location = new System.Drawing.Point(163, 146);
+			this.label47.Name = "label47";
+			this.label47.Size = new System.Drawing.Size(60, 15);
+			this.label47.TabIndex = 8;
+			this.label47.Text = "Không rõ ";
+			// 
+			// label46
+			// 
+			this.label46.AutoSize = true;
+			this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label46.Location = new System.Drawing.Point(3, 146);
+			this.label46.Name = "label46";
+			this.label46.Size = new System.Drawing.Size(151, 30);
+			this.label46.TabIndex = 7;
+			this.label46.Text = "Bản quyền riêng tư do người cung cấp ";
+			// 
+			// label45
+			// 
+			this.label45.AutoSize = true;
+			this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label45.Location = new System.Drawing.Point(163, 117);
+			this.label45.Name = "label45";
+			this.label45.Size = new System.Drawing.Size(62, 15);
+			this.label45.TabIndex = 6;
+			this.label45.Text = "2400 851 ";
+			// 
+			// label44
+			// 
+			this.label44.AutoSize = true;
+			this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label44.Location = new System.Drawing.Point(3, 117);
+			this.label44.Name = "label44";
+			this.label44.Size = new System.Drawing.Size(93, 15);
+			this.label44.TabIndex = 5;
+			this.label44.Text = "Độ phân giải ";
+			// 
+			// label43
+			// 
+			this.label43.AutoSize = true;
+			this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label43.Location = new System.Drawing.Point(163, 92);
+			this.label43.Name = "label43";
+			this.label43.Size = new System.Drawing.Size(51, 15);
+			this.label43.TabIndex = 4;
+			this.label43.Text = "TKB_L1";
+			// 
+			// label42
+			// 
+			this.label42.AutoSize = true;
+			this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label42.Location = new System.Drawing.Point(3, 92);
+			this.label42.Name = "label42";
+			this.label42.Size = new System.Drawing.Size(55, 15);
+			this.label42.TabIndex = 3;
+			this.label42.Text = "tên tệp ";
+			// 
+			// label41
+			// 
+			this.label41.AutoSize = true;
+			this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label41.Location = new System.Drawing.Point(163, 0);
+			this.label41.Name = "label41";
+			this.label41.Size = new System.Drawing.Size(50, 15);
+			this.label41.TabIndex = 2;
+			this.label41.Text = "TKB L8 ";
+			// 
+			// label40
+			// 
+			this.label40.AutoSize = true;
+			this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label40.Location = new System.Drawing.Point(3, 0);
+			this.label40.Name = "label40";
+			this.label40.Size = new System.Drawing.Size(63, 15);
+			this.label40.TabIndex = 1;
+			this.label40.Text = "Tên Tệp ";
+			// 
+			// linkLabel3
+			// 
+			this.linkLabel3.AutoSize = true;
+			this.linkLabel3.Location = new System.Drawing.Point(163, 268);
+			this.linkLabel3.Name = "linkLabel3";
+			this.linkLabel3.Size = new System.Drawing.Size(73, 13);
+			this.linkLabel3.TabIndex = 16;
+			this.linkLabel3.TabStop = true;
+			this.linkLabel3.Text = "Bấm vào đây ";
+			this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+			// 
+			// label39
+			// 
+			this.label39.AutoSize = true;
+			this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label39.Location = new System.Drawing.Point(10, 16);
+			this.label39.Name = "label39";
+			this.label39.Size = new System.Drawing.Size(145, 16);
+			this.label39.TabIndex = 0;
+			this.label39.Text = "Thông Tin Hình ảnh ";
+			// 
 			// groupBox8
 			// 
 			this.groupBox8.Controls.Add(this.button30);
@@ -2363,9 +2575,10 @@
 			this.groupBox8.Controls.Add(this.button17);
 			this.groupBox8.Controls.Add(this.button16);
 			this.groupBox8.Controls.Add(this.label57);
-			this.groupBox8.Location = new System.Drawing.Point(783, 465);
+			this.groupBox8.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.groupBox8.Location = new System.Drawing.Point(3, 455);
 			this.groupBox8.Name = "groupBox8";
-			this.groupBox8.Size = new System.Drawing.Size(329, 120);
+			this.groupBox8.Size = new System.Drawing.Size(324, 190);
 			this.groupBox8.TabIndex = 2;
 			this.groupBox8.TabStop = false;
 			this.groupBox8.Text = "Actions";
@@ -2427,286 +2640,6 @@
 			this.label57.Size = new System.Drawing.Size(188, 15);
 			this.label57.TabIndex = 19;
 			this.label57.Text = "Không có công cụ chỉnh sửa nào ";
-			// 
-			// groupBox7
-			// 
-			this.groupBox7.Controls.Add(this.tableLayoutPanel3);
-			this.groupBox7.Controls.Add(this.label39);
-			this.groupBox7.Location = new System.Drawing.Point(783, 31);
-			this.groupBox7.Name = "groupBox7";
-			this.groupBox7.Size = new System.Drawing.Size(330, 414);
-			this.groupBox7.TabIndex = 1;
-			this.groupBox7.TabStop = false;
-			this.groupBox7.Text = "Picture Information ";
-			// 
-			// tableLayoutPanel3
-			// 
-			this.tableLayoutPanel3.ColumnCount = 2;
-			this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.48097F));
-			this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.51903F));
-			this.tableLayoutPanel3.Controls.Add(this.label61, 1, 9);
-			this.tableLayoutPanel3.Controls.Add(this.label60, 0, 9);
-			this.tableLayoutPanel3.Controls.Add(this.label56, 1, 8);
-			this.tableLayoutPanel3.Controls.Add(this.label55, 0, 8);
-			this.tableLayoutPanel3.Controls.Add(this.label54, 0, 7);
-			this.tableLayoutPanel3.Controls.Add(this.label53, 1, 6);
-			this.tableLayoutPanel3.Controls.Add(this.label52, 0, 6);
-			this.tableLayoutPanel3.Controls.Add(this.label51, 1, 5);
-			this.tableLayoutPanel3.Controls.Add(this.label50, 0, 5);
-			this.tableLayoutPanel3.Controls.Add(this.label49, 1, 4);
-			this.tableLayoutPanel3.Controls.Add(this.label48, 0, 4);
-			this.tableLayoutPanel3.Controls.Add(this.label47, 1, 3);
-			this.tableLayoutPanel3.Controls.Add(this.label46, 0, 3);
-			this.tableLayoutPanel3.Controls.Add(this.label45, 1, 2);
-			this.tableLayoutPanel3.Controls.Add(this.label44, 0, 2);
-			this.tableLayoutPanel3.Controls.Add(this.label43, 1, 1);
-			this.tableLayoutPanel3.Controls.Add(this.label42, 0, 1);
-			this.tableLayoutPanel3.Controls.Add(this.label41, 1, 0);
-			this.tableLayoutPanel3.Controls.Add(this.label40, 0, 0);
-			this.tableLayoutPanel3.Controls.Add(this.linkLabel3, 1, 7);
-			this.tableLayoutPanel3.Location = new System.Drawing.Point(15, 35);
-			this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-			this.tableLayoutPanel3.RowCount = 10;
-			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
-			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 112F));
-			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-			this.tableLayoutPanel3.Size = new System.Drawing.Size(289, 350);
-			this.tableLayoutPanel3.TabIndex = 2;
-			this.tableLayoutPanel3.Visible = false;
-			this.tableLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel3_Paint);
-			// 
-			// label61
-			// 
-			this.label61.AutoSize = true;
-			this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label61.Location = new System.Drawing.Point(146, 330);
-			this.label61.Name = "label61";
-			this.label61.Size = new System.Drawing.Size(65, 15);
-			this.label61.TabIndex = 20;
-			this.label61.Text = "30 9 2026 ";
-			// 
-			// label60
-			// 
-			this.label60.AutoSize = true;
-			this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label60.Location = new System.Drawing.Point(3, 330);
-			this.label60.Name = "label60";
-			this.label60.Size = new System.Drawing.Size(92, 15);
-			this.label60.TabIndex = 19;
-			this.label60.Text = "Hạn sử dụng ";
-			// 
-			// label56
-			// 
-			this.label56.AutoSize = true;
-			this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label56.Location = new System.Drawing.Point(146, 218);
-			this.label56.Name = "label56";
-			this.label56.Size = new System.Drawing.Size(138, 60);
-			this.label56.TabIndex = 18;
-			this.label56.Text = "THời khóa biểu áp dụng vào đầu năm 2026 \r\nlần cập nhệt thứ ba \r\n\r\n";
-			// 
-			// label55
-			// 
-			this.label55.AutoSize = true;
-			this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label55.Location = new System.Drawing.Point(3, 218);
-			this.label55.Name = "label55";
-			this.label55.Size = new System.Drawing.Size(60, 15);
-			this.label55.TabIndex = 17;
-			this.label55.Text = "Ghi chú ";
-			// 
-			// label54
-			// 
-			this.label54.AutoSize = true;
-			this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label54.Location = new System.Drawing.Point(3, 179);
-			this.label54.Name = "label54";
-			this.label54.Size = new System.Drawing.Size(137, 30);
-			this.label54.TabIndex = 15;
-			this.label54.Text = "Thông tin cần chỉnh sửa ";
-			// 
-			// label53
-			// 
-			this.label53.AutoSize = true;
-			this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label53.Location = new System.Drawing.Point(146, 151);
-			this.label53.Name = "label53";
-			this.label53.Size = new System.Drawing.Size(67, 15);
-			this.label53.TabIndex = 14;
-			this.label53.Text = "không biết ";
-			this.label53.Click += new System.EventHandler(this.label53_Click);
-			// 
-			// label52
-			// 
-			this.label52.AutoSize = true;
-			this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label52.Location = new System.Drawing.Point(3, 151);
-			this.label52.Name = "label52";
-			this.label52.Size = new System.Drawing.Size(64, 15);
-			this.label52.TabIndex = 13;
-			this.label52.Text = "Hiệu lực ";
-			// 
-			// label51
-			// 
-			this.label51.AutoSize = true;
-			this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label51.Location = new System.Drawing.Point(146, 122);
-			this.label51.Name = "label51";
-			this.label51.Size = new System.Drawing.Size(58, 15);
-			this.label51.TabIndex = 12;
-			this.label51.Text = "7 9 2026 ";
-			// 
-			// label50
-			// 
-			this.label50.AutoSize = true;
-			this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label50.Location = new System.Drawing.Point(3, 122);
-			this.label50.Name = "label50";
-			this.label50.Size = new System.Drawing.Size(63, 15);
-			this.label50.TabIndex = 11;
-			this.label50.Text = "Áp dụng ";
-			// 
-			// label49
-			// 
-			this.label49.AutoSize = true;
-			this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label49.Location = new System.Drawing.Point(146, 90);
-			this.label49.Name = "label49";
-			this.label49.Size = new System.Drawing.Size(23, 15);
-			this.label49.TabIndex = 10;
-			this.label49.Text = "có ";
-			// 
-			// label48
-			// 
-			this.label48.AutoSize = true;
-			this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label48.Location = new System.Drawing.Point(3, 90);
-			this.label48.Name = "label48";
-			this.label48.Size = new System.Drawing.Size(107, 15);
-			this.label48.TabIndex = 9;
-			this.label48.Text = "Tệp này có sẵn ";
-			// 
-			// label47
-			// 
-			this.label47.AutoSize = true;
-			this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label47.Location = new System.Drawing.Point(146, 57);
-			this.label47.Name = "label47";
-			this.label47.Size = new System.Drawing.Size(60, 15);
-			this.label47.TabIndex = 8;
-			this.label47.Text = "Không rõ ";
-			// 
-			// label46
-			// 
-			this.label46.AutoSize = true;
-			this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label46.Location = new System.Drawing.Point(3, 57);
-			this.label46.Name = "label46";
-			this.label46.Size = new System.Drawing.Size(131, 30);
-			this.label46.TabIndex = 7;
-			this.label46.Text = "Bản quyền riêng tư do người cung cấp ";
-			// 
-			// label45
-			// 
-			this.label45.AutoSize = true;
-			this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label45.Location = new System.Drawing.Point(146, 28);
-			this.label45.Name = "label45";
-			this.label45.Size = new System.Drawing.Size(62, 15);
-			this.label45.TabIndex = 6;
-			this.label45.Text = "2400 851 ";
-			// 
-			// label44
-			// 
-			this.label44.AutoSize = true;
-			this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label44.Location = new System.Drawing.Point(3, 28);
-			this.label44.Name = "label44";
-			this.label44.Size = new System.Drawing.Size(93, 15);
-			this.label44.TabIndex = 5;
-			this.label44.Text = "Độ phân giải ";
-			// 
-			// label43
-			// 
-			this.label43.AutoSize = true;
-			this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label43.Location = new System.Drawing.Point(146, 3);
-			this.label43.Name = "label43";
-			this.label43.Size = new System.Drawing.Size(51, 15);
-			this.label43.TabIndex = 4;
-			this.label43.Text = "TKB_L1";
-			// 
-			// label42
-			// 
-			this.label42.AutoSize = true;
-			this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label42.Location = new System.Drawing.Point(3, 3);
-			this.label42.Name = "label42";
-			this.label42.Size = new System.Drawing.Size(55, 15);
-			this.label42.TabIndex = 3;
-			this.label42.Text = "tên tệp ";
-			// 
-			// label41
-			// 
-			this.label41.AutoSize = true;
-			this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label41.Location = new System.Drawing.Point(146, 0);
-			this.label41.Name = "label41";
-			this.label41.Size = new System.Drawing.Size(50, 3);
-			this.label41.TabIndex = 2;
-			this.label41.Text = "TKB L8 ";
-			// 
-			// label40
-			// 
-			this.label40.AutoSize = true;
-			this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label40.Location = new System.Drawing.Point(3, 0);
-			this.label40.Name = "label40";
-			this.label40.Size = new System.Drawing.Size(63, 3);
-			this.label40.TabIndex = 1;
-			this.label40.Text = "Tên Tệp ";
-			// 
-			// linkLabel3
-			// 
-			this.linkLabel3.AutoSize = true;
-			this.linkLabel3.Location = new System.Drawing.Point(146, 179);
-			this.linkLabel3.Name = "linkLabel3";
-			this.linkLabel3.Size = new System.Drawing.Size(73, 13);
-			this.linkLabel3.TabIndex = 16;
-			this.linkLabel3.TabStop = true;
-			this.linkLabel3.Text = "Bấm vào đây ";
-			this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
-			// 
-			// label39
-			// 
-			this.label39.AutoSize = true;
-			this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label39.Location = new System.Drawing.Point(10, 16);
-			this.label39.Name = "label39";
-			this.label39.Size = new System.Drawing.Size(145, 16);
-			this.label39.TabIndex = 0;
-			this.label39.Text = "Thông Tin Hình ảnh ";
-			// 
-			// pictureBox3
-			// 
-			this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Cross;
-			this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-			this.pictureBox3.Location = new System.Drawing.Point(18, 32);
-			this.pictureBox3.Name = "pictureBox3";
-			this.pictureBox3.Size = new System.Drawing.Size(751, 564);
-			this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pictureBox3.TabIndex = 0;
-			this.pictureBox3.TabStop = false;
-			this.pictureBox3.Visible = false;
-			this.pictureBox3.WaitOnLoad = true;
-			this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
 			// 
 			// tabPage6
 			// 
@@ -4477,7 +4410,7 @@
 			this.tabPage13.Location = new System.Drawing.Point(4, 22);
 			this.tabPage13.Name = "tabPage13";
 			this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage13.Size = new System.Drawing.Size(1129, 626);
+			this.tabPage13.Size = new System.Drawing.Size(1143, 654);
 			this.tabPage13.TabIndex = 12;
 			this.tabPage13.Text = "CongViec1";
 			this.tabPage13.UseVisualStyleBackColor = true;
@@ -4495,9 +4428,9 @@
 			this.groupBox24.Controls.Add(this.button66);
 			this.groupBox24.Controls.Add(this.checkedListBox5);
 			this.groupBox24.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.groupBox24.Location = new System.Drawing.Point(3, 202);
+			this.groupBox24.Location = new System.Drawing.Point(3, 230);
 			this.groupBox24.Name = "groupBox24";
-			this.groupBox24.Size = new System.Drawing.Size(1123, 421);
+			this.groupBox24.Size = new System.Drawing.Size(1137, 421);
 			this.groupBox24.TabIndex = 9;
 			this.groupBox24.TabStop = false;
 			this.groupBox24.Text = "Main Application ";
@@ -4626,7 +4559,7 @@
 			this.groupBox23.Dock = System.Windows.Forms.DockStyle.Top;
 			this.groupBox23.Location = new System.Drawing.Point(3, 3);
 			this.groupBox23.Name = "groupBox23";
-			this.groupBox23.Size = new System.Drawing.Size(1123, 193);
+			this.groupBox23.Size = new System.Drawing.Size(1137, 193);
 			this.groupBox23.TabIndex = 8;
 			this.groupBox23.TabStop = false;
 			this.groupBox23.Text = "Main Process ";
@@ -4967,7 +4900,7 @@
             this.toolStripTextBox1});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(1284, 27);
+			this.menuStrip1.Size = new System.Drawing.Size(1151, 27);
 			this.menuStrip1.TabIndex = 0;
 			this.menuStrip1.Text = "menuStrip1";
 			this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -5352,9 +5285,9 @@
             this.toolStripDropDownButton1,
             this.toolStripStatusLabel4,
             this.toolStripDropDownButton2});
-			this.statusStrip2.Location = new System.Drawing.Point(0, 727);
+			this.statusStrip2.Location = new System.Drawing.Point(0, 685);
 			this.statusStrip2.Name = "statusStrip2";
-			this.statusStrip2.Size = new System.Drawing.Size(1284, 22);
+			this.statusStrip2.Size = new System.Drawing.Size(1151, 22);
 			this.statusStrip2.TabIndex = 5;
 			this.statusStrip2.Text = "statusStrip2";
 			// 
@@ -5491,16 +5424,41 @@
 			this.pictureBox5.Image = global::Application3.Properties.Resources.Travel_127_OBGA_BingHP_shutterstock_204471067_Travel;
 			this.pictureBox5.Location = new System.Drawing.Point(0, 0);
 			this.pictureBox5.Name = "pictureBox5";
-			this.pictureBox5.Size = new System.Drawing.Size(1284, 749);
+			this.pictureBox5.Size = new System.Drawing.Size(1151, 707);
 			this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.pictureBox5.TabIndex = 4;
 			this.pictureBox5.TabStop = false;
+			// 
+			// groupBox25
+			// 
+			this.groupBox25.Controls.Add(this.pictureBox3);
+			this.groupBox25.Dock = System.Windows.Forms.DockStyle.Left;
+			this.groupBox25.Location = new System.Drawing.Point(3, 3);
+			this.groupBox25.Name = "groupBox25";
+			this.groupBox25.Size = new System.Drawing.Size(811, 648);
+			this.groupBox25.TabIndex = 9;
+			this.groupBox25.TabStop = false;
+			this.groupBox25.Text = "ThoiKhoaBieu";
+			// 
+			// pictureBox3
+			// 
+			this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Cross;
+			this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Top;
+			this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+			this.pictureBox3.Location = new System.Drawing.Point(3, 16);
+			this.pictureBox3.Name = "pictureBox3";
+			this.pictureBox3.Size = new System.Drawing.Size(805, 842);
+			this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pictureBox3.TabIndex = 1;
+			this.pictureBox3.TabStop = false;
+			this.pictureBox3.Visible = false;
+			this.pictureBox3.WaitOnLoad = true;
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1284, 749);
+			this.ClientSize = new System.Drawing.Size(1151, 707);
 			this.Controls.Add(this.statusStrip2);
 			this.Controls.Add(this.tabControl1);
 			this.Controls.Add(this.menuStrip1);
@@ -5551,17 +5509,14 @@
 			this.Number3.ResumeLayout(false);
 			this.tabPage5.ResumeLayout(false);
 			this.tabPage5.PerformLayout();
-			this.statusStrip1.ResumeLayout(false);
-			this.statusStrip1.PerformLayout();
 			this.groupBox9.ResumeLayout(false);
 			this.groupBox9.PerformLayout();
-			this.groupBox8.ResumeLayout(false);
-			this.groupBox8.PerformLayout();
 			this.groupBox7.ResumeLayout(false);
 			this.groupBox7.PerformLayout();
 			this.tableLayoutPanel3.ResumeLayout(false);
 			this.tableLayoutPanel3.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+			this.groupBox8.ResumeLayout(false);
+			this.groupBox8.PerformLayout();
 			this.tabPage6.ResumeLayout(false);
 			this.tabPage6.PerformLayout();
 			this.groupBox13.ResumeLayout(false);
@@ -5606,6 +5561,8 @@
 			this.statusStrip2.ResumeLayout(false);
 			this.statusStrip2.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+			this.groupBox25.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -5693,7 +5650,6 @@
 		private System.Windows.Forms.ToolStripMenuItem documentaryToolStripMenuItem;
 		private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
 		private System.Windows.Forms.TabPage tabPage5;
-		private System.Windows.Forms.PictureBox pictureBox3;
 		private System.Windows.Forms.ToolStripMenuItem imagePreviewToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem startToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem stopToolStripMenuItem;
@@ -5842,12 +5798,6 @@
 		private System.Windows.Forms.Button button31;
 		private System.Windows.Forms.ContextMenuStrip contextMenuStrip4;
 		private System.Windows.Forms.Label label89;
-		private System.Windows.Forms.StatusStrip statusStrip1;
-		private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
-		private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-		private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
-		private System.Windows.Forms.ToolStripMenuItem trởVềD8angNhậpToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem whatIsThisToolStripMenuItem;
 		private System.Windows.Forms.Label label93;
 		private System.Windows.Forms.Label label92;
 		private System.Windows.Forms.Label label91;
@@ -6076,6 +6026,8 @@
 		private System.Windows.Forms.Label label135;
 		private System.Windows.Forms.Label label134;
 		private System.Windows.Forms.Button button71;
+		private System.Windows.Forms.GroupBox groupBox25;
+		private System.Windows.Forms.PictureBox pictureBox3;
 	}
 }
 

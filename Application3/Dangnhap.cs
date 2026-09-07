@@ -149,7 +149,25 @@ namespace Application3
 		{
 			
 		}
+		private void CenterTabControl()
+		{
+			if (tabControl1 == null) return;
 
+			// Lấy kích thước của Form
+			int formWidth = this.ClientSize.Width;
+			int formHeight = this.ClientSize.Height;
+
+			// Lấy kích thước của TabControl
+			int tabWidth = tabControl1.Width;
+			int tabHeight = tabControl1.Height;
+
+			// Tính toán vị trí để căn giữa
+			int x = (formWidth - tabWidth) / 2;
+			int y = (formHeight - tabHeight) / 2;
+
+			// Gán lại vị trí
+			tabControl1.Location = new Point(x, y);
+		}
 		private void Dangnhap_Load(object sender, EventArgs e)
 		{
 

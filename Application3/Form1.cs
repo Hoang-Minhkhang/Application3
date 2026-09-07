@@ -1634,19 +1634,7 @@ namespace Application3
 
 		}
 
-		private void toolStripStatusLabel1_Click(object sender, EventArgs e)
-		{
-			if (dangnhap == true)
-			{
-				toolStripStatusLabel1.Text = $"Người dùng: {currentUsername} | Trạng thái: Đăng nhập";
-				MessageBox.Show($"Người dùng hiện tại: {currentUsername}", "Thông tin người dùng", MessageBoxButtons.OK, MessageBoxIcon.Information);
-			}
-			else
-			{
-				MessageBox.Show("Chưa có người dùng nào đăng nhập.", "Thông tin người dùng", MessageBoxButtons.OK, MessageBoxIcon.Information);
-				toolStripStatusLabel1.Text = "Người dùng: Không có | Trạng thái: Chưa đăng nhập";
-			}
-		}
+		
 
 		private void trởVềD8angNhậpToolStripMenuItem_Click(object sender, EventArgs e)
 		{
