@@ -209,6 +209,8 @@
 			this.button17 = new System.Windows.Forms.Button();
 			this.button16 = new System.Windows.Forms.Button();
 			this.label57 = new System.Windows.Forms.Label();
+			this.groupBox25 = new System.Windows.Forms.GroupBox();
+			this.pictureBox3 = new System.Windows.Forms.PictureBox();
 			this.tabPage6 = new System.Windows.Forms.TabPage();
 			this.groupBox13 = new System.Windows.Forms.GroupBox();
 			this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -486,8 +488,6 @@
 			this.contextMenuStrip5 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.pictureBox5 = new System.Windows.Forms.PictureBox();
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-			this.groupBox25 = new System.Windows.Forms.GroupBox();
-			this.pictureBox3 = new System.Windows.Forms.PictureBox();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.groupBox12.SuspendLayout();
@@ -513,6 +513,8 @@
 			this.groupBox7.SuspendLayout();
 			this.tableLayoutPanel3.SuspendLayout();
 			this.groupBox8.SuspendLayout();
+			this.groupBox25.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
 			this.tabPage6.SuspendLayout();
 			this.groupBox13.SuspendLayout();
 			this.tableLayoutPanel4.SuspendLayout();
@@ -541,8 +543,6 @@
 			this.menuStrip1.SuspendLayout();
 			this.statusStrip2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-			this.groupBox25.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// tabControl1
@@ -1088,7 +1088,7 @@
 			this.tabPage2.Location = new System.Drawing.Point(4, 22);
 			this.tabPage2.Name = "tabPage2";
 			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage2.Size = new System.Drawing.Size(1129, 626);
+			this.tabPage2.Size = new System.Drawing.Size(1143, 654);
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "Thông tin chung ";
 			this.tabPage2.UseVisualStyleBackColor = true;
@@ -1296,7 +1296,7 @@
 			this.pictureBox2.Image = global::Application3.Properties.Resources.Airbus_SIGINT_aircraft_proposal_for_Spain;
 			this.pictureBox2.Location = new System.Drawing.Point(3, 3);
 			this.pictureBox2.Name = "pictureBox2";
-			this.pictureBox2.Size = new System.Drawing.Size(1123, 620);
+			this.pictureBox2.Size = new System.Drawing.Size(1137, 648);
 			this.pictureBox2.TabIndex = 1;
 			this.pictureBox2.TabStop = false;
 			// 
@@ -1313,7 +1313,7 @@
 			this.tabPage3.Location = new System.Drawing.Point(4, 22);
 			this.tabPage3.Name = "tabPage3";
 			this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage3.Size = new System.Drawing.Size(1129, 626);
+			this.tabPage3.Size = new System.Drawing.Size(1143, 654);
 			this.tabPage3.TabIndex = 2;
 			this.tabPage3.Text = "Tác vụ ";
 			this.tabPage3.UseVisualStyleBackColor = true;
@@ -2641,6 +2641,31 @@
 			this.label57.TabIndex = 19;
 			this.label57.Text = "Không có công cụ chỉnh sửa nào ";
 			// 
+			// groupBox25
+			// 
+			this.groupBox25.Controls.Add(this.pictureBox3);
+			this.groupBox25.Dock = System.Windows.Forms.DockStyle.Left;
+			this.groupBox25.Location = new System.Drawing.Point(3, 3);
+			this.groupBox25.Name = "groupBox25";
+			this.groupBox25.Size = new System.Drawing.Size(811, 648);
+			this.groupBox25.TabIndex = 9;
+			this.groupBox25.TabStop = false;
+			this.groupBox25.Text = "ThoiKhoaBieu";
+			// 
+			// pictureBox3
+			// 
+			this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Cross;
+			this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+			this.pictureBox3.Location = new System.Drawing.Point(3, 16);
+			this.pictureBox3.Name = "pictureBox3";
+			this.pictureBox3.Size = new System.Drawing.Size(805, 629);
+			this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pictureBox3.TabIndex = 1;
+			this.pictureBox3.TabStop = false;
+			this.pictureBox3.Visible = false;
+			this.pictureBox3.WaitOnLoad = true;
+			// 
 			// tabPage6
 			// 
 			this.tabPage6.Controls.Add(this.groupBox13);
@@ -2650,7 +2675,7 @@
 			this.tabPage6.Location = new System.Drawing.Point(4, 22);
 			this.tabPage6.Name = "tabPage6";
 			this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage6.Size = new System.Drawing.Size(1129, 626);
+			this.tabPage6.Size = new System.Drawing.Size(1143, 654);
 			this.tabPage6.TabIndex = 5;
 			this.tabPage6.Text = "Settings";
 			this.tabPage6.UseVisualStyleBackColor = true;
@@ -3355,7 +3380,7 @@
 			this.tabPage7.Location = new System.Drawing.Point(4, 22);
 			this.tabPage7.Name = "tabPage7";
 			this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage7.Size = new System.Drawing.Size(1129, 626);
+			this.tabPage7.Size = new System.Drawing.Size(1143, 654);
 			this.tabPage7.TabIndex = 6;
 			this.tabPage7.Text = "PrintPreview";
 			this.tabPage7.UseVisualStyleBackColor = true;
@@ -3364,9 +3389,9 @@
 			// vScrollBar1
 			// 
 			this.vScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
-			this.vScrollBar1.Location = new System.Drawing.Point(1109, 106);
+			this.vScrollBar1.Location = new System.Drawing.Point(1123, 106);
 			this.vScrollBar1.Name = "vScrollBar1";
-			this.vScrollBar1.Size = new System.Drawing.Size(17, 517);
+			this.vScrollBar1.Size = new System.Drawing.Size(17, 545);
 			this.vScrollBar1.TabIndex = 3;
 			this.vScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.vScrollBar1_Scroll);
 			// 
@@ -3380,7 +3405,7 @@
 			this.groupBox14.Dock = System.Windows.Forms.DockStyle.Top;
 			this.groupBox14.Location = new System.Drawing.Point(3, 3);
 			this.groupBox14.Name = "groupBox14";
-			this.groupBox14.Size = new System.Drawing.Size(1123, 103);
+			this.groupBox14.Size = new System.Drawing.Size(1137, 103);
 			this.groupBox14.TabIndex = 1;
 			this.groupBox14.TabStop = false;
 			this.groupBox14.Text = "Action";
@@ -3446,7 +3471,7 @@
 			this.CuaSoIn.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.CuaSoIn.Location = new System.Drawing.Point(3, 3);
 			this.CuaSoIn.Name = "CuaSoIn";
-			this.CuaSoIn.Size = new System.Drawing.Size(1123, 620);
+			this.CuaSoIn.Size = new System.Drawing.Size(1137, 648);
 			this.CuaSoIn.TabIndex = 0;
 			this.CuaSoIn.Click += new System.EventHandler(this.CuaSoIn_Click);
 			// 
@@ -3489,7 +3514,7 @@
 			this.tabPage8.Location = new System.Drawing.Point(4, 22);
 			this.tabPage8.Name = "tabPage8";
 			this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage8.Size = new System.Drawing.Size(1129, 626);
+			this.tabPage8.Size = new System.Drawing.Size(1143, 654);
 			this.tabPage8.TabIndex = 7;
 			this.tabPage8.Text = "Net Support Work ";
 			this.tabPage8.UseVisualStyleBackColor = true;
@@ -3781,7 +3806,7 @@
 			this.tabPage9.Location = new System.Drawing.Point(4, 22);
 			this.tabPage9.Name = "tabPage9";
 			this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage9.Size = new System.Drawing.Size(1129, 626);
+			this.tabPage9.Size = new System.Drawing.Size(1143, 654);
 			this.tabPage9.TabIndex = 8;
 			this.tabPage9.Text = "khởi động ca làm ";
 			this.tabPage9.UseVisualStyleBackColor = true;
@@ -4124,7 +4149,7 @@
 			this.tabPage10.Location = new System.Drawing.Point(4, 22);
 			this.tabPage10.Name = "tabPage10";
 			this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage10.Size = new System.Drawing.Size(1129, 626);
+			this.tabPage10.Size = new System.Drawing.Size(1143, 654);
 			this.tabPage10.TabIndex = 9;
 			this.tabPage10.Text = "log";
 			this.tabPage10.UseVisualStyleBackColor = true;
@@ -4166,7 +4191,7 @@
 			this.tabPage11.Location = new System.Drawing.Point(4, 22);
 			this.tabPage11.Name = "tabPage11";
 			this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage11.Size = new System.Drawing.Size(1129, 626);
+			this.tabPage11.Size = new System.Drawing.Size(1143, 654);
 			this.tabPage11.TabIndex = 10;
 			this.tabPage11.Text = "Useless Broswer ";
 			this.tabPage11.UseVisualStyleBackColor = true;
@@ -4177,7 +4202,7 @@
 			this.truyCapMang.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.truyCapMang.Location = new System.Drawing.Point(3, 51);
 			this.truyCapMang.Name = "truyCapMang";
-			this.truyCapMang.Size = new System.Drawing.Size(1123, 572);
+			this.truyCapMang.Size = new System.Drawing.Size(1137, 600);
 			this.truyCapMang.TabIndex = 1;
 			this.truyCapMang.TabStop = false;
 			this.truyCapMang.Text = "NoiDung";
@@ -4190,7 +4215,7 @@
 			this.webView22.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.webView22.Location = new System.Drawing.Point(3, 16);
 			this.webView22.Name = "webView22";
-			this.webView22.Size = new System.Drawing.Size(1117, 553);
+			this.webView22.Size = new System.Drawing.Size(1131, 581);
 			this.webView22.TabIndex = 0;
 			this.webView22.ZoomFactor = 1D;
 			// 
@@ -4205,7 +4230,7 @@
 			this.groupBox21.Dock = System.Windows.Forms.DockStyle.Top;
 			this.groupBox21.Location = new System.Drawing.Point(3, 3);
 			this.groupBox21.Name = "groupBox21";
-			this.groupBox21.Size = new System.Drawing.Size(1123, 48);
+			this.groupBox21.Size = new System.Drawing.Size(1137, 48);
 			this.groupBox21.TabIndex = 0;
 			this.groupBox21.TabStop = false;
 			this.groupBox21.Text = "Thanh Địa Chỉ ";
@@ -4284,7 +4309,7 @@
 			this.tabPage12.Location = new System.Drawing.Point(4, 22);
 			this.tabPage12.Name = "tabPage12";
 			this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage12.Size = new System.Drawing.Size(1129, 626);
+			this.tabPage12.Size = new System.Drawing.Size(1143, 654);
 			this.tabPage12.TabIndex = 11;
 			this.tabPage12.Text = "Report";
 			this.tabPage12.UseVisualStyleBackColor = true;
@@ -5247,6 +5272,7 @@
 			this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.toolStripTextBox1.Name = "toolStripTextBox1";
 			this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
+			this.toolStripTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.toolStripTextBox1_KeyDown);
 			this.toolStripTextBox1.Click += new System.EventHandler(this.toolStripTextBox1_Click);
 			// 
 			// contextMenuStrip1
@@ -5429,31 +5455,6 @@
 			this.pictureBox5.TabIndex = 4;
 			this.pictureBox5.TabStop = false;
 			// 
-			// groupBox25
-			// 
-			this.groupBox25.Controls.Add(this.pictureBox3);
-			this.groupBox25.Dock = System.Windows.Forms.DockStyle.Left;
-			this.groupBox25.Location = new System.Drawing.Point(3, 3);
-			this.groupBox25.Name = "groupBox25";
-			this.groupBox25.Size = new System.Drawing.Size(811, 648);
-			this.groupBox25.TabIndex = 9;
-			this.groupBox25.TabStop = false;
-			this.groupBox25.Text = "ThoiKhoaBieu";
-			// 
-			// pictureBox3
-			// 
-			this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Cross;
-			this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Top;
-			this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-			this.pictureBox3.Location = new System.Drawing.Point(3, 16);
-			this.pictureBox3.Name = "pictureBox3";
-			this.pictureBox3.Size = new System.Drawing.Size(805, 842);
-			this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pictureBox3.TabIndex = 1;
-			this.pictureBox3.TabStop = false;
-			this.pictureBox3.Visible = false;
-			this.pictureBox3.WaitOnLoad = true;
-			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5517,6 +5518,8 @@
 			this.tableLayoutPanel3.PerformLayout();
 			this.groupBox8.ResumeLayout(false);
 			this.groupBox8.PerformLayout();
+			this.groupBox25.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
 			this.tabPage6.ResumeLayout(false);
 			this.tabPage6.PerformLayout();
 			this.groupBox13.ResumeLayout(false);
@@ -5561,8 +5564,6 @@
 			this.statusStrip2.ResumeLayout(false);
 			this.statusStrip2.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-			this.groupBox25.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

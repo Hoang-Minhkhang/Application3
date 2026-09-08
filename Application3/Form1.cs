@@ -2810,6 +2810,8 @@ namespace Application3
 		{
 			counter++;
 			label131.Text = TimeSpan.FromSeconds(counter).ToString(@"hh\:mm\:ss");
+			this.Text = $"[{TimeSpan.FromSeconds(counter).ToString(@"hh\:mm\:ss")}]   MinhKhang.exe -{_username} ----- {textBox8.Text} ";
+
 		}
 		string msg = ""; 
 		private void button63_Click(object sender, EventArgs e)
@@ -2822,7 +2824,11 @@ namespace Application3
 			counter = 0;
 			label131.Text = "00:00:00"; // reset về 0
 			workTimer2.Start();
-			
+			this.Text= $"[Làm Việc] MinhKhang.exe -{_username} ----- {textBox8.Text} ";
+			ShowBalloonNotification(
+					$"Application3 :{nickname}",
+					"Quá trình làm việc đã bắt đầu"
+				);
 
 		}
 
@@ -2846,6 +2852,11 @@ namespace Application3
 			workTimer2.Stop();
 			TruyenForm2 += $"\n ----------------Kết thúc quá trình làm việc  {DateTime.Now} \n";
 			TruyenForm2 += $"\n Tổng thời gian làm việc: {TimeSpan.FromSeconds(counter)} \n";
+			this.Text = $"[Kết Thuc] - MinhKhang.exe -{_username}   ";
+			ShowBalloonNotification(
+					$"Application3 :{nickname}",
+					"Quá trình làm việc đã kết thúc"
+				);
 		}
 
 		private void button66_Click(object sender, EventArgs e)
@@ -3003,7 +3014,34 @@ namespace Application3
 				TruyenForm2 += $"\n \n --------lần {SoLanNhacLai} \n thời gian: {DateTime.Now:HH:mm:ss} \n thời gian dự kiến : {alarmTime:HH:mm:ss}  ";
 			}
 		}
+
+		private void toolStripTextBox1_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Enter)
+			{
+				if (toolStripTextBox1.Text=="W0")
+				{
+					tabControl1.SelectedIndex = 0;
+				}
+				else if (toolStripTextBox1.Text == "W1")
+				{
+					tabControl1.SelectedIndex = 1;
+				}
+				else if (toolStripTextBox1.Text=="W2" || toolStripTextBox1.Text=="task") tabControl1.SelectedIndex = 2;
+				else if (toolStripTextBox1.Text == "W3"|| toolStripTextBox1.Text=="time") tabControl1.SelectedIndex = 3;
+				else if (toolStripTextBox1.Text == "W4" || toolStripTextBox1.Text == "tkb") tabControl1.SelectedIndex = 4;
+				else if (toolStripTextBox1.Text == "W5") tabControl1.SelectedIndex = 5;
+				else if (toolStripTextBox1.Text == "W6" || toolStripTextBox1.Text == "print") tabControl1.SelectedIndex = 6;
+				else if (toolStripTextBox1.Text == "W7") tabControl1.SelectedIndex = 7;
+				else if (toolStripTextBox1.Text == "W8") tabControl1.SelectedIndex = 8;
+				else if (toolStripTextBox1.Text == "W9" ) tabControl1.SelectedIndex = 9;
+				else if (toolStripTextBox1.Text == "W10" || toolStripTextBox1.Text == "broswer") tabControl1.SelectedIndex = 10;
+				else if (toolStripTextBox1.Text == "W11") tabControl1.SelectedIndex = 11;
+				else if (toolStripTextBox1.Text == "W12" || toolStripTextBox1.Text == "work") tabControl1.SelectedIndex = 12;
+
+			}
 		}
+	}
 }
 
 
