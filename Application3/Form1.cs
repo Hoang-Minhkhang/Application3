@@ -2247,7 +2247,7 @@ namespace Application3
 				DateTime Temp = DateTime.Now;
 				DateTime alarmTime = Temp.AddSeconds(SoGiayConLai);
 				label126.Text = $"Thời gian kết thúc: {alarmTime:HH:mm:ss}";
-				TruyenForm2 += $"\n \n  --------lần {SoLanNhacLai} \n thời gian: {DateTime.Now:HH:mm:ss} \n thời gian dự kiến : {alarmTime:HH:mm:ss}  ";
+				TruyenForm2 += $"\n \n  --------lần {SoLanNhacLai} \n thời gian: {DateTime.Now:HH:mm:ss} \n thời gian dự kiến : {alarmTime:HH:mm:ss} \n số phút : {SoGiayConLai} ";
 			}
 			else
 			{
@@ -2502,7 +2502,7 @@ namespace Application3
 				DateTime Temp = DateTime.Now;
 				DateTime alarmTime = Temp.AddSeconds(SoGiayConLai);
 				label126.Text = $"Thời gian kết thúc: {alarmTime:HH:mm:ss}";
-				TruyenForm2 += $"\n \n --------lần {SoLanNhacLai} \n thời gian: {DateTime.Now:HH:mm:ss} \n thời gian dự kiến : {alarmTime:HH:mm:ss}  ";
+				TruyenForm2 += $"\n \n  --------lần {SoLanNhacLai} \n thời gian: {DateTime.Now:HH:mm:ss} \n thời gian dự kiến : {alarmTime:HH:mm:ss} \n số phút : {SoGiayConLai} ";
 
 			}
 			else
@@ -2614,7 +2614,7 @@ namespace Application3
 
 		private void btnExport_Click(object sender, EventArgs e)
 		{
-			TruyenForm2 += " \n ----Xuất vào thời gian " + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " ";
+			TruyenForm2 += " \n ----Xuất vào thời gian " + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + $"\n Tổng thời gian {TimerCount} phút ";
 			Form2 f2 = new Form2(_username, nickname, TruyenForm2);
 			f2.Show();
 		}
@@ -2645,7 +2645,7 @@ namespace Application3
 				DateTime Temp = DateTime.Now;
 				DateTime alarmTime = Temp.AddSeconds(SoGiayConLai);
 				label126.Text = $"Thời gian kết thúc: {alarmTime:HH:mm:ss}";
-				TruyenForm2 += $"\n \n --------lần {SoLanNhacLai} \n thời gian: {DateTime.Now:HH:mm:ss} \n thời gian dự kiến : {alarmTime:HH:mm:ss}  ";
+				TruyenForm2 += $"\n \n  --------lần {SoLanNhacLai} \n thời gian: {DateTime.Now:HH:mm:ss} \n thời gian dự kiến : {alarmTime:HH:mm:ss} \n số phút : {SoGiayConLai} ";
 
 			}
 			else
@@ -3011,7 +3011,7 @@ namespace Application3
 				DateTime Temp = DateTime.Now;
 				DateTime alarmTime = Temp.AddSeconds(SoGiayConLai);
 				label126.Text = $"Thời gian kết thúc: {alarmTime:HH:mm:ss}";
-				TruyenForm2 += $"\n \n --------lần {SoLanNhacLai} \n thời gian: {DateTime.Now:HH:mm:ss} \n thời gian dự kiến : {alarmTime:HH:mm:ss}  ";
+				TruyenForm2 += $"\n \n  --------lần {SoLanNhacLai} \n thời gian: {DateTime.Now:HH:mm:ss} \n thời gian dự kiến : {alarmTime:HH:mm:ss} \n số phút : {SoGiayConLai} ";
 			}
 		}
 
