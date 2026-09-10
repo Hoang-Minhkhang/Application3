@@ -173,7 +173,7 @@ namespace Application3
 		// Build the form title using application name and current username (if any)
 		private string GetFormTitle()
 		{
-			string appName = $"MinhKhang.exe- CONNECTED TO   {_username}";
+			string appName = $"MinhKhang.exe- Username :    {_username}";
 			const string appName2 = "Activation  ";
 			if (!string.IsNullOrEmpty(currentUsername))
 				return $"{appName} : {currentUsername}";
@@ -1177,17 +1177,12 @@ namespace Application3
 
 		private void button16_Click(object sender, EventArgs e)
 		{
-			DialogResult resu = MessageBox.Show("Bạn thấy thời khóa biểu này hết hạn và yêu cầu cập nhật ", "Xác nhận ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-			if (resu == DialogResult.Yes)
-			{
-				MessageBox.Show("Cảm ơn bạn đã đóng góp ý kiến , chúng tôi sẽ cập nhật thời khóa biểu sớm nhất có thể ", "Cập nhật TKB ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-			}
+			
 
 		}
 
 		private void button17_Click(object sender, EventArgs e)
 		{
-			DialogResult SDS = MessageBox.Show("Báo cáo ", "report", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
 		}
 
@@ -1214,7 +1209,7 @@ namespace Application3
 		int tkbhethangngay = 30;
 		int tkbhethangthang = 9;
 		int tkbhethangnam = 2026;
-		private void button18_Click(object sender, EventArgs e)
+		private void button18_Click_1(object sender, EventArgs e)
 		{
 			if (dangnhap == true)
 			{
@@ -1262,12 +1257,12 @@ namespace Application3
 
 		}
 
-		private void button20_Click(object sender, EventArgs e)
+		private void button20_Click_1(object sender, EventArgs e)
 		{
 			groupBox9.Visible = false;
 		}
 
-		private void button21_Click(object sender, EventArgs e)
+		private void button21_Click_1(object sender, EventArgs e)
 		{
 			groupBox9.Visible = true;
 
@@ -1425,7 +1420,7 @@ namespace Application3
 			CuaSoIn.Visible = !checkBox8.Checked;
 		}
 
-		private void button30_Click(object sender, EventArgs e)
+		private void button30_Click_1(object sender, EventArgs e)
 		{
 			if (dangnhap == true)
 			{
@@ -3038,9 +3033,32 @@ namespace Application3
 				else if (toolStripTextBox1.Text == "W10" || toolStripTextBox1.Text == "broswer") tabControl1.SelectedIndex = 10;
 				else if (toolStripTextBox1.Text == "W11") tabControl1.SelectedIndex = 11;
 				else if (toolStripTextBox1.Text == "W12" || toolStripTextBox1.Text == "work") tabControl1.SelectedIndex = 12;
+				else if (toolStripTextBox1.Text == "exit" || toolStripTextBox1.Text == "thoat") this.Close() ;
+				else if (toolStripTextBox1.Text == "notepad") { 
+					Form2 f2 = new Form2();
+					f2.Show();
+				}
 
 			}
 		}
+
+		private void button72_Click(object sender, EventArgs e)
+		{
+			if (workTimer2.Enabled)
+			{
+				// Nếu đang chạy thì tạm ngưng
+				workTimer2.Stop();
+				this.Text = $"[Tạm ngưng] MinhKhang.exe -{_username} ----- {textBox8.Text} ";
+
+			}
+			else
+			{
+				// Nếu không chạy thì chạy lại (resume)
+				workTimer2.Start();
+			}
+		}
+
+	
 	}
 }
 

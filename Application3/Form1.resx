@@ -7309,6 +7309,9 @@
   <metadata name="menuStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>286, 17</value>
   </metadata>
+  <metadata name="menuStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>286, 17</value>
+  </metadata>
   <data name="label82.Text" xml:space="preserve">
     <value>Lưu ý trong quá trình sử dụng printpreviewApplication3.exe 
  Trong quá trình sử dụng nều không có tệp được input vào thì phần mềm sẽ báo lỗi 

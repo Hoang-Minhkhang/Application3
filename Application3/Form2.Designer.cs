@@ -35,6 +35,9 @@
 			this.saveFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.printOptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.printNowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.notAVAILABLEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutUsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.process1 = new System.Diagnostics.Process();
@@ -49,9 +52,6 @@
 			this.tabPage3 = new System.Windows.Forms.TabPage();
 			this.button1 = new System.Windows.Forms.Button();
 			this.label4 = new System.Windows.Forms.Label();
-			this.printOptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.printNowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.notAVAILABLEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
@@ -112,6 +112,30 @@
 			this.openToolStripMenuItem.Text = "Open";
 			this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
 			// 
+			// printOptionToolStripMenuItem
+			// 
+			this.printOptionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.printNowToolStripMenuItem});
+			this.printOptionToolStripMenuItem.Name = "printOptionToolStripMenuItem";
+			this.printOptionToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
+			this.printOptionToolStripMenuItem.Text = "Print Option";
+			// 
+			// printNowToolStripMenuItem
+			// 
+			this.printNowToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.notAVAILABLEToolStripMenuItem});
+			this.printNowToolStripMenuItem.Name = "printNowToolStripMenuItem";
+			this.printNowToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+			this.printNowToolStripMenuItem.Text = "Print Now ";
+			this.printNowToolStripMenuItem.Click += new System.EventHandler(this.printNowToolStripMenuItem_Click);
+			// 
+			// notAVAILABLEToolStripMenuItem
+			// 
+			this.notAVAILABLEToolStripMenuItem.Name = "notAVAILABLEToolStripMenuItem";
+			this.notAVAILABLEToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+			this.notAVAILABLEToolStripMenuItem.Text = "Not AVAILABLE ";
+			this.notAVAILABLEToolStripMenuItem.Click += new System.EventHandler(this.notAVAILABLEToolStripMenuItem_Click);
+			// 
 			// helpToolStripMenuItem
 			// 
 			this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -142,10 +166,11 @@
 			this.tabControl1.Controls.Add(this.tabPage1);
 			this.tabControl1.Controls.Add(this.tabPage2);
 			this.tabControl1.Controls.Add(this.tabPage3);
-			this.tabControl1.Location = new System.Drawing.Point(0, 27);
+			this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.tabControl1.Location = new System.Drawing.Point(0, 24);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(973, 521);
+			this.tabControl1.Size = new System.Drawing.Size(973, 526);
 			this.tabControl1.TabIndex = 5;
 			// 
 			// tabPage1
@@ -154,7 +179,7 @@
 			this.tabPage1.Location = new System.Drawing.Point(4, 22);
 			this.tabPage1.Name = "tabPage1";
 			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage1.Size = new System.Drawing.Size(965, 495);
+			this.tabPage1.Size = new System.Drawing.Size(965, 500);
 			this.tabPage1.TabIndex = 0;
 			this.tabPage1.Text = "Notepad";
 			this.tabPage1.UseVisualStyleBackColor = true;
@@ -165,7 +190,7 @@
 			this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.richTextBox1.Location = new System.Drawing.Point(3, 3);
 			this.richTextBox1.Name = "richTextBox1";
-			this.richTextBox1.Size = new System.Drawing.Size(959, 489);
+			this.richTextBox1.Size = new System.Drawing.Size(959, 494);
 			this.richTextBox1.TabIndex = 0;
 			this.richTextBox1.Text = "Visit https://github.com/Hoang-Minhkhang/Application3/ for more info ";
 			this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
@@ -254,37 +279,13 @@
 			this.label4.TabIndex = 0;
 			this.label4.Text = "Hoàng  Minh Khang Application3.exe \r\nUPDATe\r\n";
 			// 
-			// printOptionToolStripMenuItem
-			// 
-			this.printOptionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.printNowToolStripMenuItem});
-			this.printOptionToolStripMenuItem.Name = "printOptionToolStripMenuItem";
-			this.printOptionToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
-			this.printOptionToolStripMenuItem.Text = "Print Option";
-			// 
-			// printNowToolStripMenuItem
-			// 
-			this.printNowToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.notAVAILABLEToolStripMenuItem});
-			this.printNowToolStripMenuItem.Name = "printNowToolStripMenuItem";
-			this.printNowToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.printNowToolStripMenuItem.Text = "Print Now ";
-			this.printNowToolStripMenuItem.Click += new System.EventHandler(this.printNowToolStripMenuItem_Click);
-			// 
-			// notAVAILABLEToolStripMenuItem
-			// 
-			this.notAVAILABLEToolStripMenuItem.Name = "notAVAILABLEToolStripMenuItem";
-			this.notAVAILABLEToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.notAVAILABLEToolStripMenuItem.Text = "Not AVAILABLE ";
-			this.notAVAILABLEToolStripMenuItem.Click += new System.EventHandler(this.notAVAILABLEToolStripMenuItem_Click);
-			// 
 			// Form2
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(973, 550);
-			this.Controls.Add(this.menuStrip1);
 			this.Controls.Add(this.tabControl1);
+			this.Controls.Add(this.menuStrip1);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MainMenuStrip = this.menuStrip1;
 			this.MaximizeBox = false;
