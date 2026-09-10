@@ -2834,7 +2834,7 @@ namespace Application3
 
 		private void button64_Click(object sender, EventArgs e)
 		{
-			TruyenForm2 += $"In Tiến Trình Làm Việc  {DateTime.Now} \n";
+			TruyenForm2 += $"\n In Tiến Trình Làm Việc  {DateTime.Now} \n";
 			Form2 f2 = new Form2(_username, nickname, TruyenForm2);
 			f2.Show();
 		}
@@ -2983,7 +2983,7 @@ namespace Application3
 			// Lấy nội dung từ richTextBox8 và richTextBox9
 			string text8 = richTextBox8.Text;
 			string text9 = richTextBox9.Text;
-			TruyenForm2+= $"\n \n thông tin checklist  \n {checkedItems} \n GHI CHÚ  {text8} \n Công Việc đạ làm  {text9} \n vào thời gian {DateTime.Now}";
+			TruyenForm2+= $"\n \n thông tin checklist  \n {checkedItems} \n GHI CHÚ  {text8} \n Công Việc đã làm  {text9} \n vào thời gian {DateTime.Now}";
 		}
 
 		private void button71_Click(object sender, EventArgs e)
