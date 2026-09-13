@@ -16,6 +16,7 @@ using System.Media;
 using System.Net.Http;
 using System.Runtime.ConstrainedExecution;
 using System.Runtime.Remoting.Messaging;
+using System.Security.Cryptography;
 using System.Security.Policy;
 using System.Security.RightsManagement;
 using System.Text;
@@ -26,6 +27,7 @@ using System.Windows.Media.TextFormatting;
 using WMPLib;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+
 // git add .   git commit -m "" , git push  origin main
 namespace Application3
 {
@@ -47,7 +49,7 @@ namespace Application3
 			_nickname = nickname;
 			bool dangnhap = true;
 			// Ví dụ: hiển thị username lên title
-			this.Text = $"Form1 - {_username}";
+			this.Text = $"Form1 - {_username} ({_nickname})";
 			string currentusername = _username;
 			label2.Text = _username;
 			ttdangnhap.Text = _nickname;
@@ -173,7 +175,7 @@ namespace Application3
 		// Build the form title using application name and current username (if any)
 		private string GetFormTitle()
 		{
-			string appName = $"MinhKhang.exe- Username :    {_username}";
+			string appName = $"MinhKhang.exe- Username :    {_username} ({_nickname})|||Connected to (https://hoang-minhkhang.github.io/Application3)";
 			const string appName2 = "Activation  ";
 			if (!string.IsNullOrEmpty(currentUsername))
 				return $"{appName} : {currentUsername}";
@@ -1438,9 +1440,10 @@ namespace Application3
 				{
 					sfd.Filter = "PDF files (*.pdf)|*.pdf";
 					sfd.FileName = "ThoiKhoaBieu.pdf";
+					
+					
 					if (sfd.ShowDialog() != DialogResult.OK) return;
 					string outputPath = sfd.FileName;
-
 					var pd = new System.Drawing.Printing.PrintDocument();
 					try
 					{
@@ -1502,6 +1505,11 @@ namespace Application3
 
 						pd.Print();
 						MessageBox.Show("Đã xuất thành công: " + outputPath, "Hoàn tất", MessageBoxButtons.OK, MessageBoxIcon.Information);
+						pdfDocument = PdfDocument.Load(sfd.FileName);
+						coTep = true;
+						// Gắn vào PrintPreviewControl (CuaSoIn)
+						CuaSoIn.Document = pdfDocument.CreatePrintDocument();
+						tabControl1.SelectedIndex = 6; 
 					}
 					catch (Exception ex)
 					{
@@ -2800,17 +2808,23 @@ namespace Application3
 		private void button62_Click(object sender, EventArgs e)
 		{
 			tabControl1.SelectedIndex = 4;
+			label130.BackColor=Color.Green;
 		}
 		private void WorkTimer2_Tick(object sender, EventArgs e)
 		{
 			counter++;
 			label131.Text = TimeSpan.FromSeconds(counter).ToString(@"hh\:mm\:ss");
-			this.Text = $"[{TimeSpan.FromSeconds(counter).ToString(@"hh\:mm\:ss")}]   MinhKhang.exe -{_username} ----- {textBox8.Text} ";
+			this.Text = $"[{TimeSpan.FromSeconds(counter).ToString(@"hh\:mm\:ss")}]   MinhKhang.exe -{_username} ----- {textBox8.Text} {_username}     |||Connected to https://hoang-minhkhang.github.io/Application3";
 
 		}
 		string msg = ""; 
 		private void button63_Click(object sender, EventArgs e)
 		{
+			if (textBox8.Text=="" && textBox9.Text=="")
+			{
+				MessageBox.Show("Vui lòng nhập tiêu đề và nội dung công việc.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+				return;
+			}
 			TruyenForm2 += $"\n \n  --------------Tiêu Đề Làm Việc   {textBox8.Text}--------- \n \n Nội Dung {textBox9.Text} \n vào thời gian {DateTime.Now}";
 			TruyenForm2 += $"\n -----BẮT ĐẦU QUÁ TRÌNH LÀM VIỆC  {DateTime.Now} \n";
 			LamViec = true;
@@ -2819,7 +2833,7 @@ namespace Application3
 			counter = 0;
 			label131.Text = "00:00:00"; // reset về 0
 			workTimer2.Start();
-			this.Text= $"[Làm Việc] MinhKhang.exe -{_username} ----- {textBox8.Text} ";
+			this.Text= $"[Làm Việc] MinhKhang.exe -{_username} ({_nickname}) ----- {textBox8.Text} ";
 			ShowBalloonNotification(
 					$"Application3 :{nickname}",
 					"Quá trình làm việc đã bắt đầu"
@@ -2829,7 +2843,7 @@ namespace Application3
 
 		private void button64_Click(object sender, EventArgs e)
 		{
-			TruyenForm2 += $"\n In Tiến Trình Làm Việc  {DateTime.Now} \n";
+			TruyenForm2 += $"\n In Tiến Trình Làm Việc  {DateTime.Now}  tổng thời gian là {label131.Text}\n";
 			Form2 f2 = new Form2(_username, nickname, TruyenForm2);
 			f2.Show();
 		}
@@ -2842,12 +2856,20 @@ namespace Application3
 		private void button65_Click(object sender, EventArgs e)
 		{
 			LamViec = false;
+			string checkedItems = string.Join("\n      ", checkedListBox5.CheckedItems.Cast<string>());
+
+			// Lấy nội dung từ richTextBox8 và richTextBox9
+			string text8 = richTextBox8.Text;
+			string text9 = richTextBox9.Text;
+			TruyenForm2 += $"\n \n thông tin checklist  \n {checkedItems} \n GHI CHÚ \n         {text8} \n Công Việc đã làm  \n       {text9} \n vào thời gian {DateTime.Now}";
 			label133.Text = "Không làm việc ";
 			label133.ForeColor = Color.Red;
 			workTimer2.Stop();
 			TruyenForm2 += $"\n ----------------Kết thúc quá trình làm việc  {DateTime.Now} \n";
 			TruyenForm2 += $"\n Tổng thời gian làm việc: {TimeSpan.FromSeconds(counter)} \n";
-			this.Text = $"[Kết Thuc] - MinhKhang.exe -{_username}   ";
+			this.Text = $"[Kết Thuc] - MinhKhang.exe -{_username} ({_nickname})   ";
+			Form2 f2 = new Form2(_username, nickname, TruyenForm2);
+			f2.Show();
 			ShowBalloonNotification(
 					$"Application3 :{nickname}",
 					"Quá trình làm việc đã kết thúc"
@@ -2973,12 +2995,12 @@ namespace Application3
 
 		private void button68_Click(object sender, EventArgs e)
 		{
-			string checkedItems = string.Join("\n  ", checkedListBox5.CheckedItems.Cast<string>());
+			string checkedItems = string.Join("\n      ", checkedListBox5.CheckedItems.Cast<string>());
 
 			// Lấy nội dung từ richTextBox8 và richTextBox9
 			string text8 = richTextBox8.Text;
 			string text9 = richTextBox9.Text;
-			TruyenForm2+= $"\n \n thông tin checklist  \n {checkedItems} \n GHI CHÚ  {text8} \n Công Việc đã làm  {text9} \n vào thời gian {DateTime.Now}";
+			TruyenForm2+= $"\n \n thông tin checklist  \n {checkedItems} \n GHI CHÚ \n         {text8} \n Công Việc đã làm  \n       {text9} \n vào thời gian {DateTime.Now}";
 		}
 
 		private void button71_Click(object sender, EventArgs e)
@@ -3048,17 +3070,53 @@ namespace Application3
 			{
 				// Nếu đang chạy thì tạm ngưng
 				workTimer2.Stop();
-				this.Text = $"[Tạm ngưng] MinhKhang.exe -{_username} ----- {textBox8.Text} ";
+				this.Text = $"[Tạm ngưng] MinhKhang.exe -{_username} ({_nickname}) ----- {textBox8.Text} ";
+				TruyenForm2+= $"\n /! [Tạm ngưng] {DateTime.Now:HH:mm:ss} \n";
+				label133.Text = "Tạm Ngưng  ";
+				label133.ForeColor = Color.Orange;
 
 			}
 			else
 			{
 				// Nếu không chạy thì chạy lại (resume)
 				workTimer2.Start();
+				LamViec = true;
+				label133.Text = "Đang làm việc ";
+				label133.ForeColor = Color.Green;
 			}
 		}
 
-	
+		private void button16_Click_1(object sender, EventArgs e)
+		{
+			label41.BackColor = Color.Green;
+			tabControl1.SelectedIndex = 10;
+			richTextBox7.AppendText($"{DateTime.Now} - {cuser} đang truy cập website hoctructuyen \n");
+			webView22.CoreWebView2.Navigate("https://hoctructuyen.hcm.edu.vn/");
+		}
+
+		private void DiaChiThanh_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Enter)
+			{
+				string url = DiaChiThanh.Text.Trim();
+				richTextBox7.AppendText("" + $"{DateTime.Now} -Truy cập internet  {cuser} - ({nickname})\n");
+				if (string.IsNullOrEmpty(url))
+				{
+					MessageBox.Show("Nhập địa chỉ .");
+					return;
+				}
+
+				// Nếu người dùng quên http:// thì tự thêm vào
+				if (!url.StartsWith("http://") && !url.StartsWith("https://"))
+				{
+					url = "https://" + url;
+				}
+				if (webView22.CoreWebView2 != null)
+				{
+					webView22.CoreWebView2.Navigate(url);
+				}
+			}
+		}
 	}
 }
 
