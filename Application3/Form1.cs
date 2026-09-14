@@ -54,7 +54,7 @@ namespace Application3
 			label2.Text = _username;
 			ttdangnhap.Text = _nickname;
 			tabControl1.SelectedIndex = 1;
-			usernameToolStripMenuItem.Text = _username;
+			usernameToolStripMenuItem.Text = _nickname;
 
 
 		}
@@ -1208,7 +1208,7 @@ namespace Application3
 		{
 			MessageBox.Show("Nếu bạn nhập sai mã khu vực - đồng nghĩa việc tài khoản của bạn không hợp lệ ", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
-		int tkbhethangngay = 30;
+		int tkbhethangngay = 21;
 		int tkbhethangthang = 9;
 		int tkbhethangnam = 2026;
 		private void button18_Click_1(object sender, EventArgs e)

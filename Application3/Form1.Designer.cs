@@ -2425,9 +2425,9 @@
 			this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label53.Location = new System.Drawing.Point(129, 124);
 			this.label53.Name = "label53";
-			this.label53.Size = new System.Drawing.Size(67, 15);
+			this.label53.Size = new System.Drawing.Size(72, 15);
 			this.label53.TabIndex = 14;
-			this.label53.Text = "không biết ";
+			this.label53.Text = "21 09 2026 ";
 			// 
 			// label52
 			// 
