@@ -202,6 +202,7 @@
 			this.linkLabel3 = new System.Windows.Forms.LinkLabel();
 			this.label44 = new System.Windows.Forms.Label();
 			this.label46 = new System.Windows.Forms.Label();
+			this.label57 = new System.Windows.Forms.Label();
 			this.label39 = new System.Windows.Forms.Label();
 			this.tabPage6 = new System.Windows.Forms.TabPage();
 			this.groupBox13 = new System.Windows.Forms.GroupBox();
@@ -2320,10 +2321,11 @@
 			this.tableLayoutPanel3.Controls.Add(this.linkLabel3, 1, 7);
 			this.tableLayoutPanel3.Controls.Add(this.label44, 0, 3);
 			this.tableLayoutPanel3.Controls.Add(this.label46, 0, 2);
+			this.tableLayoutPanel3.Controls.Add(this.label57, 0, 11);
 			this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 16);
 			this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-			this.tableLayoutPanel3.RowCount = 11;
+			this.tableLayoutPanel3.RowCount = 12;
 			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
 			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
 			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -2334,7 +2336,8 @@
 			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
 			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
 			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 194F));
+			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
 			this.tableLayoutPanel3.Size = new System.Drawing.Size(255, 500);
 			this.tableLayoutPanel3.TabIndex = 2;
 			this.tableLayoutPanel3.Visible = false;
@@ -2377,7 +2380,7 @@
 			this.label61.Name = "label61";
 			this.label61.Size = new System.Drawing.Size(65, 15);
 			this.label61.TabIndex = 20;
-			this.label61.Text = "30 9 2026 ";
+			this.label61.Text = "21 9 2026 ";
 			// 
 			// label60
 			// 
@@ -2558,6 +2561,16 @@
 			this.label46.Size = new System.Drawing.Size(118, 45);
 			this.label46.TabIndex = 7;
 			this.label46.Text = "Bản quyền riêng tư do người cung cấp ";
+			// 
+			// label57
+			// 
+			this.label57.AutoSize = true;
+			this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label57.Location = new System.Drawing.Point(3, 468);
+			this.label57.Name = "label57";
+			this.label57.Size = new System.Drawing.Size(63, 18);
+			this.label57.TabIndex = 27;
+			this.label57.Text = "READY";
 			// 
 			// label39
 			// 
@@ -5968,6 +5981,7 @@
 		private System.Windows.Forms.Label label39;
 		private System.Windows.Forms.Button button16;
 		private System.Windows.Forms.Label label41;
+		private System.Windows.Forms.Label label57;
 	}
 }
 

@@ -1445,8 +1445,10 @@ namespace Application3
 					if (sfd.ShowDialog() != DialogResult.OK) return;
 					string outputPath = sfd.FileName;
 					var pd = new System.Drawing.Printing.PrintDocument();
+					label57.Text = "Đang xuất PDF ...";
 					try
 					{
+						
 						// Try to use Microsoft Print to PDF if available
 						const string pdfPrinterName = "Microsoft Print to PDF";
 						if (pd.PrinterSettings.IsValid && Array.IndexOf(System.Drawing.Printing.PrinterSettings.InstalledPrinters.Cast<string>().ToArray(), pdfPrinterName) >= 0)
@@ -1505,6 +1507,7 @@ namespace Application3
 
 						pd.Print();
 						MessageBox.Show("Đã xuất thành công: " + outputPath, "Hoàn tất", MessageBoxButtons.OK, MessageBoxIcon.Information);
+						label57.Text = "READY"; 
 						pdfDocument = PdfDocument.Load(sfd.FileName);
 						coTep = true;
 						// Gắn vào PrintPreviewControl (CuaSoIn)
