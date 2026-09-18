@@ -1208,7 +1208,7 @@ namespace Application3
 		{
 			MessageBox.Show("Nếu bạn nhập sai mã khu vực - đồng nghĩa việc tài khoản của bạn không hợp lệ ", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
-		int tkbhethangngay = 21;
+		int tkbhethangngay = 30;
 		int tkbhethangthang = 9;
 		int tkbhethangnam = 2026;
 		private void button18_Click_1(object sender, EventArgs e)
