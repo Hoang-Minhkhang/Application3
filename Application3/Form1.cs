@@ -100,7 +100,7 @@ namespace Application3
 				label122.Text = "Hết giờ!";
 				label134.Text = "Hết giờ!";
 				label122.ForeColor = Color.Red;
-				ShowBalloonNotification("Thông báo", "Đã hết giờ!");
+				ShowBalloonNotification("Thông báo", $"Đã hết giờ cho {TieuDe.Text }");
 			}
 		}
 		//player.URL = selectedFile;

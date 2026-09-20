@@ -484,6 +484,8 @@
 			this.contextMenuStrip5 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.pictureBox5 = new System.Windows.Forms.PictureBox();
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+			this.TieuDe = new System.Windows.Forms.TextBox();
+			this.label58 = new System.Windows.Forms.Label();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.groupBox12.SuspendLayout();
@@ -1722,6 +1724,8 @@
 			// 
 			// Rev
 			// 
+			this.Rev.Controls.Add(this.label58);
+			this.Rev.Controls.Add(this.TieuDe);
 			this.Rev.Controls.Add(this.label126);
 			this.Rev.Controls.Add(this.label125);
 			this.Rev.Controls.Add(this.SoLanBao);
@@ -5414,6 +5418,23 @@
 			this.pictureBox5.TabIndex = 4;
 			this.pictureBox5.TabStop = false;
 			// 
+			// TieuDe
+			// 
+			this.TieuDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.TieuDe.Location = new System.Drawing.Point(500, 8);
+			this.TieuDe.Name = "TieuDe";
+			this.TieuDe.Size = new System.Drawing.Size(438, 31);
+			this.TieuDe.TabIndex = 29;
+			// 
+			// label58
+			// 
+			this.label58.AutoSize = true;
+			this.label58.Location = new System.Drawing.Point(407, 16);
+			this.label58.Name = "label58";
+			this.label58.Size = new System.Drawing.Size(40, 13);
+			this.label58.TabIndex = 30;
+			this.label58.Text = "TITLE ";
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5982,6 +6003,8 @@
 		private System.Windows.Forms.Button button16;
 		private System.Windows.Forms.Label label41;
 		private System.Windows.Forms.Label label57;
+		private System.Windows.Forms.Label label58;
+		private System.Windows.Forms.TextBox TieuDe;
 	}
 }
 

@@ -456,7 +456,7 @@
 			this.MaximizeBox = false;
 			this.Name = "Dangnhap";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Application3.exe ";
+			this.Text = "Application3.exe (Last Update 19 9 2026 )";
 			this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.Dangnhap_HelpButtonClicked);
 			this.Load += new System.EventHandler(this.Dangnhap_Load);
 			this.groupBox1.ResumeLayout(false);
