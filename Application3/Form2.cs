@@ -29,7 +29,7 @@ namespace Application3
 			InitializeComponent();
 			currentUser = username;
 			this.Nickname = nickname; // gán vào property
-			richTextBox1.Text= "HI " + username + " !\n\nVisit https://github.com/Hoang-Minhkhang/Application3/ for more infomation  \n to save this document : option->saveFile \n  ";
+			richTextBox1.Text= "HI " + username + " !\n\nVisit https://github.com/Hoang-Minhkhang/Application3/ for more information  \n to save this document : option->saveFile \n  ";
 			richTextBox1.Text += "\n Sign in as " + username +" at " +DateTime.Now + " \n " + TruyenForm2;
 		}
 

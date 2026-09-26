@@ -1208,8 +1208,8 @@ namespace Application3
 		{
 			MessageBox.Show("Nếu bạn nhập sai mã khu vực - đồng nghĩa việc tài khoản của bạn không hợp lệ ", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
-		int tkbhethangngay = 30;
-		int tkbhethangthang = 9;
+		int tkbhethangngay = 10;
+		int tkbhethangthang = 10;
 		int tkbhethangnam = 2026;
 		private void button18_Click_1(object sender, EventArgs e)
 		{
@@ -2620,7 +2620,7 @@ namespace Application3
 
 		private void btnExport_Click(object sender, EventArgs e)
 		{
-			TruyenForm2 += " \n ----Xuất vào thời gian " + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + $"\n Tổng thời gian {TimerCount} phút ";
+			TruyenForm2 += $" \n ----Xuất vào thời gian \n tên {TieuDe.Text} " + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + $"\n Tổng thời gian {TimerCount} phút ";
 			Form2 f2 = new Form2(_username, nickname, TruyenForm2);
 			f2.Show();
 		}

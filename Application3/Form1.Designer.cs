@@ -132,6 +132,8 @@
 			this.button32 = new System.Windows.Forms.Button();
 			this.checkBox10 = new System.Windows.Forms.CheckBox();
 			this.Rev = new System.Windows.Forms.GroupBox();
+			this.label58 = new System.Windows.Forms.Label();
+			this.TieuDe = new System.Windows.Forms.TextBox();
 			this.label126 = new System.Windows.Forms.Label();
 			this.label125 = new System.Windows.Forms.Label();
 			this.SoLanBao = new System.Windows.Forms.Label();
@@ -484,8 +486,6 @@
 			this.contextMenuStrip5 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.pictureBox5 = new System.Windows.Forms.PictureBox();
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-			this.TieuDe = new System.Windows.Forms.TextBox();
-			this.label58 = new System.Windows.Forms.Label();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.groupBox12.SuspendLayout();
@@ -1755,6 +1755,23 @@
 			this.Rev.Text = "Hengiodingu";
 			this.Rev.Enter += new System.EventHandler(this.Rev_Enter);
 			// 
+			// label58
+			// 
+			this.label58.AutoSize = true;
+			this.label58.Location = new System.Drawing.Point(407, 16);
+			this.label58.Name = "label58";
+			this.label58.Size = new System.Drawing.Size(40, 13);
+			this.label58.TabIndex = 30;
+			this.label58.Text = "TITLE ";
+			// 
+			// TieuDe
+			// 
+			this.TieuDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.TieuDe.Location = new System.Drawing.Point(500, 8);
+			this.TieuDe.Name = "TieuDe";
+			this.TieuDe.Size = new System.Drawing.Size(438, 31);
+			this.TieuDe.TabIndex = 29;
+			// 
 			// label126
 			// 
 			this.label126.AutoSize = true;
@@ -2349,7 +2366,7 @@
 			// button30
 			// 
 			this.button30.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.button30.Location = new System.Drawing.Point(3, 277);
+			this.button30.Location = new System.Drawing.Point(3, 232);
 			this.button30.Name = "button30";
 			this.button30.Size = new System.Drawing.Size(83, 24);
 			this.button30.TabIndex = 26;
@@ -2360,7 +2377,7 @@
 			// button21
 			// 
 			this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.button21.Location = new System.Drawing.Point(129, 277);
+			this.button21.Location = new System.Drawing.Point(129, 232);
 			this.button21.Name = "button21";
 			this.button21.Size = new System.Drawing.Size(123, 25);
 			this.button21.TabIndex = 25;
@@ -2380,17 +2397,17 @@
 			// 
 			this.label61.AutoSize = true;
 			this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label61.Location = new System.Drawing.Point(129, 259);
+			this.label61.Location = new System.Drawing.Point(129, 214);
 			this.label61.Name = "label61";
-			this.label61.Size = new System.Drawing.Size(65, 15);
+			this.label61.Size = new System.Drawing.Size(75, 15);
 			this.label61.TabIndex = 20;
-			this.label61.Text = "30 9 2026 ";
+			this.label61.Text = "10 10  2026 ";
 			// 
 			// label60
 			// 
 			this.label60.AutoSize = true;
 			this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label60.Location = new System.Drawing.Point(3, 259);
+			this.label60.Location = new System.Drawing.Point(3, 214);
 			this.label60.Name = "label60";
 			this.label60.Size = new System.Drawing.Size(92, 15);
 			this.label60.TabIndex = 19;
@@ -2402,9 +2419,9 @@
 			this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label56.Location = new System.Drawing.Point(129, 169);
 			this.label56.Name = "label56";
-			this.label56.Size = new System.Drawing.Size(120, 90);
+			this.label56.Size = new System.Drawing.Size(121, 45);
 			this.label56.TabIndex = 18;
-			this.label56.Text = "THời khóa biểu áp dụng vào đầu năm 2026 \r\nlần cập nhật lần  thứ ba \r\n\r\n";
+			this.label56.Text = "Thời khóa biểu lần 3 \r\nlast update 25092026\r\n";
 			// 
 			// label55
 			// 
@@ -2454,7 +2471,7 @@
 			this.label51.Name = "label51";
 			this.label51.Size = new System.Drawing.Size(62, 15);
 			this.label51.TabIndex = 12;
-			this.label51.Text = "21 9 2026";
+			this.label51.Text = "28 9 2026";
 			// 
 			// label50
 			// 
@@ -2514,7 +2531,7 @@
 			this.label43.Name = "label43";
 			this.label43.Size = new System.Drawing.Size(51, 15);
 			this.label43.TabIndex = 4;
-			this.label43.Text = "TKB_L2";
+			this.label43.Text = "TKB_L3";
 			// 
 			// label42
 			// 
@@ -2570,7 +2587,7 @@
 			// 
 			this.label57.AutoSize = true;
 			this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label57.Location = new System.Drawing.Point(3, 468);
+			this.label57.Location = new System.Drawing.Point(3, 423);
 			this.label57.Name = "label57";
 			this.label57.Size = new System.Drawing.Size(63, 18);
 			this.label57.TabIndex = 27;
@@ -5417,23 +5434,6 @@
 			this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.pictureBox5.TabIndex = 4;
 			this.pictureBox5.TabStop = false;
-			// 
-			// TieuDe
-			// 
-			this.TieuDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.TieuDe.Location = new System.Drawing.Point(500, 8);
-			this.TieuDe.Name = "TieuDe";
-			this.TieuDe.Size = new System.Drawing.Size(438, 31);
-			this.TieuDe.TabIndex = 29;
-			// 
-			// label58
-			// 
-			this.label58.AutoSize = true;
-			this.label58.Location = new System.Drawing.Point(407, 16);
-			this.label58.Name = "label58";
-			this.label58.Size = new System.Drawing.Size(40, 13);
-			this.label58.TabIndex = 30;
-			this.label58.Text = "TITLE ";
 			// 
 			// Form1
 			// 
