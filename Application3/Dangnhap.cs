@@ -37,6 +37,7 @@ namespace Application3
 				{ "Test", "test@123" },
 				{ "TurboLines", "TurboLines@123" },
 				{ "User1005", "123456987" }
+				// DO NOT SHARE ANY INFORMATION IN THIS CHECK thank you ! 
 			};
 			
 			if (credentials.TryGetValue(username, out var expected) && expected == password)
@@ -51,6 +52,7 @@ namespace Application3
 					{ "Test", "Người dùng thử" },
 					{ "TurboLines", "ToNguyenCat" },
 					{ "User1005", "DuyKhang" }
+					// DO NOT SHARE PRIVATE INFORMATION .
 				};
 
 				string nickname;

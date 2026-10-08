@@ -2846,7 +2846,7 @@ namespace Application3
 
 		private void button64_Click(object sender, EventArgs e)
 		{
-			TruyenForm2 += $"\n In Tiến Trình Làm Việc  {DateTime.Now}  tổng thời gian là {label131.Text}\n";
+			TruyenForm2 += $"\n In Tiến Trình Làm Việc  {DateTime.Now}  tổng thời gian tạm tính là {label131.Text}\n";
 			Form2 f2 = new Form2(_username, nickname, TruyenForm2);
 			f2.Show();
 		}
@@ -2952,7 +2952,7 @@ namespace Application3
 		}
 		private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
 		{
-			string selected = comboBox1.SelectedItem?.ToString();
+			string selected = comboBox1.SelectedItem?.ToString()   ;
 			if (!string.IsNullOrEmpty(selected))
 			{
 				richTextBox9.AppendText(selected + Environment.NewLine);
@@ -2976,7 +2976,7 @@ namespace Application3
 			}
 			if (e.KeyCode == Keys.Enter)
 			{
-				string selected = comboBox1.Text.Trim();
+				string selected = $" {comboBox1.Text.Trim() }   vào lúc {DateTime.Now:dd/MM/yyyy HH:mm:ss}";
 				if (!string.IsNullOrEmpty(selected))
 				{
 					richTextBox9.AppendText(selected + Environment.NewLine);
