@@ -2401,7 +2401,7 @@
 			this.label61.Name = "label61";
 			this.label61.Size = new System.Drawing.Size(75, 15);
 			this.label61.TabIndex = 20;
-			this.label61.Text = "10 10  2026 ";
+			this.label61.Text = "25 10  2026 ";
 			// 
 			// label60
 			// 
@@ -2449,9 +2449,9 @@
 			this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label53.Location = new System.Drawing.Point(129, 124);
 			this.label53.Name = "label53";
-			this.label53.Size = new System.Drawing.Size(65, 15);
+			this.label53.Size = new System.Drawing.Size(69, 15);
 			this.label53.TabIndex = 14;
-			this.label53.Text = "30 9 2026 ";
+			this.label53.Text = "12 10 2026";
 			// 
 			// label52
 			// 
@@ -2469,9 +2469,9 @@
 			this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label51.Location = new System.Drawing.Point(129, 109);
 			this.label51.Name = "label51";
-			this.label51.Size = new System.Drawing.Size(62, 15);
+			this.label51.Size = new System.Drawing.Size(75, 15);
 			this.label51.TabIndex = 12;
-			this.label51.Text = "28 9 2026";
+			this.label51.Text = "12 10 2026  ";
 			// 
 			// label50
 			// 
@@ -2531,7 +2531,7 @@
 			this.label43.Name = "label43";
 			this.label43.Size = new System.Drawing.Size(51, 15);
 			this.label43.TabIndex = 4;
-			this.label43.Text = "TKB_L3";
+			this.label43.Text = "TKB_L4";
 			// 
 			// label42
 			// 

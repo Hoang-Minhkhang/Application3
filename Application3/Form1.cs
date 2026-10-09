@@ -1208,7 +1208,7 @@ namespace Application3
 		{
 			MessageBox.Show("Nếu bạn nhập sai mã khu vực - đồng nghĩa việc tài khoản của bạn không hợp lệ ", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
-		int tkbhethangngay = 10;
+		int tkbhethangngay = 25;
 		int tkbhethangthang = 10;
 		int tkbhethangnam = 2026;
 		private void button18_Click_1(object sender, EventArgs e)
@@ -1232,6 +1232,7 @@ namespace Application3
 					{
 						label53.Text = "Hết  Hiệu Lực ";
 						label53.ForeColor = Color.Red;
+						MessageBox.Show("Thời khóa biểu đã hết hạn , vui lòng liên hệ quản trị viên để được cấp lại ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 					}
 				}
 				catch (ArgumentOutOfRangeException)
