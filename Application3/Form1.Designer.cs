@@ -2421,7 +2421,7 @@
 			this.label56.Name = "label56";
 			this.label56.Size = new System.Drawing.Size(121, 45);
 			this.label56.TabIndex = 18;
-			this.label56.Text = "Thời khóa biểu lần 3 \r\nlast update 25092026\r\n";
+			this.label56.Text = "Thời khóa biểu lần 4 \r\nlast update 10102026\r\n";
 			// 
 			// label55
 			// 
@@ -5342,8 +5342,8 @@
 			// toolStripStatusLabel3
 			// 
 			this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-			this.toolStripStatusLabel3.Size = new System.Drawing.Size(157, 17);
-			this.toolStripStatusLabel3.Text = "MinhKhangApplication-ver3";
+			this.toolStripStatusLabel3.Size = new System.Drawing.Size(193, 17);
+			this.toolStripStatusLabel3.Text = "Application3 Last Update 10102026 ";
 			this.toolStripStatusLabel3.Click += new System.EventHandler(this.toolStripStatusLabel3_Click);
 			// 
 			// tinhtrang

@@ -68,6 +68,7 @@ namespace Application3
 		private int alarmTime = 0;
 		private string selectedFile;
 		private int SoLanNhacLai = 0;
+		private int num = 1;
 		private string TruyenForm2 = "";
 		private WindowsMediaPlayer player = new WindowsMediaPlayer();
 		private bool isPlaying = false;
@@ -140,7 +141,7 @@ namespace Application3
 			// Gán lại vị trí
 			tabControl1.Location = new Point(x, y);
 		}
-		string ver = "MinhKhangApplicationVer1";
+		string ver = "Application3 Last Update 10-10-2026";
 		private void maskedTextBox2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
 		{
 			// ensure password masking
@@ -2871,7 +2872,7 @@ namespace Application3
 			workTimer2.Stop();
 			TruyenForm2 += $"\n ----------------Kết thúc quá trình làm việc  {DateTime.Now} \n";
 			TruyenForm2 += $"\n Tổng thời gian làm việc: {TimeSpan.FromSeconds(counter)} \n";
-			this.Text = $"[Kết Thuc] - MinhKhang.exe -{_username} ({_nickname})   ";
+			this.Text = $"[Kết Thuc] - MinhKhang.exe -{_username} ({_nickname})  \n Phiên bản hiện tại: {ver}  ";
 			Form2 f2 = new Form2(_username, nickname, TruyenForm2);
 			f2.Show();
 			ShowBalloonNotification(
@@ -2975,13 +2976,15 @@ namespace Application3
 				}
 				e.SuppressKeyPress = true;
 			}
+
 			if (e.KeyCode == Keys.Enter)
 			{
-				string selected = $" {comboBox1.Text.Trim() }   vào lúc {DateTime.Now:dd/MM/yyyy HH:mm:ss}";
+				string selected = $" {num } - {comboBox1.Text.Trim() }   vào lúc {DateTime.Now:dd/MM/yyyy HH:mm:ss}";
 				if (!string.IsNullOrEmpty(selected))
 				{
 					richTextBox9.AppendText(selected + Environment.NewLine);
 					comboBox1.Text = ""; 
+					num++;
 				}
 				e.SuppressKeyPress = true;
 			}
@@ -3004,7 +3007,7 @@ namespace Application3
 			// Lấy nội dung từ richTextBox8 và richTextBox9
 			string text8 = richTextBox8.Text;
 			string text9 = richTextBox9.Text;
-			TruyenForm2+= $"\n \n thông tin checklist  \n {checkedItems} \n GHI CHÚ \n         {text8} \n Công Việc đã làm  \n       {text9} \n vào thời gian {DateTime.Now}";
+			TruyenForm2+= $"\n \n thông tin checklist  \n {checkedItems} \n GHI CHÚ \n         {text8} \n Công Việc đã làm  \n {text9} \n vào thời gian {DateTime.Now}";
 		}
 
 		private void button71_Click(object sender, EventArgs e)
