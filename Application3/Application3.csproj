@@ -33,7 +33,7 @@
     <SuiteName>Administrator</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>4059</ApplicationRevision>
+    <ApplicationRevision>4060</ApplicationRevision>
     <ApplicationVersion>2.6.04.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -60,7 +60,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>HMK1.ico</ApplicationIcon>
+    <ApplicationIcon>HMK2.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>A935E903D17DAE5CE5134ABDA6B0B0F0980BD0A2</ManifestCertificateThumbprint>
@@ -223,6 +223,7 @@
     <None Include="Resources\TKB L10.jpg" />
     <None Include="Resources\HMK.JPG" />
     <Content Include="HMK1.ico" />
+    <Content Include="HMK2.ico" />
     <Content Include="Screensaver.ico" />
   </ItemGroup>
   <ItemGroup>
