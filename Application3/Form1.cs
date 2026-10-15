@@ -141,7 +141,7 @@ namespace Application3
 			// Gán lại vị trí
 			tabControl1.Location = new Point(x, y);
 		}
-		string ver = "Application3 Last Update 10-10-2026";
+		string ver = "Application3 Last Update 15-10-2026";
 		private void maskedTextBox2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
 		{
 			// ensure password masking
