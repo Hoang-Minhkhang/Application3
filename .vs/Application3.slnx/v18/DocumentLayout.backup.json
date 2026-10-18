@@ -11,15 +11,15 @@
       "RelativeMoniker": "D:0:0:{E6C850A7-F8BC-468D-87AF-51F2AB834702}|Application3\\Application3.csproj|solutionrelative:application3\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|Application3||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E6C850A7-F8BC-468D-87AF-51F2AB834702}|Application3\\Application3.csproj|C:\\Users\\hoang\\OneDrive\\M\u00E1y t\u00EDnh\\project\\PRO3\\Application3\\application3\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E6C850A7-F8BC-468D-87AF-51F2AB834702}|Application3\\Application3.csproj|solutionrelative:application3\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6C850A7-F8BC-468D-87AF-51F2AB834702}|Application3\\Application3.csproj|C:\\Users\\hoang\\OneDrive\\M\u00E1y t\u00EDnh\\project\\PRO3\\Application3\\application3\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E6C850A7-F8BC-468D-87AF-51F2AB834702}|Application3\\Application3.csproj|solutionrelative:application3\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|Application3||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6C850A7-F8BC-468D-87AF-51F2AB834702}|Application3\\Application3.csproj|C:\\Users\\hoang\\OneDrive\\M\u00E1y t\u00EDnh\\project\\PRO3\\Application3\\application3\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -85,7 +85,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Application3",
               "DocumentMoniker": "C:\\Users\\hoang\\OneDrive\\M\u00E1y t\u00EDnh\\project\\PRO3\\Application3\\Application3\\Application3.csproj",
               "RelativeDocumentMoniker": "Application3\\Application3.csproj",
@@ -110,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Dangnhap.cs [Design]",
               "DocumentMoniker": "C:\\Users\\hoang\\OneDrive\\M\u00E1y t\u00EDnh\\project\\PRO3\\Application3\\Application3\\Dangnhap.cs",
               "RelativeDocumentMoniker": "Application3\\Dangnhap.cs",
@@ -128,7 +128,7 @@
               "RelativeDocumentMoniker": "Application3\\Form1.cs",
               "ToolTip": "C:\\Users\\hoang\\OneDrive\\M\u00E1y t\u00EDnh\\project\\PRO3\\Application3\\Application3\\Form1.cs",
               "RelativeToolTip": "Application3\\Form1.cs",
-              "ViewState": "AgIAAC0MAAAAAAAAAAAmwEMMAAARAAAAAAAAAA==",
+              "ViewState": "AgIAABANAAAAAAAAAAAswB8NAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-08T14:07:27.844Z",
               "EditorCaption": ""
@@ -147,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Form2.cs [Design]",
               "DocumentMoniker": "C:\\Users\\hoang\\OneDrive\\M\u00E1y t\u00EDnh\\project\\PRO3\\Application3\\Application3\\Form2.cs",
               "RelativeDocumentMoniker": "Application3\\Form2.cs",

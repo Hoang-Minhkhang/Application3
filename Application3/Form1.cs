@@ -3134,11 +3134,20 @@ namespace Application3
 				}
 			}
 		}
+		
 		private void SendMessageToLan(string msg)
 		{
 			richTextBox10.AppendText(
 				$"[{_username}] " + msg +
 				Environment.NewLine);
+			byte[] data = Encoding.UTF8.GetBytes(msg);
+			if (stream == null)
+			{
+				MessageBox.Show("Chưa kết nối tới máy chủ");
+				return;
+			}
+
+			stream.Write(data, 0, data.Length);
 		}
 		private void Broadcast(string msg)
 		{
@@ -3168,6 +3177,31 @@ namespace Application3
 
 			return "Không tìm thấy IP";
 		}
+		private void StartListening()
+		{
+			while (isServerRunning)
+			{
+				try
+				{
+					TcpClient c =
+						server.AcceptTcpClient();
+
+					this.Invoke((MethodInvoker)delegate
+					{
+						richTextBox10.AppendText(
+							"Thiết bị vừa kết nối\r\n");
+					});
+				}
+				catch (SocketException)
+				{
+					break;
+				}
+				catch
+				{
+					break;
+				}
+			}
+		}
 		private void button74_Click(object sender, EventArgs e)
 		{
 			try
@@ -3179,11 +3213,15 @@ namespace Application3
 				server.Start();
 
 				isServerRunning = true;
-
+				
 				string ip = GetLocalIPAddress();
 
 				IP.Text = ip;      // Label tên IP
+				Thread listenThread =new Thread(StartListening);
 
+				listenThread.IsBackground = true;
+
+				listenThread.Start();
 				richTextBox10.AppendText(
 					$"Đã mở cổng 5000 - IP: {ip}\r\n");
 
@@ -3282,46 +3320,41 @@ namespace Application3
 
 		private void button73_Click(object sender, EventArgs e)
 		{
+			isServerRunning = false;
+
+			if (server != null)
+			{
+				server.Stop();
+			}
+
+			richTextBox10.AppendText(
+				"LAN đã dừng\r\n");
+		}
+
+		private void button75_Click(object sender, EventArgs e)
+		{
 			try
 			{
-				if (server != null)
-				{
-					server.Stop();
+				client = new TcpClient();
 
-					isServerRunning = false;
+				client.Connect(IP.Text, 5000);
 
-					MessageBox.Show (
-						$"[{DateTime.Now}] Đã đóng cổng 5000\r\n");
+				stream = client.GetStream();
 
-					SendSystemMessage(
-						$"{nickname} vừa đóng cổng 5000");
-				}
+				Thread receiveThread =
+					new Thread(ReceiveClient);
+
+				receiveThread.IsBackground = true;
+
+				receiveThread.Start();
+
+				richTextBox10.AppendText(
+					"Đã kết nối tới server\r\n");
 			}
 			catch (Exception ex)
 			{
 				MessageBox.Show(ex.Message);
 			}
-		}
-
-		private void button75_Click(object sender, EventArgs e)
-		{
-			client = new TcpClient();
-
-			client.Connect(
-				textBox13.Text,
-				5000);
-
-			stream = client.GetStream();
-
-			Thread t =
-				new Thread(ReceiveClient);
-
-			t.IsBackground = true;
-
-			t.Start();
-
-			SendMessage(
-				$"[SYSTEM] {nickname} vừa đăng nhập");
 		}
 		private void ReceiveClient()
 		{
