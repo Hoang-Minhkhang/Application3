@@ -110,6 +110,7 @@ namespace Application3
 				{
 					MinhKhangNotepad = sfd.FileName;
 					File.WriteAllText(MinhKhangNotepad, richTextBox1.Text);
+					MessageBox.Show("File saved successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				}
 			}
 		}

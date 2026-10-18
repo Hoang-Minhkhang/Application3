@@ -398,6 +398,25 @@
 			this.button61 = new System.Windows.Forms.Button();
 			this.textBox9 = new System.Windows.Forms.TextBox();
 			this.label129 = new System.Windows.Forms.Label();
+			this.tabPage14 = new System.Windows.Forms.TabPage();
+			this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+			this.groupBox8 = new System.Windows.Forms.GroupBox();
+			this.button75 = new System.Windows.Forms.Button();
+			this.label138 = new System.Windows.Forms.Label();
+			this.PCNAME = new System.Windows.Forms.Label();
+			this.IP = new System.Windows.Forms.Label();
+			this.button74 = new System.Windows.Forms.Button();
+			this.textBox11 = new System.Windows.Forms.TextBox();
+			this.label59 = new System.Windows.Forms.Label();
+			this.button73 = new System.Windows.Forms.Button();
+			this.button17 = new System.Windows.Forms.Button();
+			this.groupBox25 = new System.Windows.Forms.GroupBox();
+			this.chat = new System.Windows.Forms.GroupBox();
+			this.label137 = new System.Windows.Forms.Label();
+			this.textBox12 = new System.Windows.Forms.TextBox();
+			this.richTextBox10 = new System.Windows.Forms.RichTextBox();
+			this.label64 = new System.Windows.Forms.Label();
+			this.checkedListBox6 = new System.Windows.Forms.CheckedListBox();
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.mởToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.lưuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -486,6 +505,7 @@
 			this.contextMenuStrip5 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.pictureBox5 = new System.Windows.Forms.PictureBox();
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+			this.textBox13 = new System.Windows.Forms.TextBox();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.groupBox12.SuspendLayout();
@@ -537,6 +557,11 @@
 			this.tabPage13.SuspendLayout();
 			this.groupBox24.SuspendLayout();
 			this.groupBox23.SuspendLayout();
+			this.tabPage14.SuspendLayout();
+			this.tableLayoutPanel6.SuspendLayout();
+			this.groupBox8.SuspendLayout();
+			this.groupBox25.SuspendLayout();
+			this.chat.SuspendLayout();
 			this.menuStrip1.SuspendLayout();
 			this.statusStrip2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -557,6 +582,7 @@
 			this.tabControl1.Controls.Add(this.tabPage11);
 			this.tabControl1.Controls.Add(this.tabPage12);
 			this.tabControl1.Controls.Add(this.tabPage13);
+			this.tabControl1.Controls.Add(this.tabPage14);
 			this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tabControl1.Location = new System.Drawing.Point(0, 27);
 			this.tabControl1.Name = "tabControl1";
@@ -4749,6 +4775,224 @@
 			this.label129.TabIndex = 4;
 			this.label129.Text = "Tác vụ :";
 			// 
+			// tabPage14
+			// 
+			this.tabPage14.Controls.Add(this.tableLayoutPanel6);
+			this.tabPage14.Location = new System.Drawing.Point(4, 22);
+			this.tabPage14.Name = "tabPage14";
+			this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage14.Size = new System.Drawing.Size(1143, 654);
+			this.tabPage14.TabIndex = 13;
+			this.tabPage14.Text = "LAN WORK ";
+			this.tabPage14.UseVisualStyleBackColor = true;
+			// 
+			// tableLayoutPanel6
+			// 
+			this.tableLayoutPanel6.ColumnCount = 1;
+			this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.40018F));
+			this.tableLayoutPanel6.Controls.Add(this.groupBox8, 0, 0);
+			this.tableLayoutPanel6.Controls.Add(this.groupBox25, 0, 1);
+			this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 3);
+			this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+			this.tableLayoutPanel6.RowCount = 2;
+			this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+			this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83.33334F));
+			this.tableLayoutPanel6.Size = new System.Drawing.Size(1137, 648);
+			this.tableLayoutPanel6.TabIndex = 0;
+			// 
+			// groupBox8
+			// 
+			this.groupBox8.BackColor = System.Drawing.Color.Gainsboro;
+			this.groupBox8.Controls.Add(this.textBox13);
+			this.groupBox8.Controls.Add(this.button75);
+			this.groupBox8.Controls.Add(this.label138);
+			this.groupBox8.Controls.Add(this.PCNAME);
+			this.groupBox8.Controls.Add(this.IP);
+			this.groupBox8.Controls.Add(this.button74);
+			this.groupBox8.Controls.Add(this.textBox11);
+			this.groupBox8.Controls.Add(this.label59);
+			this.groupBox8.Controls.Add(this.button73);
+			this.groupBox8.Controls.Add(this.button17);
+			this.groupBox8.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.groupBox8.Location = new System.Drawing.Point(3, 3);
+			this.groupBox8.Name = "groupBox8";
+			this.groupBox8.Size = new System.Drawing.Size(1131, 102);
+			this.groupBox8.TabIndex = 0;
+			this.groupBox8.TabStop = false;
+			this.groupBox8.Text = "Làm việc trên mạng lan nội bộ ";
+			// 
+			// button75
+			// 
+			this.button75.BackColor = System.Drawing.Color.DarkSeaGreen;
+			this.button75.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.button75.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button75.Location = new System.Drawing.Point(873, 46);
+			this.button75.Name = "button75";
+			this.button75.Size = new System.Drawing.Size(139, 50);
+			this.button75.TabIndex = 10;
+			this.button75.Text = "CONNECT";
+			this.button75.UseVisualStyleBackColor = false;
+			this.button75.Click += new System.EventHandler(this.button75_Click);
+			// 
+			// label138
+			// 
+			this.label138.AutoSize = true;
+			this.label138.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label138.Location = new System.Drawing.Point(524, 42);
+			this.label138.Name = "label138";
+			this.label138.Size = new System.Drawing.Size(77, 18);
+			this.label138.TabIndex = 9;
+			this.label138.Text = "STATUS ";
+			// 
+			// PCNAME
+			// 
+			this.PCNAME.AutoSize = true;
+			this.PCNAME.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.PCNAME.Location = new System.Drawing.Point(252, 78);
+			this.PCNAME.Name = "PCNAME";
+			this.PCNAME.Size = new System.Drawing.Size(83, 18);
+			this.PCNAME.TabIndex = 8;
+			this.PCNAME.Text = "PCNAME ";
+			// 
+			// IP
+			// 
+			this.IP.AutoSize = true;
+			this.IP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.IP.Location = new System.Drawing.Point(252, 51);
+			this.IP.Name = "IP";
+			this.IP.Size = new System.Drawing.Size(28, 18);
+			this.IP.TabIndex = 7;
+			this.IP.Text = "IP ";
+			// 
+			// button74
+			// 
+			this.button74.BackColor = System.Drawing.Color.Lime;
+			this.button74.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.button74.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button74.Location = new System.Drawing.Point(126, 46);
+			this.button74.Name = "button74";
+			this.button74.Size = new System.Drawing.Size(107, 56);
+			this.button74.TabIndex = 6;
+			this.button74.Text = "Start Lan Worker";
+			this.button74.UseVisualStyleBackColor = false;
+			this.button74.Click += new System.EventHandler(this.button74_Click);
+			// 
+			// textBox11
+			// 
+			this.textBox11.Location = new System.Drawing.Point(209, 20);
+			this.textBox11.Name = "textBox11";
+			this.textBox11.Size = new System.Drawing.Size(603, 20);
+			this.textBox11.TabIndex = 5;
+			// 
+			// label59
+			// 
+			this.label59.AutoSize = true;
+			this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label59.Location = new System.Drawing.Point(123, 23);
+			this.label59.Name = "label59";
+			this.label59.Size = new System.Drawing.Size(85, 18);
+			this.label59.TabIndex = 3;
+			this.label59.Text = "Username";
+			// 
+			// button73
+			// 
+			this.button73.BackColor = System.Drawing.Color.Red;
+			this.button73.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.button73.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button73.Location = new System.Drawing.Point(1018, 46);
+			this.button73.Name = "button73";
+			this.button73.Size = new System.Drawing.Size(107, 50);
+			this.button73.TabIndex = 2;
+			this.button73.Text = "End ";
+			this.button73.UseVisualStyleBackColor = false;
+			this.button73.Click += new System.EventHandler(this.button73_Click);
+			// 
+			// button17
+			// 
+			this.button17.BackColor = System.Drawing.Color.DodgerBlue;
+			this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button17.Location = new System.Drawing.Point(2, 19);
+			this.button17.Name = "button17";
+			this.button17.Size = new System.Drawing.Size(107, 77);
+			this.button17.TabIndex = 1;
+			this.button17.Text = "SCAN";
+			this.button17.UseVisualStyleBackColor = false;
+			// 
+			// groupBox25
+			// 
+			this.groupBox25.BackColor = System.Drawing.Color.PaleGoldenrod;
+			this.groupBox25.Controls.Add(this.chat);
+			this.groupBox25.Controls.Add(this.label64);
+			this.groupBox25.Controls.Add(this.checkedListBox6);
+			this.groupBox25.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.groupBox25.Location = new System.Drawing.Point(3, 111);
+			this.groupBox25.Name = "groupBox25";
+			this.groupBox25.Size = new System.Drawing.Size(1131, 534);
+			this.groupBox25.TabIndex = 1;
+			this.groupBox25.TabStop = false;
+			this.groupBox25.Text = "Windows ";
+			// 
+			// chat
+			// 
+			this.chat.BackColor = System.Drawing.Color.Cornsilk;
+			this.chat.Controls.Add(this.label137);
+			this.chat.Controls.Add(this.textBox12);
+			this.chat.Controls.Add(this.richTextBox10);
+			this.chat.Location = new System.Drawing.Point(236, 19);
+			this.chat.Name = "chat";
+			this.chat.Size = new System.Drawing.Size(591, 407);
+			this.chat.TabIndex = 10;
+			this.chat.TabStop = false;
+			this.chat.Text = "CHAT";
+			// 
+			// label137
+			// 
+			this.label137.AutoSize = true;
+			this.label137.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label137.Location = new System.Drawing.Point(9, 375);
+			this.label137.Name = "label137";
+			this.label137.Size = new System.Drawing.Size(264, 18);
+			this.label137.TabIndex = 11;
+			this.label137.Text = "PRESS ENTER to send message ";
+			// 
+			// textBox12
+			// 
+			this.textBox12.Location = new System.Drawing.Point(12, 341);
+			this.textBox12.Name = "textBox12";
+			this.textBox12.Size = new System.Drawing.Size(559, 20);
+			this.textBox12.TabIndex = 9;
+			this.textBox12.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
+			this.textBox12.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox12_KeyDown);
+			// 
+			// richTextBox10
+			// 
+			this.richTextBox10.Location = new System.Drawing.Point(12, 17);
+			this.richTextBox10.Name = "richTextBox10";
+			this.richTextBox10.Size = new System.Drawing.Size(559, 309);
+			this.richTextBox10.TabIndex = 0;
+			this.richTextBox10.Text = "";
+			// 
+			// label64
+			// 
+			this.label64.AutoSize = true;
+			this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label64.Location = new System.Drawing.Point(24, 16);
+			this.label64.Name = "label64";
+			this.label64.Size = new System.Drawing.Size(189, 18);
+			this.label64.TabIndex = 9;
+			this.label64.Text = "Tài khoản trên mạng lan";
+			// 
+			// checkedListBox6
+			// 
+			this.checkedListBox6.FormattingEnabled = true;
+			this.checkedListBox6.Location = new System.Drawing.Point(22, 40);
+			this.checkedListBox6.Name = "checkedListBox6";
+			this.checkedListBox6.Size = new System.Drawing.Size(191, 154);
+			this.checkedListBox6.TabIndex = 0;
+			this.checkedListBox6.SelectedIndexChanged += new System.EventHandler(this.checkedListBox6_SelectedIndexChanged);
+			// 
 			// fileToolStripMenuItem
 			// 
 			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -5038,42 +5282,42 @@
 			// đăngNhậpToolStripMenuItem
 			// 
 			this.đăngNhậpToolStripMenuItem.Name = "đăngNhậpToolStripMenuItem";
-			this.đăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.đăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
 			this.đăngNhậpToolStripMenuItem.Text = "Đăng nhập ";
 			this.đăngNhậpToolStripMenuItem.Click += new System.EventHandler(this.đăngNhậpToolStripMenuItem_Click);
 			// 
 			// thôngTinChungToolStripMenuItem
 			// 
 			this.thôngTinChungToolStripMenuItem.Name = "thôngTinChungToolStripMenuItem";
-			this.thôngTinChungToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.thôngTinChungToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
 			this.thôngTinChungToolStripMenuItem.Text = "Thông tin chung";
 			this.thôngTinChungToolStripMenuItem.Click += new System.EventHandler(this.thôngTinChungToolStripMenuItem_Click);
 			// 
 			// tácVụToolStripMenuItem
 			// 
 			this.tácVụToolStripMenuItem.Name = "tácVụToolStripMenuItem";
-			this.tácVụToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.tácVụToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
 			this.tácVụToolStripMenuItem.Text = "Tác vụ ";
 			this.tácVụToolStripMenuItem.Click += new System.EventHandler(this.tácVụToolStripMenuItem_Click);
 			// 
 			// documentaryToolStripMenuItem1
 			// 
 			this.documentaryToolStripMenuItem1.Name = "documentaryToolStripMenuItem1";
-			this.documentaryToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+			this.documentaryToolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
 			this.documentaryToolStripMenuItem1.Text = "Thời gian ";
 			this.documentaryToolStripMenuItem1.Click += new System.EventHandler(this.documentaryToolStripMenuItem1_Click);
 			// 
 			// thờiKhóaBiểuToolStripMenuItem
 			// 
 			this.thờiKhóaBiểuToolStripMenuItem.Name = "thờiKhóaBiểuToolStripMenuItem";
-			this.thờiKhóaBiểuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.thờiKhóaBiểuToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
 			this.thờiKhóaBiểuToolStripMenuItem.Text = "Thời khóa biểu ";
 			this.thờiKhóaBiểuToolStripMenuItem.Click += new System.EventHandler(this.thờiKhóaBiểuToolStripMenuItem_Click);
 			// 
 			// càiĐặtToolStripMenuItem
 			// 
 			this.càiĐặtToolStripMenuItem.Name = "càiĐặtToolStripMenuItem";
-			this.càiĐặtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.càiĐặtToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
 			this.càiĐặtToolStripMenuItem.Text = "Cài đặt ";
 			this.càiĐặtToolStripMenuItem.Click += new System.EventHandler(this.càiĐặtToolStripMenuItem_Click);
 			// 
@@ -5435,6 +5679,13 @@
 			this.pictureBox5.TabIndex = 4;
 			this.pictureBox5.TabStop = false;
 			// 
+			// textBox13
+			// 
+			this.textBox13.Location = new System.Drawing.Point(882, 21);
+			this.textBox13.Name = "textBox13";
+			this.textBox13.Size = new System.Drawing.Size(187, 20);
+			this.textBox13.TabIndex = 11;
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5537,6 +5788,14 @@
 			this.groupBox24.PerformLayout();
 			this.groupBox23.ResumeLayout(false);
 			this.groupBox23.PerformLayout();
+			this.tabPage14.ResumeLayout(false);
+			this.tableLayoutPanel6.ResumeLayout(false);
+			this.groupBox8.ResumeLayout(false);
+			this.groupBox8.PerformLayout();
+			this.groupBox25.ResumeLayout(false);
+			this.groupBox25.PerformLayout();
+			this.chat.ResumeLayout(false);
+			this.chat.PerformLayout();
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
 			this.statusStrip2.ResumeLayout(false);
@@ -6005,6 +6264,26 @@
 		private System.Windows.Forms.Label label57;
 		private System.Windows.Forms.Label label58;
 		private System.Windows.Forms.TextBox TieuDe;
+		private System.Windows.Forms.TabPage tabPage14;
+		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+		private System.Windows.Forms.GroupBox groupBox8;
+		private System.Windows.Forms.TextBox textBox11;
+		private System.Windows.Forms.Label label59;
+		private System.Windows.Forms.Button button73;
+		private System.Windows.Forms.Button button17;
+		private System.Windows.Forms.Button button74;
+		private System.Windows.Forms.Label PCNAME;
+		private System.Windows.Forms.Label IP;
+		private System.Windows.Forms.GroupBox groupBox25;
+		private System.Windows.Forms.GroupBox chat;
+		private System.Windows.Forms.RichTextBox richTextBox10;
+		private System.Windows.Forms.Label label64;
+		private System.Windows.Forms.CheckedListBox checkedListBox6;
+		private System.Windows.Forms.Label label138;
+		private System.Windows.Forms.Label label137;
+		private System.Windows.Forms.TextBox textBox12;
+		private System.Windows.Forms.Button button75;
+		private System.Windows.Forms.TextBox textBox13;
 	}
 }
 

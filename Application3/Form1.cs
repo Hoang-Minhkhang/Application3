@@ -25,8 +25,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media.TextFormatting;
 using WMPLib;
+using System.Net;
+using System.Net.Sockets;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+
 
 // git add .   git commit -m "" , git push  origin main
 namespace Application3
@@ -55,6 +58,13 @@ namespace Application3
 			ttdangnhap.Text = _nickname;
 			tabControl1.SelectedIndex = 1;
 			usernameToolStripMenuItem.Text = _nickname;
+			TcpListener server;
+			TcpClient client;
+			NetworkStream stream;
+
+			Thread receiveThread;
+
+			
 
 
 		}
@@ -1385,7 +1395,7 @@ namespace Application3
 
 		private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
 		{
-
+			textBox11.Text = _username; 
 		}
 
 		private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -3123,6 +3133,241 @@ namespace Application3
 					webView22.CoreWebView2.Navigate(url);
 				}
 			}
+		}
+		private void SendMessageToLan(string msg)
+		{
+			richTextBox10.AppendText(
+				$"[{_username}] " + msg +
+				Environment.NewLine);
+		}
+		private void Broadcast(string msg)
+		{
+			richTextBox10.AppendText(msg + Environment.NewLine);
+		}
+		private void SendSystemMessage(string text)
+		{
+			richTextBox10.AppendText(
+				text + Environment.NewLine);
+		}
+		private TcpListener server;
+		private bool isServerRunning = false;
+		private TcpClient client;
+		private NetworkStream stream;
+
+		private List<TcpClient> clients =
+	new List<TcpClient>();
+		private string GetLocalIPAddress()
+		{
+			foreach (IPAddress ip in Dns.GetHostAddresses(Dns.GetHostName()))
+			{
+				if (ip.AddressFamily == AddressFamily.InterNetwork)
+				{
+					return ip.ToString();
+				}
+			}
+
+			return "Không tìm thấy IP";
+		}
+		private void button74_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				server = new TcpListener(
+					IPAddress.Any,
+					5000);
+
+				server.Start();
+
+				isServerRunning = true;
+
+				string ip = GetLocalIPAddress();
+
+				IP.Text = ip;      // Label tên IP
+
+				richTextBox10.AppendText(
+					$"Đã mở cổng 5000 - IP: {ip}\r\n");
+
+				SendSystemMessage(
+					$"{nickname} vừa mở cổng 5000 ({ip})");
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
+		}
+
+		private void textBox12_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Enter)
+			{
+				e.SuppressKeyPress = true;
+
+				if (string.IsNullOrWhiteSpace(textBox12.Text))
+					return;
+
+				SendMessageToLan(textBox12.Text); 
+
+				textBox12.Clear();
+			}
+		}
+		private void ListenClient()
+		{
+			while (true)
+			{
+				TcpClient c = server.AcceptTcpClient();
+
+				clients.Add(c);
+
+				Thread t =
+					new Thread(() => Receive(c));
+
+				t.IsBackground = true;
+				t.Start();
+			}
+		}
+		private void Receive(TcpClient c)
+		{
+			byte[] buffer = new byte[4096];
+
+			while (true)
+			{
+				int bytes =
+					c.GetStream().Read(
+						buffer,
+						0,
+						buffer.Length);
+
+				string msg =
+					Encoding.UTF8.GetString(
+						buffer,
+						0,
+						bytes);
+
+				this.Invoke((MethodInvoker)delegate
+				{
+					richTextBox10.AppendText(
+						msg + "\r\n");
+				});
+
+				foreach (var item in clients)
+				{
+					byte[] data =
+						Encoding.UTF8.GetBytes(msg);
+
+					item.GetStream().Write(
+						data,
+						0,
+						data.Length);
+				}
+			}
+		}
+		private void AddOnlineUser(string username)
+		{
+			if (!checkedListBox6.Items.Contains(username))
+			{
+				checkedListBox6.Items.Add(username, true);
+			}
+		}
+		private void RemoveOnlineUser(string username)
+		{
+			if (checkedListBox6.Items.Contains(username))
+			{
+				checkedListBox6.Items.Remove(username);
+			}
+		}
+		private void checkedListBox6_SelectedIndexChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void button73_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				if (server != null)
+				{
+					server.Stop();
+
+					isServerRunning = false;
+
+					MessageBox.Show (
+						$"[{DateTime.Now}] Đã đóng cổng 5000\r\n");
+
+					SendSystemMessage(
+						$"{nickname} vừa đóng cổng 5000");
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
+		}
+
+		private void button75_Click(object sender, EventArgs e)
+		{
+			client = new TcpClient();
+
+			client.Connect(
+				textBox13.Text,
+				5000);
+
+			stream = client.GetStream();
+
+			Thread t =
+				new Thread(ReceiveClient);
+
+			t.IsBackground = true;
+
+			t.Start();
+
+			SendMessage(
+				$"[SYSTEM] {nickname} vừa đăng nhập");
+		}
+		private void ReceiveClient()
+		{
+			byte[] buffer = new byte[4096];
+
+			while (true)
+			{
+				int bytes =
+					stream.Read(
+						buffer,
+						0,
+						buffer.Length);
+
+				string msg =
+					Encoding.UTF8.GetString(
+						buffer,
+						0,
+						bytes);
+
+				this.Invoke((MethodInvoker)delegate
+				{
+					richTextBox10.AppendText(
+						msg + "\r\n");
+				});
+			}
+		}
+
+		///////////////////////////////////////////////////
+
+		private void SendMessage(string msg)
+		{
+			if (stream == null)
+				return;
+
+			byte[] data =
+				Encoding.UTF8.GetBytes(msg);
+
+			stream.Write(
+				data,
+				0,
+				data.Length);
+		}
+
+		private void textBox12_TextChanged(object sender, EventArgs e)
+		{
+
 		}
 	}
 }
