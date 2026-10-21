@@ -401,6 +401,7 @@
 			this.tabPage14 = new System.Windows.Forms.TabPage();
 			this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
 			this.groupBox8 = new System.Windows.Forms.GroupBox();
+			this.textBox13 = new System.Windows.Forms.TextBox();
 			this.button75 = new System.Windows.Forms.Button();
 			this.label138 = new System.Windows.Forms.Label();
 			this.PCNAME = new System.Windows.Forms.Label();
@@ -505,7 +506,6 @@
 			this.contextMenuStrip5 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.pictureBox5 = new System.Windows.Forms.PictureBox();
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-			this.textBox13 = new System.Windows.Forms.TextBox();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.groupBox12.SuspendLayout();
@@ -2259,24 +2259,26 @@
 			// 
 			// button20
 			// 
+			this.button20.BackColor = System.Drawing.Color.Red;
 			this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button20.Location = new System.Drawing.Point(253, 153);
 			this.button20.Name = "button20";
 			this.button20.Size = new System.Drawing.Size(80, 23);
 			this.button20.TabIndex = 7;
 			this.button20.Text = "Close Windows ";
-			this.button20.UseVisualStyleBackColor = true;
+			this.button20.UseVisualStyleBackColor = false;
 			this.button20.Click += new System.EventHandler(this.button20_Click_1);
 			// 
 			// button19
 			// 
+			this.button19.BackColor = System.Drawing.Color.Brown;
 			this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button19.Location = new System.Drawing.Point(144, 153);
 			this.button19.Name = "button19";
 			this.button19.Size = new System.Drawing.Size(103, 24);
 			this.button19.TabIndex = 6;
 			this.button19.Text = "Sign in ";
-			this.button19.UseVisualStyleBackColor = true;
+			this.button19.UseVisualStyleBackColor = false;
 			// 
 			// label66
 			// 
@@ -2291,13 +2293,14 @@
 			// 
 			// button18
 			// 
+			this.button18.BackColor = System.Drawing.Color.MediumTurquoise;
 			this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.button18.Location = new System.Drawing.Point(35, 153);
 			this.button18.Name = "button18";
 			this.button18.Size = new System.Drawing.Size(103, 24);
 			this.button18.TabIndex = 5;
 			this.button18.Text = "Show";
-			this.button18.UseVisualStyleBackColor = true;
+			this.button18.UseVisualStyleBackColor = false;
 			this.button18.Click += new System.EventHandler(this.button18_Click_1);
 			// 
 			// tableLayoutPanel5
@@ -3385,6 +3388,7 @@
 			// 
 			// button29
 			// 
+			this.button29.BackColor = System.Drawing.Color.LawnGreen;
 			this.button29.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.button29.Font = new System.Drawing.Font("Wingdings 2", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
 			this.button29.Location = new System.Drawing.Point(340, 19);
@@ -3392,7 +3396,7 @@
 			this.button29.Size = new System.Drawing.Size(110, 50);
 			this.button29.TabIndex = 9;
 			this.button29.Text = "4";
-			this.button29.UseVisualStyleBackColor = true;
+			this.button29.UseVisualStyleBackColor = false;
 			this.button29.Click += new System.EventHandler(this.button29_Click);
 			// 
 			// Print
@@ -4675,6 +4679,7 @@
 			// 
 			this.button64.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
 			this.button64.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.button64.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button64.Location = new System.Drawing.Point(136, 114);
 			this.button64.Name = "button64";
 			this.button64.Size = new System.Drawing.Size(120, 46);
@@ -4821,6 +4826,13 @@
 			this.groupBox8.TabIndex = 0;
 			this.groupBox8.TabStop = false;
 			this.groupBox8.Text = "Làm việc trên mạng lan nội bộ ";
+			// 
+			// textBox13
+			// 
+			this.textBox13.Location = new System.Drawing.Point(882, 21);
+			this.textBox13.Name = "textBox13";
+			this.textBox13.Size = new System.Drawing.Size(187, 20);
+			this.textBox13.TabIndex = 11;
 			// 
 			// button75
 			// 
@@ -5678,13 +5690,6 @@
 			this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.pictureBox5.TabIndex = 4;
 			this.pictureBox5.TabStop = false;
-			// 
-			// textBox13
-			// 
-			this.textBox13.Location = new System.Drawing.Point(882, 21);
-			this.textBox13.Name = "textBox13";
-			this.textBox13.Size = new System.Drawing.Size(187, 20);
-			this.textBox13.TabIndex = 11;
 			// 
 			// Form1
 			// 

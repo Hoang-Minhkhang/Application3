@@ -52,7 +52,7 @@ namespace Application3
 			_nickname = nickname;
 			bool dangnhap = true;
 			// Ví dụ: hiển thị username lên title
-			this.Text = $"Form1 - {_username} ({_nickname})";
+			this.Text = $"Loading...- {_username} ({_nickname})";
 			string currentusername = _username;
 			label2.Text = _username;
 			ttdangnhap.Text = _nickname;
@@ -304,8 +304,8 @@ namespace Application3
 				if (currentUsername == "MinhKhang1995") nickname = "MinhKhang";
 				else if (currentUsername == "Administrator") nickname = "Quản trị viên ";
 				else if (currentUsername == "Test") nickname = "Người dùng thử ";
-				else if (currentUsername == "TurboLines") nickname = "ToNguyenCat";
-				else if (currentUsername == "User1005") nickname = "DuyKhang";
+				else if (currentUsername == "TurboLines") nickname = "TurboLines";
+				else if (currentUsername == "User1005") nickname = "My Friend";
 				ttdangnhap.Text = MaKhuVuc.Text;
 				if (MaKhuVuc.Text == "")
 				{
@@ -2880,8 +2880,8 @@ namespace Application3
 			label133.Text = "Không làm việc ";
 			label133.ForeColor = Color.Red;
 			workTimer2.Stop();
-			TruyenForm2 += $"\n ----------------Kết thúc quá trình làm việc  {DateTime.Now} \n";
-			TruyenForm2 += $"\n Tổng thời gian làm việc: {TimeSpan.FromSeconds(counter)} \n";
+			TruyenForm2 += $"\n ----------------Kết thúc quá trình làm việc  {DateTime.Now} ------------------\n";
+			TruyenForm2 += $"\n Tổng thời gian làm việc: {TimeSpan.FromSeconds(counter)} \n Kí Tên {_username }\n \n \n \n \n \n ___________________ \n Phiên bản hiện tại: {ver}";
 			this.Text = $"[Kết Thuc] - MinhKhang.exe -{_username} ({_nickname})  \n Phiên bản hiện tại: {ver}  ";
 			Form2 f2 = new Form2(_username, nickname, TruyenForm2);
 			f2.Show();
@@ -3072,6 +3072,7 @@ namespace Application3
 				else if (toolStripTextBox1.Text == "W10" || toolStripTextBox1.Text == "broswer") tabControl1.SelectedIndex = 10;
 				else if (toolStripTextBox1.Text == "W11") tabControl1.SelectedIndex = 11;
 				else if (toolStripTextBox1.Text == "W12" || toolStripTextBox1.Text == "work") tabControl1.SelectedIndex = 12;
+				else if (toolStripTextBox1.Text == "W13" || toolStripTextBox1.Text == "lan") tabControl1.SelectedIndex = 13;
 				else if (toolStripTextBox1.Text == "exit" || toolStripTextBox1.Text == "thoat") this.Close() ;
 				else if (toolStripTextBox1.Text == "notepad") { 
 					Form2 f2 = new Form2();

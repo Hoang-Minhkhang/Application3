@@ -50,8 +50,8 @@ namespace Application3
 					{ "MinhKhang1995", "MinhKhang" },
 					{ "Administrator", "Quản trị viên" },
 					{ "Test", "Người dùng thử" },
-					{ "TurboLines", "ToNguyenCat" },
-					{ "User1005", "DuyKhang" }
+					{ "TurboLines", "TurboLines" },
+					{ "User1005", "My Friend" }
 					// DO NOT SHARE PRIVATE INFORMATION .
 				};
 
