@@ -51,7 +51,7 @@ namespace Application3
 					{ "Administrator", "Quản trị viên" },
 					{ "Test", "Người dùng thử" },
 					{ "TurboLines", "TurboLines" },
-					{ "User1005", "My Friend" }
+					{ "User1005", "DKhang" }
 					// DO NOT SHARE PRIVATE INFORMATION .
 				};
 

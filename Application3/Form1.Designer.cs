@@ -2430,7 +2430,7 @@
 			this.label61.Name = "label61";
 			this.label61.Size = new System.Drawing.Size(75, 15);
 			this.label61.TabIndex = 20;
-			this.label61.Text = "25 10  2026 ";
+			this.label61.Text = "31 10  2026 ";
 			// 
 			// label60
 			// 

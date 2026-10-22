@@ -1219,7 +1219,7 @@ namespace Application3
 		{
 			MessageBox.Show("Nếu bạn nhập sai mã khu vực - đồng nghĩa việc tài khoản của bạn không hợp lệ ", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
-		int tkbhethangngay = 25;
+		int tkbhethangngay = 31;
 		int tkbhethangthang = 10;
 		int tkbhethangnam = 2026;
 		private void button18_Click_1(object sender, EventArgs e)
@@ -2829,7 +2829,7 @@ namespace Application3
 		{
 			counter++;
 			label131.Text = TimeSpan.FromSeconds(counter).ToString(@"hh\:mm\:ss");
-			this.Text = $"[{TimeSpan.FromSeconds(counter).ToString(@"hh\:mm\:ss")}]   MinhKhang.exe -{_username} ----- {textBox8.Text} {_username}     |||Connected to https://hoang-minhkhang.github.io/Application3";
+			this.Text = $"[{TimeSpan.FromSeconds(counter).ToString(@"hh\:mm\:ss")}]   MinhKhang.exe -{_username} ----- {textBox8.Text} {_username}     ";
 
 		}
 		string msg = ""; 
