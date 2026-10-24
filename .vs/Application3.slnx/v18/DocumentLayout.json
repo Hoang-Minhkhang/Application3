@@ -80,7 +80,8 @@
               "RelativeToolTip": "Application3\\Form2.cs",
               "ViewState": "AgIAAGMAAAAAAAAAAAAcwHAAAAByAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-10T02:51:29.231Z"
+              "WhenOpened": "2026-10-10T02:51:29.231Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -102,7 +103,7 @@
               "RelativeDocumentMoniker": "Application3\\Dangnhap.cs",
               "ToolTip": "C:\\Users\\hoang\\OneDrive\\M\u00E1y t\u00EDnh\\project\\PRO3\\Application3\\Application3\\Dangnhap.cs",
               "RelativeToolTip": "Application3\\Dangnhap.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAqwDUAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAwwK4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-08T14:07:56.557Z",
               "EditorCaption": ""
@@ -125,9 +126,9 @@
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\hoang\\OneDrive\\M\u00E1y t\u00EDnh\\project\\PRO3\\Application3\\Application3\\Form1.cs",
               "RelativeDocumentMoniker": "Application3\\Form1.cs",
-              "ToolTip": "C:\\Users\\hoang\\OneDrive\\M\u00E1y t\u00EDnh\\project\\PRO3\\Application3\\Application3\\Form1.cs*",
-              "RelativeToolTip": "Application3\\Form1.cs*",
-              "ViewState": "AgIAANAKAAAAAAAAAAAUwA8LAAAKAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\hoang\\OneDrive\\M\u00E1y t\u00EDnh\\project\\PRO3\\Application3\\Application3\\Form1.cs",
+              "RelativeToolTip": "Application3\\Form1.cs",
+              "ViewState": "AgIAAKcNAAAAAAAAAAAIwLsNAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-08T14:07:27.844Z",
               "EditorCaption": ""
@@ -141,7 +142,8 @@
               "ToolTip": "C:\\Users\\hoang\\OneDrive\\M\u00E1y t\u00EDnh\\project\\PRO3\\Application3\\Application3\\Form2.cs [Design]",
               "RelativeToolTip": "Application3\\Form2.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-07T14:24:28.068Z"
+              "WhenOpened": "2026-10-07T14:24:28.068Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -149,8 +151,8 @@
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\hoang\\OneDrive\\M\u00E1y t\u00EDnh\\project\\PRO3\\Application3\\Application3\\Form1.cs",
               "RelativeDocumentMoniker": "Application3\\Form1.cs",
-              "ToolTip": "C:\\Users\\hoang\\OneDrive\\M\u00E1y t\u00EDnh\\project\\PRO3\\Application3\\Application3\\Form1.cs [Design]*",
-              "RelativeToolTip": "Application3\\Form1.cs [Design]*",
+              "ToolTip": "C:\\Users\\hoang\\OneDrive\\M\u00E1y t\u00EDnh\\project\\PRO3\\Application3\\Application3\\Form1.cs [Design]",
+              "RelativeToolTip": "Application3\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-07T14:24:38.526Z",
               "EditorCaption": " [Design]"

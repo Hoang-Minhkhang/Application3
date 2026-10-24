@@ -49,6 +49,7 @@ namespace Application3
 			InitializeComponent();
 			InitializeTimer();
 			_username = username;
+			this.KeyPreview = true;
 			_nickname = nickname;
 			bool dangnhap = true;
 			// Ví dụ: hiển thị username lên title
@@ -151,7 +152,7 @@ namespace Application3
 			// Gán lại vị trí
 			tabControl1.Location = new Point(x, y);
 		}
-		string ver = "Application3 Last Update 15-10-2026";
+		string ver = "Application3 Last Update 24-10-2026";
 		private void maskedTextBox2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
 		{
 			// ensure password masking
@@ -2835,6 +2836,15 @@ namespace Application3
 		string msg = ""; 
 		private void button63_Click(object sender, EventArgs e)
 		{
+			if (LamViec)
+			{
+				var result = MessageBox.Show("Bạn đang làm việc, Bạn có muốn bắt đầu công việc mới?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+				if (result == DialogResult.Cancel)
+				{
+					return; 
+					}
+					
+			}
 			if (textBox8.Text=="" && textBox9.Text=="")
 			{
 				MessageBox.Show("Vui lòng nhập tiêu đề và nội dung công việc.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -2890,20 +2900,25 @@ namespace Application3
 					"Quá trình làm việc đã kết thúc"
 				);
 		}
-
+		private string import_checkList = "";
 		private void button66_Click(object sender, EventArgs e)
 		{
 
 			OpenFileDialog ofd = new OpenFileDialog();
 			ofd.Filter = "Text Files (*.txt)|*.txt";
+
 			if (ofd.ShowDialog() == DialogResult.OK)
 			{
-				checkedListBox1.Items.Clear();
-				var lines = File.ReadAllLines(ofd.FileName);
+				import_checkList = ofd.FileName; // Lưu đường dẫn file
+
+				checkedListBox5.Items.Clear();
+
+				var lines = File.ReadAllLines(import_checkList);
+
 				foreach (var line in lines)
 				{
-					// Nếu file có định dạng "Nội dung|True/False"
 					var parts = line.Split('|');
+
 					if (parts.Length == 2)
 					{
 						bool isChecked = bool.Parse(parts[1]);
@@ -2913,7 +2928,6 @@ namespace Application3
 					{
 						checkedListBox5.Items.Add(line, false);
 					}
-
 				}
 			}
 
@@ -3402,6 +3416,104 @@ namespace Application3
 		private void textBox12_TextChanged(object sender, EventArgs e)
 		{
 
+		}
+
+		private void Form1_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.F2)
+			{
+				tabControl1.SelectedIndex = 12; 
+			}
+			else if (e.KeyCode == Keys.F3)
+			{
+				tabControl1.SelectedIndex = 4;
+			}
+			else if (e.KeyCode == Keys.F1 )
+			{
+				MessageBox.Show("Các phím tắt:\nF1: Hướng dẫn\nF2: Quản lý công việc\nF3: Lịch học\nF4: Trình duyệt\nF5: Làm mới\nF9: Bắt đầu làm việc\nF10: Xuất báo cáo\nF11: Tạm ngưng làm việc\nF12: Kết thúc làm việc", "Hướng dẫn" );
+			}
+			else if (e.KeyCode == Keys.F4)
+			{
+				tabControl1.SelectedIndex = 10;
+			}
+			else if (e.KeyCode == Keys.F5)
+			{
+				this.Refresh();
+			}
+			else if (e.KeyCode == Keys.F9)
+			{
+				tabControl1.SelectedIndex = 12;
+				button63.PerformClick();
+			}
+			else if (e.KeyCode == Keys.F10)
+			{
+				tabControl1.SelectedIndex = 12;
+				button64.PerformClick();
+			}
+			else if (e.KeyCode == Keys.F11)
+			{
+				tabControl1.SelectedIndex = 12;
+				button72.PerformClick();
+			}
+			else if (e.KeyCode == Keys.F12)
+			{
+				tabControl1.SelectedIndex = 12;
+				button65.PerformClick();
+			}
+		}
+
+		private void button76_Click(object sender, EventArgs e)
+		{
+			if (string.IsNullOrEmpty(import_checkList))
+			{
+				MessageBox.Show("Chưa import file TXT!");
+				return;
+			}
+
+			checkedListBox5.Items.Clear();
+
+			var lines = File.ReadAllLines(import_checkList);
+
+			foreach (var line in lines)
+			{
+				var parts = line.Split('|');
+
+				if (parts.Length == 2)
+				{
+					bool isChecked = bool.Parse(parts[1]);
+					checkedListBox5.Items.Add(parts[0], isChecked);
+				}
+				else
+				{
+					checkedListBox5.Items.Add(line, false);
+				}
+			}
+		}
+
+		private void linkLabel7_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			tabControl1.SelectedIndex = 3; 
+		}
+
+		private void label134_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void button77_Click(object sender, EventArgs e)
+		{
+			for (int i = 0; i < checkedListBox5.Items.Count; i++)
+			{
+				checkedListBox5.SetItemChecked(i, true);
+			}
+		}
+
+		private void button78_Click(object sender, EventArgs e)
+		{
+			for (int i = 0; i < checkedListBox5.Items.Count; i++)
+			{
+				checkedListBox5.SetItemChecked(i, false);
+			}
 		}
 	}
 }

@@ -506,6 +506,10 @@
 			this.contextMenuStrip5 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.pictureBox5 = new System.Windows.Forms.PictureBox();
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+			this.button76 = new System.Windows.Forms.Button();
+			this.linkLabel7 = new System.Windows.Forms.LinkLabel();
+			this.button77 = new System.Windows.Forms.Button();
+			this.button78 = new System.Windows.Forms.Button();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.groupBox12.SuspendLayout();
@@ -4410,6 +4414,9 @@
 			// 
 			// groupBox24
 			// 
+			this.groupBox24.Controls.Add(this.button78);
+			this.groupBox24.Controls.Add(this.button77);
+			this.groupBox24.Controls.Add(this.button76);
 			this.groupBox24.Controls.Add(this.button70);
 			this.groupBox24.Controls.Add(this.button68);
 			this.groupBox24.Controls.Add(this.richTextBox9);
@@ -4421,9 +4428,9 @@
 			this.groupBox24.Controls.Add(this.button66);
 			this.groupBox24.Controls.Add(this.checkedListBox5);
 			this.groupBox24.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.groupBox24.Location = new System.Drawing.Point(3, 230);
+			this.groupBox24.Location = new System.Drawing.Point(3, 202);
 			this.groupBox24.Name = "groupBox24";
-			this.groupBox24.Size = new System.Drawing.Size(1137, 421);
+			this.groupBox24.Size = new System.Drawing.Size(1137, 449);
 			this.groupBox24.TabIndex = 9;
 			this.groupBox24.TabStop = false;
 			this.groupBox24.Text = "Main Application ";
@@ -4444,7 +4451,7 @@
 			// 
 			this.button68.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
 			this.button68.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.button68.Location = new System.Drawing.Point(380, 364);
+			this.button68.Location = new System.Drawing.Point(380, 352);
 			this.button68.Name = "button68";
 			this.button68.Size = new System.Drawing.Size(120, 46);
 			this.button68.TabIndex = 18;
@@ -4481,7 +4488,7 @@
 			// 
 			// textBox10
 			// 
-			this.textBox10.Location = new System.Drawing.Point(9, 72);
+			this.textBox10.Location = new System.Drawing.Point(9, 96);
 			this.textBox10.Name = "textBox10";
 			this.textBox10.Size = new System.Drawing.Size(345, 20);
 			this.textBox10.TabIndex = 14;
@@ -4490,7 +4497,7 @@
 			// richTextBox8
 			// 
 			this.richTextBox8.BackColor = System.Drawing.SystemColors.Info;
-			this.richTextBox8.Location = new System.Drawing.Point(10, 276);
+			this.richTextBox8.Location = new System.Drawing.Point(9, 297);
 			this.richTextBox8.Name = "richTextBox8";
 			this.richTextBox8.Size = new System.Drawing.Size(344, 134);
 			this.richTextBox8.TabIndex = 13;
@@ -4500,9 +4507,9 @@
 			// 
 			this.button67.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
 			this.button67.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.button67.Location = new System.Drawing.Point(136, 19);
+			this.button67.Location = new System.Drawing.Point(10, 69);
 			this.button67.Name = "button67";
-			this.button67.Size = new System.Drawing.Size(120, 46);
+			this.button67.Size = new System.Drawing.Size(120, 21);
 			this.button67.TabIndex = 12;
 			this.button67.Text = "Export Checklist ";
 			this.button67.UseVisualStyleBackColor = false;
@@ -4525,13 +4532,14 @@
 			// checkedListBox5
 			// 
 			this.checkedListBox5.FormattingEnabled = true;
-			this.checkedListBox5.Location = new System.Drawing.Point(10, 101);
+			this.checkedListBox5.Location = new System.Drawing.Point(9, 122);
 			this.checkedListBox5.Name = "checkedListBox5";
 			this.checkedListBox5.Size = new System.Drawing.Size(344, 169);
 			this.checkedListBox5.TabIndex = 0;
 			// 
 			// groupBox23
 			// 
+			this.groupBox23.Controls.Add(this.linkLabel7);
 			this.groupBox23.Controls.Add(this.button16);
 			this.groupBox23.Controls.Add(this.label41);
 			this.groupBox23.Controls.Add(this.button72);
@@ -4640,6 +4648,7 @@
 			this.label134.Size = new System.Drawing.Size(92, 31);
 			this.label134.TabIndex = 13;
 			this.label134.Text = "--:--:--\r\n";
+			this.label134.Click += new System.EventHandler(this.label134_Click);
 			// 
 			// label133
 			// 
@@ -5691,6 +5700,53 @@
 			this.pictureBox5.TabIndex = 4;
 			this.pictureBox5.TabStop = false;
 			// 
+			// button76
+			// 
+			this.button76.BackColor = System.Drawing.Color.LightBlue;
+			this.button76.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.button76.Location = new System.Drawing.Point(136, 19);
+			this.button76.Name = "button76";
+			this.button76.Size = new System.Drawing.Size(120, 46);
+			this.button76.TabIndex = 20;
+			this.button76.Text = "Reload ";
+			this.button76.UseVisualStyleBackColor = false;
+			this.button76.Click += new System.EventHandler(this.button76_Click);
+			// 
+			// linkLabel7
+			// 
+			this.linkLabel7.AutoSize = true;
+			this.linkLabel7.Location = new System.Drawing.Point(785, 141);
+			this.linkLabel7.Name = "linkLabel7";
+			this.linkLabel7.Size = new System.Drawing.Size(55, 13);
+			this.linkLabel7.TabIndex = 20;
+			this.linkLabel7.TabStop = true;
+			this.linkLabel7.Text = "GoTo Site";
+			this.linkLabel7.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel7_LinkClicked);
+			// 
+			// button77
+			// 
+			this.button77.BackColor = System.Drawing.SystemColors.AppWorkspace;
+			this.button77.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.button77.Location = new System.Drawing.Point(136, 71);
+			this.button77.Name = "button77";
+			this.button77.Size = new System.Drawing.Size(120, 21);
+			this.button77.TabIndex = 21;
+			this.button77.Text = "Select all ";
+			this.button77.UseVisualStyleBackColor = false;
+			this.button77.Click += new System.EventHandler(this.button77_Click);
+			// 
+			// button78
+			// 
+			this.button78.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			this.button78.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.button78.Location = new System.Drawing.Point(262, 71);
+			this.button78.Name = "button78";
+			this.button78.Size = new System.Drawing.Size(92, 21);
+			this.button78.TabIndex = 22;
+			this.button78.Text = "Unselect all ";
+			this.button78.UseVisualStyleBackColor = false;
+			this.button78.Click += new System.EventHandler(this.button78_Click);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5710,6 +5766,7 @@
 			this.MaximizedBoundsChanged += new System.EventHandler(this.Form1_MaximizedBoundsChanged);
 			this.MaximumSizeChanged += new System.EventHandler(this.Form1_MaximumSizeChanged);
 			this.Load += new System.EventHandler(this.Form1_Load);
+			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
 			this.tabControl1.ResumeLayout(false);
 			this.tabPage1.ResumeLayout(false);
 			this.tabPage1.PerformLayout();
@@ -6289,6 +6346,10 @@
 		private System.Windows.Forms.TextBox textBox12;
 		private System.Windows.Forms.Button button75;
 		private System.Windows.Forms.TextBox textBox13;
+		private System.Windows.Forms.Button button76;
+		private System.Windows.Forms.LinkLabel linkLabel7;
+		private System.Windows.Forms.Button button77;
+		private System.Windows.Forms.Button button78;
 	}
 }
 
