@@ -367,6 +367,9 @@
 			this.button56 = new System.Windows.Forms.Button();
 			this.tabPage13 = new System.Windows.Forms.TabPage();
 			this.groupBox24 = new System.Windows.Forms.GroupBox();
+			this.button78 = new System.Windows.Forms.Button();
+			this.button77 = new System.Windows.Forms.Button();
+			this.button76 = new System.Windows.Forms.Button();
 			this.button70 = new System.Windows.Forms.Button();
 			this.button68 = new System.Windows.Forms.Button();
 			this.richTextBox9 = new System.Windows.Forms.RichTextBox();
@@ -378,6 +381,7 @@
 			this.button66 = new System.Windows.Forms.Button();
 			this.checkedListBox5 = new System.Windows.Forms.CheckedListBox();
 			this.groupBox23 = new System.Windows.Forms.GroupBox();
+			this.linkLabel7 = new System.Windows.Forms.LinkLabel();
 			this.button16 = new System.Windows.Forms.Button();
 			this.label41 = new System.Windows.Forms.Label();
 			this.button72 = new System.Windows.Forms.Button();
@@ -506,10 +510,6 @@
 			this.contextMenuStrip5 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.pictureBox5 = new System.Windows.Forms.PictureBox();
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-			this.button76 = new System.Windows.Forms.Button();
-			this.linkLabel7 = new System.Windows.Forms.LinkLabel();
-			this.button77 = new System.Windows.Forms.Button();
-			this.button78 = new System.Windows.Forms.Button();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.groupBox12.SuspendLayout();
@@ -2399,7 +2399,7 @@
 			// button30
 			// 
 			this.button30.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.button30.Location = new System.Drawing.Point(3, 262);
+			this.button30.Location = new System.Drawing.Point(3, 277);
 			this.button30.Name = "button30";
 			this.button30.Size = new System.Drawing.Size(83, 24);
 			this.button30.TabIndex = 26;
@@ -2410,7 +2410,7 @@
 			// button21
 			// 
 			this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.button21.Location = new System.Drawing.Point(129, 262);
+			this.button21.Location = new System.Drawing.Point(129, 277);
 			this.button21.Name = "button21";
 			this.button21.Size = new System.Drawing.Size(123, 25);
 			this.button21.TabIndex = 25;
@@ -2430,17 +2430,17 @@
 			// 
 			this.label61.AutoSize = true;
 			this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label61.Location = new System.Drawing.Point(129, 244);
+			this.label61.Location = new System.Drawing.Point(129, 259);
 			this.label61.Name = "label61";
-			this.label61.Size = new System.Drawing.Size(75, 15);
+			this.label61.Size = new System.Drawing.Size(72, 15);
 			this.label61.TabIndex = 20;
-			this.label61.Text = "31 10  2026 ";
+			this.label61.Text = "07 11 2026 ";
 			// 
 			// label60
 			// 
 			this.label60.AutoSize = true;
 			this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label60.Location = new System.Drawing.Point(3, 244);
+			this.label60.Location = new System.Drawing.Point(3, 259);
 			this.label60.Name = "label60";
 			this.label60.Size = new System.Drawing.Size(92, 15);
 			this.label60.TabIndex = 19;
@@ -2452,9 +2452,10 @@
 			this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label56.Location = new System.Drawing.Point(129, 169);
 			this.label56.Name = "label56";
-			this.label56.Size = new System.Drawing.Size(122, 75);
+			this.label56.Size = new System.Drawing.Size(122, 90);
 			this.label56.TabIndex = 18;
-			this.label56.Text = "Thời khóa biểu lần 5\r\nTHời khóa biểu quá VÔ ĐẠO BẤT LƯƠNG \r\n\r\n";
+			this.label56.Text = "Thời khóa biểu lần 6 \r\nnghỉ Chiều thứ 2 4 và sáng thứ 6\r\nVui lòng lưu ý thời khóa" +
+    " biểu này chỉ tồn tại có 01 tuần thôi \r\n";
 			// 
 			// label55
 			// 
@@ -2482,9 +2483,9 @@
 			this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label53.Location = new System.Drawing.Point(129, 124);
 			this.label53.Name = "label53";
-			this.label53.Size = new System.Drawing.Size(69, 15);
+			this.label53.Size = new System.Drawing.Size(63, 15);
 			this.label53.TabIndex = 14;
-			this.label53.Text = "19 10 2026";
+			this.label53.Text = "02102026";
 			// 
 			// label52
 			// 
@@ -2502,9 +2503,9 @@
 			this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label51.Location = new System.Drawing.Point(129, 109);
 			this.label51.Name = "label51";
-			this.label51.Size = new System.Drawing.Size(63, 15);
+			this.label51.Size = new System.Drawing.Size(69, 15);
 			this.label51.TabIndex = 12;
-			this.label51.Text = "19102026";
+			this.label51.Text = "02 11 2026";
 			// 
 			// label50
 			// 
@@ -2564,7 +2565,7 @@
 			this.label43.Name = "label43";
 			this.label43.Size = new System.Drawing.Size(51, 15);
 			this.label43.TabIndex = 4;
-			this.label43.Text = "TKB_L5";
+			this.label43.Text = "TKB_L6";
 			// 
 			// label42
 			// 
@@ -2620,7 +2621,7 @@
 			// 
 			this.label57.AutoSize = true;
 			this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label57.Location = new System.Drawing.Point(3, 453);
+			this.label57.Location = new System.Drawing.Point(3, 468);
 			this.label57.Name = "label57";
 			this.label57.Size = new System.Drawing.Size(63, 18);
 			this.label57.TabIndex = 27;
@@ -4435,6 +4436,43 @@
 			this.groupBox24.TabStop = false;
 			this.groupBox24.Text = "Main Application ";
 			// 
+			// button78
+			// 
+			this.button78.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			this.button78.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.button78.Location = new System.Drawing.Point(262, 71);
+			this.button78.Name = "button78";
+			this.button78.Size = new System.Drawing.Size(92, 21);
+			this.button78.TabIndex = 22;
+			this.button78.Text = "Unselect all ";
+			this.button78.UseVisualStyleBackColor = false;
+			this.button78.Click += new System.EventHandler(this.button78_Click);
+			// 
+			// button77
+			// 
+			this.button77.BackColor = System.Drawing.SystemColors.AppWorkspace;
+			this.button77.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.button77.Location = new System.Drawing.Point(136, 71);
+			this.button77.Name = "button77";
+			this.button77.Size = new System.Drawing.Size(120, 21);
+			this.button77.TabIndex = 21;
+			this.button77.Text = "Select all ";
+			this.button77.UseVisualStyleBackColor = false;
+			this.button77.Click += new System.EventHandler(this.button77_Click);
+			// 
+			// button76
+			// 
+			this.button76.BackColor = System.Drawing.Color.LightBlue;
+			this.button76.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.button76.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button76.Location = new System.Drawing.Point(136, 19);
+			this.button76.Name = "button76";
+			this.button76.Size = new System.Drawing.Size(120, 46);
+			this.button76.TabIndex = 20;
+			this.button76.Text = "Reload ";
+			this.button76.UseVisualStyleBackColor = false;
+			this.button76.Click += new System.EventHandler(this.button76_Click);
+			// 
 			// button70
 			// 
 			this.button70.BackColor = System.Drawing.Color.Red;
@@ -4567,6 +4605,17 @@
 			this.groupBox23.TabIndex = 8;
 			this.groupBox23.TabStop = false;
 			this.groupBox23.Text = "Main Process ";
+			// 
+			// linkLabel7
+			// 
+			this.linkLabel7.AutoSize = true;
+			this.linkLabel7.Location = new System.Drawing.Point(785, 141);
+			this.linkLabel7.Name = "linkLabel7";
+			this.linkLabel7.Size = new System.Drawing.Size(55, 13);
+			this.linkLabel7.TabIndex = 20;
+			this.linkLabel7.TabStop = true;
+			this.linkLabel7.Text = "GoTo Site";
+			this.linkLabel7.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel7_LinkClicked);
 			// 
 			// button16
 			// 
@@ -5608,7 +5657,7 @@
 			// 
 			this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
 			this.toolStripStatusLabel3.Size = new System.Drawing.Size(193, 17);
-			this.toolStripStatusLabel3.Text = "Application3 Last Update 15102026 ";
+			this.toolStripStatusLabel3.Text = "Application3 Last Update 29102026 ";
 			this.toolStripStatusLabel3.Click += new System.EventHandler(this.toolStripStatusLabel3_Click);
 			// 
 			// tinhtrang
@@ -5700,53 +5749,6 @@
 			this.pictureBox5.TabIndex = 4;
 			this.pictureBox5.TabStop = false;
 			// 
-			// button76
-			// 
-			this.button76.BackColor = System.Drawing.Color.LightBlue;
-			this.button76.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.button76.Location = new System.Drawing.Point(136, 19);
-			this.button76.Name = "button76";
-			this.button76.Size = new System.Drawing.Size(120, 46);
-			this.button76.TabIndex = 20;
-			this.button76.Text = "Reload ";
-			this.button76.UseVisualStyleBackColor = false;
-			this.button76.Click += new System.EventHandler(this.button76_Click);
-			// 
-			// linkLabel7
-			// 
-			this.linkLabel7.AutoSize = true;
-			this.linkLabel7.Location = new System.Drawing.Point(785, 141);
-			this.linkLabel7.Name = "linkLabel7";
-			this.linkLabel7.Size = new System.Drawing.Size(55, 13);
-			this.linkLabel7.TabIndex = 20;
-			this.linkLabel7.TabStop = true;
-			this.linkLabel7.Text = "GoTo Site";
-			this.linkLabel7.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel7_LinkClicked);
-			// 
-			// button77
-			// 
-			this.button77.BackColor = System.Drawing.SystemColors.AppWorkspace;
-			this.button77.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.button77.Location = new System.Drawing.Point(136, 71);
-			this.button77.Name = "button77";
-			this.button77.Size = new System.Drawing.Size(120, 21);
-			this.button77.TabIndex = 21;
-			this.button77.Text = "Select all ";
-			this.button77.UseVisualStyleBackColor = false;
-			this.button77.Click += new System.EventHandler(this.button77_Click);
-			// 
-			// button78
-			// 
-			this.button78.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.button78.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.button78.Location = new System.Drawing.Point(262, 71);
-			this.button78.Name = "button78";
-			this.button78.Size = new System.Drawing.Size(92, 21);
-			this.button78.TabIndex = 22;
-			this.button78.Text = "Unselect all ";
-			this.button78.UseVisualStyleBackColor = false;
-			this.button78.Click += new System.EventHandler(this.button78_Click);
-			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5765,6 +5767,7 @@
 			this.AutoSizeChanged += new System.EventHandler(this.Form1_AutoSizeChanged);
 			this.MaximizedBoundsChanged += new System.EventHandler(this.Form1_MaximizedBoundsChanged);
 			this.MaximumSizeChanged += new System.EventHandler(this.Form1_MaximumSizeChanged);
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
 			this.tabControl1.ResumeLayout(false);

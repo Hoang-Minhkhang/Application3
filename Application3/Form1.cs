@@ -1220,8 +1220,8 @@ namespace Application3
 		{
 			MessageBox.Show("Nếu bạn nhập sai mã khu vực - đồng nghĩa việc tài khoản của bạn không hợp lệ ", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
-		int tkbhethangngay = 31;
-		int tkbhethangthang = 10;
+		int tkbhethangngay = 07;
+		int tkbhethangthang = 11;
 		int tkbhethangnam = 2026;
 		private void button18_Click_1(object sender, EventArgs e)
 		{
@@ -3513,6 +3513,23 @@ namespace Application3
 			for (int i = 0; i < checkedListBox5.Items.Count; i++)
 			{
 				checkedListBox5.SetItemChecked(i, false);
+			}
+		}
+
+		private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			if (LamViec)
+			{
+				DialogResult rs = MessageBox.Show(
+					"Bạn chưa kết thúc công việc!\n\nOK = Thoát\nCancel = Quay lại",
+					"Thông báo",
+					MessageBoxButtons.OKCancel,
+					MessageBoxIcon.Warning);
+
+				if (rs == DialogResult.Cancel)
+				{
+					e.Cancel = true;
+				}
 			}
 		}
 	}
