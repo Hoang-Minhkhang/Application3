@@ -2399,7 +2399,7 @@
 			// button30
 			// 
 			this.button30.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.button30.Location = new System.Drawing.Point(3, 277);
+			this.button30.Location = new System.Drawing.Point(3, 292);
 			this.button30.Name = "button30";
 			this.button30.Size = new System.Drawing.Size(83, 24);
 			this.button30.TabIndex = 26;
@@ -2410,7 +2410,7 @@
 			// button21
 			// 
 			this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.button21.Location = new System.Drawing.Point(129, 277);
+			this.button21.Location = new System.Drawing.Point(129, 292);
 			this.button21.Name = "button21";
 			this.button21.Size = new System.Drawing.Size(123, 25);
 			this.button21.TabIndex = 25;
@@ -2430,17 +2430,17 @@
 			// 
 			this.label61.AutoSize = true;
 			this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label61.Location = new System.Drawing.Point(129, 259);
+			this.label61.Location = new System.Drawing.Point(129, 274);
 			this.label61.Name = "label61";
 			this.label61.Size = new System.Drawing.Size(72, 15);
 			this.label61.TabIndex = 20;
-			this.label61.Text = "07 11 2026 ";
+			this.label61.Text = "27 11 2026 ";
 			// 
 			// label60
 			// 
 			this.label60.AutoSize = true;
 			this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label60.Location = new System.Drawing.Point(3, 259);
+			this.label60.Location = new System.Drawing.Point(3, 274);
 			this.label60.Name = "label60";
 			this.label60.Size = new System.Drawing.Size(92, 15);
 			this.label60.TabIndex = 19;
@@ -2452,10 +2452,10 @@
 			this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label56.Location = new System.Drawing.Point(129, 169);
 			this.label56.Name = "label56";
-			this.label56.Size = new System.Drawing.Size(122, 90);
+			this.label56.Size = new System.Drawing.Size(123, 105);
 			this.label56.TabIndex = 18;
-			this.label56.Text = "Thời khóa biểu lần 6 \r\nnghỉ Chiều thứ 2 4 và sáng thứ 6\r\nVui lòng lưu ý thời khóa" +
-    " biểu này chỉ tồn tại có 01 tuần thôi \r\n";
+			this.label56.Text = "THời khóa biểu lần 5 áp dụng lại cho tuần 10\r\nThấy thời khóa biểu này vộ cùng hợp" +
+    " lý nên mong nó tồn tại lâu dài \r\n";
 			// 
 			// label55
 			// 
@@ -2505,7 +2505,7 @@
 			this.label51.Name = "label51";
 			this.label51.Size = new System.Drawing.Size(69, 15);
 			this.label51.TabIndex = 12;
-			this.label51.Text = "02 11 2026";
+			this.label51.Text = "09 11 2026";
 			// 
 			// label50
 			// 
@@ -2565,7 +2565,7 @@
 			this.label43.Name = "label43";
 			this.label43.Size = new System.Drawing.Size(51, 15);
 			this.label43.TabIndex = 4;
-			this.label43.Text = "TKB_L6";
+			this.label43.Text = "TKB_L5";
 			// 
 			// label42
 			// 
@@ -2621,9 +2621,9 @@
 			// 
 			this.label57.AutoSize = true;
 			this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label57.Location = new System.Drawing.Point(3, 468);
+			this.label57.Location = new System.Drawing.Point(3, 483);
 			this.label57.Name = "label57";
-			this.label57.Size = new System.Drawing.Size(63, 18);
+			this.label57.Size = new System.Drawing.Size(63, 17);
 			this.label57.TabIndex = 27;
 			this.label57.Text = "READY";
 			// 
@@ -4190,6 +4190,7 @@
 			this.webView22.Size = new System.Drawing.Size(1131, 581);
 			this.webView22.TabIndex = 0;
 			this.webView22.ZoomFactor = 1D;
+			this.webView22.Click += new System.EventHandler(this.webView22_Click_1);
 			// 
 			// groupBox21
 			// 
@@ -5524,7 +5525,6 @@
 			// 
 			// userToolStripMenuItem
 			// 
-			this.userToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.userToolStripMenuItem.Name = "userToolStripMenuItem";
 			this.userToolStripMenuItem.Size = new System.Drawing.Size(42, 23);
 			this.userToolStripMenuItem.Text = "User";
@@ -5563,7 +5563,6 @@
 			// 
 			// toolStripTextBox1
 			// 
-			this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.toolStripTextBox1.Name = "toolStripTextBox1";
 			this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
 			this.toolStripTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.toolStripTextBox1_KeyDown);
@@ -5657,7 +5656,7 @@
 			// 
 			this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
 			this.toolStripStatusLabel3.Size = new System.Drawing.Size(193, 17);
-			this.toolStripStatusLabel3.Text = "Application3 Last Update 29102026 ";
+			this.toolStripStatusLabel3.Text = "Application3 Last Update 05112026 ";
 			this.toolStripStatusLabel3.Click += new System.EventHandler(this.toolStripStatusLabel3_Click);
 			// 
 			// tinhtrang

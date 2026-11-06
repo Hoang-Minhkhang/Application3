@@ -152,7 +152,7 @@ namespace Application3
 			// Gán lại vị trí
 			tabControl1.Location = new Point(x, y);
 		}
-		string ver = "Application3 Last Update 24-10-2026";
+		string ver = "Application3 Last Update 05-11-2026";
 		private void maskedTextBox2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
 		{
 			// ensure password masking
@@ -1220,7 +1220,7 @@ namespace Application3
 		{
 			MessageBox.Show("Nếu bạn nhập sai mã khu vực - đồng nghĩa việc tài khoản của bạn không hợp lệ ", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
-		int tkbhethangngay = 07;
+		int tkbhethangngay = 27;
 		int tkbhethangthang = 11;
 		int tkbhethangnam = 2026;
 		private void button18_Click_1(object sender, EventArgs e)
@@ -3531,6 +3531,11 @@ namespace Application3
 					e.Cancel = true;
 				}
 			}
+		}
+
+		private void webView22_Click_1(object sender, EventArgs e)
+		{
+
 		}
 	}
 }
